@@ -38,4 +38,32 @@
 更改数据存储位置
 +++++++++++++++++++++++++++++
 
-默认情况下，缓存将使用 :class:`~.stores.memory.MemoryStore`，但可以配置为使用其他存储后端。
+默认情况下，缓存将使用 :class:`~.stores.memory.MemoryStore`，但它可以配置为使用任何 :class:`~.stores.base.Store`，例如 :class:`~.stores.redis.RedisStore`：
+
+.. literalinclude:: /examples/caching/redis_store.py
+    :language: python
+    :caption: 使用 Redis 作为缓存存储。
+
+指定缓存键构建器
+++++++++++++++++++++++++++++++
+
+Litestar 使用请求的路径 + 排序的查询参数作为缓存键。这可以通过在应用程序或路由处理程序级别提供"键构建器"函数来调整。
+
+.. literalinclude:: /examples/caching/key_builder.py
+    :language: python
+    :caption: 使用自定义缓存键构建器。
+
+.. literalinclude:: /examples/caching/key_builder_for_route_handler.py
+    :language: python
+    :caption: 为特定路由处理程序使用自定义缓存键构建器。
+
+使用 cache_response_filter
+++++++++++++++++++++++++++++
+
+可以自定义 :attr:`~.config.response_cache.ResponseCacheConfig.cache_response_filter` 以根据应用程序的需求实现任何缓存逻辑。例如，您可能只想缓存成功的响应，或根据某些标头或内容缓存响应。
+
+.. literalinclude:: /examples/caching/cache_response_filter.py
+    :language: python
+    :caption: 使用 cache_response_filter 自定义缓存行为。
+
+在此示例中，`custom_cache_response_filter` 函数仅缓存成功的 (2xx) 响应。

@@ -53,6 +53,9 @@ DTO 层参数
     :caption: 禁用隐式 ``return_dto`` 行为
     :language: python
 
+在此示例中，我们使用 ``UserDTO`` 解码请求数据并将其转换为 ``User`` 类型，
+但我们想自己管理响应数据的编码，因此我们显式声明 ``return_dto`` 为 ``None``。
+
 在层上定义 DTO
 ~~~~~~~~~~~~~~
 
@@ -63,21 +66,104 @@ DTO 可以在应用程序的任何 :ref:`层 <layered-architecture>` 上定义�
     :caption: 在 Controller 上定义 DTO
     :language: python
 
+在此示例中，任何声明了 ``data`` 关键字参数的处理器接收到的 ``User`` 实例，
+都由 ``UserDTO`` 类型转换，所有处理器返回值都由 ``UserReturnDTO`` 转换为可编码类型
+（``delete()`` 路由除外，该路由禁用了 ``return_dto``）。
+
+DTO 同样可以在 :class:`路由器 <litestar.router.Router>` 和
+:class:`应用程序本身 <litestar.app.Litestar>` 上定义。
+
+
 使用 codegen 后端提高性能
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. note::
 
-    此功能在 ``2.2.0`` 中引入，从 ``2.8.0`` 开始默认启用。
-    可以使用 ``DTOConfig(experimental_codegen_backend=False)`` 选择性地禁用它。
+    此功能在 ``2.2.0`` 中引入，隐藏在 ``DTO_CODEGEN`` 功能标志后面。
+    从 ``2.8.0`` 开始，它被认为是稳定的并默认启用。
+    仍然可以通过使用 ``DTOConfig(experimental_codegen_backend=False)`` 覆盖选择性地禁用它。
 
-DTO 后端负责转换、验证和解析，是对性能影响最大的部分。
-DTO codegen 后端通过在运行时生成优化的 Python 代码来提高效率。
+DTO 后端是为所有 DTO 功能执行繁重工作的部分。它负责转换、验证和解析。
+因此，它也是对性能影响最大的部分。为了减少 DTO 引入的开销，引入了 DTO codegen 后端；
+这是一个通过在运行时生成优化的 Python 代码来执行所有必要操作以提高效率的 DTO 后端。
+
+禁用后端
+--------
+
+你可以使用 ``experimental_codegen_backend=False`` 选择性地禁用 codegen 后端：
+
+.. code-block:: python
+
+    from dataclasses import dataclass
+    from litestar.dto import DTOConfig, DataclassDTO
+
+
+    @dataclass
+    class Foo:
+        name: str
+
+
+    class FooDTO(DataclassDTO[Foo]):
+        config = DTOConfig(experimental_codegen_backend=False)
+
+启用后端
+--------
+
+.. note:: 这是针对 Litestar 2.8.0 之前版本的历史文档
+    从 2.8.0 开始，此后端默认启用
+
+.. warning:: ``ExperimentalFeatures.DTO_CODEGEN`` 已弃用，将在 3.0.0 中移除
+
+.. dropdown:: 启用 DTO codegen 后端
+    :icon: git-pull-request-closed
+
+    你可以通过向 Litestar 应用程序传递适当的功能标志来为所有 DTO 全局启用此后端：
+
+    .. code-block:: python
+
+        from litestar import Litestar
+        from litestar.config.app import ExperimentalFeatures
+
+        app = Litestar(experimental_features=[ExperimentalFeatures.DTO_CODEGEN])
+
+
+    或者为单个 DTO 选择性地启用：
+
+    .. code-block:: python
+
+        from dataclasses import dataclass
+        from litestar.dto import DTOConfig, DataclassDTO
+
+
+        @dataclass
+        class Foo:
+            name: str
+
+
+        class FooDTO(DataclassDTO[Foo]):
+            config = DTOConfig(experimental_codegen_backend=True)
+
+    同样的标志可用于选择性地禁用后端：
+
+    .. code-block:: python
+
+        from dataclasses import dataclass
+        from litestar.dto import DTOConfig, DataclassDTO
+
+
+        @dataclass
+        class Foo:
+            name: str
+
+
+        class FooDTO(DataclassDTO[Foo]):
+            config = DTOConfig(experimental_codegen_backend=False)
+
 
 性能改进
 --------
 
-某些操作的性能提升：
+这是一些显示某些操作性能提升的初步数据：
 
 =================================== ===========
 操作                                 提升
@@ -89,3 +175,8 @@ Python 转 Python（集合）             ~5x
 Python 转 JSON                      ~5.3x
 Python 转 JSON（集合）               ~5.4x
 =================================== ===========
+
+
+.. seealso::
+    如果你对技术细节感兴趣，请查看
+    https://github.com/litestar-org/litestar/pull/2388

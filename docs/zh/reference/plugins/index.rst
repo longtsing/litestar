@@ -1,10 +1,18 @@
-插件参考
-=========
+=======
+插件
+=======
+
+.. automodule:: litestar.plugins
+    :members:
 
 .. toctree::
-    :titlesonly:
+    :maxdepth: 1
+    :hidden:
 
-    pydantic
-    prometheus
+    attrs
+    flash_messages
+    htmx
     problem_details
+    prometheus
+    pydantic
     structlog

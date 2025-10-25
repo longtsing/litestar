@@ -98,3 +98,83 @@
 --------
 
 .. rst-class:: lead
+
+   Litestar 是一个社区驱动的开源项目，得益于我们赞助商的慷慨贡献而蓬勃发展，使我们能够追求创新发展并继续我们的使命，为用户提供卓越的工具和资源。
+
+
+衷心感谢我们当前的赞助商：
+
+.. container::
+   :name: sponsors-section
+
+   .. grid:: 3
+      :class-row: surface
+      :padding: 0
+      :gutter: 2
+
+      .. grid-item-card::
+         :link: https://github.com/scalar/scalar
+
+         .. image:: https://raw.githubusercontent.com/litestar-org/branding/main/assets/sponsors/scalar.svg
+            :alt: Scalar.com
+            :class: sponsor
+
+         `Scalar.com <https://github.com/scalar/scalar>`_
+
+      .. grid-item-card::
+         :link: https://telemetrysports.com/
+
+         .. image:: https://raw.githubusercontent.com/litestar-org/branding/main/assets/sponsors/telemetry-sports/unofficial-telemetry-whitebg.svg
+            :alt: Telemetry Sports
+            :class: sponsor
+
+         `Telemetry Sports <https://telemetrysports.com/>`_
+
+      .. grid-item-card::
+         :link: https://www.stok.kr/
+
+         .. image:: https://avatars.githubusercontent.com/u/144093421
+            :alt: Stok
+            :class: sponsor
+
+         `Stok <https://www.stok.kr/>`_
+
+我们邀请组织和个人加入我们的赞助计划。
+通过在 `Polar <sponsor-polar_>`_、`GitHub <sponsor-github_>`_
+和 `Open Collective <sponsor-oc_>`_ 等平台上成为赞助商，您可以在我们项目的发展中发挥关键作用。
+
+除了常规赞助之外，我们还通过 `Polar <sponsor-polar_>`_ 参与基于承诺的赞助机会，
+您可以为您希望看到实现的问题或功能承诺一定金额。
+
+
+.. _sponsor-github: https://github.com/sponsors/litestar-org
+.. _sponsor-oc: https://opencollective.com/litestar
+.. _sponsor-polar: https://polar.sh/litestar-org
+
+.. toctree::
+    :titlesonly:
+    :caption: 文档
+    :hidden:
+
+    getting-started
+    usage/index
+    reference/index
+    benchmarks
+
+.. toctree::
+    :titlesonly:
+    :caption: 指南
+    :hidden:
+
+    migration/index
+    topics/index
+    tutorials/index
+
+.. toctree::
+    :titlesonly:
+    :caption: 贡献
+    :hidden:
+
+    contribution-guide
+    可用问题 <https://github.com/search?q=user%3Alitestar-org+state%3Aopen+label%3A%22good+first+issue%22+++no%3Aassignee+&type=issues=>
+    行为准则 <https://github.com/litestar-org/.github?tab=coc-ov-file#readme>
