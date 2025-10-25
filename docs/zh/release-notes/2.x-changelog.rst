@@ -1,0 +1,81 @@
+:orphan:
+
+2.x 更新日志
+=============
+
+.. changelog:: 2.7.1
+    :date: 2024-03-22
+
+    .. change:: 为 `Enums` 和 `EnumMeta` 添加默认编码器
+        :type: bug修复
+        :pr: 3193
+
+        修复了在序列化 ``Enums`` 时出现的问题。
+
+    .. change:: TestClient.__enter__ 返回类型改为 Self
+        :type: bug修复
+        :pr: 3194
+
+        ``TestClient.__enter__`` 和 ``AsyncTestClient.__enter__`` 现在返回 ``Self``。
+        如果你继承了 ``TestClient``，其 ``__enter__`` 方法应返回派生类实例，除非重写该方法。``Self`` 更灵活。
+
+    .. change:: 获取 openapi.json 时使用完整路径
+        :type: bug修复
+        :pr: 3196
+        :issue: 3047
+
+        现在 Rapidoc 和 Stoplight Elements 的 ``spec-url`` 和 ``apiDescriptionUrl`` 都使用相对于站点根目录的绝对路径。
+
+        确保这两个 UI 请求 OpenAPI schema 的 JSON 时能正确定位端点。
+
+    .. change:: JSON schema ``examples`` 格式修正
+        :type: bug修复
+        :pr: 3224
+        :issue: 2849
+
+        生成的 *JSON schema* 对象中的 ``examples`` 字段格式修正：
+
+        .. code-block:: json
+
+            "examples": {
+              "some-id": {
+                "description": "Lorem ipsum",
+                "value": "the real beef"
+              }
+           }
+
+        上述为 OpenAPI 示例格式，不应用于 JSON schema 对象。Schema 对象应采用如下格式：
+
+        .. code-block:: json
+
+            "examples": [
+              "the real beef"
+           ]
+
+        * 详见 `APIs You Won't Hate 博文 <https://medium.com/apis-you-wont-hate/openapi-v3-1-and-json-schema-2019-09-6862cf3db959>`_。
+        * `Schema objects 规范 <https://spec.openapis.org/oas/v3.1.0#schema-object>`_
+        * `OpenAPI example format 规范 <https://spec.openapis.org/oas/v3.1.0#example-object>`_。
+
+        该字段至少在参数、媒体类型和组件中被引用。
+
+        技术变更：定义 ``Schema.examples`` 为 ``list[Any]``，而不是 ``list[Example]``。OpenAPI 对象（如 ``Parameter``、``Body``）仍用 ``list[Example]``，但 JSON schema ``examples`` 现在内部生成/转换为 ``list[Any]``。
+
+        OpenAPI 3.0 与 3.1 的区别在于，3.0 只允许 schema 对象有单个 ``example`` 字段，3.1 支持完整的 JSON schema 2020-12 规范，因此支持 ``examples`` 数组。
+
+        两者似乎都支持，但后者在最新规范中已标记为弃用。
+
+        可在 https://editor-next.swagger.io 测试，将 ``examples`` 加入 ``components.schemas.Pet``，用两种方式，Swagger UI 只会在格式正确时渲染示例。
+
+    .. change:: Python >= 3.12 的 queue_listener 处理器
+        :type: bug修复
+        :pr: 3185
+        :issue: 2954
+
+        - 修复了 Python 3.12 的 ``queue_listener`` 处理器
+
+        Python 3.12 引入了通过 ``logging.config.dictConfig()`` 配置 ``QueueHandler`` 和 ``QueueListener`` 的新方式。详见 `logging 文档 <https://docs.python.org/3/library/logging.config.html#configuring-queuehandler-and-queuelistener>`_。
+
+        监听器仍需像以前一样启动和停止。为此新增了 ``LoggingQueueListener``。
+
+        文档说明：
+        * 所有自定义队列处理器和监听器类需与 `QueueHandler <https://docs.python.org/3/library/logging.handlers.html#logging.handlers.QueueHandler>`_ 和 `QueueListener <https://docs.python.org/3/library/logging.handlers.html#logging.handlers.QueueListener>`_ 初始化签名一致。
