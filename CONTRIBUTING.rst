@@ -233,7 +233,6 @@ In practice, this looks like the following:
 
 .. code-block:: python
    :caption: An example of how to use the automatic example runner
-   :no-upgrade:
 
    from typing import Dict
 

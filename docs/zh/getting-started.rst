@@ -15,80 +15,61 @@
     :icon: star
 
     `Pydantic <https://docs.pydantic.dev/latest/>`_
-        :code:`pip install 'litestar[pydantic]'
-`
+        :code:`pip install 'litestar[pydantic]'`
 
     `Attrs <https://www.attrs.org>`_
-        :code:`pip install 'litestar[attrs]'
-`
+        :code:`pip install 'litestar[attrs]'`
 
     :ref:`Brotli Compression Middleware <usage/middleware/builtin-middleware:brotli>`
-        :code:`pip install 'litestar[brotli]'
-`
+        :code:`pip install 'litestar[brotli]'`
 
    :ref:`Zstd Compression Middleware <usage/middleware/builtin-middleware:zstd>`
-        :code:`pip install 'litestar[zstd]'
-`
+        :code:`pip install 'litestar[zstd]'`
 
     :ref:`Cookie Based Sessions <usage/middleware/builtin-middleware:client-side sessions>`
-        :code:`pip install 'litestar[cryptography]'
-`
+        :code:`pip install 'litestar[cryptography]'`
 
     :doc:`JWT </usage/security/jwt>`
-        :code:`pip install 'litestar[jwt]'
-`
+        :code:`pip install 'litestar[jwt]'`
 
     :doc:`RedisStore </usage/stores>`
-        :code:`pip install 'litestar[redis]'
-`
+        :code:`pip install 'litestar[redis]'`
 
     :ref:`Picologging <usage/logging:using picologging>`
-        :code:`pip install 'litestar[picologging]'
-`
+        :code:`pip install 'litestar[picologging]'`
 
     :ref:`StructLog <usage/logging:using structlog>`
-        :code:`pip install 'litestar[structlog]'
-`
+        :code:`pip install 'litestar[structlog]'`
 
     :doc:`Prometheus Instrumentation </usage/metrics/prometheus>`
-        :code:`pip install 'litestar[prometheus]'
-`
+        :code:`pip install 'litestar[prometheus]'`
 
     :doc:`Open Telemetry Instrumentation </usage/metrics/open-telemetry>`
-        :code:`pip install 'litestar[opentelemetry]'
-`
+        :code:`pip install 'litestar[opentelemetry]'`
 
     :doc:`SQLAlchemy </usage/databases/sqlalchemy/index>`（通过 `Advanced-Alchemy <https://docs.advanced-alchemy.litestar.dev/latest/>`_）
-        :code:`pip install 'litestar[sqlalchemy]'
-`
+        :code:`pip install 'litestar[sqlalchemy]'`
 
-    :doc:`Jinja 模板引擎 </usage/templating>`
-        :code:`pip install 'litestar[jinja]'
-`
+    :doc:`Jinja Templating </usage/templating>`
+        :code:`pip install 'litestar[jinja]'`
 
-    :doc:`Mako 模板引擎 </usage/templating>`
-        :code:`pip install 'litestar[mako]'
-`
+    :doc:`Mako Templating </usage/templating>`
+        :code:`pip install 'litestar[mako]'`
 
-    :ref:`更好的 OpenAPI 示例生成 <usage/openapi/schema_generation:Generating examples>`，可配合 `Polyfactory <https://github.com/litestar-org/polyfactory>`_
-        :code:`pip install 'litestar[polyfactory]'
-`
+    :ref:`Better OpenAPI examples generation <usage/openapi/schema_generation:Generating examples>` with `Polyfactory <https://github.com/litestar-org/polyfactory>`_
+        :code:`pip install 'litestar[polyfactory]'`
 
-    :doc:`HTMX 插件 </usage/htmx>`
-        :code:`pip install 'litestar[htmx]'
-`
+    :doc:`HTMX plugin </usage/htmx>`
+        :code:`pip install 'litestar[htmx]'`
 
-    :ref:`OpenAPI YAML 渲染 <usage/openapi/ui_plugins:Using OpenAPI UI Plugins>`
-        :code:`pip install 'litestar[yaml]'
-`
+    :ref:`OpenAPI YAML rendering <usage/openapi/ui_plugins:Using OpenAPI UI Plugins>`
+        :code:`pip install 'litestar[yaml]'`
 
-    标准安装（包含 CLI、Uvicorn 与 Jinja2 模板）：
-        :code:`pip install 'litestar[standard]'
-`
+    Standard Installation (includes CLI, Uvicorn, and Jinja2 templating):
+        :code:`pip install 'litestar[standard]'`
 
-    全部扩展：
-        :code:`pip install 'litestar[full]'
-`
+    All Extras:
+        :code:`pip install 'litestar[full]'`
 
     .. note:: 不建议安装全部扩展（full），因为它会带入大量不必要的依赖。
 
@@ -141,8 +122,8 @@
 
 .. tip:: 你也可以查看自动生成的基于 OpenAPI 的文档：
 
-    * ``http://localhost:8000/schema``（用于 `ReDoc <https://redocly.com/redoc>`_），
-    * ``http://localhost:8000/schema/swagger``（用于 `Swagger UI <https://swagger.io/>`_），
+    * ``http://localhost:8000/schema``（用于 `ReDoc <https://redocly.com/redoc>`_）
+    * ``http://localhost:8000/schema/swagger``（用于 `Swagger UI <https://swagger.io/>`_）
     * ``http://localhost:8000/schema/elements``（用于 `Stoplight Elements <https://stoplight.io/open-source/elements/>`_）
     * ``http://localhost:8000/schema/rapidoc``（用于 `RapiDoc <https://rapidocweb.com/>`_）
 

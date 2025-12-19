@@ -32,6 +32,8 @@ JSON
    RPS JSON
 
 .. note::
+   
+   以上基准测试仅供参考，实际性能可能因具体使用场景而异。
     由于所有框架都使用其“原生”配置，Litestar 将通过 `msgspec <https://jcristharif.com/msgspec/>`_ 运行数据，而 FastAPI 将通过 `Pydantic <https://docs.pydantic.dev/latest/>`_ 运行数据。
 
 
@@ -55,6 +57,8 @@ JSON
    RPS 文件
 
 .. note::
+   
+   以上基准测试仅供参考，实际性能可能因具体使用场景而异。
     Sanic 和 Quart 不支持或仅部分支持同步文件响应。
 
 
@@ -68,7 +72,7 @@ JSON
 -  查询参数：单个查询参数，强制转换为整数
 -  混合参数：一个路径参数和一个查询参数，均强制转换为整数
 
-.. figure:: /images/bencharts/rps_params.svg
+.. figure:: images/benchmarks/rps_params.svg
    :alt: RPS 路径和查询参数
 
    RPS 路径和查询参数
@@ -87,3 +91,5 @@ JSON
 
 
 .. note::
+   
+   以上基准测试仅供参考，实际性能可能因具体使用场景而异。

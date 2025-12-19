@@ -40,7 +40,6 @@ Litestar 提供了多种指定和处理 HTTP 响应的方式,每种方式都适�
 
 MediaType 具有以下成员:
 
-
 * MediaType.JSON: ``application/json``
 * MediaType.MessagePack: ``application/x-msgpack``
 * MediaType.TEXT: ``text/plain``

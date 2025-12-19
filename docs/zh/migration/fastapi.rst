@@ -1,5 +1,5 @@
 从 Starlette / FastAPI 迁移
-------------------------
+==============================
 
 路由装饰器
 ~~~~~~~~~~~~~~~~~~
@@ -230,7 +230,7 @@ Cookies
 
 依赖项参数
 ~~~~~~~~~~~~~~~~~~~~~~~
-FastAPI 和 Litestar 之间传递依赖项参数的方式不同，请注意 Litestar 示例中的 `state: State` 参数。
+FastAPI 和 Litestar 之间传递依赖项参数的方式不同，请注意 Litestar 示例中的 ``state: State`` 参数。
 您可以通过处理器中的 state 关键字参数或 ``request.state``（它们指向同一个对象，一个从应用程序状态继承的请求本地状态）获取状态，或者通过 `request.app.state` 获取应用程序的状态。
 
 .. tab-set::
