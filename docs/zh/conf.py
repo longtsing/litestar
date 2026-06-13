@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib.metadata
 import json
 import os
+import re
 import sys
 import warnings
 from datetime import datetime
@@ -49,6 +50,13 @@ extensions = [
     "sphinx_togglebutton",
 ]
 
+# 自定义扩展：把英文 docstring 替换为中文（来自 tools/translate_docstrings.py 生成的缓存）
+sys.path.insert(0, str(Path(__file__).parent / "_ext"))
+extensions.append("zh_docstring")
+
+ZH_DOCSTRING_CACHE = str(Path(__file__).parent / "_docstrings")
+ZH_DOCSTRING_FALLBACK = True
+
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 intersphinx_mapping = {
@@ -85,7 +93,7 @@ autodoc_class_signature = "separated"
 autodoc_default_options = {"special-members": "__init__", "show-inheritance": True, "members": True}
 autodoc_member_order = "bysource"
 autodoc_typehints_format = "short"
-autodoc_mock_imports = []
+autodoc_mock_imports = ["picologging"]
 
 nitpicky = True
 nitpick_ignore = [
@@ -398,11 +406,12 @@ html_theme_options = {
     ],
 }
 
-if environment != "latest":
-    html_theme_options["announcement"] = (
-        f"您正在查看文档的 <strong>{environment}</strong> 版本。"
-        f'<a href="/latest/">点击此处查看最新版本。</a>'
-    )
+# Announcement banner disabled for local builds.
+# if environment != "latest":
+#     html_theme_options["announcement"] = (
+#         f"您正在查看文档的 <strong>{environment}</strong> 版本。"
+#         f'<a href="/latest/">点击此处查看最新版本。</a>'
+#     )
 
 
 def delayed_setup(app: Sphinx) -> None:

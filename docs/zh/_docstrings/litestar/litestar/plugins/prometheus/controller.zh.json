@@ -1,0 +1,7 @@
+{
+  "litestar.plugins.prometheus.controller.PrometheusController": {
+    "hash": "40a14af482812a6b",
+    "text": "Prometheus 端点的控制器。",
+    "type": "ClassDef"
+  }
+}

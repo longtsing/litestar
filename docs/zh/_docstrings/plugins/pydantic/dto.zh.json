@@ -1,0 +1,6 @@
+{
+  "litestar.plugins.pydantic.dto.PydanticDTO": {
+    "hash": "7646a49c28990e2c",
+    "text": "支持使用 Pydantic 进行领域建模。"
+  }
+}

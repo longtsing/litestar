@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.server_variable.ServerVariable": {
+    "hash": "ced89c004fc4a4d5",
+    "text": "表示用于服务器 URL 模板替换的服务器变量的对象。"
+  }
+}

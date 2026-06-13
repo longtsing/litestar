@@ -1,0 +1,7 @@
+{
+  "litestar._openapi.request_body.create_request_body": {
+    "hash": "50fd2b0ff50c30ee",
+    "text": "为给定路由处理器的数据字段创建 RequestBody 实例。\n\nArgs:\n    context: OpenAPIContext 实例。\n    handler_id: 处理器 ID。\n    resolved_data_dto: 解析后的数据 DTO。\n    data_field: 数据字段。\n\nReturns:\n    一个 RequestBody 实例。",
+    "type": "FunctionDef"
+  }
+}

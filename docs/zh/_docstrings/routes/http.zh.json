@@ -1,0 +1,18 @@
+{
+  "litestar.routes.http.HTTPRoute": {
+    "hash": "7b8576dabc52c2b7",
+    "text": "一个能够处理多个 ``HTTPRouteHandler`` 的 HTTP 路由。"
+  },
+  "litestar.routes.http.HTTPRoute.__init__": {
+    "hash": "df341c6537826f3e",
+    "text": "初始化 ``HTTPRoute``。\n\nArgs:\n    path: 路由的路径。\n    route_handlers: :class:`~.handlers.HTTPRouteHandler` 类（HTTP 路由处理器）的列表。"
+  },
+  "litestar.routes.http.HTTPRoute.create_handler_map": {
+    "hash": "96ef07dfab7ba6c0",
+    "text": "解析此路由的 ``router_handlers`` 并返回 HTTP 方法（http-methods）与路由处理程序（route handlers）的映射。"
+  },
+  "litestar.routes.http.HTTPRoute.handle": {
+    "hash": "c469cb6b6679c6eb",
+    "text": "创建自传入参数的 Request 对象，确定要调用的处理函数，然后处理该调用的 ASGI 应用。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI receive 函数。\n    send: ASGI send 函数。\n\nReturns:\n    None"
+  }
+}

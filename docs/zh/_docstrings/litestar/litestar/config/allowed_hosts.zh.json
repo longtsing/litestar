@@ -1,0 +1,12 @@
+{
+  "litestar.config.allowed_hosts.AllowedHostsConfig": {
+    "hash": "4192017190308b94",
+    "text": "允许主机保护的配置。\n\n要启用允许主机保护，请使用 ``allowed_hosts`` 键将此类的一个实例传递给 :class:`Litestar <litestar.app.Litestar>` 构造函数。",
+    "type": "ClassDef"
+  },
+  "litestar.config.allowed_hosts.AllowedHostsConfig.__post_init__": {
+    "hash": "0070bd5c61f42506",
+    "text": "确保受信任的主机具有正确的域名通配符。",
+    "type": "FunctionDef"
+  }
+}

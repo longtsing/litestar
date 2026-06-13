@@ -1,0 +1,27 @@
+{
+  "litestar.events.listener.EventListener": {
+    "hash": "288f27af7e1a9505",
+    "text": "事件监听器的装饰器",
+    "type": "ClassDef"
+  },
+  "litestar.events.listener.EventListener.__call__": {
+    "hash": "e479cbe017a5c304",
+    "text": "通过将其包装在 `EventListener` 实例中来装饰可调用对象。\n\nArgs:\n    fn: 要装饰的可调用对象。\n\nReturns:\n    `EventListener` 的一个实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.events.listener.EventListener.__init__": {
+    "hash": "2bcaa127f5a918d2",
+    "text": "为事件处理器创建装饰器。\n\nArgs:\n    *event_ids: 要监听的事件 ID，或要监听的事件 ID 列表。",
+    "type": "FunctionDef"
+  },
+  "litestar.events.listener.EventListener.wrap_in_error_handler": {
+    "hash": "c592e69d32ca4de0",
+    "text": "包装一个监听器函数以处理错误。\n\n监听器在 `TaskGroup` 中并发执行，因此我们需要确保异常不会传播到任务组，从而导致其他未完成的监听器被取消，以及接收流被关闭。\n\n参见 https://github.com/litestar-org/litestar/issues/2809\n\nArgs:\n    fn: 要包装的监听器函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.events.listener.EventListener.wrap_in_error_handler.wrapped": {
+    "hash": "6cfa7167e99adc46",
+    "text": "包装一个监听器函数以处理错误。",
+    "type": "AsyncFunctionDef"
+  }
+}

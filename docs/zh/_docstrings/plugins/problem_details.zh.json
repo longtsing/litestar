@@ -1,0 +1,27 @@
+{
+  "litestar.plugins.problem_details": {
+    "hash": "452b29403af762d3",
+    "text": "将异常转换为问题详情响应的插件。",
+    "type": "Module"
+  },
+  "litestar.plugins.problem_details.ProblemDetailsConfig": {
+    "hash": "814bad0e3cb78b68",
+    "text": "``ProblemDetailsPlugin`` 的配置对象。"
+  },
+  "litestar.plugins.problem_details.ProblemDetailsException": {
+    "hash": "488c74b8cc1c25df",
+    "text": "根据 RFC 9457 标准的详细问题异常。"
+  },
+  "litestar.plugins.problem_details.ProblemDetailsException.__init__": {
+    "hash": "ca11d950032a316c",
+    "text": "初始化 ``ProblemDetailsException``。\n\nArgs:\n    *args: 如果未提供 ``detail`` 关键字参数，则第一个参数应为错误详情。\n    detail: 异常详情或消息。如果未提供，将默认为 args[0]。\n    status_code: 异常的 HTTP 状态码。\n    headers: 要在响应中设置的标头。\n    extra: 要附加到异常上的额外映射。\n    type_: 问题详情中的 type 字段。\n    title: 问题详情中的 title 字段。\n    instance: 问题详情中的 instance 字段。"
+  },
+  "litestar.plugins.problem_details.ProblemDetailsException.to_response": {
+    "hash": "ee9b3625e8f11d4f",
+    "text": "将问题详情异常转换为 ``Response``。"
+  },
+  "litestar.plugins.problem_details.ProblemDetailsPlugin": {
+    "hash": "d4a4c2fb797ea423",
+    "text": "一个根据 RFC 9457 将异常转换为问题详情的插件。"
+  }
+}

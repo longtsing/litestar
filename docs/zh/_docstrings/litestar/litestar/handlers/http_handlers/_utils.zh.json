@@ -1,0 +1,37 @@
+{
+  "litestar.handlers.http_handlers._utils.create_data_handler": {
+    "hash": "975d51cde8b1795e",
+    "text": "为任意数据创建处理函数。\n\nArgs:\n    after_request: 一个请求后处理函数。\n    background: 一个后台任务或多个后台任务。\n    cookies: 一组预定义的 Cookie。\n    headers: 一组响应头。\n    media_type: 响应媒体类型。\n    response_class: 要使用的响应类。\n    status_code: 响应状态码。\n    type_encoders: 类型到编码器函数的映射。\n\nReturns:\n    一个处理函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers._utils.create_generic_asgi_response_handler": {
+    "hash": "e8e5eacd6c20ae68",
+    "text": "为响应创建处理函数。\n\nArgs:\n    after_request: 一个请求后处理函数。\n\nReturns:\n    一个处理函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers._utils.create_response_handler": {
+    "hash": "093a623082a33cf0",
+    "text": "为 Litestar 响应创建处理函数。\n\nArgs:\n    after_request: 一个请求后处理函数。\n    background: 一个后台任务或多个后台任务。\n    cookies: 一组预定义的 Cookie。\n    headers: 一组响应头。\n    media_type: 响应媒体类型。\n    status_code: 响应状态码。\n    type_encoders: 类型到编码函数的映射。\n\nReturns:\n    一个处理函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers._utils.get_default_status_code": {
+    "hash": "4caf9363368813ca",
+    "text": "返回给定 HTTP 方法集合的默认状态码。\n\nArgs:\n    http_methods: 方法字符串的集合\n\nReturns:\n    一个状态码",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers._utils.is_empty_response_annotation": {
+    "hash": "5adede845446fd6b",
+    "text": "返回返回注解是否为空响应。\n\nArgs:\n    return_annotation: 一个返回注解。\n\nReturns:\n    返回注解是否为空响应。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers._utils.normalize_headers": {
+    "hash": "171a5b428b99b459",
+    "text": "给定一个 `ResponseHeader` 字典，对其进行过滤并返回一个值字典。\n\nArgs:\n    headers: 一个包含 :class:`ResponseHeader <litestar.datastructures.ResponseHeader>` 值的字典\n\nReturns:\n    一个以字符串为键的规范化值字典",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers._utils.normalize_http_method": {
+    "hash": "19edf5213681c2e5",
+    "text": "将 HTTP 方法（一个或多个）规范化为一组大写的 HTTP 方法名称。\n\nArgs:\n    http_methods: HTTP 方法的值。\n\nReturns:\n    规范化后的 HTTP 方法集合。",
+    "type": "FunctionDef"
+  }
+}

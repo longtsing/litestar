@@ -1,0 +1,20 @@
+{
+  "litestar.response.redirect.ASGIRedirectResponse": {
+    "hash": "84257cdf5594b79f",
+    "text": "一个底层的 ASGI 重定向响应类。"
+  },
+  "litestar.response.redirect.Redirect": {
+    "hash": "49840c027c2407d6",
+    "text": "重定向响应。"
+  },
+  "litestar.response.redirect.Redirect.__init__": {
+    "hash": "2eff208bbb96acaf",
+    "text": "初始化响应。\n\nArgs:\n    path: 要重定向到的路径。\n    background: 在响应发送后运行的后台任务或任务列表。\n    cookies: 要在响应 ``Set-Cookie`` 标头下设置的 :class:`Cookie <.datastructures.Cookie>` 实例列表。\n    encoding: 用于响应标头的编码。\n    headers: 以字符串为键的响应标头字典。标头键不区分大小写。\n    media_type: 响应 ``Content-Type`` 标头的值。\n    status_code: HTTP 状态码。状态码应为 301、302、303、307 或 308 之一，否则将引发异常。\n    type_encoders: 将类型映射为可调用对象，用于将它们转换为支持序列化的类型。\n    query_params: 用于生成请求查询参数的值字典。\n\nRaises:\n    ImproperlyConfiguredException: 如果状态码不是重定向状态码，或者媒体类型不受支持。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.redirect.RedirectStatusType": {
+    "hash": "9be3b48b56902ff5",
+    "text": "重定向响应的可接受状态码。",
+    "type": "Variable"
+  }
+}

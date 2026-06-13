@@ -1,0 +1,12 @@
+{
+  "litestar.utils.path.join_paths": {
+    "hash": "a3ed92833614f9ee",
+    "text": "规范化并连接路径片段。\n\nArgs:\n    paths: 路径片段的可迭代对象。\n\nReturns:\n    规范化后的连接路径字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.path.normalize_path": {
+    "hash": "cd0fc0cb027fc0ee",
+    "text": "规范化给定路径，确保其以斜杠开头且不以斜杠结尾。\n\nArgs:\n    path: 路径字符串\n\nReturns:\n    路径字符串",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.__init__": {
+    "hash": "fb37f4898f7729fb",
+    "text": "HTTP 路由的处理程序。\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段序列。\n        如果未提供，默认为 ``/``\n    fn: 处理函数\n    after_request: 在 :class:`Request <.connection.Request>` 传递给任何路由处理程序之前执行的同步或异步函数。\n        如果此函数返回值，请求将不会到达路由处理程序，而是使用该返回值。\n    after_response: 在响应等待完成后调用的同步或异步函数。它接收\n        :class:`Request <.connection.Request>` 对象，且不应返回任何值。\n    background: 在响应完成后执行的 :class:`BackgroundTask <.background_tasks.BackgroundTask>` 实例或\n        :class:`BackgroundTasks <.background_tasks.BackgroundTasks>`。\n        默认为 ``None``。\n    before_request: 在调用路由处理程序之前立即调用的同步或异步函数。接收\n        :class:`Request <.connection.Request>` 实例，任何非 ``None`` 的返回值将用于\n        响应，从而绕过路由处理程序。\n    cache: 如果在应用级别配置，则启用响应缓存。有效值为 ``True`` 或\n        缓存响应的秒数（例如 ``120``）。\n    cache_control: 将添加到响应中的 ``cache-control`` 标头，类型为\n        :class:`CacheControlHeader <.datastructures.CacheControlHeader>`。\n    cache_key_builder: :class:`缓存键构建函数 <.types.CacheKeyBuilder>`。如果已在应用级别配置缓存，\n        允许自定义缓存键。\n    dependencies: 以字符串为键的依赖项 :class:`Provider <.di.Provide>` 实例映射。\n    dto: 用于请求数据（反）序列化和验证的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    etag: 将添加到响应中的 ``etag`` 标头，类型为 :class:`ETag <.datastructures.ETag>`。\n    exception_handlers: 状态码和/或异常类型到处理函数的映射。\n    guards: :class:`Guard <.types.Guard>` 可调用对象的序列。\n    http_method: :class:`http 方法字符串 <.types.Method>`，枚举\n        :class:`HttpMethod <.enums.HttpMethod>` 的成员，或这些方法的列表，对应于路由\n        处理函数应处理的方法。\n    media_type: :class:`MediaType <.enums.MediaType>` 枚举的成员，或包含有效 IANA\n        媒体类型的字符串。\n    middleware: :class:`Middleware <.types.Middleware>` 的序列。\n    name: 标识路由处理程序的字符串。\n    opt: 以字符串为键的任意值映射，可在 :class:`Guards <.types.Guard>` 中访问，或\n        在任何可访问 :class:`Request <.connection.Request>` 或\n        :class:`ASGI Scope <.types.Scope>` 的地方访问。\n    request_class: 用作路由处理程序默认请求的 :class:`Request <.connection.Request>` 自定义子类。\n    request_max_body_size: 请求正文允许的最大大小（字节）。如果超过此大小，\n        将返回 '413 - Request Entity Too Large' 错误响应。\n    response_class: 用作路由处理程序默认响应的 :class:`Response <.response.Response>` 自定义子类。\n    response_cookies: :class:`Cookie <.datastructures.Cookie>` 实例的序列。\n    response_headers: 以字符串为键的 :class:`ResponseHeader <.datastructures.ResponseHeader>`\n        实例映射。\n    responses: 额外状态码及其预期内容描述的映射。\n        此信息将包含在 OpenAPI 架构中。\n    return_dto: 用于序列化出站响应数据的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    status_code: 响应的 http 状态码。默认为 ``GET``、``PUT`` 和 ``PATCH`` 的 ``200``，\n        ``POST`` 的 ``201`` 以及 ``DELETE`` 的 ``204``。对于混合方法请求，将首先检查 ``POST`` 和 ``DELETE``，\n        然后默认为 ``200``。\n    sync_to_thread: 布尔值，指定处理函数是在工作线程还是主事件循环中执行。\n        这仅对同步处理函数有效。请参阅使用同步处理函数。\n    content_encoding: 描述内容编码的字符串，例如 ``\"base64\"``。\n    content_media_type: 指定内容媒体类型的字符串，例如 ``\"image/png\"``。\n    deprecated: 布尔值，指定是否应在 OpenAPI 架构中将此路由标记为已弃用。\n    description: 用于路由架构描述部分的文本。\n    include_in_schema: 布尔标志，指定是否应在 OpenAPI 架构中记录路由处理程序。\n    operation_class: 用于路由 OpenAPI 架构的 :class:`Operation <.openapi.spec.operation.Operation>`。\n    operation_id: 字符串或返回字符串的可调用对象。用作路由架构 operationId 的标识符。\n\n    raises: 用于 OpenAPI 文档的异常类列表，这些类继承自 litestar.HttpException。\n        此列表应描述路由处理函数/方法中引发的所有异常。如果涉及任何验证，\n        Litestar ValidationException 将自动添加到架构中。\n    response_description: 用于路由响应架构描述部分的文本。\n    security: 包含有关可在端点上使用哪些安全方案的信息的字典序列。\n    summary: 用于路由架构摘要部分的文本。\n    tags: 将附加到 OpenAPI 架构的字符串标签序列。\n    type_decoders: 元组序列，每个元组由测试类型身份的谓词和用于反序列化的 msgspec 钩子组成。\n    type_encoders: 类型到可调用对象的映射，这些可调用对象将它们转换为支持序列化的类型。\n    parameters: :func:`Parameter <.params.Parameter>` 定义的映射\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler._call_handler_function": {
+    "hash": "3343fb89630e8e5c",
+    "text": "调用请求前处理器，检索路由处理器所需的数据，并调用路由处理器的 ``to_response`` 方法。\n\n此过程被包裹在 try-except 块中——如果抛出异常，则尝试将其传递给适当的异常处理器（如果已定义）。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler._get_cached_response": {
+    "hash": "241efeb94fc8b333",
+    "text": "检索并反序列化缓存的响应（如果存在）。\n\nArgs:\n    request: :class:`Request <litestar.connection.Request>` 实例\n\nReturns:\n    如果存在，则返回一个缓存的响应实例。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler._get_response_for_request": {
+    "hash": "98aabe1d609cf632",
+    "text": "返回请求的响应。\n\n如果启用了缓存且缓存中存在响应，则返回缓存的响应。\n如果启用了缓存但缓存中不存在响应，则新创建的响应将被缓存。\n\nArgs:\n    request: Request 实例\n\nReturns:\n    Response 实例、兼容的 ASGIApp 或其子类实例",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler._resolve_response_headers": {
+    "hash": "7fc7069741e6429c",
+    "text": "返回处理函数作用域内的所有头部参数。\n\nReturns:\n    一个将键映射到 :class:`ResponseHeader <.datastructures.ResponseHeader>` 实例的字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler._validate_handler_function": {
+    "hash": "e45a1b238b7ad1ac",
+    "text": "验证路由处理函数，方法是在其设置后检查其返回类型注解。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.handle": {
+    "hash": "9f09b4e2097b67c7",
+    "text": "从传入的参数创建 :class:`~.connection.Request` 的 ASGI 应用，确定要调用的处理函数，然后处理该调用。\n\n.. versionadded: 3.0\n\nArgs:\n        connection: 请求\n\nReturns:\n        None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_after_response": {
+    "hash": "d91fbdfdf6b8e76a",
+    "text": "从路由处理器开始向上查找，以解析 `after_response` 处理器。\n\n如果找到处理器则返回该处理器，否则设置为 `None`。\n此方法已进行记忆化（memoized），因此计算仅执行一次。\n\nReturns:\n    一个可选的 :class:`after response 生命周期钩子处理器 <.types.AfterResponseHookHandler>`",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_before_request": {
+    "hash": "e372486d5db7d3ce",
+    "text": "通过从路由处理器开始向上移动，解析 `before_handler` 处理器。\n\n如果找到处理器则返回该处理器，否则设置为 `None`。\n此方法已进行记忆化（memoized），因此计算仅执行一次。\n\nReturns:\n    一个可选的 :class:`before 请求生命周期钩子处理器 <.types.BeforeRequestHookHandler>`",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_include_in_schema": {
+    "hash": "166d9138d5ec5493",
+    "text": "从路由处理器开始向上遍历，解析 `include_in_schema` 属性。\n\n如果在任何所有权层级中找到 `include_in_schema`，则返回最后找到的值。\n如果在任何层级中均未找到，则返回默认值 ``True``。\n\nReturns:\n    bool: 解析后的 `include_in_schema` 属性。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_request_class": {
+    "hash": "940275b4855b0a38",
+    "text": "返回所有者图中最近的自定义 Request 类，或默认的 Request 类。\n\n此方法已进行记忆化（memoized），因此计算仅执行一次。\n\nReturns:\n    路由处理程序的默认 :class:`Request <.connection.Request>` 类。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_response_class": {
+    "hash": "65c484eab607e630",
+    "text": "返回所有者图中最近的自定义 Response 类，或默认的 Response 类。\n\n此方法已进行记忆化（memoized），因此计算仅执行一次。\n\nReturns:\n    路由处理程序的默认 :class:`Response <.response.Response>` 类。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_security": {
+    "hash": "91648a4efcffc882",
+    "text": "从路由处理器开始向上追溯，以解析安全属性。\n\n安全需求是累加的，因此路由处理器的安全需求是所有所有权层安全需求的总和。\n\nReturns:\n    list[SecurityRequirement]: 解析后的安全属性。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.resolve_tags": {
+    "hash": "a9b9399aa0f58077",
+    "text": "通过从路由处理器开始向上移动来解析 tags 属性。\n\nTags 是累加的，因此路由处理器的 tags 是所有所有权层 tags 的总和。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.http_handlers.base.HTTPRouteHandler.to_response": {
+    "hash": "a8a5f81b505b2cf2",
+    "text": "从处理程序中解析并调用以返回一个 :class:`Response <.response.Response>`。\n\nArgs:\n    data: 可以是 :class:`Response <.response.Response>` 的实例、Response 实例或任意值。\n    request: 一个 :class:`Request <.connection.Request>` 实例\n\nReturns:\n    一个 Response 实例",
+    "type": "AsyncFunctionDef"
+  }
+}

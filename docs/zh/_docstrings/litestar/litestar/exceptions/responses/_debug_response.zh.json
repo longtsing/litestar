@@ -1,0 +1,37 @@
+{
+  "litestar.exceptions.responses._debug_response.create_debug_response": {
+    "hash": "191c9a55958bfeb7",
+    "text": "根据客户端能力，以纯文本或 HTML 格式创建调试响应。\n\nArgs:\n    request: 一个 :class:`Request <litestar.connection.Request>` 实例。\n    exc: 一个用于渲染调试响应的 Exception 实例。\n\nReturns:\n    一个包含渲染后的异常回溯信息的响应。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.responses._debug_response.create_exception_html": {
+    "hash": "b37e06358ed53b32",
+    "text": "生成异常帧的 HTML 表示。\n\nArgs:\n    exc: 要生成的 Exception 实例。\n    line_limit: 返回的代码上下文行数，这些行以执行行为中心。\n\nReturns:\n    一个包含与异常相关的执行帧的 HTML 表示的字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.responses._debug_response.create_frame_html": {
+    "hash": "ab84214b442d5ec2",
+    "text": "生成给定帧对象的 HTML 表示，包括包含源代码的文件名以及正在执行的函数名称。\n\nArgs:\n    frame: [FrameInfo](https://docs.python.org/3/library/inspect.html#inspect.FrameInfo) 的实例。\n    collapsed: 控制帧是否应在页面加载时折叠的标志。\n\nReturns:\n    包含执行帧 HTML 表示的字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.responses._debug_response.create_html_response_content": {
+    "hash": "87c400769ee212c2",
+    "text": "给定一个异常，生成其 HTML 格式的堆栈跟踪。\n\nArgs:\n    exc: 用于渲染调试响应的异常实例。\n    request: 一个 :class:`Request <litestar.connection.Request>` 实例。\n    line_limit: 返回的代码上下文行数，这些行以执行行为中心。\n\nReturns:\n    一个包含异常堆栈跟踪的 HTML 页面字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.responses._debug_response.create_line_html": {
+    "hash": "fb7ebeb5413ab7a4",
+    "text": "生成包含源代码中实际行号的行的 HTML 表示。\n\nArgs:\n    line: 表示当前行的字符串。\n    line_no: 与执行行关联的行号。\n    frame_index: 执行行在代码上下文中的索引。\n    idx: 当前行在代码上下文中的索引。\n\nReturns:\n    包含给定行的 HTML 表示的字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.responses._debug_response.create_plain_text_response_content": {
+    "hash": "bfb246b521d9b57b",
+    "text": "给定一个异常，以纯文本形式生成其回溯信息。\n\nArgs:\n    exc: 一个 Exception 实例，用于生成调试响应。\n\nReturns:\n    包含异常回溯信息的字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.responses._debug_response.get_symbol_name": {
+    "hash": "3344a46b729b4e84",
+    "text": "返回由给定帧执行的函数的完整名称。\n\nArgs:\n    frame: [FrameInfo](https://docs.python.org/3/library/inspect.html#inspect.FrameInfo) 的实例。\n\nNotes:\n    - 类检测假设参数的标准名称为 `self` 和 `cls`。\n    - 如果无法确定当前类名，则仅返回函数（方法）名称。\n    - 目前我们无法区分静态方法和普通函数。\n\nReturns:\n    包含完整函数名的字符串。",
+    "type": "FunctionDef"
+  }
+}

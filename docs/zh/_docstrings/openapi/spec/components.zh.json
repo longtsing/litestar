@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.components.Components": {
+    "hash": "40af6271e7fa772c",
+    "text": "保存一组用于 OAS 不同方面的可重用对象。\n\n在 components 对象内定义的所有对象，除非从 components 对象之外的属性中显式引用，否则不会对 API 产生任何影响。"
+  }
+}

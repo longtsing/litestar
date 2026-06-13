@@ -1,0 +1,51 @@
+{
+  "litestar.dto._codegen_backend": {
+    "hash": "133a2bbba39e1ad7",
+    "text": "DTO 后端负责将原始字节解码并验证为领域模型，以及反向将领域模型转换回原始字节的重任。",
+    "type": "Module"
+  },
+  "litestar.dto._codegen_backend.DTOCodegenBackend.__init__": {
+    "hash": "41cb0a75e169278c",
+    "text": "创建 DTO 后端实例。\n\nArgs:\n    dto_factory: 调用此后端的 DTO 工厂类。\n    field_definition: 解析后的类型。\n    handler_id: 此后端所对应的处理器名称。\n    is_data_field: 该字段是否为 DTOData 的子类。\n    model_type: 模型类型。\n    wrapper_attribute_name: 如果 DTO 应操作的数据被封装在通用数据结构中，此属性名为存储该数据的属性名称。"
+  },
+  "litestar.dto._codegen_backend.DTOCodegenBackend._create_transfer_data_fn": {
+    "hash": "0e6112b018428d54",
+    "text": "创建 ``destination_type`` 的实例或实例的可迭代对象。\n\nArgs:\n    destination_type: DTO 在类型收窄时接收到的模型类型。\n    field_definition: 解析后的类型，代表 DTO 所应用的处理程序注解。\n\nReturns:\n    解析为 ``destination_type`` 的数据。"
+  },
+  "litestar.dto._codegen_backend.DTOCodegenBackend.encode_data": {
+    "hash": "8d56e743bd528671",
+    "text": "将数据编码为 ``LitestarEncodableType``。\n\nArgs:\n    data: 待编码的数据。\n\nReturns:\n    编码后的数据。"
+  },
+  "litestar.dto._codegen_backend.DTOCodegenBackend.populate_data_from_builtins": {
+    "hash": "a8d4213b7423d86e",
+    "text": "从内置类型填充模型实例。\n\nArgs:\n    builtins: 内置类型。\n    asgi_connection: 当前的 ASGI 连接。\n\nReturns:\n    ``model_type`` 实例或实例集合。"
+  },
+  "litestar.dto._codegen_backend.DTOCodegenBackend.populate_data_from_raw": {
+    "hash": "5f5bd97ef964dafd",
+    "text": "将原始字节解析为 `model_type` 的实例。\n\nArgs:\n    raw: bytes\n    asgi_connection: 当前的 ASGI 连接\n\nReturns:\n    `model_type` 的实例或实例集合。"
+  },
+  "litestar.dto._codegen_backend.DTOCodegenBackend.transfer_data_from_builtins": {
+    "hash": "b1b3194cac562f5e",
+    "text": "从内置类型填充模型实例。\n\nArgs:\n    builtins: 内置类型。\n\nReturns:\n    ``model_type`` 实例或实例集合。"
+  },
+  "litestar.dto._codegen_backend.TransferFunctionFactory._access_attribute": {
+    "hash": "8bf6a883737f6aa0",
+    "text": "进入一个上下文，在此上下文中可以安全地访问对象的属性，即仅当对象确实拥有该属性时。\n生成一个用于检索对象属性的表达式。在此上下文中写入的内容可以使用该表达式来访问所需的值。"
+  },
+  "litestar.dto._codegen_backend.TransferFunctionFactory._access_mapping_item": {
+    "hash": "1e04d28e04a9f0d3",
+    "text": "进入一个上下文，在此上下文中可以安全地访问映射（mapping）中的项，即仅当该项包含在该映射中时方可访问。\n生成一个用于访问映射项的表达式。在此上下文中写入的内容可以使用该表达式来访问所需的值。"
+  },
+  "litestar.dto._codegen_backend.TransferFunctionFactory._make_function": {
+    "hash": "cc07b1ecd3880c25",
+    "text": "将当前函数体内容包装在函数定义中，并将其转换为可调用对象。"
+  },
+  "litestar.dto._codegen_backend.TransferFunctionFactory._start_block": {
+    "hash": "bc3cb26935452ebf",
+    "text": "开始一个缩进块。如果提供了 `expr`，则将其用作块的“起始行”。"
+  },
+  "litestar.dto._codegen_backend.TransferFunctionFactory._try_except_pass": {
+    "hash": "b0bd68bde9b7e066",
+    "text": "进入一个 ``try / except / pass`` 代码块。在此上下文中编写的内容将放入 ``try`` 块中。"
+  }
+}

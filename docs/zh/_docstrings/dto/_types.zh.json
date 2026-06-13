@@ -1,0 +1,34 @@
+{
+  "litestar.dto._types.CollectionType": {
+    "hash": "58ef1cbb3bf1793f",
+    "text": "用于表示数据传输集合类型的类型。"
+  },
+  "litestar.dto._types.CompositeType": {
+    "hash": "8d5635158c1381d5",
+    "text": "由其他类型组成的类型。"
+  },
+  "litestar.dto._types.MappingType": {
+    "hash": "2313839d98c255f5",
+    "text": "用于表示数据传输映射的类型。"
+  },
+  "litestar.dto._types.NestedFieldInfo": {
+    "hash": "55662037bc2bda3b",
+    "text": "用于表示嵌套模型类型的字段和模型类型。"
+  },
+  "litestar.dto._types.SimpleType": {
+    "hash": "5fbf5ce5c870d8e3",
+    "text": "表示不可分割、非复合的类型。"
+  },
+  "litestar.dto._types.TransferType": {
+    "hash": "55909c52c79f0f2e",
+    "text": "用于表示数据传输模型类型的类型。"
+  },
+  "litestar.dto._types.TupleType": {
+    "hash": "5b41488e45c5fc9c",
+    "text": "用于表示数据传输元组的类型。"
+  },
+  "litestar.dto._types.UnionType": {
+    "hash": "bdc865484a96b9f0",
+    "text": "用于表示数据传输联合类型的类型。"
+  }
+}

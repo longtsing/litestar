@@ -1,0 +1,137 @@
+{
+  "litestar.file_system.BaseFileSystem.info": {
+    "hash": "feb94ae8fcf0dbb4",
+    "text": "返回给定 ``path`` 的 :class:`~litestar.file_system.FileInfo`。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.BaseFileSystem.iter": {
+    "hash": "ea0dec46be7c113b",
+    "text": "从 ``path`` 流式读取字节\n\nArgs:\n    path: 要读取的路径\n    chunksize: 每次读取的字节数\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含该位置）",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.BaseFileSystem.read_bytes": {
+    "hash": "2ee2586aab3262a7",
+    "text": "从 ``path`` 读取字节\n\nArgs:\n    path: 要读取的文件\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含该位置）",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.BaseLocalFileSystem": {
+    "hash": "09fd7afbf867b6e7",
+    "text": "本地文件系统的基类。",
+    "type": "ClassDef"
+  },
+  "litestar.file_system.BaseLocalFileSystem._info": {
+    "hash": "feb94ae8fcf0dbb4",
+    "text": "返回给定 ``path`` 的 :class:`~litestar.file_system.FileInfo`。",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.BaseLocalFileSystem.info": {
+    "hash": "feb94ae8fcf0dbb4",
+    "text": "返回给定 ``path`` 的 :class:`~litestar.file_system.FileInfo`。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.BaseLocalFileSystem.iter": {
+    "hash": "ea0dec46be7c113b",
+    "text": "从 ``path`` 流式读取字节\n\nArgs:\n    path: 要读取的路径\n    chunksize: 每次读取的字节数\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含该位置）",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.BaseLocalFileSystem.read_bytes": {
+    "hash": "2ee2586aab3262a7",
+    "text": "从 ``path`` 读取字节\n\nArgs:\n    path: 要读取的文件\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含）",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.FileInfo": {
+    "hash": "aa86deb916063673",
+    "text": "从文件系统收集的文件信息。",
+    "type": "ClassDef"
+  },
+  "litestar.file_system.FileSystemRegistry.__init__": {
+    "hash": "4f942b66770be37f",
+    "text": "文件系统注册表\n\nArgs:\n    file_systems: 名称到文件系统的映射\n    default: 未指定系统时使用的默认文件系统。如果为 ``None``，则默认为 :class:`~litestar.file_system.BaseLocalFileSystem`",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.FileSystemRegistry.default": {
+    "hash": "6c9d00d6813691ca",
+    "text": "返回默认文件系统",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.FileSystemRegistry.get": {
+    "hash": "8e5669af70e093f4",
+    "text": "返回在 ``name`` 下注册的文件系统。如果未找到匹配的文件系统，则返回 ``None``。",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.FileSystemRegistry.register": {
+    "hash": "a07702f64c392e0e",
+    "text": "在 ``name`` 下注册文件系统 ``fs``。如果此前已在此名称下注册了文件系统，则将被覆盖。",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.FsspecAsyncWrapper.__init__": {
+    "hash": "e75281f31a0b0a78",
+    "text": "包装一个 :class:`fsspec.asyn.AsyncFileSystem`，以提供与 :class:`litestar.file_system.BaseFileSystem` 兼容的接口。\n\nArgs:\n    fs: 一个以 `asynchronous=True` 实例化的 :class:`fsspec.asyn.AsyncFileSystem`。",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.FsspecAsyncWrapper.info": {
+    "hash": "d438796766bf2266",
+    "text": "返回给定 ``path`` 的 :class:`~litestar.file_system.FileInfo`。\n\n从 ``fsspec.async.AsyncFileSystem._info`` 原样返回信息，但尝试使用 :func:`litestar.file_system.get_fsspec_mtime_equivalent` 修补 'mtime'。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.FsspecAsyncWrapper.iter": {
+    "hash": "0c85af05f8b775aa",
+    "text": "从 ``path`` 流式读取字节。\n\n如果未提供偏移量且文件系统实现了 ``fsspec.async.AsyncFileSystem.async_open``，则使用 ``async_open``；否则，使用 ``fsspec.async.AsyncFileSystem._cat_file`` 手动读取数据块。\n\nArgs:\n    path: 要读取的路径\n    chunksize: 每个数据块读取的字节数\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含该位置）",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.FsspecAsyncWrapper.read_bytes": {
+    "hash": "9dd857b2f63a0a99",
+    "text": "从 ``path`` 读取字节，使用 ``fsspec.asyn.AsyncFileSystem._cat_file``\n\nArgs:\n    path: 要读取的文件\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含该位置）",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.FsspecSyncWrapper.__init__": {
+    "hash": "dd6833cd8e343c3b",
+    "text": "包装一个 :class:`fsspec.spec.AbstractFileSystem` 以提供与 :class:`litestar.file_system.BaseFileSystem` 兼容的接口",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.FsspecSyncWrapper.info": {
+    "hash": "549bf7b60f351785",
+    "text": "返回给定 ``path`` 的 :class:`~litestar.file_system.FileInfo`。\n\n从 :meth:`fsspec.spec.AbstractFileSystem.info` 原样返回信息，但尝试使用 :func:`litestar.file_system.get_fsspec_mtime_equivalent` 修补 'mtime'。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.FsspecSyncWrapper.iter": {
+    "hash": "9153a7b31cea6beb",
+    "text": "从 ``path`` 流式读取字节，使用 :meth:`fsspec.spec.AbstractFileSystem.open`\n\nArgs:\n    path: 要读取的路径\n    chunksize: 每个块读取的字节数\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含该位置）",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.FsspecSyncWrapper.read_bytes": {
+    "hash": "a828a576d695e148",
+    "text": "从 ``path`` 读取字节，使用 :meth:`fsspec.spec.AbstractFileSystem.cat_file`\n\nArgs:\n    path: 要读取的文件\n    start: 开始读取的偏移量\n    end: 停止读取的偏移量（包含该位置）",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.LinkableFileSystem": {
+    "hash": "daf1c8210ccdd277",
+    "text": "支持符号链接的文件系统",
+    "type": "ClassDef"
+  },
+  "litestar.file_system.LinkableFileSystem.get_symlink_resolver": {
+    "hash": "2ef8e4a7902442e1",
+    "text": "对于给定的文件系统，获取一个用于解析路径中潜在符号链接的函数。\n\n对于实现 :class:`~litestar.file_system.LinkableFileSystem` 的类，将返回其 :meth:`~litestar.file_system.LinkableFileSystem.resolve_symlinks` 方法。否则，将返回通过 :class:`~litestar.file_system.LinkableFileSystem.register_as_linkable` 注册的 ``resolver``。",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.LinkableFileSystem.register_as_linkable": {
+    "hash": "d30c030a9fdfd4cb",
+    "text": "注册一个文件系统的类型为“可链接”，即支持符号链接，但其自身未实现 :class:`~litestar.file_system.LinkableFileSystem`。\n\n默认情况下，会注册 :class:`fsspec.implementations.local.LocalFileSystem`。\n\nArgs:\n    fs_type: 文件系统类型\n    resolver: 一个函数，接收一个路径并返回解析所有符号链接后的绝对路径",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.LinkableFileSystem.resolve_symlinks": {
+    "hash": "d54a795b2afdcf45",
+    "text": "返回解析所有符号链接后的 ``path``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.file_system.get_fsspec_mtime_equivalent": {
+    "hash": "ba68f4fa5a2e7114",
+    "text": "返回不同 fsspec 实现对应的 `'mtime'` 或等效值，因为它们尚未标准化。\n\n参见 https://github.com/fsspec/filesystem_spec/issues/526。",
+    "type": "FunctionDef"
+  },
+  "litestar.file_system.maybe_wrap_fsspec_file_system": {
+    "hash": "53784abe0970119c",
+    "text": "如果 ``file_system`` 是 fsspec 文件系统，则根据其类型将其包装在\n:class:`~litestar.file_system.FsspecSyncWrapper` 或\n:class:`~litestar.file_system.FsspecAsyncWrapper` 中。如果未安装 fsspec 或 ``file_system`` 不是 fsspec 文件系统，则返回\n``file_system``。",
+    "type": "FunctionDef"
+  }
+}

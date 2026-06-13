@@ -1,0 +1,27 @@
+{
+  "litestar._signature.model.SignatureModel": {
+    "hash": "0e0690e08f2edc61",
+    "text": "表示使用 msgspec 特定类型或类型的函数签名的模型。",
+    "type": "ClassDef"
+  },
+  "litestar._signature.model.SignatureModel._build_error_message": {
+    "hash": "d1b0702f5f3bfd48",
+    "text": "构建错误消息。\n\nArgs:\n    keys: 键列表。\n    exc_msg: 消息。\n    connection: ASGI 连接实例。\n\nReturns:\n    一个 ErrorMessage",
+    "type": "FunctionDef"
+  },
+  "litestar._signature.model.SignatureModel._create_exception": {
+    "hash": "2a63360269b4a1f9",
+    "text": "创建一个异常类——根据失败是发生在客户端提供的值还是注入的依赖中，创建 `ValidationException` 或 `InternalServerException`。\n\nArgs:\n    connection: 一个 ASGI 连接实例。\n    messages: 错误消息列表。\n\nReturns:\n    一个异常对象。",
+    "type": "FunctionDef"
+  },
+  "litestar._signature.model.SignatureModel.parse_values_from_connection_kwargs": {
+    "hash": "d65569f5ecaaa0f2",
+    "text": "从连接实例中提取值，并返回解析后的值字典。\n\nArgs:\n    connection: ASGI 连接实例。\n    kwargs: 参数字典。\n\nRaises:\n    ValidationException: 如果验证失败。\n    InternalServerException: 如果引发了其他异常。\n\nReturns:\n    解析后的值字典",
+    "type": "FunctionDef"
+  },
+  "litestar._signature.model.SignatureModel.to_dict": {
+    "hash": "a180193faf974cad",
+    "text": "规范化对签名模型字典方法的访问，因为不同的后端使用不同的方法来实现此功能。\n\nReturns: 一个以字符串为键的字典。",
+    "type": "FunctionDef"
+  }
+}

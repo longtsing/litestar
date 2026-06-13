@@ -1,0 +1,132 @@
+{
+  "litestar.types.asgi_types": {
+    "hash": "3160eb9b2fb8630d",
+    "text": "包含改编自 https://github.com/django/asgiref/blob/main/asgiref/typing.py 的代码。\n\n版权所有 (c) Django 软件基金会及个别贡献者。\n保留所有权利。\n\n在满足以下条件的前提下，允许以源代码和二进制形式重新分发和使用，无论是否修改：\n\n    1. 源代码的重新分发必须保留上述版权声明、本条件列表以及以下免责声明。\n\n    2. 二进制形式的重新分发必须在文档和/或其他随分发提供的材料中复制上述版权声明、本条件列表以及以下免责声明。\n\n    3. 未经事先书面许可，不得使用 Django 的名称或其贡献者的名称来背书或推广源自本软件的产品。\n\n本软件由版权所有者和贡献者“按原样”提供，不提供任何明示或暗示的保证，包括但不限于对适销性和特定用途适用性的暗示保证。在任何情况下，版权所有者和贡献者均不对任何直接、间接、偶然、特殊、惩戒性或后果性损害（包括但不限于替代商品或服务的采购；使用、数据或利润的损失；或业务中断）承担责任，无论该责任是基于合同、严格责任还是侵权（包括疏忽或其他原因），即使已被告知发生此类损害的可能性。",
+    "type": "Module"
+  },
+  "litestar.types.asgi_types.ASGIVersion": {
+    "hash": "491142e9786845ab",
+    "text": "ASGI 规范版本。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.BaseScope": {
+    "hash": "28b4c18e998e8f8e",
+    "text": "ASGI 作用域基类。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.HTTPDisconnectEvent": {
+    "hash": "01f9b33942577292",
+    "text": "ASGI `http.disconnect` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.HTTPRequestEvent": {
+    "hash": "a7e7e336ca6321ae",
+    "text": "ASGI `http.request` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.HTTPResponseBodyEvent": {
+    "hash": "a0ce2284e90f831d",
+    "text": "ASGI `http.response.body` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.HTTPResponseStartEvent": {
+    "hash": "0fae864269ba1a3a",
+    "text": "ASGI `http.response.start` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.HTTPScope": {
+    "hash": "5734e6958864a2e4",
+    "text": "HTTP-ASGI-scope.",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.HTTPServerPushEvent": {
+    "hash": "c0e0fd6e0a61be5a",
+    "text": "ASGI `http.response.push` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.HeaderScope": {
+    "hash": "148782dd52723c94",
+    "text": "支持标头的 ASGI 作用域基类。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.LifeSpanScope": {
+    "hash": "68a34c7d43fb74d4",
+    "text": "Lifespan-ASGI-scope.",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.LifeSpanShutdownCompleteEvent": {
+    "hash": "0d05858c0b320e3f",
+    "text": "ASGI `lifespan.shutdown.complete` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.LifeSpanShutdownEvent": {
+    "hash": "e783084424c91984",
+    "text": "ASGI `lifespan.shutdown` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.LifeSpanShutdownFailedEvent": {
+    "hash": "ad053c0c457d1ce7",
+    "text": "ASGI `lifespan.shutdown.failed` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.LifeSpanStartupCompleteEvent": {
+    "hash": "f065da507868fd91",
+    "text": "ASGI `lifespan.startup.complete` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.LifeSpanStartupEvent": {
+    "hash": "d0ce15f24df0247d",
+    "text": "ASGI `lifespan.startup` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.LifeSpanStartupFailedEvent": {
+    "hash": "3ca666bb148181a2",
+    "text": "ASGI `lifespan.startup.failed` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketAcceptEvent": {
+    "hash": "6bd121f017d9de61",
+    "text": "ASGI `websocket.accept` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketCloseEvent": {
+    "hash": "a7d912aa044bcb61",
+    "text": "ASGI `websocket.close` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketConnectEvent": {
+    "hash": "1f7b25645542972f",
+    "text": "ASGI `websocket.connect` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketDisconnectEvent": {
+    "hash": "27a949590a1b90b0",
+    "text": "ASGI `websocket.disconnect` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketReceiveEvent": {
+    "hash": "db36991a37ea3520",
+    "text": "ASGI `websocket.receive` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketResponseBodyEvent": {
+    "hash": "add5a25986e151cb",
+    "text": "ASGI `websocket.http.response.body` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketResponseStartEvent": {
+    "hash": "329bb15eb058a62f",
+    "text": "ASGI `websocket.http.response.start` 事件。",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketScope": {
+    "hash": "6cad14e1ea0ebae0",
+    "text": "WebSocket-ASGI-scope.",
+    "type": "ClassDef"
+  },
+  "litestar.types.asgi_types.WebSocketSendEvent": {
+    "hash": "d4afc59e1207af96",
+    "text": "ASGI `websocket.send` 事件。",
+    "type": "ClassDef"
+  }
+}

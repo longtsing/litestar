@@ -1,0 +1,30 @@
+{
+  "litestar.serialization.msgspec_hooks.decode_json": {
+    "hash": "c513ce018afe0591",
+    "text": "将 JSON 字符串/字节解码为对象。\n\nArgs:\n    value: 待解码的值\n    target_type: 可选的目标类型，用于将数据解码为该类型\n    type_decoders: 可选的类型解码器序列\n    strict: 是否严格遵循类型强制规则。设置为 False 可启用更广泛的从字符串到非字符串类型的强制规则，适用于所有值\n\nReturns:\n    一个对象\n\nRaises:\n    SerializationException: 如果解码 ``value`` 时出错。"
+  },
+  "litestar.serialization.msgspec_hooks.decode_msgpack": {
+    "hash": "d5887eeb11aac59c",
+    "text": "将 MessagePack 字符串/字节解码为对象。\n\nArgs:\n    value: 待解码的值\n    target_type: 用于解码数据的可选类型\n    type_decoders: 可选的类型解码器序列\n    strict: 是否应严格遵循类型强制规则。设置为 False 可启用更广泛的从字符串到非字符串类型的强制规则，适用于所有值\n\nReturns:\n    一个对象\n\nRaises:\n    SerializationException: 如果解码 ``value`` 时出错。"
+  },
+  "litestar.serialization.msgspec_hooks.default_deserializer": {
+    "hash": "6ac1f366db342f3b",
+    "text": "转换 ``msgspec`` 原生不支持的值\n\nArgs:\n    target_type: 遇到的类型\n    value: 待转换的值\n    type_decoders: 可选的类型解码器序列\n\nReturns:\n    一个 ``msgspec`` 支持的类型"
+  },
+  "litestar.serialization.msgspec_hooks.default_serializer": {
+    "hash": "b659a5219cacc024",
+    "text": "转换 ``msgspec`` 原生不支持的值\n\nArgs:\n    value: 待序列化的值\n    type_encoders: 将类型映射到用于转换类型的可调用对象的映射\nReturns:\n    序列化后的值\nRaises:\n    TypeError: 如果值不受支持"
+  },
+  "litestar.serialization.msgspec_hooks.encode_json": {
+    "hash": "e3a749b4a6850705",
+    "text": "将值编码为 JSON。\n\nArgs:\n    value: 要编码的值\n    serializer: 可选的可调用对象，用于支持非原生支持的类型。\n\nReturns:\n    作为字节的 JSON\n\nRaises:\n    SerializationException: 如果编码 ``obj`` 时出错。"
+  },
+  "litestar.serialization.msgspec_hooks.encode_msgpack": {
+    "hash": "35c13fc42ca705f2",
+    "text": "将值编码为 MessagePack。\n\nArgs:\n    value: 要编码的值\n    serializer: 可选的可调用对象，用于支持非原生支持的类型\n\nReturns:\n    作为字节的 MessagePack 数据\n\nRaises:\n    SerializationException: 如果编码 ``obj`` 时出错。"
+  },
+  "litestar.serialization.msgspec_hooks.get_serializer": {
+    "hash": "f5085100e43770f6",
+    "text": "获取给定类型编码器的序列化器。"
+  }
+}

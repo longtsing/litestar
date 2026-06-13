@@ -1,0 +1,27 @@
+{
+  "litestar.dto.field": {
+    "hash": "40e2e07e19365090",
+    "text": "DTO 领域类型。",
+    "type": "Module"
+  },
+  "litestar.dto.field.DTOField": {
+    "hash": "2cc106cb88ef70d8",
+    "text": "用于配置模型字段上的 DTO 行为。",
+    "type": "ClassDef"
+  },
+  "litestar.dto.field.Mark": {
+    "hash": "530f6a022176e1c7",
+    "text": "用于在领域模型上标记字段定义。",
+    "type": "ClassDef"
+  },
+  "litestar.dto.field.dto_field": {
+    "hash": "2e7e3b822912c744",
+    "text": "创建字段元数据映射。\n\nArgs:\n    mark: 字段的 DTO 标记，例如 \"read-only\"。\n\nReturns:\n    用于设置为字段元数据的字典，例如 dataclass 的 \"metadata\" 字段键，或 SQLAlchemy 的 \"info\" 字段。\n\n    标记字段会根据 DTO 的用途，自动将其包含或排除在 DTO 字段定义之外。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.field.extract_dto_field": {
+    "hash": "bc39574df5a89db2",
+    "text": "提取模型字段的 ``DTOField`` 实例。\n\n支持通过 ``Annotated`` 或通过字段信息/元数据映射来设置 ``DTOField``。\n\n例如：``Annotated[str, DTOField(mark=\"read-only\")]`` 或 ``info=dto_field(mark=\"read-only\")``。\n\n如果在 ``field_info_mapping`` 中找到了值，则其优先级高于字段定义中的元数据。\n\nArgs:\n    field_definition: 字段定义。\n    field_info_mapping: 字段元数据/信息属性映射，例如 SQLAlchemy 的 ``info`` 属性，\n      或 dataclasses 的 ``metadata`` 属性。\n\nReturns:\n    DTO 字段信息（如果存在）。",
+    "type": "FunctionDef"
+  }
+}

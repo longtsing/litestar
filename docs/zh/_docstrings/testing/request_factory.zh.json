@@ -1,0 +1,46 @@
+{
+  "litestar.testing.request_factory.RequestFactory": {
+    "hash": "fc434fa2ed4e25d6",
+    "text": "用于创建 :class:`Request <litestar.connection.Request>` 实例的工厂。"
+  },
+  "litestar.testing.request_factory.RequestFactory.__init__": {
+    "hash": "d7f6c7aa010312f6",
+    "text": "初始化 ``RequestFactory``\n\nArgs:\n     app: :class:`Litestar <litestar.app.Litestar>` 的实例，将设置为 ``request.scope[\"litestar_app\"]``。\n     server: 服务器的域名。\n     port: 服务器的端口。\n     root_path: 服务器的根路径。\n     scheme: 服务器的协议方案。\n     handler_kwargs: 传递给为请求创建的路线处理程序（route handler）的关键字参数。\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar\n        from litestar.enums import RequestEncodingType\n        from litestar.testing import RequestFactory\n\n        from tests import PersonFactory\n\n        my_app = Litestar(route_handlers=[])\n        my_server = \"litestar.org\"\n\n        # Create a GET request\n        query_params = {\"id\": 1}\n        get_user_request = RequestFactory(app=my_app, server=my_server).get(\n            \"/person\", query_params=query_params\n        )\n\n        # Create a POST request\n        new_person = PersonFactory.build()\n        create_user_request = RequestFactory(app=my_app, server=my_server).post(\n            \"/person\", data=person\n        )\n\n        # Create a request with a special header\n        headers = {\"header1\": \"value1\"}\n        request_with_header = RequestFactory(app=my_app, server=my_server).get(\n            \"/person\", query_params=query_params, headers=headers\n        )\n\n        # Create a request with a media type\n        request_with_media_type = RequestFactory(app=my_app, server=my_server).post(\n            \"/person\", data=person, request_media_type=RequestEncodingType.MULTI_PART\n        )"
+  },
+  "litestar.testing.request_factory.RequestFactory._build_headers": {
+    "hash": "834d79a7c8510c05",
+    "text": "构建一个可传递给请求作用域的编码头部列表。\n\nArgs:\n    headers: 一个头部字典。\n    cookies: 一个表示 Cookie 头部的字符串，或一个 \"Cookie\" 实例列表。\n        该值可以包含多个 Cookie。\n\nReturns:\n    一个可传递给请求作用域的编码头部列表。"
+  },
+  "litestar.testing.request_factory.RequestFactory._create_cookie_header": {
+    "hash": "8722f538f4cf064f",
+    "text": "创建 Cookie 头并将其添加到 ``headers`` 字典中。\n\nArgs:\n    headers: 一个包含请求头的字典，Cookie 头将被添加其中。\n    cookies: 一个表示 Cookie 头的字符串，或一系列 \"Cookie\" 实例。\n        该值可以包含多个 Cookie。"
+  },
+  "litestar.testing.request_factory.RequestFactory._create_request_with_data": {
+    "hash": "a96108238a43b6f6",
+    "text": "创建一个包含请求体（数据）的 :class:`Request <litestar.connection.Request>` 实例\n\nArgs:\n    http_method: 请求的 HTTP 方法。\n    path: 请求的路径。\n    headers: 一个包含请求头的字典。\n    cookies: 表示 Cookie 头的字符串，或 \"Cookie\" 实例的列表。\n        该值可以包含多个 Cookie。\n    session: 一个包含会话数据的字典。\n    user: 用于 `request.scope[\"user\"]` 的值。\n    auth: 用于 `request.scope[\"auth\"]` 的值。\n    request_media_type: 请求的 'Content-Type' 头。\n    data: 请求体的值。可以是任何支持的序列化类型。\n    files: 一个包含随请求发送的文件的字典。\n    query_params: 一个用于生成请求查询参数的值字典。\n    state: 任意的请求状态。\n    path_params: 一个以路径参数值为键的字符串字典。\n    http_version: HTTP 版本。默认为 \"1.1\"。\n    route_handler: 一个路由处理器实例或方法。如果未提供，将设置默认处理器。\n\nReturns:\n    一个 :class:`Request <litestar.connection.Request>` 实例"
+  },
+  "litestar.testing.request_factory.RequestFactory._create_scope": {
+    "hash": "a46d73e8e99f7589",
+    "text": "为 :class:`Request <litestar.connection.Request>` 创建作用域。\n\nArgs:\n    path: 请求的路径。\n    http_method: 请求的 HTTP 方法。\n    session: 会话数据字典。\n    user: 用于 `request.scope[\"user\"]` 的值。\n    auth: 用于 `request.scope[\"auth\"]` 的值。\n    query_params: 用于生成请求查询参数的值字典。\n    state: 任意请求状态。\n    path_params: 以路径参数值为键的字符串字典。\n    http_version: HTTP 版本。默认为 \"1.1\"。\n    route_handler: 路由处理器实例或方法。如果未提供，将设置默认处理器。\n\nReturns:\n    一个字典，可作为作用域传递给 :class:`Request <litestar.connection.Request>` 的构造函数。"
+  },
+  "litestar.testing.request_factory.RequestFactory.delete": {
+    "hash": "1d3a9d5eeccda7df",
+    "text": "创建 :class:`Request <litestar.connection.Request>` 的 POST 实例。\n\nArgs:\n    path: 请求的路径。\n    headers: 标头字典。\n    cookies: 表示 Cookie 标头的字符串，或 \"Cookie\" 实例列表。\n        该值可包含多个 Cookie。\n    session: 会话数据字典。\n    user: `request.scope[\"user\"]` 的值。\n    auth: `request.scope[\"auth\"]` 的值。\n    query_params: 用于生成请求查询参数的值字典。\n    state: 任意请求状态。\n    path_params: 以路径参数值为键的字符串字典。\n    http_version: HTTP 版本。默认为 \"1.1\"。\n    route_handler: 路由处理器实例或方法。如果未提供，将设置默认处理器。\n\nReturns:\n    一个 :class:`Request <litestar.connection.Request>` 实例"
+  },
+  "litestar.testing.request_factory.RequestFactory.get": {
+    "hash": "11996fb0a5680c1c",
+    "text": "创建 :class:`Request <litestar.connection.Request>` 的 GET 请求实例。\n\nArgs:\n    path: 请求的路径。\n    headers: 请求头字典。\n    cookies: 表示 Cookie 头的字符串，或 \"Cookie\" 实例列表。该值可包含多个 Cookie。\n    session: 会话数据字典。\n    user: `request.scope[\"user\"]` 的值。\n    auth: `request.scope[\"auth\"]` 的值。\n    query_params: 用于生成请求查询参数的值字典。\n    state: 任意请求状态。\n    path_params: 以路径参数值为键的字符串字典。\n    http_version: HTTP 版本。默认为 \"1.1\"。\n    route_handler: 路由处理器实例或方法。如果未提供，将设置默认处理器。\n\nReturns:\n    一个 :class:`Request <litestar.connection.Request>` 实例"
+  },
+  "litestar.testing.request_factory.RequestFactory.patch": {
+    "hash": "ecca5269afe34409",
+    "text": "创建 :class:`Request <litestar.connection.Request>` 实例的 PATCH 请求。\n\nArgs:\n    path: 请求的路径。\n    headers: 标头字典。\n    cookies: 表示 Cookie 标头的字符串，或 \"Cookie\" 实例列表。\n        该值可包含多个 Cookie。\n    session: 会话数据字典。\n    user: `request.scope[\"user\"]` 的值。\n    auth: `request.scope[\"auth\"]` 的值。\n    request_media_type: 请求的 'Content-Type' 标头。\n    data: 请求体的值。可以是任何支持的序列化类型。\n    query_params: 用于生成请求查询参数的值字典。\n    state: 任意请求状态。\n    path_params: 以路径参数值为键的字符串字典。\n    http_version: HTTP 版本。默认为 \"1.1\"。\n    route_handler: 路由处理器实例或方法。如果未提供，将设置默认处理器。\n\nReturns:\n    一个 :class:`Request <litestar.connection.Request>` 实例"
+  },
+  "litestar.testing.request_factory.RequestFactory.post": {
+    "hash": "1753c9a546392330",
+    "text": "创建 :class:`Request <litestar.connection.Request>` 的 POST 实例。\n\nArgs:\n    path: 请求的路径。\n    headers: 标头字典。\n    cookies: 表示 Cookie 标头的字符串，或 \"Cookie\" 实例列表。\n        该值可包含多个 Cookie。\n    session: 会话数据字典。\n    user: `request.scope[\"user\"]` 的值。\n    auth: `request.scope[\"auth\"]` 的值。\n    request_media_type: 请求的 'Content-Type' 标头。\n    data: 请求体的值。可以是任何支持的序列化类型。\n    query_params: 用于生成请求查询参数的值字典。\n    state: 任意请求状态。\n    path_params: 以路径参数值为键的字符串字典。\n    http_version: HTTP 版本。默认为 \"1.1\"。\n    route_handler: 路由处理器实例或方法。如果未提供，将设置默认处理器。\n\nReturns:\n    一个 :class:`Request <litestar.connection.Request>` 实例"
+  },
+  "litestar.testing.request_factory.RequestFactory.put": {
+    "hash": "1e72af99ee74c665",
+    "text": "创建 :class:`Request <litestar.connection.Request>` 实例的 PUT 请求。\n\nArgs:\n    path: 请求的路径。\n    headers: 请求头字典。\n    cookies: 表示 Cookie 头的字符串，或 \"Cookie\" 实例列表。\n        该值可包含多个 Cookie。\n    session: 会话数据字典。\n    user: `request.scope[\"user\"]` 的值。\n    auth: `request.scope[\"auth\"]` 的值。\n    request_media_type: 请求的 'Content-Type' 头。\n    data: 请求体的值。可以是任何支持的序列化类型。\n    query_params: 用于生成请求查询参数的值字典。\n    state: 任意请求状态。\n    path_params: 以路径参数值为键的字符串字典。\n    http_version: HTTP 版本。默认为 \"1.1\"。\n    route_handler: 路由处理器实例或方法。如果未提供，将设置默认处理器。\n\nReturns:\n    一个 :class:`Request <litestar.connection.Request>` 实例"
+  }
+}

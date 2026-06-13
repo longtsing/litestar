@@ -1,0 +1,82 @@
+{
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.close": {
+    "hash": "d4070637db8e1772",
+    "text": "发送一个 'websocket.disconnect' 事件。\n\nArgs:\n    code: 关闭连接的状态码。\n    reason: 关闭原因\n\nReturns:\n    None."
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive": {
+    "hash": "0d367edf65ebafbb",
+    "text": "这是基础接收方法。\n\nArgs:\n    block: 阻塞直到收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nNotes:\n    - 您可以使用其他接收方法之一从消息中提取数据。\n\nReturns:\n    一个 websocket 消息。"
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_bytes": {
+    "hash": "42bc728e6ec194ae",
+    "text": "以 ``binary`` 模式接收数据并返回字节\n\nArgs:\n    block: 阻塞直到收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nReturns:\n    一个字符串值。"
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_json": {
+    "hash": "7b9d7556f8ae0767",
+    "text": "以 ``text`` 或 ``binary`` 模式接收数据并将其解码为 JSON。\n\nArgs:\n    mode: 选择 ``text`` 或 ``binary`` 模式\n    block: 是否阻塞直到接收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nReturns:\n    任意值"
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.receive_text": {
+    "hash": "864eeca2cb1300ee",
+    "text": "以 ``text`` 模式接收数据并返回字符串\n\nArgs:\n    block: 阻塞直到收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nReturns:\n    一个字符串值。"
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send": {
+    "hash": "8c587bac020330b7",
+    "text": "发送一个“接收”事件。这是 ASGI 发送方法的逆操作。\n\nArgs:\n    data: 字符串或字节字符串。\n    mode: 要使用的键 - ``text`` 或 ``bytes``\n    encoding: 编码或解码数据时使用的编码。\n\nReturns:\n    None."
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_bytes": {
+    "hash": "7006f9b6a7564455",
+    "text": "使用 ``bytes`` 键发送数据。\n\nArgs:\n    data: 要发送的数据。\n    encoding: 要使用的编码。\n\nReturns:\n    None"
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_json": {
+    "hash": "2904df346af7ab35",
+    "text": "将给定数据作为 JSON 发送。\n\nArgs:\n    data: 要发送的数据。\n    mode: 可以是 ``text`` 或 ``binary``。\n\nReturns:\n    None"
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_msgpack": {
+    "hash": "ff08350493a2722e",
+    "text": "将给定数据作为 MessagePack 发送。\n\nArgs:\n    data: 要发送的数据。\n\nReturns:\n    None"
+  },
+  "litestar.testing.websocket_test_session.AsyncWebSocketTestSession.send_text": {
+    "hash": "d619fc5cdd52d08a",
+    "text": "使用 ``text`` 键发送数据。\n\nArgs:\n    data: 要发送的数据。\n    encoding: 要使用的编码。\n\nReturns:\n    None"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.close": {
+    "hash": "d4070637db8e1772",
+    "text": "发送一个 'websocket.disconnect' 事件。\n\nArgs:\n    code: 关闭连接的状态码。\n    reason: 关闭原因\n\nReturns:\n    None."
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.receive": {
+    "hash": "0d367edf65ebafbb",
+    "text": "这是基础接收方法。\n\nArgs:\n    block: 阻塞直到收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nNotes:\n    - 您可以使用其他接收方法之一从消息中提取数据。\n\nReturns:\n    一个 websocket 消息。"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.receive_bytes": {
+    "hash": "42bc728e6ec194ae",
+    "text": "以 ``binary`` 模式接收数据并返回字节\n\nArgs:\n    block: 阻塞直到接收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nReturns:\n    一个字符串值。"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.receive_json": {
+    "hash": "7b9d7556f8ae0767",
+    "text": "以 ``text`` 或 ``binary`` 模式接收数据并将其解码为 JSON。\n\nArgs:\n    mode: 选择 ``text`` 或 ``binary`` 模式\n    block: 是否阻塞直到接收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nReturns:\n    任意值"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.receive_text": {
+    "hash": "864eeca2cb1300ee",
+    "text": "以 ``text`` 模式接收数据并返回字符串\n\nArgs:\n    block: 阻塞直到收到消息\n    timeout: 如果 ``block`` 为 ``True``，则最多阻塞 ``timeout`` 秒\n\nReturns:\n    一个字符串值。"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.send": {
+    "hash": "8c587bac020330b7",
+    "text": "发送一个“接收”事件。这是 ASGI 发送方法的逆操作。\n\nArgs:\n    data: 字符串或字节字符串。\n    mode: 要使用的键 - ``text`` 或 ``bytes``\n    encoding: 编码或解码数据时使用的编码。\n\nReturns:\n    None."
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.send_bytes": {
+    "hash": "7006f9b6a7564455",
+    "text": "使用 ``bytes`` 键发送数据。\n\nArgs:\n    data: 要发送的数据。\n    encoding: 要使用的编码。\n\nReturns:\n    None"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.send_json": {
+    "hash": "2904df346af7ab35",
+    "text": "将给定数据作为 JSON 发送。\n\nArgs:\n    data: 要发送的数据。\n    mode: 可以是 ``text`` 或 ``binary``。\n\nReturns:\n    None"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.send_msgpack": {
+    "hash": "ff08350493a2722e",
+    "text": "将给定数据作为 MessagePack 发送。\n\nArgs:\n    data: 要发送的数据。\n\nReturns:\n    None"
+  },
+  "litestar.testing.websocket_test_session.WebSocketTestSession.send_text": {
+    "hash": "d619fc5cdd52d08a",
+    "text": "使用 ``text`` 键发送数据。\n\nArgs:\n    data: 要发送的数据。\n    encoding: 要使用的编码。\n\nReturns:\n    None"
+  }
+}

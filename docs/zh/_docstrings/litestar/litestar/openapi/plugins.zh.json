@@ -1,0 +1,162 @@
+{
+  "litestar.openapi.plugins.JsonRenderPlugin": {
+    "hash": "43b26b4cacbd823a",
+    "text": "将 OpenAPI 模式渲染为 JSON。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.JsonRenderPlugin.__init__": {
+    "hash": "c5fdfa0406e67c8c",
+    "text": "初始化 OpenAPI UI 渲染插件。\n\nArgs:\n    path: 提供 OpenAPI UI 的路径。\n    media_type: 处理器的媒体类型。\n    **kwargs: 传递给基类的其他参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.JsonRenderPlugin.render": {
+    "hash": "b73be3e12325193c",
+    "text": "将 OpenAPI 模式渲染为 JSON。\n\nArgs:\n    request: 请求。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 OpenAPI 模式，格式为 JSON。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.OpenAPIRenderPlugin": {
+    "hash": "edd45381c2d3ecc8",
+    "text": "OpenAPI UI 渲染插件的基类。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.OpenAPIRenderPlugin.__init__": {
+    "hash": "d372acc386720bdd",
+    "text": "初始化 OpenAPI UI 渲染插件。\n\nArgs:\n    path: 提供 OpenAPI UI 的路径。\n    media_type: 处理器的媒体类型。\n    favicon: 用于 favicon 的 HTML `<link>` 标签。\n    style: HTML 主体的基础样式。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.OpenAPIRenderPlugin.get_openapi_json_route": {
+    "hash": "c31aed193594d696",
+    "text": "获取 OpenAPI JSON 模式的路由。\n\nReturns:\n    OpenAPI JSON 模式的路由。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.OpenAPIRenderPlugin.has_path": {
+    "hash": "1bcee9a20a6be1ed",
+    "text": "检查插件是否包含指定路径。\n\nArgs:\n    path: 要检查的路径。\n\nReturns:\n    如果插件包含该路径则返回 True，否则返回 False。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.OpenAPIRenderPlugin.receive_router": {
+    "hash": "2d1efea1700c1de0",
+    "text": "接收提供 OpenAPI UI 的路由器。\n\n插件可使用此函数进一步配置路由器，例如添加额外路由。\n\nArgs:\n    router: 提供 OpenAPI UI 的路由器。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.OpenAPIRenderPlugin.render": {
+    "hash": "d2225bd13f9105e2",
+    "text": "渲染 OpenAPI 用户界面。\n\nArgs:\n    request: 触发渲染的请求。\n    openapi_schema: 作为字典的 OpenAPI 架构。\n\nReturns:\n    渲染后的 HTML。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.OpenAPIRenderPlugin.render_json": {
+    "hash": "a93fe6fca7f2de7f",
+    "text": "将 OpenAPI 模式渲染为 JSON。\n\nArgs:\n    request: 触发渲染的请求。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 JSON。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.RapidocRenderPlugin": {
+    "hash": "7780fc7105df4316",
+    "text": "使用 Rapidoc 渲染 OpenAPI 模式。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.RapidocRenderPlugin.__init__": {
+    "hash": "869a924efb3b0f07",
+    "text": "初始化 OpenAPI UI 渲染插件。\n\nArgs:\n    version: 从 CDN 下载的 RapiDoc 版本。如果提供了 js_url，则忽略此参数。\n    js_url: RapiDoc JS 捆绑包的下载 URL。如果未提供，则使用 version 来构建 URL。\n    path: 提供 OpenAPI UI 的路径。\n    **kwargs: 传递给基类的其他参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.RapidocRenderPlugin.render": {
+    "hash": "8c7ecc3f465599bb",
+    "text": "为 Rapidoc 渲染 HTML 页面。\n\n.. note:: 重写此方法以自定义模板。\n\nArgs:\n    request: 请求对象。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 HTML 字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.RedocRenderPlugin": {
+    "hash": "eea1c132ee39bc03",
+    "text": "使用 Redoc 渲染 OpenAPI 模式。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.RedocRenderPlugin.__init__": {
+    "hash": "264459d0c49f3eed",
+    "text": "初始化 OpenAPI UI 渲染插件。\n\nArgs:\n    version: 从 CDN 下载的 Redoc 版本。如果提供了 js_url，则忽略此参数。\n    js_url: Redoc JS 捆绑包的下载 URL。如果未提供，将使用 version 来构建 URL。\n    google_fonts: 通过 CDN 下载 Google 字体。如果不使用 CDN，应设置为 False。\n    path: 提供 OpenAPI UI 的路径。\n    **kwargs: 传递给基类的其他参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.RedocRenderPlugin.render": {
+    "hash": "16947310e49e12b9",
+    "text": "为 Redoc 渲染 HTML 页面。\n\n.. note:: 重写此方法以自定义模板。\n\nArgs:\n    request: 请求对象。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 HTML 字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.ScalarRenderPlugin": {
+    "hash": "815db02724d44c42",
+    "text": "使用 Scalar 渲染 OpenAPI 架构的插件。\n\n.. versionadded:: 2.8.0",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.ScalarRenderPlugin.__init__": {
+    "hash": "545399525523c41a",
+    "text": "初始化 Scalar OpenAPI UI 渲染插件。\n\nArgs:\n    version: 要从 CDN 下载的 Scalar 版本。\n        如果提供了 js_url，则忽略此参数。\n    js_url: Scalar JS 捆绑包的下载 URL。\n        如果未提供，将使用 version 来构建 URL。\n    css_url: Scalar CSS 捆绑包的下载 URL。\n        如果未提供，将使用 Litestar 提供的 CSS。\n    path: 提供 OpenAPI UI 的路径。\n    options: Scalar 配置选项。\n        如果未提供，将使用默认的 Scalar 配置。\n    **kwargs: 传递给基类的其他参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.ScalarRenderPlugin.render": {
+    "hash": "1f29de5e511ffdfc",
+    "text": "为 Scalar 渲染一个 HTML 页面。\n\n.. note:: 重写此方法以自定义模板。\n\nArgs:\n    request: 请求对象。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 HTML 字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.ScalarRenderPlugin.render_options": {
+    "hash": "1bae91224d756729",
+    "text": "将渲染选项转换为 Scalar 配置。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.StoplightRenderPlugin": {
+    "hash": "f795269017ae1651",
+    "text": "使用 StopLight Elements 渲染 OpenAPI 模式。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.StoplightRenderPlugin.__init__": {
+    "hash": "554fbaa90fd0eee8",
+    "text": "初始化 OpenAPI UI 渲染插件。\n\nArgs:\n    version: 要从 CDN 下载的 StopLight Elements 版本。如果提供了 js_url，则忽略此参数。\n    js_url: StopLight Elements JS 捆绑包的下载 URL。如果未提供，将使用 version 来构建 URL。\n    css_url: StopLight Elements CSS 捆绑包的下载 URL。如果未提供，将使用 version 来构建 URL。\n    path: 提供 OpenAPI UI 的路径。\n    **kwargs: 传递给基类的其他参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.StoplightRenderPlugin.render": {
+    "hash": "553c7f2c5a798ac0",
+    "text": "为 StopLight Elements 渲染 HTML 页面。\n\n.. note:: 重写此方法以自定义模板。\n\nArgs:\n    request: 请求对象。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 HTML 字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.SwaggerRenderPlugin": {
+    "hash": "f41d0d5ae5437d2a",
+    "text": "使用 Swagger-UI 渲染 OpenAPI 模式。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.SwaggerRenderPlugin.__init__": {
+    "hash": "5198323bf39271f3",
+    "text": "初始化 OpenAPI UI 渲染插件。\n\nArgs:\n    version: 要从 CDN 下载的 SwaggerUI 版本。如果提供了 js_url，则忽略此参数。\n    js_url: Swagger UI JS 捆绑包的下载 URL。如果未提供，将使用 version 来构建 URL。\n    css_url: Swagger UI CSS 捆绑包的下载 URL。如果未提供，将使用 version 来构建 URL。\n    standalone_preset_js_url: Swagger Standalone Preset JS 捆绑包的下载 URL。如果未提供，将使用 version 来构建 URL。\n    init_oauth: 通过调用 ``initOAuth`` 方法初始化 Swagger UI OAuth2 的 JSON 数据。\n        详细信息请参阅以下 URL：\n        `Swagger-UI <https://swagger.io/docs/open-source-tools/swagger-ui/usage/oauth2/>`_。\n    oauth2_redirect_url: Swagger UI 提供的 ``oauth2-redirect.html`` 页面的绝对 URL。\n        设置此值后，该值将作为 ``oauth2RedirectUrl`` 传递给 ``SwaggerUIBundle`` 配置，\n        覆盖 Swagger UI 默认根据当前页面位置计算 URL 的行为。\n        当 API 挂载在子路径下且自动计算的 URL 不正确时，此参数非常有用。\n    path: 提供 OpenAPI UI 的路径。\n    **kwargs: 传递给基类的其他参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.SwaggerRenderPlugin.receive_router": {
+    "hash": "eb4e979fdc441dbe",
+    "text": "接收提供 OpenAPI UI 的路由器。\n\n添加一个路由以提供 OAuth2 重定向页面。\n\nArgs:\n    router: 提供 OpenAPI UI 的路由器。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.SwaggerRenderPlugin.render": {
+    "hash": "0fac354096e89970",
+    "text": "为 Swagger-UI 渲染 HTML 页面。\n\nNotes:\n    - 重写此方法以自定义模板。\n\nArgs:\n    request: 请求对象。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 HTML 字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.SwaggerRenderPlugin.render_oauth2_redirect": {
+    "hash": "992f3da00cd2d0c7",
+    "text": "为 Swagger-UI 渲染一个 HTML oauth2-redirect.html 页面。\n\n.. note:: 重写此方法以自定义模板。\n\nReturns:\n    渲染后的 HTML 字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.YamlRenderPlugin": {
+    "hash": "d38f07ef76646131",
+    "text": "将 OpenAPI 模式渲染为 YAML。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.plugins.YamlRenderPlugin.__init__": {
+    "hash": "c5fdfa0406e67c8c",
+    "text": "初始化 OpenAPI UI 渲染插件。\n\nArgs:\n    path: 提供 OpenAPI UI 的路径。\n    media_type: 处理器的媒体类型。\n    **kwargs: 传递给基类的其他参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins.YamlRenderPlugin.render": {
+    "hash": "050a452e96e37d67",
+    "text": "将 OpenAPI 模式渲染为 YAML。\n\nArgs:\n    request: 请求。\n    openapi_schema: 作为字典的 OpenAPI 模式。\n\nReturns:\n    渲染后的 OpenAPI 模式（YAML 格式）。",
+    "type": "FunctionDef"
+  },
+  "litestar.openapi.plugins._get_cookie_value_or_undefined": {
+    "hash": "1b54015e165680be",
+    "text": "以字符串形式提供的 JavaScript 代码，用于根据名称获取 cookie 的值，若未找到则返回 undefined。",
+    "type": "FunctionDef"
+  }
+}

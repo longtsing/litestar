@@ -1,0 +1,62 @@
+{
+  "litestar.middleware.base.ASGIMiddleware": {
+    "hash": "a30961045a0d170f",
+    "text": "一个抽象基类，用于轻松构建 ASGI 中间件，提供基于 ASGI ``scope[\"type\"]``、处理器 ``opt`` 键或路径模式动态跳过中间件的功能，以及向中间件传递配置的简便方法。\n\n此基类未实现 ``__init__`` 方法，因此子类可以自由使用它来自定义中间件的配置。\n\n.. important::\n    各个中间件的实例将*仅创建一次*，并用于构建内部中间件栈。因此，中间件*不应*包含状态，因为这些状态将在所有请求之间共享。\n    任何与连接相关的状态都应限定在 `handle` 实现的作用域内。\n    如果不这样做，通常会导致跨请求的变量读写冲突，并极有可能引发错误。\n\n\n.. code-block:: python\n\n    class MyMiddleware(ASGIMiddleware):\n        scopes = (ScopeType.HTTP,)\n        exclude_path_pattern = (\"/not/this/path\",)\n        exclude_opt_key = \"exclude_my_middleware\"\n\n        def __init__(self, my_logger: Logger) -> None:\n            self.logger = my_logger\n\n        async def handle(\n            self, scope: Scope, receive: Receive, send: Send, next_app: ASGIApp\n        ) -> None:\n            self.logger.debug(\"Received request for path %s\", scope[\"path\"])\n            await next_app(scope, receive, send)\n            self.logger.debug(\"Processed request for path %s\", scope[\"path\"])\n\n\n    app = Litestar(..., middleware=[MyMiddleware(logger=my_logger)])\n\n.. versionadded:: 2.15",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.base.ASGIMiddleware.__call__": {
+    "hash": "6e9ec1e40c9c49e6",
+    "text": "创建实际的可调用中间件",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.base.ASGIMiddleware.handle": {
+    "hash": "cc8be7c0b0334ad7",
+    "text": "处理 ASGI 调用。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n    next_app: 中间件栈中要调用的下一个 ASGI 应用程序。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.base.ASGIMiddleware.should_bypass_for_handler": {
+    "hash": "770dfc9e5e4743e9",
+    "text": "如果根据 :attr:`~litestar.middleware.ASGIMiddleware.scopes`、\n:attr:`~litestar.middleware.ASGIMiddleware.exclude_path_pattern` 或\n:attr:`~litestar.middleware.ASGIMiddleware.exclude_opt_key`，此中间件应被 ``handler`` 绕过，则返回 ``True``，否则返回 ``False``。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.base.AbstractMiddleware": {
+    "hash": "42637f96b649e492",
+    "text": "提供所有中间件通用基础功能的抽象中间件，支持基于路径、``opt`` 键和 scope 类型动态启用或绕过中间件。\n\n在实现新中间件时，应以此类作为基类。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.base.AbstractMiddleware.__call__": {
+    "hash": "17034fefd7667847",
+    "text": "执行 ASGI 中间件。\n\n如果在前一个中间件调用时未等待响应，则由栈中的前一个中间件调用。\n\n完成后，中间件应调用下一个 ASGI 处理器并等待其执行，或者等待在其闭包中创建的响应。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.base.AbstractMiddleware.__init__": {
+    "hash": "47eb1025ef02d406",
+    "text": "初始化中间件。\n\nArgs:\n    app: 要调用的下一个 ASGI 应用。\n    exclude: 用于匹配请求路径的模式或模式列表。\n        如果找到匹配项，将跳过该中间件。\n    exclude_opt_key: 在路由处理器的 ``opt`` 键中设置的标识符，\n        用于允许跳过该中间件。\n    scopes: ASGI 作用域类型，应是一个集合，包含\n        'ScopeType.HTTP' 和/或 'ScopeType.WEBSOCKET'。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.base.DefineMiddleware": {
+    "hash": "eb945266916a7d67",
+    "text": "允许将 ``*args`` 和 ``**kwargs`` 传递给中间件类构造函数和工厂函数的容器。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.base.DefineMiddleware.__call__": {
+    "hash": "f0620d35d3e0012e",
+    "text": "调用中间件构造函数或工厂函数。\n\nArgs:\n    app: 一个 ASGIApp，该值是中间件栈中要调用的下一个 ASGI 处理器。\n\nReturns:\n    调用 :class:`DefineMiddleware.middleware <.DefineMiddleware>` 并返回创建的 ASGIApp。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.base.DefineMiddleware.__init__": {
+    "hash": "2db06cbaa8430033",
+    "text": "初始化 ``DefineMiddleware``。\n\nArgs:\n    middleware: 一个返回 ASGIApp 的可调用对象。\n    *args: 传递给该可调用对象的位置参数。\n    **kwargs: 传递给该可调用对象的键值参数。\n\nNotes:\n    该可调用对象将接收一个键值参数 ``app``，它是中间件栈中下一个要调用的 ASGI 应用。\n    因此，它必须定义这样一个键值参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.base.MiddlewareProtocol": {
+    "hash": "444e410ff0c8169e",
+    "text": "抽象中间件协议。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.base.MiddlewareProtocol.__call__": {
+    "hash": "17034fefd7667847",
+    "text": "执行 ASGI 中间件。\n\n如果在前一个中间件调用时未等待响应，则由栈中的前一个中间件调用。\n\n完成后，中间件应调用下一个 ASGI 处理器并等待其执行，或者等待在其闭包中创建的响应。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "litestar.utils.sequence.find_index": {
+    "hash": "58702e29360d6eb9",
+    "text": "在列表中根据键和值查找元素。\n\n列表元素可以是字典或类。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.sequence.unique": {
+    "hash": "303f461a03f06ae8",
+    "text": "返回给定序列或迭代器中的所有唯一值。",
+    "type": "FunctionDef"
+  }
+}

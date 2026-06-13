@@ -1,0 +1,14 @@
+{
+  "litestar.plugins.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware": {
+    "hash": "861abacecf41fc01",
+    "text": "OpenTelemetry 中间件。"
+  },
+  "litestar.plugins.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.plugins.opentelemetry.middleware.OpenTelemetryInstrumentationMiddleware.__init__": {
+    "hash": "7854dda29d2e2236",
+    "text": "为应用程序添加 OpenTelemetry 遥测（instrumentation）中间件。\n\nArgs:\n    app: 要调用的下一个 ``next`` ASGI 应用。\n    config: :class:`OpenTelemetryConfig <litestar.plugins.opentelemetry.OpenTelemetryConfig>` 的实例。"
+  }
+}

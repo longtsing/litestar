@@ -1,0 +1,28 @@
+{
+  "litestar.response.sse.ASGIStreamingSSEResponse": {
+    "hash": "67d40c4805af2248",
+    "text": "支持 SSE 可选 keepalive ping 的 ASGI 流式响应。"
+  },
+  "litestar.response.sse.ASGIStreamingSSEResponse._ping": {
+    "hash": "228ccbfe6450b0bd",
+    "text": "在配置的间隔发送 SSE 注释保活 ping。"
+  },
+  "litestar.response.sse.ASGIStreamingSSEResponse._send": {
+    "hash": "802df82cb7a281ba",
+    "text": "发送带有锁的正文块，以确保并发 ping/流操作的安全性。"
+  },
+  "litestar.response.sse.ASGIStreamingSSEResponse.send_body": {
+    "hash": "fe1979c6ccc61f0c",
+    "text": "发送响应体，可选择性地发送 keepalive 心跳包。"
+  },
+  "litestar.response.sse.ServerSentEvent.__init__": {
+    "hash": "68a451b029bb9365",
+    "text": "初始化响应。\n\nArgs:\n    content: 字节、字符串，或同步/异步迭代器/可迭代对象。\n    background: 一个 :class:`BackgroundTask <.background_tasks.BackgroundTask>` 实例或\n        :class:`BackgroundTasks <.background_tasks.BackgroundTasks>`，用于在响应完成后执行。\n        默认为 None。\n    cookies: 一组 :class:`Cookie <.datastructures.Cookie>` 实例，将设置在响应的\n        ``Set-Cookie`` 标头下。\n    encoding: 用于响应标头的编码。\n    headers: 以字符串为键的响应标头字典。标头键不区分大小写。\n    status_code: 响应状态码。默认为 200。\n    event_type: SSE 事件的类型。如果提供，浏览器会将事件发送给任何为其声明的 'event-listener'\n        （例如通过 JS 中的 'addEventListener'）。\n    event_id: 事件 ID。这将设置事件源的 'last event id'。\n    retry_duration: 重试持续时间（毫秒）。\n    comment_message: 注释消息。该值会被客户端忽略，主要用于 ping。\n    ping_interval: 保活 ping 之间的间隔（秒）。设置后，SSE 注释\n        (``: ping``) 将按指定间隔发送，以防止反向代理或客户端的连接超时。\n        默认为 ``None``（不发送 ping）。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.sse.ServerSentEvent.to_asgi_response": {
+    "hash": "f616087e14305334",
+    "text": "创建带有可选 keepalive ping 支持的 ASGI 流式响应。\n\n当设置了 ``ping_interval`` 时，返回一个 :class:`ASGIStreamingSSEResponse` 实例，该实例会发送周期性的 SSE 注释 ping。否则，委托给父类实现。\n\nArgs:\n    request: :class:`Request <.connection.Request>` 实例。\n    background: 响应发送后需要执行的后端任务。\n    cookies: 要在响应中设置的 cookie 列表。\n    headers: 要与响应头合并的额外头信息。响应头具有优先权。\n    is_head_response: 响应是否为 HEAD 响应。\n    media_type: 响应的媒体类型。如果响应上已设置 ``media_type``，则忽略此参数。\n    status_code: 响应的状态码。如果响应上已设置 ``status_code``，则忽略此参数。\n    type_encoders: 用于编码响应内容的类型编码器字典。\n\nReturns:\n    一个 ASGIStreamingResponse（当设置了 ping_interval 时为 ASGIStreamingSSEResponse）。",
+    "type": "FunctionDef"
+  }
+}

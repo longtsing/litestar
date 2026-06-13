@@ -1,0 +1,98 @@
+{
+  "litestar.pagination.AbstractAsyncClassicPaginator": {
+    "hash": "d196ef4b74211854",
+    "text": "异步经典分页的基础分页器类。\n\n实现此以使用经典分页方案返回分页结果集。"
+  },
+  "litestar.pagination.AbstractAsyncClassicPaginator.__call__": {
+    "hash": "0b59a2c0c0b7545c",
+    "text": "返回分页结果集。\n\nArgs:\n    page_size: 返回的最大记录数。\n    current_page: 要返回的当前结果页。\n\nReturns:\n    分页结果集。"
+  },
+  "litestar.pagination.AbstractAsyncClassicPaginator.get_items": {
+    "hash": "57dde759d9ca18ae",
+    "text": "返回与 `current_page` 对应的、大小为 `page_size` 的项目列表。\n\nArgs:\n    page_size: 要返回的最大记录数。\n    current_page: 要返回的当前结果页。\n\nReturns:\n    项目列表。"
+  },
+  "litestar.pagination.AbstractAsyncClassicPaginator.get_total": {
+    "hash": "ca11586ed4e1c180",
+    "text": "返回记录的总数。\n\nArgs:\n    page_size: 要返回的最大记录数。\n\nReturns:\n    一个整数。"
+  },
+  "litestar.pagination.AbstractAsyncCursorPaginator": {
+    "hash": "d1a044d7fc965b3f",
+    "text": "用于异步游标分页的基础分页器类。\n\n实现此类以使用游标分页方案返回分页结果集。"
+  },
+  "litestar.pagination.AbstractAsyncCursorPaginator.__call__": {
+    "hash": "74e7b1aaaff8b652",
+    "text": "返回一个分页结果集，可选地提供游标（唯一 ID）和要返回的最大结果数。\n\nArgs:\n    cursor: 一个唯一标识符，作为返回结果之后的“游标”。\n    results_per_page: 要返回的最大结果数。\n\nReturns:\n    一个分页结果集。"
+  },
+  "litestar.pagination.AbstractAsyncCursorPaginator.get_items": {
+    "hash": "e0f5f5a2739d49be",
+    "text": "返回一个包含 `results_per_page` 个项目的列表，这些项目位于给定游标（如果有的话）之后。\n\nArgs:\n    cursor: 一个唯一标识符，作为返回结果之后的“游标”。\n    results_per_page: 要返回的最大结果数量。\n\nReturns:\n    一个元组，包含结果集和一个标记已检索最后一条记录的新游标。\n    该新游标可用于请求“下一页”（next_cursor）批次的结果。"
+  },
+  "litestar.pagination.AbstractAsyncOffsetPaginator": {
+    "hash": "bd513548025ef8d1",
+    "text": "用于限制/偏移分页的基础分页器类。\n\n实现此类以使用限制/偏移分页方案返回分页结果集。"
+  },
+  "litestar.pagination.AbstractAsyncOffsetPaginator.__call__": {
+    "hash": "0a4fd60197eab4df",
+    "text": "返回分页结果集。\n\nArgs:\n    limit: 要返回的最大记录数。\n    offset: 结果集中的起始位置（假设索引 0 为起始位置）。\n\nReturns:\n    分页结果集。"
+  },
+  "litestar.pagination.AbstractAsyncOffsetPaginator.get_items": {
+    "hash": "213a6b6018862859",
+    "text": "返回从位置 ``offset`` 开始、大小为 ``limit`` 的项列表。\n\nArgs:\n    limit: 要返回的最大记录数。\n    offset: 结果集中的起始位置（假设索引 0 为起始位置）。\n\nReturns:\n    项列表。"
+  },
+  "litestar.pagination.AbstractAsyncOffsetPaginator.get_total": {
+    "hash": "77697b28e66375dc",
+    "text": "返回记录的总数。\n\nReturns:\n    一个整数。"
+  },
+  "litestar.pagination.AbstractSyncClassicPaginator": {
+    "hash": "1ecfd773cf057269",
+    "text": "同步经典分页的基础分页器类。\n\n实现此类以使用经典分页方案返回分页结果集。"
+  },
+  "litestar.pagination.AbstractSyncClassicPaginator.__call__": {
+    "hash": "0b59a2c0c0b7545c",
+    "text": "返回分页结果集。\n\nArgs:\n    page_size: 要返回的最大记录数。\n    current_page: 要返回的当前结果页。\n\nReturns:\n    分页结果集。"
+  },
+  "litestar.pagination.AbstractSyncClassicPaginator.get_items": {
+    "hash": "57dde759d9ca18ae",
+    "text": "返回与 `current_page` 对应的、大小为 `page_size` 的项列表。\n\nArgs:\n    page_size: 要返回的最大记录数。\n    current_page: 要返回的当前结果页。\n\nReturns:\n    项列表。"
+  },
+  "litestar.pagination.AbstractSyncClassicPaginator.get_total": {
+    "hash": "ca11586ed4e1c180",
+    "text": "返回记录总数。\n\nArgs:\n    page_size: 要返回的最大记录数。\n\nReturns:\n    一个整数。"
+  },
+  "litestar.pagination.AbstractSyncCursorPaginator": {
+    "hash": "5a93c0073723fa7e",
+    "text": "同步游标分页的基础分页器类。\n\n实现此类以使用游标分页方案返回分页结果集。"
+  },
+  "litestar.pagination.AbstractSyncCursorPaginator.__call__": {
+    "hash": "74e7b1aaaff8b652",
+    "text": "返回一个分页结果集，可选参数包括游标（唯一 ID）和要返回的最大结果数。\n\nArgs:\n    cursor: 一个唯一标识符，作为返回结果之后的“游标”。\n    results_per_page: 要返回的最大结果数。\n\nReturns:\n    一个分页结果集。"
+  },
+  "litestar.pagination.AbstractSyncCursorPaginator.get_items": {
+    "hash": "e0f5f5a2739d49be",
+    "text": "返回一个包含 `results_per_page` 个项目的列表，这些项目位于给定游标（cursor）之后（如果存在）。\n\nArgs:\n    cursor: 一个唯一标识符，作为返回结果之后的“游标”。\n    results_per_page: 要返回的最大结果数量。\n\nReturns:\n    一个元组，包含结果集和一个标记已检索最后一条记录的新游标。\n    该新游标可用于请求“下一页”（next_cursor）批次的结果。"
+  },
+  "litestar.pagination.AbstractSyncOffsetPaginator": {
+    "hash": "bd513548025ef8d1",
+    "text": "用于限制/偏移分页的基础分页器类。\n\n实现此类以使用限制/偏移分页方案返回分页结果集。"
+  },
+  "litestar.pagination.AbstractSyncOffsetPaginator.__call__": {
+    "hash": "0a4fd60197eab4df",
+    "text": "返回分页结果集。\n\nArgs:\n    limit: 要返回的最大记录数。\n    offset: 结果集中的起始位置（假设索引 0 为起始位置）。\n\nReturns:\n    分页结果集。"
+  },
+  "litestar.pagination.AbstractSyncOffsetPaginator.get_items": {
+    "hash": "213a6b6018862859",
+    "text": "返回从位置 'offset' 开始、大小为 'limit' 的项列表。\n\nArgs:\n    limit: 要返回的最大记录数。\n    offset: 结果集中的起始位置（假设索引 0 为起始位置）。\n\nReturns:\n    项列表。"
+  },
+  "litestar.pagination.AbstractSyncOffsetPaginator.get_total": {
+    "hash": "77697b28e66375dc",
+    "text": "返回记录总数。\n\nReturns:\n    一个整数。"
+  },
+  "litestar.pagination.ClassicPagination": {
+    "hash": "f56458f86111fa76",
+    "text": "使用 limit/offset 分页返回数据的容器。"
+  },
+  "litestar.pagination.CursorPagination": {
+    "hash": "702b24af42904324",
+    "text": "使用游标分页返回数据的容器。"
+  }
+}

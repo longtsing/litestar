@@ -1,0 +1,27 @@
+{
+  "litestar._kwargs.dependencies.DependencyContainer": {
+    "hash": "8a1f8b576326d013",
+    "text": "给定 ``Route`` + ``RouteHandler`` 组合的依赖图",
+    "type": "ClassDef"
+  },
+  "litestar._kwargs.dependencies.DependencyContainer.__init__": {
+    "hash": "669aab890727411d",
+    "text": "初始化一个依赖项。\n\nArgs:\n    key: 依赖项键\n    provide: 提供者\n    dependencies: 子节点列表",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.dependencies.create_dependency_batches": {
+    "hash": "fa5a4e8d6c175c3d",
+    "text": "```\n递归计算所有依赖项的批次。\n\nArgs:\n    expected_dependencies: 所有直接 :class:`Dependencies <litestar._kwargs.Dependency>` 的集合。\n\nReturns:\n    批次列表。\n```",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.dependencies.map_dependencies_recursively": {
+    "hash": "5e71094116167f6e",
+    "text": "递归地将依赖项映射到其子依赖项。\n\nArgs:\n    dependency: 当前要映射的依赖项。\n    dependencies_to: 依赖项到其子依赖项的映射。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.dependencies.resolve_dependency": {
+    "hash": "37f28f9c67ffd348",
+    "text": "解析给定的 :class:`Dependency <litestar._kwargs.Dependency>` 实例。\n\n所有必需的子依赖项必须已解析并放入 `kwargs` 中。依赖项的结果将存储在该 `kwargs` 中。\n\nArgs:\n    dependency: :class:`Dependency <litestar._kwargs.Dependency>` 的实例\n    connection: :class:`Request <litestar.connection.Request>` 或\n        :class:`WebSocket <litestar.connection.WebSocket>` 的实例。\n    kwargs: 传递给依赖项的任何 `kwargs`，结果也将存储在此处。\n    cleanup_group: 由 ``dependency`` 返回的生成器将被添加到的 `DependencyCleanupGroup`",
+    "type": "AsyncFunctionDef"
+  }
+}

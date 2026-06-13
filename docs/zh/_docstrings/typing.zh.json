@@ -1,0 +1,150 @@
+{
+  "litestar.typing.FieldDefinition": {
+    "hash": "29ecfa9853e4a166",
+    "text": "表示函数参数或类型注解。"
+  },
+  "litestar.typing.FieldDefinition.bound_types": {
+    "hash": "8e49dffc04ae5715",
+    "text": "一个绑定类型的元组——如果注解是带有绑定类型的 TypeVar，否则为 None。"
+  },
+  "litestar.typing.FieldDefinition.from_annotation": {
+    "hash": "f797acdbc136e2fa",
+    "text": "初始化 FieldDefinition。\n\nArgs:\n    annotation: 类型注解。应从 ``get_type_hints(..., include_extras=True)`` 的返回值中提取，以便解析前向引用并展平递归的 ``Annotated`` 类型。\n    **kwargs: 传递给 ``FieldDefinition`` 构造函数的其他关键字参数。\n\nReturns:\n    FieldDefinition"
+  },
+  "litestar.typing.FieldDefinition.from_kwarg": {
+    "hash": "cf9f363b2cf8e306",
+    "text": "创建一个新的 FieldDefinition 实例。\n\nArgs:\n    annotation: 关键字参数的类型。\n    name: 字段名称。\n    default: 默认值。\n    inner_types: 表示内部类型的 FieldDefinition 实例元组（如果有的话）。\n    kwarg_definition: 关键字参数（Kwarg Parameter）。\n    extra: 额外值的映射。\n\nReturns:\n    FieldDefinition 实例。"
+  },
+  "litestar.typing.FieldDefinition.from_parameter": {
+    "hash": "7daecbfb6601d54b",
+    "text": "初始化 ParsedSignatureParameter。\n\nArgs:\n    parameter: inspect.Parameter\n    fn_type_hints: 名称到类型的映射。应为 ``get_type_hints()`` 的结果，建议通过 :attr:``get_fn_type_hints() <.utils.signature_parsing.get_fn_type_hints>`` 辅助函数获取。\n\nReturns:\n    ParsedSignatureParameter。"
+  },
+  "litestar.typing.FieldDefinition.generic_types": {
+    "hash": "0d485081d9c4ab8a",
+    "text": "如果其是泛型，则传入注解的泛型类型元组。"
+  },
+  "litestar.typing.FieldDefinition.get_from_metadata": {
+    "hash": "aff57f38d5c57e1e",
+    "text": "返回字段元数据中 ``type_`` 的下一个实例"
+  },
+  "litestar.typing.FieldDefinition.get_type_hints": {
+    "hash": "8d85b20714160e50",
+    "text": "获取注解的类型提示。\n\nArgs:\n    include_extras: 标志，用于指示是否包含 ``Annotated[T, ...]``。\n    resolve_generics: 标志，用于指示是否解析类型提示中的泛型类型。\n\nReturns:\n    类型提示。"
+  },
+  "litestar.typing.FieldDefinition.has_default": {
+    "hash": "e40bdba0c5b90b19",
+    "text": "检查字段是否具有默认值。\n\nReturns:\n    如果默认值不是 Empty 或 Ellipsis，则为 True，否则为 False。"
+  },
+  "litestar.typing.FieldDefinition.has_inner_subclass_of": {
+    "hash": "162218b8074393cd",
+    "text": "检查任何泛型参数是否为给定类型的子类。\n\nArgs:\n    cl: 要检查的类型，或类型元组。作为 ``issubclass()`` 的第 2 个参数传递。\n\nReturns:\n    该类型的任何泛型参数是否为给定类型的子类。"
+  },
+  "litestar.typing.FieldDefinition.has_metadata": {
+    "hash": "a5f87b0b1455022a",
+    "text": "字段元数据中是否包含任何 ``type_``"
+  },
+  "litestar.typing.FieldDefinition.is_annotated": {
+    "hash": "055487a637864a4a",
+    "text": "检查字段类型是否为 Annotated。"
+  },
+  "litestar.typing.FieldDefinition.is_any": {
+    "hash": "74e2aaaa3b9976df",
+    "text": "检查字段类型是否为 Any。"
+  },
+  "litestar.typing.FieldDefinition.is_collection": {
+    "hash": "6018b75aab9a2943",
+    "text": "是否表示注解为集合类型。"
+  },
+  "litestar.typing.FieldDefinition.is_const": {
+    "hash": "a685b1d27f02937d",
+    "text": "检查字段是否定义为常量值。"
+  },
+  "litestar.typing.FieldDefinition.is_dataclass_type": {
+    "hash": "0b7ab52173e37854",
+    "text": "是否为 dataclass（数据类）类型的注解。"
+  },
+  "litestar.typing.FieldDefinition.is_forward_ref": {
+    "hash": "b102b07a482737b9",
+    "text": "是否为前向引用。"
+  },
+  "litestar.typing.FieldDefinition.is_generic": {
+    "hash": "fad1e6e18a8a7b50",
+    "text": "检查字段类型是否为扩展 Generic 的自定义类。"
+  },
+  "litestar.typing.FieldDefinition.is_literal": {
+    "hash": "d38f712b658b2787",
+    "text": "检查字段类型是否为 Literal。"
+  },
+  "litestar.typing.FieldDefinition.is_mapping": {
+    "hash": "14f85943ed3187b3",
+    "text": "判断该注解是否为映射类型。"
+  },
+  "litestar.typing.FieldDefinition.is_non_marker_parameter_field": {
+    "hash": "f8d1e22c48670a3b",
+    "text": "检查字段类型是否为非仅标记的 ``ParameterKwarg``。\n\n标记被视为未应用任何约束的 ``ParameterKwarg`` 实例，通常由 ``FromQuery[]``、``FromPath[]`` 等产生。"
+  },
+  "litestar.typing.FieldDefinition.is_non_string_collection": {
+    "hash": "9aaaad6bad4ac32b",
+    "text": "是否为非字符串集合类型的注解。"
+  },
+  "litestar.typing.FieldDefinition.is_non_string_iterable": {
+    "hash": "6291e24cf32ad9b4",
+    "text": "检查字段类型是否为可迭代对象（Iterable）。\n\n如果 ``self.annotation`` 是可选联合类型（optional union），则仅评估联合类型中的非可选成员。\n\n参见：https://github.com/litestar-org/litestar/issues/1106"
+  },
+  "litestar.typing.FieldDefinition.is_non_string_sequence": {
+    "hash": "d8e5fc15b111540b",
+    "text": "检查字段类型是否为非字符串序列。\n\n如果 ``self.annotation`` 是可选联合类型（optional union），则仅评估联合类型中的非可选成员。\n\n参见：https://github.com/litestar-org/litestar/issues/1106"
+  },
+  "litestar.typing.FieldDefinition.is_none_type": {
+    "hash": "879ae32ef37171b1",
+    "text": "判断注解是否为 NoneType。"
+  },
+  "litestar.typing.FieldDefinition.is_optional": {
+    "hash": "47bb2686f6a362c6",
+    "text": "是否表示该注解为 Optional。"
+  },
+  "litestar.typing.FieldDefinition.is_parameter_field": {
+    "hash": "3b716687bf0f6643",
+    "text": "检查字段类型是否为参数关键字参数值。"
+  },
+  "litestar.typing.FieldDefinition.is_required": {
+    "hash": "f6b658dfa0064590",
+    "text": "检查该字段是否应标记为必需参数。"
+  },
+  "litestar.typing.FieldDefinition.is_simple_type": {
+    "hash": "0f73ccf5100b0c3f",
+    "text": "检查字段类型是否为单例值（例如 ``int``、``str`` 等）。"
+  },
+  "litestar.typing.FieldDefinition.is_subclass_of": {
+    "hash": "5b465d8b68b56280",
+    "text": "检查该注解是否为给定类型的子类。\n\n当 ``self.annotation`` 为联合类型（union type）时，如果联合类型中的所有成员都是 ``cl`` 的子类型，则此方法返回 ``True``，否则返回 ``False``。\n\nArgs:\n    cl: 要检查的类型，或类型元组。作为 ``issubclass()`` 的第 2 个参数传入。\n\nReturns:\n    该注解是否为给定类型（或类型集合）的子类型。"
+  },
+  "litestar.typing.FieldDefinition.is_tuple": {
+    "hash": "f85df09adf09f4de",
+    "text": "是否为 ``tuple`` 类型的注解。"
+  },
+  "litestar.typing.FieldDefinition.is_type_alias_type": {
+    "hash": "35d7b39f55dc34d6",
+    "text": "是否表示注解为 ``TypeAliasType``"
+  },
+  "litestar.typing.FieldDefinition.is_type_var": {
+    "hash": "6776dc7aa03eae85",
+    "text": "是否为 TypeVar 的注解。"
+  },
+  "litestar.typing.FieldDefinition.is_typeddict_type": {
+    "hash": "dd8d3d1bc874e5c0",
+    "text": "是否为 TypedDict 类型。"
+  },
+  "litestar.typing.FieldDefinition.is_union": {
+    "hash": "d7072a4408108325",
+    "text": "是否为联合类型。"
+  },
+  "litestar.typing.FieldDefinition.match_predicate_recursively": {
+    "hash": "9c4a31c902a80c9d",
+    "text": "递归地对字段及其任何内部字段测试传入的谓词。\n\nArgs:\n    predicate: 一个可调用对象，接收一个字段定义实例作为参数，并返回一个布尔值。\n\nReturns:\n    一个布尔值。"
+  },
+  "litestar.typing.FieldDefinition.type_": {
+    "hash": "d580a3afff646e04",
+    "text": "移除所有包装器（包括泛型类型）后的注解类型。"
+  }
+}

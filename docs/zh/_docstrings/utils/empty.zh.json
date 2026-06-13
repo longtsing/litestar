@@ -1,0 +1,17 @@
+{
+  "litestar.utils.empty.EmptyValueError": {
+    "hash": "dc30aeed89ad04f3",
+    "text": "当遇到空值时抛出。",
+    "type": "ClassDef"
+  },
+  "litestar.utils.empty.value_or_default": {
+    "hash": "12ec04fbdc7b502f",
+    "text": "返回 `value`，并处理其为空的情况。\n\n如果 `value` 是 `Empty`，则返回 `default`。\n\nArgs:\n    value: 要检查的值。\n    default: 如果 `value` 是 `Empty` 时返回的默认值。\n\nReturns:\n    该值或默认值。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.empty.value_or_raise": {
+    "hash": "cb9ad56aff969fb5",
+    "text": "返回 `value`，并处理其为空的情况。\n\nArgs:\n    value: 要检查的值。\n\nReturns:\n    该值。\n\nRaises:\n    EmptyValueError: 如果 `value` 为 `Empty`。",
+    "type": "FunctionDef"
+  }
+}

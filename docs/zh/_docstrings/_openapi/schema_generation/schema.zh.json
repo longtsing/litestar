@@ -1,0 +1,102 @@
+{
+  "litestar._openapi.schema_generation.schema.SchemaCreator.__init__": {
+    "hash": "43085d4878f0597b",
+    "text": "实例化一个 SchemaCreator。\n\nArgs:\n    generate_examples: 如果未提供任何示例，是否生成示例。\n    plugins: 插件列表。\n    prefer_alias: 是否优先使用别名作为 schema 的名称。\n    schema_registry: 一个 SchemaRegistry 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.create_component_schema": {
+    "hash": "617008112c667348",
+    "text": "为 OpenAPI 规范中的 `components/schemas` 部分创建模式。\n\n这些模式可以在文档中被其他模式引用，包括自引用。\n\n为了支持自引用模式，在创建其属性的模式之前，先将该模式添加到注册表中。这使得该模式可以被其属性引用。\n\nArgs:\n    type_: 要为其创建模式的类型的 ``FieldDefinition`` 实例。\n    required: 必需字段的列表。\n    property_fields: 从名称到 ``FieldDefinition`` 实例的映射，用于模式的属性。\n    openapi_type: OpenAPI 类型，默认为 ``OpenAPIType.OBJECT``。\n    title: 模式标题，如果未提供则自动生成。\n    examples: 从示例名称到 ``Example`` 实例的映射，非必需。\n\nReturns:\n    一个模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_collection_constrained_field": {
+    "hash": "9b6275f3171cc9a5",
+    "text": "从受限列表/集合字段创建模式。\n\nArgs:\n    field_definition: 一个签名字段实例。\n\nReturns:\n    一个模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_constrained_field": {
+    "hash": "c1bba5cf5324e7d0",
+    "text": "为 Pydantic 约束字段创建模式（使用 `constr()`、`conint()` 等函数创建，或通过继承 `Constrained*` 类创建）\n\nArgs:\n    field: 一个签名字段实例。\n\nReturns:\n    一个模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_enum_field": {
+    "hash": "30bfa832567de4aa",
+    "text": "为枚举创建模式实例。\n\nArgs:\n    field_definition: 签名字段实例。\n\nReturns:\n    模式或引用实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_field_definition": {
+    "hash": "e9fb6e9488f0d378",
+    "text": "为给定的 FieldDefinition 创建 Schema。\n\nArgs:\n    field_definition: 一个签名字段实例。\n\nReturns:\n    一个 Schema 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_object_type": {
+    "hash": "9746de63bd37ed45",
+    "text": "为对象类型（dict、Mapping、list、Sequence 等）创建模式。\n\nArgs:\n    field_definition: 一个签名字段实例。\n\nReturns:\n    一个模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_optional_field": {
+    "hash": "1c5e4b1d18335060",
+    "text": "为可选的 `FieldDefinition` 创建模式。\n\nArgs:\n    field_definition: 签名字段实例。\n\nReturns:\n    模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_plugin": {
+    "hash": "6c2ca9c9f3f6d41d",
+    "text": "使用插件创建模式。\n\nArgs:\n    field_definition: 签名字段实例。\n    plugin: 字段类型的插件。\n\nReturns:\n    模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_typevar": {
+    "hash": "484652ca55f3e5c6",
+    "text": "为 TypeVar 创建模式。\n\nReturns:\n    一个模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_union_field": {
+    "hash": "f97240b7038ffb59",
+    "text": "为联合 FieldDefinition 创建 Schema。\n\nArgs:\n    field_definition: 一个签名字段实例。\n\nReturns:\n    一个 Schema 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.for_upload_file": {
+    "hash": "e8a66f7ac4303d98",
+    "text": "为 UploadFile 创建模式。\n\nArgs:\n    field_definition: 字段定义实例。\n\nReturns:\n    一个 Schema 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.is_constrained_field": {
+    "hash": "8b8ca7194143f531",
+    "text": "返回字段是否受约束，同时考虑插件定义的约束。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.is_undefined": {
+    "hash": "8133e3150449f630",
+    "text": "返回字段是否未定义，同时考虑插件定义的未定义类型。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.SchemaCreator.not_generating_examples": {
+    "hash": "4093a4a1c52c4e7e",
+    "text": "返回一个 `generate_examples` 设置为 `False` 的 `SchemaCreator`。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema._get_type_schema_name": {
+    "hash": "051badfbfbb6c610",
+    "text": "从数据容器中提取模式名称。\n\nArgs:\n    field_definition: 字段定义实例。\n\nReturns:\n    一个字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema._iter_flat_literal_args": {
+    "hash": "ab57e54050dc8a6b",
+    "text": "遍历 `Literal` 的扁平化参数。\n\nArgs:\n    annotation: 一个 `Literal` 注解。\n\nYields:\n    `Literal` 的扁平化参数。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema._types_in_list": {
+    "hash": "f92223588e2b67e6",
+    "text": "```\n提取列表中值里存在的唯一 OpenAPITypes。\n\nArgs:\n    lst: 一个值列表\n\nReturns:\n    给定列表中的 OpenAPIType。如果存在多个，则返回 OpenAPITypes 列表。\n```",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.create_literal_schema": {
+    "hash": "74da09ee8f38e358",
+    "text": "为 `Literal` 创建模式实例。\n\nArgs:\n    annotation: 一个 `Literal` 注解。\n    include_null: 是否将 `null` 作为可能的值包含在内。\n\nReturns:\n    一个模式实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.schema.create_schema_for_annotation": {
+    "hash": "18f358fa0deab556",
+    "text": "从类型映射中获取模式（如果可能）。\n\nArgs:\n    annotation: 类型注解。\n\nReturns:\n    模式实例或 None。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.responses.Responses": {
+    "hash": "3bf2000892421176",
+    "text": "一个用于存储操作预期响应的容器。该容器将 HTTP 响应码映射到预期的响应。\n\n文档不一定需要涵盖所有可能的 HTTP 响应码，因为它们可能无法提前获知。但是，文档应涵盖成功的操作响应以及任何已知的错误。\n\n``default`` 字段**可以**用作默认响应对象，用于处理规范中未单独涵盖的所有 HTTP 代码。\n\n``Responses Object`` **必须**包含至少一个响应码，且该响应码**应当**是成功操作调用的响应。\n\n固定字段\n\ndefault: ``Optional[Union[Response, Reference]]``\n\n特定 HTTP 响应码之外其他响应的文档说明。使用此字段来涵盖未声明的响应。`Reference Object <https://spec.openapis.org/oas/v3.1.0#referenceObject>`_ 可以链接到 `OpenAPI Object's components/responses <https://spec.openapis.org/oas/v3.1.0#componentsResponses>`_ 部分中定义的响应。\n\n模式化字段\n{httpStatusCode}: ``Optional[Union[Response, Reference]]``\n\n任何 `HTTP status code <https://spec.openapis.org/oas/v3.1.0#httpCodes>`_ 都可以用作属性名，但每个代码只能有一个属性，用于描述该 HTTP 状态码的预期响应。\n\n`Reference Object <https://spec.openapis.org/oas/v3.1.0#referenceObject>`_ 可以链接到在 `OpenAPI Object's components/responses <https://spec.openapis.org/oas/v3.1.0#componentsResponses>`_ 部分中定义的响应。为了兼容 JSON 和 YAML，此字段**必须**用引号括起来（例如，``200``）。若要定义一系列响应码，此字段**可以**包含大写的通配符字符 ``X``。例如，``2XX`` 代表 ``[200-299]`` 之间的所有响应码。仅允许以下范围定义：``1XX``、``2XX``、``3XX``、``4XX`` 和 ``5XX``。如果响应是使用显式代码定义的，则对于该代码，显式代码定义的优先级高于范围定义。",
+    "type": "Variable"
+  }
+}

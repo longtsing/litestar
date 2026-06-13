@@ -1,0 +1,27 @@
+{
+  "litestar.concurrency.get_asyncio_executor": {
+    "hash": "82c546209d68207f",
+    "text": "在 asyncio 上下文中获取用于运行同步可调用对象的执行器",
+    "type": "FunctionDef"
+  },
+  "litestar.concurrency.get_trio_capacity_limiter": {
+    "hash": "841811483a01d9c0",
+    "text": "在 trio 上下文中运行同步可调用对象时获取所使用的容量限制器。",
+    "type": "FunctionDef"
+  },
+  "litestar.concurrency.set_asyncio_executor": {
+    "hash": "f79ffb19da95fd3d",
+    "text": "在 asyncio 上下文中设置用于运行同步可调用对象的执行器。",
+    "type": "FunctionDef"
+  },
+  "litestar.concurrency.set_trio_capacity_limiter": {
+    "hash": "5da447a75b831e9c",
+    "text": "在 trio 上下文中运行同步可调用对象时设置容量限制器。",
+    "type": "FunctionDef"
+  },
+  "litestar.concurrency.sync_to_thread": {
+    "hash": "7e880580676831eb",
+    "text": "在 worker 线程中异步运行同步可调用对象 ``fn``。\n\n当从 asyncio 调用时，使用 :meth:`asyncio.loop.run_in_executor` 运行该可调用对象。默认情况下未指定执行器，因此将使用当前事件循环的执行器。可以使用 :func:`~litestar.concurrency.set_asyncio_executor` 设置特定的执行器。这不会影响事件循环的默认执行器。\n\n当从 trio 调用时，使用 :func:`trio.to_thread.run_sync` 运行该可调用对象。默认情况下未指定容量限制器，但可以使用 :func:`~litestar.concurrency.set_trio_capacity_limiter` 进行设置。这不会影响 trio 的默认容量限制器。",
+    "type": "AsyncFunctionDef"
+  }
+}

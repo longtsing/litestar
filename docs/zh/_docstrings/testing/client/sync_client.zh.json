@@ -1,0 +1,18 @@
+{
+  "litestar.testing.client.sync_client.TestClient.__init__": {
+    "hash": "c8a789f16f156ffe",
+    "text": "一个为测试应用程序提供上下文管理器的客户端实现。\n\nArgs:\n    app: 待测试的 :class:`Litestar <litestar.app.Litestar>` 实例。\n    base_url: 测试请求路径的 URL 方案和域名，例如 ``http://testserver``。\n    raise_server_exceptions: 底层测试客户端的标志，用于引发服务器异常，而不是将其包装在 HTTP 响应中。\n    root_path: 请求的路径前缀。\n    timeout: 请求超时时间。\n    cookies: 要在客户端设置的 Cookie。\n    backend: 要使用的异步后端（async backend），选项为 \"asyncio\" 或 \"trio\"。\n    backend_options: ``anyio`` 选项。\n    session_config: 会话后端配置。"
+  },
+  "litestar.testing.client.sync_client.TestClient.get_session_data": {
+    "hash": "2d0c542bc2470562",
+    "text": "获取会话数据。\n\nReturns:\n    一个包含会话数据的字典。\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar, post\n        from litestar.middleware.session.memory_backend import MemoryBackendConfig\n\n        session_config = MemoryBackendConfig()\n\n\n        @post(path=\"/test\")\n        def set_session_data(request: Request) -> None:\n            request.session[\"foo\"] == \"bar\"\n\n\n        app = Litestar(\n            route_handlers=[set_session_data], middleware=[session_config.middleware]\n        )\n\n        async with AsyncTestClient(app=app, session_config=session_config) as client:\n            await client.post(\"/test\")\n            assert await client.get_session_data() == {\"foo\": \"bar\"}"
+  },
+  "litestar.testing.client.sync_client.TestClient.set_session_data": {
+    "hash": "dceeb07bc5215618",
+    "text": "设置会话数据。\n\nArgs:\n    data: 会话数据\n\nReturns:\n    None\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar, get\n        from litestar.middleware.session.memory_backend import MemoryBackendConfig\n\n        session_config = MemoryBackendConfig()\n\n\n        @get(path=\"/test\")\n        def get_session_data(request: Request) -> Dict[str, Any]:\n            return request.session\n\n\n        app = Litestar(\n            route_handlers=[get_session_data], middleware=[session_config.middleware]\n        )\n\n        async with AsyncTestClient(app=app, session_config=session_config) as client:\n            await client.set_session_data({\"foo\": \"bar\"})\n            assert await client.get(\"/test\").json() == {\"foo\": \"bar\"}"
+  },
+  "litestar.testing.client.sync_client.TestClient.websocket_connect": {
+    "hash": "ef799d8000c8d50f",
+    "text": "发送 GET 请求以建立 WebSocket 连接。\n\nArgs:\n    url: 请求 URL。\n    subprotocols: WebSocket 子协议（Websocket subprotocols）。\n    params: 查询参数。\n    headers: 请求头。\n    cookies: 请求 Cookie。\n    auth: 认证头。\n    follow_redirects: 是否跟随重定向。\n    timeout: 请求超时时间。\n    extensions: ASGI 扩展字典。\n\nReturns:\n    一个 `WebSocketTestSession <litestar.testing.WebSocketTestSession>` 实例。"
+  }
+}

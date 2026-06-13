@@ -1,0 +1,22 @@
+{
+  "litestar.handlers.asgi_handlers.ASGIRouteHandler.__init__": {
+    "hash": "ab0f78f23e64cff5",
+    "text": "ASGI 路由的处理程序。\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段列表。如果未提供，默认为 ``/``。\n    fn: 处理函数。\n\n        .. versionadded:: 3.0\n    exception_handlers: 将状态码和/或异常类型映射到处理函数的字典。\n    guards: 一系列 :class:`Guard <.types.Guard>` 可调用对象。\n    name: 用于标识路由处理程序的字符串。\n    opt: 任意值的字符串键映射，可在 :class:`Guards <.types.Guard>` 中访问，或在任何可访问 :class:`Request <.connection.Request>` 或 :class:`ASGI Scope <.types.Scope>` 的地方访问。\n    is_mount: 布尔值，指定处理程序的路径是否应被视为挂载路径。挂载路径接受任何以定义的带前缀路径开头的任意路径。例如，路径为 ``/some-path/`` 的挂载将接受 ``/some-path/`` 的请求以及该路径下的任何子路径，例如 ``/some-path/sub-path/`` 等。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    type_encoders: 类型到可调用对象的映射，用于将类型转换为支持序列化的类型。\n    copy_scope: 在调用挂载的应用程序之前复制 ASGI 'scope'。除非挂载的 ASGI 应用程序有意通过 scope 突变产生副作用，否则应设置为 'True'。\n    parameters: :func:`Parameter <.params.Parameter>` 定义的映射。\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.asgi_handlers.ASGIRouteHandler._validate_handler_function": {
+    "hash": "f90555565e005996",
+    "text": "验证路由处理函数，在其设置后通过检查其返回注解进行验证。",
+    "type": "FunctionDef"
+  },
+  "litestar.handlers.asgi_handlers.ASGIRouteHandler.handle": {
+    "hash": "1916150ab5a8b933",
+    "text": "允许连接并等待处理函数的 ASGI 应用。\n\n.. versionadded: 3.0\n\nArgs:\n        connection: ASGI 连接\n\nReturns:\n        None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.handlers.asgi_handlers.asgi": {
+    "hash": "3ca71574aff9cdce",
+    "text": "创建 :class:`ASGIRouteHandler`。\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段序列。如果未提供，则默认为 ``/``。\n    exception_handlers: 将状态码和/或异常类型映射到处理函数的字典。\n    guards: :class:`Guard <.types.Guard>` 可调用对象的序列。\n    name: 用于标识路由处理函数的字符串。\n    opt: 以字符串为键的映射，包含任意值，可在 :class:`Guards <.types.Guard>` 中访问，或在任何可访问 :class:`Request <.connection.Request>` 或 :class:`ASGI Scope <.types.Scope>` 的地方访问。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    is_mount: 布尔值，指定处理程序的路径是否应被视为挂载路径。挂载路径接受任何以定义的带前缀路径开头的任意路径。例如，路径为 ``/some-path/`` 的挂载将接受 ``/some-path/`` 的请求以及该路径下的任何子路径，例如 ``/some-path/sub-path/`` 等。\n    handler_class: 由装饰器实例化的路由处理程序类。\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。",
+    "type": "FunctionDef"
+  }
+}

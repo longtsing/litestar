@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.oauth_flow.OAuthFlow": {
+    "hash": "b7c0b14e35c6e1c4",
+    "text": "支持 OAuth 流程的配置详情。"
+  }
+}

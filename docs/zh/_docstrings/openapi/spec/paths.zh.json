@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.paths.Paths": {
+    "hash": "9eef57083814e643",
+    "text": "保存各个端点及其操作的相对路径。该路径会附加到 `Server Object <https://spec.openapis.org/oas/v3.1.0#serverObject>`_ 的 URL 之后，以构建完整的 URL。\n\n由于 `Access Control List (ACL) constraints <https://spec.openapis.org/oas/v3.1.0#securityFiltering>`_，Paths 可能为空。\n\n模式化字段\n\n/{path}: PathItem\n\n指向单个端点的相对路径。字段名必须以正斜杠 (``/``) 开头。该路径会**附加**（不进行相对 URL 解析）到 `Server Object <https://spec.openapis.org/oas/v3.1.0#serverObject>`_ 的 ``url`` 字段所扩展的 URL 之后，以构建完整的 URL。允许使用 `Path templating <https://spec.openapis.org/oas/v3.1.0#pathTemplating>`_。在匹配 URL 时，具体（非模板化）路径会优先于其模板化对应项进行匹配。具有相同层级但不同模板名称的模板化路径不得同时存在，因为它们被视为相同。在匹配存在歧义的情况下，由工具决定使用哪一个。",
+    "type": "Variable"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.header.OpenAPIHeader": {
+    "hash": "bd03026b9aaa9bf5",
+    "text": "Header 对象遵循 [Parameter Object](https://spec.openapis.org/oas/v3.1.0#parameterObject) 的结构，但有以下变更：\n\n1. ``name`` 不得指定，它由对应的 ``headers`` 映射给出。\n2. ``in`` 不得指定，它隐式地为 ``header``。\n3. 所有受位置影响的特性必须适用于 ``header`` 位置（例如，`style <https://spec.openapis.org/oas/v3.1.0#parameterStyle>`__）。"
+  }
+}

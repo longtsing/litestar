@@ -1,0 +1,27 @@
+{
+  "litestar.config.response_cache.CACHE_FOREVER": {
+    "hash": "e4152729b3916144",
+    "text": "表示缓存响应应永久存储（不设置过期时间）的哨兵值，显式跳过默认过期时间。",
+    "type": "ClassDef"
+  },
+  "litestar.config.response_cache.ResponseCacheConfig": {
+    "hash": "0132fd11e01a1a73",
+    "text": "响应缓存的配置。\n\n要启用响应缓存，请使用 ``response_cache_config`` 键将本类的实例传递给 :class:`Litestar <.app.Litestar>`。",
+    "type": "ClassDef"
+  },
+  "litestar.config.response_cache.ResponseCacheConfig.get_store_from_app": {
+    "hash": "8df02762fade3aa9",
+    "text": "从 :class:`Litestar <.app.Litestar>` 实例中获取在 :attr:`store` 中定义的存储。",
+    "type": "FunctionDef"
+  },
+  "litestar.config.response_cache.default_cache_key_builder": {
+    "hash": "5dcab8f080d63153",
+    "text": "给定一个请求对象，通过组合请求方法和路径与排序后的查询参数，返回一个缓存键。\n\nArgs:\n    request: 用于生成缓存键的请求。\n\nReturns:\n    URL 路径和查询参数的组合",
+    "type": "FunctionDef"
+  },
+  "litestar.config.response_cache.default_do_cache_predicate": {
+    "hash": "b6e852ecd967e4c5",
+    "text": "给定状态码，返回一个布尔值，指示响应是否应被缓存。\n\nArgs:\n    _: ASGI 作用域。\n    status_code: 响应的状态码。\n\nReturns:\n    一个布尔值，指示响应是否应被缓存。",
+    "type": "FunctionDef"
+  }
+}

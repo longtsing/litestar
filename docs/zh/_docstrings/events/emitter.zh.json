@@ -1,0 +1,30 @@
+{
+  "litestar.events.emitter.BaseEventEmitterBackend": {
+    "hash": "16639435b75bd185",
+    "text": "用于定义事件发射器后端的抽象类。"
+  },
+  "litestar.events.emitter.BaseEventEmitterBackend.__init__": {
+    "hash": "76322b2c0756973c",
+    "text": "创建一个事件发射器实例。\n\nArgs:\n    listeners: 监听器列表。"
+  },
+  "litestar.events.emitter.BaseEventEmitterBackend.emit": {
+    "hash": "746205a6c5c110bc",
+    "text": "向所有附加的监听器发出一个事件。\n\nArgs:\n    event_id: 要发出的事件 ID，例如 'my_event'。\n    *args: 传递给监听器的参数。\n    **kwargs: 传递给监听器的关键字参数。\n\nReturns:\n    None"
+  },
+  "litestar.events.emitter.SimpleEventEmitter": {
+    "hash": "c8d586d44ae22fbe",
+    "text": "仅在当前进程中工作的**事件发射器**（Event emitter）"
+  },
+  "litestar.events.emitter.SimpleEventEmitter.__init__": {
+    "hash": "76322b2c0756973c",
+    "text": "创建一个事件发射器实例。\n\nArgs:\n    listeners: 监听器列表。"
+  },
+  "litestar.events.emitter.SimpleEventEmitter._worker": {
+    "hash": "67f41751fec7c7de",
+    "text": "在任务组中运行 ``receive_stream`` 中的项目。\n\nReturns:\n    None"
+  },
+  "litestar.events.emitter.SimpleEventEmitter.emit": {
+    "hash": "746205a6c5c110bc",
+    "text": "向所有附加的监听器发出事件。\n\nArgs:\n    event_id: 要发出的事件 ID，例如 'my_event'。\n    *args: 传递给监听器的参数。\n    **kwargs: 传递给监听器的关键字参数。\n\nReturns:\n    None"
+  }
+}

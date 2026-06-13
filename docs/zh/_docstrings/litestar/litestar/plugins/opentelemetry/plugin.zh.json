@@ -1,0 +1,12 @@
+{
+  "litestar.plugins.opentelemetry.plugin.OpenTelemetryPlugin": {
+    "hash": "cd892a0d9c411336",
+    "text": "OpenTelemetry 插件。",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.opentelemetry.plugin.OpenTelemetryPlugin._pop_otel_middleware": {
+    "hash": "79697153b6a270ed",
+    "text": "如果应用程序中启用了 OpenTelemetry 中间件，则获取该中间件。\n如果找到该中间件，则将其从中间件列表中移除。",
+    "type": "FunctionDef"
+  }
+}

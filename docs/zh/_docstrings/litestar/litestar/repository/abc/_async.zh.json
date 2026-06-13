@@ -1,0 +1,52 @@
+{
+  "litestar.repository.abc._async.AbstractAsyncRepository": {
+    "hash": "48590598d5acd4e0",
+    "text": "持久化数据交互的接口。",
+    "type": "ClassDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.__init__": {
+    "hash": "6a1828328708a468",
+    "text": "仓库构造函数接受任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.add": {
+    "hash": "a2ba68486b25960c",
+    "text": "将 ``data`` 添加到集合中。\n\nArgs:\n    data: 要添加到集合的实例。\n\nReturns:\n    已添加的实例。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.add_many": {
+    "hash": "d5495aff11a7c8f0",
+    "text": "向集合中添加多个 ``data``。\n\nArgs:\n    data: 要添加到集合中的实例。\n\nReturns:\n    已添加的实例。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.count": {
+    "hash": "207fa2fb46654a3b",
+    "text": "获取查询返回的记录数。\n\nArgs:\n    *filters: 特定过滤操作的数据类型。\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    实例的数量",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.delete": {
+    "hash": "8608ca743b3165e2",
+    "text": "删除由 ``item_id`` 标识的实例。\n\nArgs:\n    item_id: 要删除的实例的标识符。\n\nReturns:\n    已删除的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``item_id`` 标识的实例。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.delete_many": {
+    "hash": "089e0c10e4f44d37",
+    "text": "删除由 ID 列表 ``item_ids`` 标识的多个实例。\n\nArgs:\n    item_ids: 待删除的标识符列表。\n\nReturns:\n    已删除的实例。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.exists": {
+    "hash": "d7a07ce6cfda8fe2",
+    "text": "如果 ``kwargs`` 指定的对象存在，则返回 True。\n\nArgs:\n    *filters: 用于特定过滤操作的类型。\n    **kwargs: 要检索的实例的标识符。\n\nReturns:\n    如果找到实例则返回 True。如果未找到则返回 False。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.get_one": {
+    "hash": "3fc8ac9324c1c536",
+    "text": "如果存在，则获取由 ``kwargs`` 过滤器指定的实例。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    检索到的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``kwargs`` 标识的实例。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.get_one_or_none": {
+    "hash": "d5c778c40cae8f28",
+    "text": "如果实例存在则获取其实例，否则返回 None。\n\nArgs:\n    **kwargs: 实例属性值过滤条件。\n\nReturns:\n    检索到的实例或 None。",
+    "type": "AsyncFunctionDef"
+  }
+}

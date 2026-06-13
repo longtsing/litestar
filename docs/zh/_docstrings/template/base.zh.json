@@ -1,0 +1,42 @@
+{
+  "litestar.template.base.TemplateEngineProtocol": {
+    "hash": "96fb4cd5f5b67316",
+    "text": "模板引擎的协议。"
+  },
+  "litestar.template.base.TemplateEngineProtocol.__init__": {
+    "hash": "36b05765852cf0ba",
+    "text": "使用目录初始化模板引擎。\n\nArgs:\n    directory: 提供模板服务的直接路径或目录路径列表，如果提供，实现必须创建引擎实例。\n    engine_instance: 一个模板引擎对象，如果提供，实现必须使用它。"
+  },
+  "litestar.template.base.TemplateEngineProtocol.get_template": {
+    "hash": "6f51936f6d855a91",
+    "text": "根据提供的名称（点路径）与一个或多个目录中的文件匹配，检索模板。\n\nArgs:\n    template_name: 点路径\n\nReturns:\n    模板实例\n\nRaises:\n    TemplateNotFoundException: 如果未找到模板。"
+  },
+  "litestar.template.base.TemplateEngineProtocol.register_template_callable": {
+    "hash": "7c37f486cbe0f3ac",
+    "text": "在模板引擎上注册一个可调用对象。\n\nArgs:\n    key: 可调用对象的键，即在模板中用于调用该可调用对象的值。\n    template_callable: 要注册的可调用对象。\n\nReturns:\n    None"
+  },
+  "litestar.template.base.TemplateEngineProtocol.render_string": {
+    "hash": "5928ead97889b7df",
+    "text": "从给定上下文中渲染字符串模板。\n\nArgs:\n    template_string: 要渲染的模板字符串。\n    context: 传递给模板的变量字典。\n\nReturns:\n    渲染后的模板字符串。"
+  },
+  "litestar.template.base.TemplateProtocol": {
+    "hash": "21115a7f125a58f7",
+    "text": "定义 ``Template`` 的协议。\n\nTemplate 是一个包含 render 方法的类，该方法将模板渲染为字符串。"
+  },
+  "litestar.template.base.TemplateProtocol.render": {
+    "hash": "90dac858575a08c8",
+    "text": "返回渲染后的模板字符串。\n\nArgs:\n    *args: 传递给 TemplateEngine 的位置参数\n    **kwargs: 传递给 TemplateEngine 的以字符串为键的映射值\n\nReturns:\n    渲染后的模板字符串"
+  },
+  "litestar.template.base._get_request_from_context": {
+    "hash": "46dc13ec6a3f3cac",
+    "text": "从模板上下文中获取请求。\n\nArgs:\n    context: 模板上下文。\n\nReturns:\n    请求对象。"
+  },
+  "litestar.template.base.csrf_token": {
+    "hash": "503c14592a455ab0",
+    "text": "在模板中设置 CSRF 令牌。\n\nNotes:\n    - 要使用此函数，请确保将 :ref:`CSRFConfig <litestar.config.csrf_config.CSRFConfig>` 的实例传递给 :class:`Litestar <litestar.app.Litestar>` 构造函数。\n\nArgs:\n    context: 模板上下文。\n\nReturns:\n    如果应用级别的 ``csrf_config`` 已设置，则返回一个 CSRF 令牌，否则返回空字符串。"
+  },
+  "litestar.template.base.url_for": {
+    "hash": "b54f0737c1c1356d",
+    "text": "将 :func:`route_reverse <litestar.app.route_reverse>` 包装为可在模板中使用的函数。\n\nArgs:\n    context: 模板上下文。\n    route_name: 路由处理程序的 ``name``，或者是路由处理程序本身。\n    **path_parameters: 路由中路径参数的实际值。\n\nRaises:\n    NoRouteMatchFoundException: 如果 ``route_name`` 不存在，**path_parameters 中缺少路径参数，或参数类型错误。\n\nReturns:\n    一个完全格式化的 URL 路径。"
+  }
+}

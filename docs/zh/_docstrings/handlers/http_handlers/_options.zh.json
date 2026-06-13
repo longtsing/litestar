@@ -1,0 +1,10 @@
+{
+  "litestar.handlers.http_handlers._options.create_options_handler": {
+    "hash": "fbdefdfbbfd9729b",
+    "text": "Args:\n    path: 路由路径\n\nReturns:\n    用于 OPTIONS 请求的 HTTP 路由处理器。"
+  },
+  "litestar.handlers.http_handlers._options.create_options_handler.options_handler": {
+    "hash": "57e142590b1b6f4e",
+    "text": "处理 OPTIONS 请求的处理器函数。\n\nReturns:\n    Response"
+  }
+}

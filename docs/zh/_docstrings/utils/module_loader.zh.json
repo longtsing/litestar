@@ -1,0 +1,22 @@
+{
+  "litestar.utils.module_loader": {
+    "hash": "e6c0f15e06ca5836",
+    "text": "通用工具函数。",
+    "type": "Module"
+  },
+  "litestar.utils.module_loader.import_string": {
+    "hash": "c5e4ef67c3d1796f",
+    "text": "通过点号路径导入模块。\n\n导入一个带点号的模块路径，并返回路径中最后一个名称所指定的属性或类。如果导入失败，则抛出 ImportError。\n\nArgs:\n    dotted_path: 要导入的模块路径。\n\nRaises:\n    ImportError: 无法导入该模块。\n\nReturns:\n    object: 导入的对象。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.module_loader.import_string._cached_import": {
+    "hash": "3cf8bec98524d200",
+    "text": "从模块中导入并缓存一个类。\n\nArgs:\n    module_path: 模块的点分隔路径。\n    class_name: 类或函数名称。\n\nReturns:\n    object: 导入的类或函数",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.module_loader.module_to_os_path": {
+    "hash": "03e82332ae818083",
+    "text": "查找模块到操作系统路径。\n\n返回项目基础目录或 `dotted_path` 所指定模块的路径。\n\nArgs:\n    dotted_path: 模块的路径。默认为 \"app\"。\n\nRaises:\n    TypeError: 无法找到该模块。\n\nReturns:\n    Path: 模块的路径。",
+    "type": "FunctionDef"
+  }
+}

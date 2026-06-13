@@ -1,0 +1,79 @@
+{
+  "litestar.app.DEFAULT_OPENAPI_CONFIG": {
+    "hash": "ab5af94267118c29",
+    "text": "如果未显式将配置传递给 :class:`Litestar <.app.Litestar>` 实例构造函数，则使用此默认 OpenAPI 配置。",
+    "type": "Variable"
+  },
+  "litestar.app.HandlerIndex": {
+    "hash": "652a8a520ebc62cb",
+    "text": "将路由处理程序名称映射到路径和路由处理程序的映射。\n\n它由 'get_handler_index_by_name' 工具方法返回。"
+  },
+  "litestar.app.Litestar": {
+    "hash": "dedf3fc13cc65acd",
+    "text": "Litestar 应用程序。\n\n``Litestar`` 是应用程序的根级别——它具有基础路径 ``/``，所有根级别的控制器（Controllers）、路由器（Routers）和路由处理器（Route Handlers）都应注册到它上面。"
+  },
+  "litestar.app.Litestar.__call__": {
+    "hash": "a7aa576e4ba7ac4e",
+    "text": "应用程序入口点。\n\n生命周期事件（启动/关闭）会发送给生命周期处理器，否则将使用 ASGI 处理器。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.app.Litestar._build_routes": {
+    "hash": "d36dc851cd9d37ec",
+    "text": "为所有处理器创建路由"
+  },
+  "litestar.app.Litestar._create_asgi_handler": {
+    "hash": "bfed83e04f09de60",
+    "text": "创建一个 ASGIApp，将 ASGI 路由器包装在异常处理器内。\n\n如果在构造函数中提供了 CORS 或 TrustedHost 配置，它们也将包装该路由器。"
+  },
+  "litestar.app.Litestar._create_route_handler_method_map": {
+    "hash": "1d6a45fb3351819f",
+    "text": "将路由路径映射到 :class:`~litestar.types.internal_types.RouteHandlerMapItem`\n\nReturns:\n     一个将路径映射到路由处理器的字典"
+  },
+  "litestar.app.Litestar._iter_handlers": {
+    "hash": "aa1680e96afc8fbe",
+    "text": "递归遍历 `handlers`，返回所有子处理程序（即包含在 `Router` / `Controller` 中的处理程序）及其前置层的元组。\n\n```\nhandlers = [\n    Router(\n        path=\"/one\",\n        route_handlers=[\n            Router(path=\"/two\", route_handlers=[handler_one]),\n            handler_two,\n        ],\n    )\n]\n\nwill return:\n\n[\n    (handler_one, [<router path=\"/two\">, <router path=\"/one\">]),\n    (handler_two, [<router path=\"/one\">]),\n]"
+  },
+  "litestar.app.Litestar._reduce_handlers": {
+    "hash": "cc2b6b187b9bce48",
+    "text": "通过递归迭代 `handlers` 及其子 `handlers`（例如路由器内部的 `handlers`），并将所有上层选项合并到一个新的 `handler` 中，从而减少可能嵌套的 `handlers`。这使我们能够消除所有中间层，仅将配置保留在 `handlers` 上。\n\n以路径合并为例：\n\n.. code-block:: python\n\n    @get(\"/handler-one\")\n    async def handler_one() -> None:\n        pass\n\n\n    @get(\"/handler-two\")\n    async def handler_two() -> None:\n        pass\n\n\n    router = Router(\n        path=\"/router-one\",\n        route_handlers=[\n            handler_one,\n            Router(path=\"/router-two\", route_handlers=[handler_two]),\n        ],\n    )\n\n等同于编写：\n\n.. code-block:: python\n\n   @get(\"/router-one/handler-one\")\n    async def handler_one() -> None:\n        pass\n\n    @get(\"/router-one/router-two/handler-two\")\n    async def handler_two() -> None:\n        pass"
+  },
+  "litestar.app.Litestar._validate_registration_value": {
+    "hash": "790f8fd0cbb17c38",
+    "text": "确保传递给 ``register`` 方法的值是受支持的。"
+  },
+  "litestar.app.Litestar._wrap_send": {
+    "hash": "2b5eb3b181d9c7fd",
+    "text": "封装 ASGI send 并处理任何“发送前”（before send）钩子。\n\nArgs:\n    send: ASGI send 函数。\n    scope: ASGI scope。\n\nReturns:\n    一个 ASGI send 函数。"
+  },
+  "litestar.app.Litestar.emit": {
+    "hash": "6f11952bae39e2dc",
+    "text": "向所有附加的监听器发出一个事件。\n\nArgs:\n    event_id: 要发出的事件 ID，例如 ``my_event``。\n    args: 传递给监听器的参数。\n    kwargs: 传递给监听器的关键字参数。\n\nReturns:\n    None"
+  },
+  "litestar.app.Litestar.from_config": {
+    "hash": "2b8a305f17bf0d53",
+    "text": "从配置实例初始化 ``Litestar`` 应用。\n\nArgs:\n    config: :class:`AppConfig` <.config.AppConfig> 的实例\n\nReturns:\n    ``Litestar`` 应用的实例。"
+  },
+  "litestar.app.Litestar.from_scope": {
+    "hash": "6e76ec6225eb51b1",
+    "text": "从当前 ASGI 作用域中检索 Litestar 应用"
+  },
+  "litestar.app.Litestar.get_handler_index_by_name": {
+    "hash": "8f0a443610776333",
+    "text": "接收一个路由处理器名称，并返回一个可选字典，其中包含路由处理器实例和按字典序排序的路径列表。\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar, get\n\n\n        @get(\"/\", name=\"my-handler\")\n        def handler() -> None:\n            pass\n\n\n        app = Litestar(route_handlers=[handler])\n\n        handler_index = app.get_handler_index_by_name(\"my-handler\")\n\n        # { \"paths\": [\"/\"], \"handler\" ... }\n\nArgs:\n    name: 路由处理器的唯一名称。\n\nReturns:\n    一个 :class:`HandlerIndex <.app.HandlerIndex>` 实例或 ``None``。"
+  },
+  "litestar.app.Litestar.lifespan": {
+    "hash": "f684eadc619bef44",
+    "text": "处理 ASGI 生命周期的上下文管理器。\n\n当从服务器接收到 ``lifespan`` 消息时进入，在 ``asgi.shutdown`` 消息之后退出。在此期间，它负责调用 ``on_startup``、``on_shutdown`` 钩子以及自定义生命周期管理器。"
+  },
+  "litestar.app.Litestar.openapi_schema": {
+    "hash": "a5430d652374583c",
+    "text": "访问应用程序的 OpenAPI 模式。\n\nReturns:\n    应用程序的 :class:`OpenAPI`\n    <pydantic_openapi_schema.open_api.OpenAPI> 实例。\n\nRaises:\n    ImproperlyConfiguredException: 如果应用程序的 ``openapi_config`` 属性为 ``None``。"
+  },
+  "litestar.app.Litestar.route_reverse": {
+    "hash": "fe8d71003d51dfb1",
+    "text": "接收路由处理器名称和路径参数值，并返回填充了路径参数的处理器 URL 路径。\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar, get\n\n\n        @get(\"/group/{group_id:int}\")\n        def get_group_members(group_id: int) -> None:\n            pass\n\n\n        @get(\"/group/{group_id:int}/user/{user_id:int}\", name=\"get_membership_details\")\n        def get_membership_details(group_id: int, user_id: int) -> None:\n            pass\n\n\n        app = Litestar(route_handlers=[get_group_members, get_membership_details])\n\n        group_members_path = app.route_reverse(get_group_members, group_id=10)\n\n        # /group/10\n\n        membership_details_path = app.route_reverse(\n            \"get_membership_details\", user_id=100, group_id=10\n        )\n\n        # /group/10/user/100\n\nArgs:\n    name: 路由处理器的 ``name``，或者是路由处理器本身。\n    **path_parameters: 路由中路径参数的实际值。`datetime`、`date`、`time`、`timedelta`、`float`、`Path` 和 `UUID` 类型的参数可以以其字符串形式传递。\n\nRaises:\n    NoRouteMatchFoundException: 如果不存在名为 'name' 的路由，或者 ``**path_parameters`` 中的任何路径参数缺失或类型错误。\n\nReturns:\n    一个完全格式化后的 URL 路径。"
+  },
+  "litestar.app.Litestar.update_openapi_schema": {
+    "hash": "1d4d4061b481fb0d",
+    "text": "更新 OpenAPI 模式以反映在应用上注册的路线处理器。\n\nReturns:\n    None"
+  }
+}

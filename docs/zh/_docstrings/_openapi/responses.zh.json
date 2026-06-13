@@ -1,0 +1,67 @@
+{
+  "litestar._openapi.responses.ResponseFactory": {
+    "hash": "43ca953df03e9f5f",
+    "text": "为给定路由处理器创建 Response 实例的工厂。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.__init__": {
+    "hash": "cac93e3c5b1ca7b7",
+    "text": "初始化工厂。\n\nArgs:\n    context: 一个 OpenAPIContext 实例。\n    route_handler: 一个 HTTPRouteHandler 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.create_additional_responses": {
+    "hash": "986079fed5168614",
+    "text": "创建其他响应（如果有）的架构。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.create_description": {
+    "hash": "f03e6202f72a250c",
+    "text": "为成功响应创建描述。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.create_file_response": {
+    "hash": "e6e9a722ba8bb1fa",
+    "text": "为文件/流响应创建模式。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.create_redirect_response": {
+    "hash": "e3f9a222e4efcdca",
+    "text": "为重定向响应创建架构。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.create_responses": {
+    "hash": "c955437f50879975",
+    "text": "为响应创建模式（如果存在）。\n\nArgs:\n    raises_validation_error: 布尔标志，指示处理程序是否引发 ValidationException。\n\nReturns:\n    Responses",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.create_success_response": {
+    "hash": "9b14c957a91c123e",
+    "text": "为成功响应创建模式。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.ResponseFactory.set_success_response_headers": {
+    "hash": "888c0b0fe8ae4710",
+    "text": "设置成功响应头的架构（如果有的话）。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.create_cookie_schema": {
+    "hash": "baa066e4254af2a9",
+    "text": "给定一个 Cookie 实例，返回其对应的 OpenAPI 模式。\n\nArgs:\n    cookie: Cookie\n\nReturns:\n    Schema",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.create_error_responses": {
+    "hash": "73e5a453e4a02a03",
+    "text": "创建错误响应的架构（如果有的话）。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.create_responses_for_handler": {
+    "hash": "95f05465b1833fbf",
+    "text": "为响应创建模式（如果有的话）。\n\nArgs:\n    context: 一个 OpenAPIContext 实例。\n    route_handler: 一个 HTTPRouteHandler 实例。\n    raises_validation_error: 布尔标志，指示处理程序是否引发 ValidationException。\n\nReturns:\n    Responses",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.responses.pascal_case_to_text": {
+    "hash": "d2ab684bee7fb33f",
+    "text": "给定一个“PascalCased”字符串，返回其拆分形式——“Pascal Cased”。",
+    "type": "FunctionDef"
+  }
+}

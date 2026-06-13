@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.xml.XML": {
+    "hash": "4402d758bc25a1e0",
+    "text": "允许进行更精细的 XML 模型定义的元数据对象。\n\n当使用数组时，XML 元素名称*不会*被推断（针对单数/复数形式），因此*应*使用 ``name`` 属性来添加该信息。请参阅示例以了解预期行为。",
+    "type": "ClassDef"
+  }
+}

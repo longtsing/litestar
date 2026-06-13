@@ -1,0 +1,47 @@
+{
+  "litestar.channels.plugin.ChannelsPlugin.__init__": {
+    "hash": "ccc51b457f471b67",
+    "text": "用于通过 WebSocket 进行广播并支持通道的插件。\n\n该插件可通过 ``channels`` 键作为注入依赖使用。\n\nArgs:\n    backend: 用于存储数据的后端\n    channels: 要服务的通道列表。如果 ``arbitrary_channels_allowed`` 为 ``False``（默认值），尝试订阅不在 ``channels`` 中的通道将引发异常\n    arbitrary_channels_allowed: 允许动态创建通道\n    create_ws_route_handlers: 如果为 ``True``，将为 ``channels`` 中定义的所有通道创建 WebSocket 路由处理器。如果 ``arbitrary_channels_allowed`` 为 ``True``，则只创建一个处理器来处理所有通道。创建的处理器将接受 WebSocket 连接，并开始向其各自通道发送接收到的事件。\n    ws_handler_send_history: 客户端连接后，从生成的 WebSocket 路由处理器发送的历史记录条目数量。值为 ``0`` 表示不发送历史记录\n    ws_handler_base_path: 用于生成路由处理器的路径前缀\n    ws_send_mode: 通过 :class:`WebSocket <.connection.WebSocket>` 发送数据时使用的发送模式。该模式将在生成的路由处理器内部或 :meth:`Subscriber.run_in_background` 发送数据时使用\n    subscriber_max_backlog: 为给定订阅者在内存中保留的未发送消息的最大数量。如果达到该限制，新消息将根据 ``backlog_strategy`` 进行处理\n    subscriber_backlog_strategy: 定义当订阅者的 ``max_backlog`` 达到上限时的行为。``backoff`` 将导致新消息被丢弃，直到旧消息被处理完毕；``dropleft`` 将丢弃旧消息以保留新消息\n    subscriber_class: 从 :meth:`subscribe` 返回的 :class:`Subscriber` 子类\n    type_encoders: 用于在发送前编码数据的额外类型编码器映射",
+    "type": "FunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.encode_data": {
+    "hash": "c56515eedd34a4b1",
+    "text": "在将数据存储到后端之前对其进行编码",
+    "type": "FunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.on_app_init": {
+    "hash": "5b44c1752b3a56c3",
+    "text": "插件钩子。设置 ``channels`` 依赖项，添加路由处理器并注册应用钩子。",
+    "type": "FunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.publish": {
+    "hash": "05d6f399676be2e9",
+    "text": "安排将 ``data`` 发布到 ``channels``。\n\n.. note::\n    这是一个同步方法，会立即返回。无法保证当此方法返回时，数据已被发布到后端。如需等待发布完成，请使用 :meth:`wait_published`。",
+    "type": "FunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.put_subscriber_history": {
+    "hash": "c29e6d19f347a204",
+    "text": "从后端获取 ``channels`` 的历史记录，并将其放入订阅者的流中。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.start_subscription": {
+    "hash": "0c95569d6de3763a",
+    "text": "创建一个 :class:`Subscriber` 并将其订阅绑定到一个上下文管理器；\n退出上下文时，将调用 :meth:`unsubscribe`。\n\nArgs:\n    channels: 要订阅的频道（一个或多个）\n    history: 如果为非负整数，则从每个频道添加指定数量的历史记录条目到订阅者的事件流中。请注意，这将等待所有历史记录条目被获取并推送到订阅者的流中。如需更精细的控制，请使用 :meth:`put_subscriber_history`。\n\nReturns:\n    一个 :class:`Subscriber`",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.subscribe": {
+    "hash": "8cb8935c3a391396",
+    "text": "创建 :class:`Subscriber`，提供 ``channels`` 中所有事件的流。\n\n创建的订阅者默认是被动式的，必须手动消费，可以通过使用 :meth:`Subscriber.run_in_background` 或使用 :meth:`Subscriber.iter_events` 迭代事件来实现。\n\nArgs:\n    channels: 要订阅的通道（一个或多个）\n    history: 如果为非负整数，则从每个通道添加指定数量的历史条目到订阅者的事件流中。请注意，这将等待直到所有历史条目被获取并推送到订阅者的流中。如需更多控制，请使用 :meth:`put_subscriber_history`。\n\nReturns:\n    一个 :class:`Subscriber`\n\nRaises:\n    ChannelsException: 如果 ``channels`` 中的某个通道未在此后端上声明，且 ``arbitrary_channels_allowed`` 未设置为 ``True``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.unsubscribe": {
+    "hash": "88cce7d4bfdf35c3",
+    "text": "从 ``channels`` 取消订阅一个 :class:`Subscriber`。如果该订阅者有正在运行的发送任务，它将被停止。\n\nArgs:\n    channels: 要取消订阅的频道。如果为 ``None``，则取消订阅所有频道\n    subscriber: 要取消订阅的 :class:`Subscriber`",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.plugin.ChannelsPlugin.wait_published": {
+    "hash": "ba501ce33511a50f",
+    "text": "将 ``data`` 发布到 ``channels``",
+    "type": "AsyncFunctionDef"
+  }
+}

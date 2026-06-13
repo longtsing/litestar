@@ -1,0 +1,175 @@
+{
+  "litestar.repository.testing.generic_mock_repository": {
+    "hash": "975ad36e27ef29a9",
+    "text": "用于测试的存储库实现。\n\n使用 `dict` 进行存储。",
+    "type": "Module"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository": {
+    "hash": "35044e7bd26510d3",
+    "text": "用于测试的存储库实现。\n\n使用 :class:`dict` 进行存储。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.__class_getitem__": {
+    "hash": "1d0e6bcbb5e5435f",
+    "text": "将集合添加到该类型的 ``_collections`` 中。\n\nArgs:\n    item: 类已参数化的类型。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.add": {
+    "hash": "a2ba68486b25960c",
+    "text": "将 ``data`` 添加到集合中。\n\nArgs:\n    data: 要添加到集合中的实例。\n\nReturns:\n    已添加的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.add_many": {
+    "hash": "7b19daf629f00370",
+    "text": "向集合中添加多个 ``data``。\n\nArgs:\n    data: 要添加到集合的实例。\n\nReturns:\n    已添加的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.clear_collection": {
+    "hash": "22d20ffaf4821567",
+    "text": "清空仓库类型的集合。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.count": {
+    "hash": "66ecb524fd0496d4",
+    "text": "查询返回的行数。\n\nArgs:\n    *filters: 特定过滤操作的数据类型。\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    集合中的实例数量，忽略分页。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.delete": {
+    "hash": "8608ca743b3165e2",
+    "text": "删除由 ``item_id`` 标识的实例。\n\nArgs:\n    item_id: 要删除的实例的标识符。\n\nReturns:\n    已删除的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``item_id`` 标识的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.delete_many": {
+    "hash": "f20d0e0bf799bb0b",
+    "text": "删除由标识符列表 ``item_ids`` 标识的实例。\n\nArgs:\n    item_ids: 待删除实例的标识符列表。\n\nReturns:\n    已删除的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.exists": {
+    "hash": "076002837eaf8078",
+    "text": "如果 ``kwargs`` 指定的对象存在，则返回 True。\n\nArgs:\n    *filters: 用于特定过滤操作的类型。\n    **kwargs: 要检索的实例的标识符。\n\nReturns:\n    如果找到实例，则返回 True。如果未找到，则返回 False。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.filter_collection_by_kwargs": {
+    "hash": "a2af4cd8f5bc8bca",
+    "text": "根据关键字参数过滤集合。\n\nArgs:\n    collection: 要过滤的对象集合\n    **kwargs: 键值对，使得过滤后保留在集合中的对象满足其名为 ``key`` 的属性值等于 ``value``。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.get": {
+    "hash": "a3c3d98ca3e130cd",
+    "text": "获取由 ``item_id`` 标识的实例。\n\nArgs:\n    item_id: 要检索的实例的标识符。\n    **kwargs: 其他参数\n\nReturns:\n    检索到的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``item_id`` 标识的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.get_one": {
+    "hash": "7be8f922102355cf",
+    "text": "通过查询过滤器获取实例。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    检索到的实例或 None\n\nRaises:\n    NotFoundError: 如果未找到由 ``kwargs`` 标识的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.get_one_or_none": {
+    "hash": "df5c8b16f8ace057",
+    "text": "根据查询过滤器获取实例，如果未找到则返回 None。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    检索到的实例或 None"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.get_or_create": {
+    "hash": "a80548b545e8414d",
+    "text": "获取由 ``kwargs`` 标识的实例，如果不存在则创建。\n\nArgs:\n    match_fields: 用于匹配现有模型的一组键列表。当为空时，将匹配所有字段。\n    **kwargs: 要检索的实例的标识符。\n\nReturns:\n    一个元组，包含实例以及该实例是否需要创建。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.list": {
+    "hash": "9fa4584d7b55cc46",
+    "text": "获取实例列表，可选择性过滤。\n\nArgs:\n    *filters: 用于特定过滤操作的类型。\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    应用过滤后的实例列表。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.list_and_count": {
+    "hash": "cdb6f29928d2c550",
+    "text": "获取实例列表，可选择性地应用过滤条件并返回总行数。\n\nArgs:\n    *filters: 用于特定过滤操作的数据类型。\n    **kwargs: 实例属性值过滤条件。\n\nReturns:\n    实例列表，以及查询返回的记录总数（忽略分页）。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.seed_collection": {
+    "hash": "2a7aa60ce816075f",
+    "text": "为仓库类型初始化集合。\n\nArgs:\n    instances: 要添加到集合中的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.update": {
+    "hash": "39ad2f0cfd767b6d",
+    "text": "使用 ``data`` 中存在的属性值更新实例。\n\nArgs:\n    data: 一个实例，该实例应包含存在于集合中的 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 值。\n\nReturns:\n    更新后的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.update_many": {
+    "hash": "3266208af5629553",
+    "text": "使用 ``data`` 中存在的属性值更新实例。\n\nArgs:\n    data: 一个实例列表，这些实例应包含一个存在于集合中的 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 值。\n\nReturns:\n    更新后的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.upsert": {
+    "hash": "db6f728ef68778a9",
+    "text": "更新或创建实例。\n\n使用 ``data`` 中存在的属性值更新实例，如果该实例不存在则创建新实例。\n\nArgs:\n    data: 待更新的现有实例，或待创建的新实例。用于判断现有实例是否存在的标识符是 `data` 上名为 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 属性值的属性。\n\nReturns:\n    更新后或新创建的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericAsyncMockRepository.upsert_many": {
+    "hash": "295597edfdd726db",
+    "text": "更新或创建多个实例。\n\n使用 ``data`` 中存在的属性值更新实例，如果实例不存在则创建新实例。\n\nArgs:\n    data: 待更新或创建的实例列表。用于判断现有实例是否存在的标识符是 `data` 中名为 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 属性值的属性值。\n\nReturns:\n    更新或创建后的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository": {
+    "hash": "35044e7bd26510d3",
+    "text": "用于测试的存储库实现。\n\n使用 :class:`dict` 进行存储。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.__class_getitem__": {
+    "hash": "1d0e6bcbb5e5435f",
+    "text": "将集合添加到该类型的 ``_collections`` 中。\n\nArgs:\n    item: 类已参数化的类型。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.add": {
+    "hash": "a2ba68486b25960c",
+    "text": "将 ``data`` 添加到集合中。\n\nArgs:\n    data: 要添加到集合中的实例。\n\nReturns:\n    已添加的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.add_many": {
+    "hash": "7b19daf629f00370",
+    "text": "向集合中添加多个 ``data``。\n\nArgs:\n    data: 要添加到集合的实例。\n\nReturns:\n    已添加的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.clear_collection": {
+    "hash": "22d20ffaf4821567",
+    "text": "清空仓库类型的集合。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.count": {
+    "hash": "66ecb524fd0496d4",
+    "text": "查询返回的行数。\n\nArgs:\n    *filters: 特定过滤操作的数据类型。\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    集合中的实例数量，忽略分页。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.delete": {
+    "hash": "8608ca743b3165e2",
+    "text": "删除由 ``item_id`` 标识的实例。\n\nArgs:\n    item_id: 要删除的实例的标识符。\n\nReturns:\n    已删除的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``item_id`` 标识的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.delete_many": {
+    "hash": "f20d0e0bf799bb0b",
+    "text": "删除由标识符列表 ``item_ids`` 标识的实例。\n\nArgs:\n    item_ids: 待删除实例的标识符列表。\n\nReturns:\n    已删除的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.exists": {
+    "hash": "076002837eaf8078",
+    "text": "如果 ``kwargs`` 指定的对象存在，则返回 True。\n\nArgs:\n    *filters: 用于特定过滤操作的类型。\n    **kwargs: 要检索的实例的标识符。\n\nReturns:\n    如果找到实例则返回 True。如果未找到则返回 False。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.filter_collection_by_kwargs": {
+    "hash": "a2af4cd8f5bc8bca",
+    "text": "根据 kwargs 过滤集合。\n\nArgs:\n    collection: 要过滤的对象集合\n    **kwargs: 键值对，使得过滤后保留在集合中的对象满足其名为 ``key`` 的属性值等于 ``value``。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.get": {
+    "hash": "a3c3d98ca3e130cd",
+    "text": "获取由 ``item_id`` 标识的实例。\n\nArgs:\n    item_id: 要检索的实例的标识符。\n    **kwargs: 其他参数\n\nReturns:\n    检索到的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``item_id`` 标识的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.get_one": {
+    "hash": "7be8f922102355cf",
+    "text": "通过查询过滤器获取实例。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    检索到的实例或 None\n\nRaises:\n    NotFoundError: 如果未找到由 ``kwargs`` 标识的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.get_one_or_none": {
+    "hash": "df5c8b16f8ace057",
+    "text": "根据查询过滤器获取实例，如果未找到则返回 None。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    检索到的实例或 None"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.get_or_create": {
+    "hash": "a80548b545e8414d",
+    "text": "获取由 ``kwargs`` 标识的实例，如果不存在则创建。\n\nArgs:\n    match_fields: 用于匹配现有模型的一组键列表。当为空时，将匹配所有字段。\n    **kwargs: 要检索的实例的标识符。\n\nReturns:\n    一个元组，包含实例以及该实例是否需要创建。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.list": {
+    "hash": "9fa4584d7b55cc46",
+    "text": "获取实例列表，可选择性过滤。\n\nArgs:\n    *filters: 用于特定过滤操作的类型。\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    应用过滤后的实例列表。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.list_and_count": {
+    "hash": "cdb6f29928d2c550",
+    "text": "获取实例列表，可选择性地应用过滤条件并返回总行数。\n\nArgs:\n    *filters: 用于特定过滤操作的数据类型。\n    **kwargs: 实例属性值过滤条件。\n\nReturns:\n    实例列表，以及查询返回的记录总数（忽略分页）。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.seed_collection": {
+    "hash": "2a7aa60ce816075f",
+    "text": "为仓库类型初始化集合。\n\nArgs:\n    instances: 要添加到集合中的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.update": {
+    "hash": "39ad2f0cfd767b6d",
+    "text": "使用 ``data`` 中存在的属性值更新实例。\n\nArgs:\n    data: 一个实例，该实例应包含存在于集合中的 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 值。\n\nReturns:\n    更新后的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.update_many": {
+    "hash": "3266208af5629553",
+    "text": "使用 ``data`` 中存在的属性值更新实例。\n\nArgs:\n    data: 一个实例列表，这些实例应包含一个存在于集合中的 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 值。\n\nReturns:\n    更新后的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.upsert": {
+    "hash": "db6f728ef68778a9",
+    "text": "更新或创建实例。\n\n使用 ``data`` 中存在的属性值更新实例，如果实例不存在则创建新实例。\n\nArgs:\n    data: 待更新的现有实例，或待创建的新实例。用于判断现有实例是否存在的标识符是 `data` 上名为 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 属性值的属性。\n\nReturns:\n    更新后或新创建的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.testing.generic_mock_repository.GenericSyncMockRepository.upsert_many": {
+    "hash": "295597edfdd726db",
+    "text": "更新或创建多个实例。\n\n使用 ``data`` 中存在的属性值更新实例，如果实例不存在则创建新实例。\n\nArgs:\n    data: 待更新或创建的实例列表。用于判断现有实例是否存在的标识符是 `data` 中名为 :attr:`id_attribute <AsyncGenericMockRepository.id_attribute>` 属性值的属性。\n\nReturns:\n    更新或创建后的实例。"
+  }
+}

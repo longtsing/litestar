@@ -1,0 +1,12 @@
+{
+  "litestar.openapi.spec.base.BaseSchemaObject": {
+    "hash": "448b0f08d9167f9b",
+    "text": "schema 规范对象的基类",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.spec.base.BaseSchemaObject.to_schema": {
+    "hash": "d1f8ab14b3141225",
+    "text": "将 spec 数据类对象转换为以字符串为键的字典。此方法递归遍历所有嵌套值。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "litestar._signature.utils._validate_signature_dependencies": {
+    "hash": "71fa027d98cd2835",
+    "text": "验证 ``parsed_signature`` 的依赖项。\n\nArgs:\n    dependency_name_set: 依赖名称集合\n    fn_name: 可调用对象的名称。\n    parsed_signature: 已解析的签名。\n\nReturns:\n    已验证的依赖名称集合。",
+    "type": "FunctionDef"
+  }
+}

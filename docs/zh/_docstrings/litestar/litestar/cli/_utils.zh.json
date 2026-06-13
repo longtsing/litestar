@@ -1,0 +1,97 @@
+{
+  "litestar.cli._utils.LitestarCLIException": {
+    "hash": "5bf97c3d88c376ef",
+    "text": "Litestar CLI 异常的基类。",
+    "type": "ClassDef"
+  },
+  "litestar.cli._utils.LitestarCLIException.__init__": {
+    "hash": "14b4c9ac5d94c0b5",
+    "text": "初始化异常和样式错误消息。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.LitestarEnv": {
+    "hash": "3ee2d155b7642829",
+    "text": "关于当前 Litestar 环境变量的信息。",
+    "type": "ClassDef"
+  },
+  "litestar.cli._utils.LitestarEnv.from_env": {
+    "hash": "e5ffb968277704f9",
+    "text": "加载环境变量。\n\n如果已安装 ``python-dotenv``，则首先使用它来填充环境变量。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.LitestarExtensionGroup": {
+    "hash": "ef35fc9945621473",
+    "text": "``LitestarGroup`` 的子类，用于从 `litestar.commands` 入口点加载 Litestar-CLI 扩展。\n\n此类不应在除根 ``litestar_group`` 之外的任何组上使用。",
+    "type": "ClassDef"
+  },
+  "litestar.cli._utils.LitestarExtensionGroup.__init__": {
+    "hash": "19003915fe793e3d",
+    "text": "初始化 ``LitestarExtensionGroup``",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.LitestarExtensionGroup.format_help": {
+    "hash": "e1024376bdc696e5",
+    "text": "重写 `format_help` 以确保在渲染帮助信息之前加载插件。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.LitestarGroup": {
+    "hash": "2d1bf27bee143fbe",
+    "text": ":class:`click.Group` 的子类，可自动将 ``app`` 和 ``env`` 参数注入到请求它们的命令中。\n\n如果您正在通过组（group）扩展内部 CLI，请将此用作 :class:`click.Group` 的 ``cls``。对于直接添加到根组的 ``command``，则不需要此功能。",
+    "type": "ClassDef"
+  },
+  "litestar.cli._utils.LitestarGroup.__init__": {
+    "hash": "f2b5bf62576fd3b0",
+    "text": "初始化 ``LitestarGroup``",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.LitestarGroup.add_command": {
+    "hash": "5d7474f7d8528c71",
+    "text": "添加命令。\n\n如有必要，注入 ``app`` 和 ``env`` 参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.LitestarGroup.command": {
+    "hash": "062739d1d59d3068",
+    "text": "将函数添加为命令。\n\n如有必要，注入 ``app`` 和 ``env`` 参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.LoadedApp": {
+    "hash": "d539ff50ed671170",
+    "text": "关于已加载的 Litestar 应用的信息。",
+    "type": "ClassDef"
+  },
+  "litestar.cli._utils._format_is_enabled": {
+    "hash": "c2f9c06eb1db98c7",
+    "text": "如果 ``value`` 为真值，则返回彩色字符串 `\"Enabled\"`，否则返回 `\"Disabled\"`。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils._generate_self_signed_cert": {
+    "hash": "7dc0677d34158a3c",
+    "text": "使用给定路径下的 cryptography 模块创建自签名证书",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils._inject_args": {
+    "hash": "0725171dee4320ea",
+    "text": "将应用实例注入到 ``Command`` 中",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.create_ssl_files": {
+    "hash": "9ee113326d36365b",
+    "text": "验证是否同时提供了两个文件，它们不是目录，其父目录存在，且两个文件要么都存在，要么都不存在。\n如果两个文件都不存在，则在指定位置创建一个自签名 SSL 证书和一个无密码的密钥。\n\nArgs:\n    certfile_arg: 证书文件的路径参数\n    keyfile_arg: 密钥文件的路径参数\n    common_name: 用作证书颁发者和主题的 CN\n\nReturns:\n    找到的或生成的文件的解析路径",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.isatty": {
+    "hash": "a3e914a17eccbe09",
+    "text": "检测终端是否启用了 TTY。\n\n这是一个围绕内置系统方法的便捷封装。这使得测试 TTY/非 TTY 模式更加容易。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.show_app_info": {
+    "hash": "96d455f58ef2e9bc",
+    "text": "显示有关应用程序及其配置的基本信息。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli._utils.validate_ssl_file_paths": {
+    "hash": "7d11ef24de985076",
+    "text": "验证给定的路径是否存在、不是目录，且两个路径均提供或均未提供。返回解析后的路径。\n\nArgs:\n    certfile_arg: 证书文件的路径参数\n    keyfile_arg: 密钥文件的路径参数\n\nReturns:\n    解析后的路径元组（转换为 str），或者如果未提供任何参数，则返回 None 元组",
+    "type": "FunctionDef"
+  }
+}

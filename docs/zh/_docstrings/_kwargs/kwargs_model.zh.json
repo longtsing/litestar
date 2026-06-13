@@ -1,0 +1,47 @@
+{
+  "litestar._kwargs.kwargs_model.KwargsModel": {
+    "hash": "cb530bbf90a2525d",
+    "text": "为给定的 RouteHandler 及其依赖项建模所需的 kwargs。\n\n此操作仅在应用启动时执行一次并进行缓存，以确保运行时开销最小。",
+    "type": "ClassDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel.__init__": {
+    "hash": "5ef9b77c350cb2b6",
+    "text": "初始化 ``KwargsModel``。\n\nArgs:\n    expected_cookie_params: 任何预期的 Cookie 参数 kwargs\n    expected_dependencies: 任何预期的依赖项 kwargs\n    expected_form_data: 任何预期的表单数据 kwargs\n    expected_header_params: 任何预期的头部参数 kwargs\n    expected_msgpack_data: 任何预期的 MessagePack 数据 kwargs\n    expected_path_params: 任何预期的路径参数 kwargs\n    expected_query_params: 任何预期的查询参数 kwargs\n    expected_reserved_kwargs: 任何预期的保留 kwargs，例如 'state'\n    expected_data_dto: 如果已定义，则为数据 DTO\n    is_data_optional: 将数据视为可选\n    sequence_query_parameter_names: 任何为序列的查询参数",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel._create_dependency_graph": {
+    "hash": "71468f4ddfe8d904",
+    "text": "创建一个类似图的依赖结构，其中每个依赖项都包含其自身的依赖项列表。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel._get_param_definitions": {
+    "hash": "d975b38256e9c4e4",
+    "text": "获取用于构建 KwargsModel 实例的 parameter_definitions。\n\nArgs:\n    path_parameters: 任何预期的路径参数。\n    layered_parameters: 一个以字符串为键的分层参数字典。\n    dependencies: 一个以字符串为键的字典，用于映射依赖提供者。\n    field_definitions: SignatureModel 的字段。\n\nReturns:\n    一个集合元组",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel._validate_dependency_data": {
+    "hash": "bba4794621127515",
+    "text": "验证 'data' 关键字参数在依赖项之间是否兼容。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel._validate_raw_kwargs": {
+    "hash": "7b5f853f9d40e4a0",
+    "text": "验证不存在歧义的 kwargs，即在不同位置使用相同键声明的 kwargs。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel.create_for_signature_model": {
+    "hash": "e580109896fc2f2b",
+    "text": "预先确定给定路由与路由处理器组合所需的参数。该函数在应用程序引导过程中执行。\n\nArgs:\n    signature_model: 一个 :class:`SignatureModel <litestar._signature.SignatureModel>` 子类。\n    parsed_signature: 一个 :class:`ParsedSignature <litestar._signature.ParsedSignature>` 实例。\n    dependencies: 一个以字符串为键的字典，用于映射依赖提供者。\n    path_parameters: 任何预期的路径参数。\n    layered_parameters: 一个以字符串为键的分层参数字典。\n    ctx: 路由处理器 / 路由处理器上下文\n\nReturns:\n    KwargsModel 的一个实例",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel.resolve_dependencies": {
+    "hash": "e5eb9a902e616096",
+    "text": "将所有依赖项递归地解析到 kwargs 中。\n\nArgs:\n    connection: :class:`Request <litestar.connection.Request>` 或 :class:`WebSocket <litestar.connection.WebSocket>` 的实例。\n    kwargs: 要传递给依赖项的 kwargs。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.kwargs_model.KwargsModel.to_kwargs": {
+    "hash": "f4e5ad6da52a20dc",
+    "text": "返回一个 kwargs 字典。异步值（即协程）不会被解析，以确保此函数是同步的。\n\nArgs:\n    connection: 一个 :class:`Request <litestar.connection.Request>` 或 :class:`WebSocket <litestar.connection.WebSocket>` 的实例。\n\nReturns:\n    一个以字符串为键的字典，包含处理函数及其依赖项所期望的 kwargs。",
+    "type": "AsyncFunctionDef"
+  }
+}

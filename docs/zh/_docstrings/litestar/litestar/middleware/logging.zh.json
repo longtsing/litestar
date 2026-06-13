@@ -1,0 +1,37 @@
+{
+  "litestar.middleware.logging.LoggingMiddleware": {
+    "hash": "fbec2d605b32c47a",
+    "text": "日志中间件。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.logging.LoggingMiddleware.create_send_wrapper": {
+    "hash": "eb22b276e3ad6302",
+    "text": "创建一个 ``send`` 包装器，用于处理响应数据的日志记录。\n\nArgs:\n    scope: ASGI 连接作用域。\n    send: ASGI send 函数。\n\nReturns:\n    一个 ASGI send 函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.logging.LoggingMiddleware.extract_request_data": {
+    "hash": "774fcc92fd238e38",
+    "text": "为消息创建值字典。\n\nArgs:\n    request: 一个 :class:`Request <litestar.connection.Request>` 实例。\n\nReturns:\n    一个 dict。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.logging.LoggingMiddleware.extract_response_data": {
+    "hash": "d5d3d591d93c3e9e",
+    "text": "从响应中提取数据。\n\nArgs:\n    scope: ASGI 连接作用域。\n\nReturns:\n    一个 dict。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.logging.LoggingMiddleware.log_message": {
+    "hash": "723a2b99ac252deb",
+    "text": "记录一条消息。\n\nArgs:\n    values: 提取要记录的数值。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.logging.LoggingMiddleware.log_request": {
+    "hash": "55480548fd58a277",
+    "text": "提取请求数据并记录消息。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收可调用对象\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.logging.LoggingMiddleware.log_response": {
+    "hash": "86498ecd63e01007",
+    "text": "提取响应数据并记录消息。\n\nArgs:\n    scope: ASGI 连接作用域。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  }
+}

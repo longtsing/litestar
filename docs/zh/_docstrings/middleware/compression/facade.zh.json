@@ -1,0 +1,18 @@
+{
+  "litestar.middleware.compression.facade.CompressionFacade": {
+    "hash": "db04f78b8cff67b4",
+    "text": "为不同的压缩库提供统一接口的统一门面。"
+  },
+  "litestar.middleware.compression.facade.CompressionFacade.__init__": {
+    "hash": "174c5c0dbc6837d1",
+    "text": "初始化 ``CompressionFacade``。\n\nArgs:\n    buffer: 一个 bytes IO 缓冲区，用于将压缩数据写入其中。\n    compression_encoding: 使用的压缩编码。\n    config: 应用压缩配置。"
+  },
+  "litestar.middleware.compression.facade.CompressionFacade.close": {
+    "hash": "06bb82bb4d8c4855",
+    "text": "关闭压缩流。\n\nReturns:\n    None"
+  },
+  "litestar.middleware.compression.facade.CompressionFacade.write": {
+    "hash": "75685652fb263854",
+    "text": "将压缩后的字节写入缓冲区。\n\nArgs:\n    body: 要处理的消息体。可以是 `bytes` 或 `bytearray`。\n    final: 指示这是否为最后一个数据块。如果为 True，压缩器可能会刷新任何剩余的內部缓冲区。\n\nReturns:\n    None"
+  }
+}

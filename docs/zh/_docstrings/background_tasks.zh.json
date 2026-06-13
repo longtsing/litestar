@@ -1,0 +1,26 @@
+{
+  "litestar.background_tasks.BackgroundTask": {
+    "hash": "d06e746a3a31beb5",
+    "text": "用于“后台”任务函数的容器。\n\n后台任务在响应完成后被调用。"
+  },
+  "litestar.background_tasks.BackgroundTask.__call__": {
+    "hash": "f8ee8f14f53a3f08",
+    "text": "调用传入参数的被包装函数。\n\nReturns:\n    None"
+  },
+  "litestar.background_tasks.BackgroundTask.__init__": {
+    "hash": "0cf94deb422a6367",
+    "text": "初始化 ``BackgroundTask``。\n\nArgs:\n    fn: 要作为后台任务调用的同步或异步函数。\n    *args: 要传递给函数的参数。\n    **kwargs: 要传递给函数的关键字参数。"
+  },
+  "litestar.background_tasks.BackgroundTasks": {
+    "hash": "83dcfb522f36efc4",
+    "text": "一个用于容纳多个“后台”任务函数的容器。\n\n后台任务在响应完成后被调用。"
+  },
+  "litestar.background_tasks.BackgroundTasks.__call__": {
+    "hash": "14c8fcfcc0e938b8",
+    "text": "调用被包装的后台任务。\n\nReturns:\n    None"
+  },
+  "litestar.background_tasks.BackgroundTasks.__init__": {
+    "hash": "e46acbdf86eb13b1",
+    "text": "初始化 ``BackgroundTasks``。\n\nArgs:\n    tasks: 一个 :class:`BackgroundTask <.background_tasks.BackgroundTask>` 实例的可迭代对象。\n    run_in_task_group: 如果将此值设置为 ``True``，则任务将使用 :class:`TaskGroup <anyio.abc.TaskGroup>` 并发运行。注意：这将不保留执行顺序。"
+  }
+}

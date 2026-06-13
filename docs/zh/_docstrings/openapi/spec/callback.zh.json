@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.callback.Callback": {
+    "hash": "0d826128de8bf34e",
+    "text": "与父操作相关的可能的带外回调的映射。映射中的每个值都是一个 `Path Item Object <https://spec.openapis.org/oas/v3.1.0#pathItemObject>`_，描述了 API 提供者可能发起的一组请求及其预期响应。用于标识路径项对象的键值是一个在运行时求值的表达式，该表达式标识了用于回调操作的 URL。\n\n模式化字段\n\n{expression}: 'PathItem' = ...\n\n用于定义回调请求和预期响应的路径项对象。\n\n一个 `完整示例 <https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.1/webhook-example.yaml>`_ 可供参考。",
+    "type": "Variable"
+  }
+}

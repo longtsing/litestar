@@ -1,0 +1,37 @@
+{
+  "litestar._asgi.asgi_router.ASGIRouter": {
+    "hash": "4ffabb0ef6f6de21",
+    "text": "Litestar ASGI 路由器。\n\n处理 ASGI 生命周期事件以及连接请求的路由。",
+    "type": "ClassDef"
+  },
+  "litestar._asgi.asgi_router.ASGIRouter.__call__": {
+    "hash": "a6c5f9d3483aa508",
+    "text": "ASGI 可调用对象。\n\nRouter 类的主要入口点。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._asgi.asgi_router.ASGIRouter.__init__": {
+    "hash": "56a3e464b23088f9",
+    "text": "初始化 ``ASGIRouter``。\n\nArgs:\n    app: Litestar 应用实例",
+    "type": "FunctionDef"
+  },
+  "litestar._asgi.asgi_router.ASGIRouter._store_handler_to_route_mapping": {
+    "hash": "0977817d08413d0f",
+    "text": "将路由处理器到路由及其处理器名称的映射进行存储。\n\nArgs:\n    route: 一个 Route 实例。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar._asgi.asgi_router.ASGIRouter.construct_routing_trie": {
+    "hash": "036f6e1a741e6e06",
+    "text": "创建应用程序的路由映射。\n\n此映射用于 ASGI 路由器以路由请求。",
+    "type": "FunctionDef"
+  },
+  "litestar._asgi.asgi_router.ASGIRouter.handle_routing": {
+    "hash": "b829451163388325",
+    "text": "处理给定路径/方法组合的路由。此方法旨在便于缓存。\n\nArgs:\n    path: 请求的路径。\n    method: 作用域的方法（如果有）。\n\nReturns:\n    一个元组，由路由的 ASGIApp、路由处理程序实例、解析并规范化的路径以及任何解析后的路径参数组成。",
+    "type": "FunctionDef"
+  },
+  "litestar._asgi.asgi_router.ASGIRouter.lifespan": {
+    "hash": "895e472262f8929e",
+    "text": "处理应用程序启动和关闭时的 ASGI \"lifespan\" 事件。\n\nArgs:\n    receive: ASGI receive 函数。\n    send: ASGI send 函数。\n\nReturns:\n    None.",
+    "type": "AsyncFunctionDef"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "litestar.security.session_auth.middleware.MiddlewareWrapper": {
+    "hash": "1c76cf1a4fd09e42",
+    "text": "作为中间件入口点的包装类。",
+    "type": "ClassDef"
+  },
+  "litestar.security.session_auth.middleware.MiddlewareWrapper.__call__": {
+    "hash": "a8221bb9540ccc72",
+    "text": "处理创建中间件栈并调用它。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.security.session_auth.middleware.MiddlewareWrapper.__init__": {
+    "hash": "573aca3d55dfb691",
+    "text": "将 SessionAuthMiddleware 包装在 ExceptionHandlerMiddleware 内部，并将后者包装在 SessionMiddleware 内部。\n这使得认证中间件在抛出异常时仍能处理响应，同时清除会话。\n\nArgs:\n    app: 一个 ASGIApp，该值是中间件栈中要调用的下一个 ASGI 处理器。\n    config: SessionAuth 的一个实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.session_auth.middleware.SessionAuthMiddleware": {
+    "hash": "590f915f209db613",
+    "text": "会话认证中间件。",
+    "type": "ClassDef"
+  },
+  "litestar.security.session_auth.middleware.SessionAuthMiddleware.__init__": {
+    "hash": "2b2f1ffb1385d9e4",
+    "text": "基于会话的身份验证中间件。\n\nArgs:\n    app: 一个 ASGIApp，该值是中间件栈中要调用的下一个 ASGI 处理器。\n    exclude: 用于在身份验证中间件中跳过的模式或模式列表。\n    exclude_http_methods: 不需要身份验证的 HTTP 方法序列。\n    exclude_opt_key: 用于路由的标识符，以禁用特定路由的身份验证和授权检查。\n    scopes: 由身份验证中间件处理的 ASGI 作用域。\n    retrieve_user_handler: 可调用对象，接收来自身份验证中间件的 ``session`` 值，并返回 ``user`` 值。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.session_auth.middleware.SessionAuthMiddleware.authenticate_request": {
+    "hash": "48eaf8869d80fcb2",
+    "text": "验证传入的连接。\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <.connection.ASGIConnection>` 实例。\n\nRaises:\n    NotAuthorizedException: 如果会话数据为空或找不到用户。\n\nReturns:\n    :class:`AuthenticationResult <.middleware.authentication.AuthenticationResult>`",
+    "type": "AsyncFunctionDef"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "litestar.channels.backends.memory.MemoryChannelsBackend": {
+    "hash": "1df633bccddb2f3c",
+    "text": "内存中的 channels 后端",
+    "type": "ClassDef"
+  },
+  "litestar.channels.backends.memory.MemoryChannelsBackend.get_history": {
+    "hash": "951e623b29c0f9b7",
+    "text": "返回 ``channel`` 的事件历史，最多包含 ``limit`` 条记录。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.memory.MemoryChannelsBackend.publish": {
+    "hash": "bd68506f0d487c17",
+    "text": "将 ``data`` 发布到 ``channels``。如果某个频道尚未被订阅，此操作将不执行任何操作。\n\nArgs:\n    data: 要发布的数据\n    channels: 要发布到的频道\n\nReturns:\n    None\n\nRaises:\n    RuntimeError: 如果尚未调用 ``on_startup``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.memory.MemoryChannelsBackend.stream_events": {
+    "hash": "be36ed184e358171",
+    "text": "返回一个生成器，迭代订阅通道的可用事件。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.memory.MemoryChannelsBackend.subscribe": {
+    "hash": "8b4e425999d02a03",
+    "text": "订阅 ``channels`` 并启用向它们发布",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.memory.MemoryChannelsBackend.unsubscribe": {
+    "hash": "dc9b3035d5c453c8",
+    "text": "从 ``channels`` 取消订阅",
+    "type": "AsyncFunctionDef"
+  }
+}

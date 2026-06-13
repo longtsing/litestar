@@ -1,0 +1,22 @@
+{
+  "litestar.utils.sync.AsyncCallable": {
+    "hash": "efed7712d151d4d0",
+    "text": "使用 ``anyio.to_thread.run_sync`` 将给定的可调用对象包装为在线程池中调用，并将原始可调用对象的引用保留在 :attr:`func` 中。",
+    "type": "ClassDef"
+  },
+  "litestar.utils.sync.AsyncIteratorWrapper": {
+    "hash": "c1a8f4a1c5174361",
+    "text": "异步生成器，用于包装可迭代对象或迭代器。",
+    "type": "ClassDef"
+  },
+  "litestar.utils.sync.AsyncIteratorWrapper.__init__": {
+    "hash": "b1ec7d7f6b8f92da",
+    "text": "从同步迭代器或可迭代对象中异步生成值。\n\nArgs:\n    iterator: 一个同步迭代器或可迭代对象。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.sync.ensure_async_callable": {
+    "hash": "564715648f52e466",
+    "text": "确保 ``fn`` 是一个异步可调用对象。\n如果它已经是异步的，则返回原始对象；否则将其包装在 ``AsyncCallable`` 中。",
+    "type": "FunctionDef"
+  }
+}

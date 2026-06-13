@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.security_scheme.SecurityScheme": {
+    "hash": "d5c849188e562be6",
+    "text": "定义了一种可供操作使用的安全方案。\n\n支持的安全方案包括 HTTP 认证、API 密钥（可作为标头、Cookie 参数或查询参数）、双向 TLS（使用客户端证书）、以及 :rfc:`6749` 中定义的 OAuth2 常见流程（隐式、密码、客户端凭证和授权码），还有 `OpenID Connect Discovery <https://tools.ietf.org/html/draft-ietf-oauth-discovery-06>`_。\n\n请注意，截至 2020 年，隐式流程（implicit flow）即将被 `OAuth 2.0 Security Best Current Practice <https://tools.ietf.org/html/draft-ietf-oauth-security-topics>`_ 弃用。对于大多数用例，推荐使用带有 PKCE 的授权码授予流程（Authorization Code Grant flow）。"
+  }
+}

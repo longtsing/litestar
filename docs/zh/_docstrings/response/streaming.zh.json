@@ -1,0 +1,40 @@
+{
+  "litestar.response.streaming.ASGIStreamingResponse": {
+    "hash": "0b7073e48e7b623a",
+    "text": "流式响应。"
+  },
+  "litestar.response.streaming.ASGIStreamingResponse.__init__": {
+    "hash": "6fd1e35f5dbb178d",
+    "text": "一个底层的 ASGI 流式响应。\n\nArgs:\n    background: 在响应发送后执行的后台任务或后台任务列表。\n    content_length: 响应内容长度。\n    cookies: 响应 Cookie。\n    encoding: 响应编码。\n    headers: 响应头。\n    is_head_response: 一个布尔值，指示响应是否为 HEAD 响应。\n    iterator: 一个异步迭代器或可迭代对象。\n    media_type: 响应媒体类型。\n    status_code: 响应状态码。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.streaming.ASGIStreamingResponse._listen_for_disconnect": {
+    "hash": "fce14a551c37976a",
+    "text": "监听取消消息，如果收到消息，则在取消作用域上调用 cancel。\n\nArgs:\n    cancel_scope: 任务组取消作用域实例。\n    receive: ASGI receive 函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.response.streaming.ASGIStreamingResponse._stream": {
+    "hash": "db3a33cfd8eeaba4",
+    "text": "将迭代器中的块作为 ASGI 'http.response.body' 事件流发送。\n\nArgs:\n    send: ASGI Send 函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.response.streaming.ASGIStreamingResponse.send_body": {
+    "hash": "18dc8018a1a913e0",
+    "text": "发出与响应体相关联的事件流。\n\nArgs:\n    send: ASGI send 函数。\n    receive: ASGI receive 函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.response.streaming.Stream": {
+    "hash": "50747ddabb19cb27",
+    "text": "一个将响应数据作为一系列 ASGI ``http.response.body`` 事件进行流式传输的 HTTP 响应。"
+  },
+  "litestar.response.streaming.Stream.__init__": {
+    "hash": "f730030ae0c46b70",
+    "text": "初始化响应。\n\nArgs:\n    content: 一个同步或异步的迭代器或可迭代对象。\n    background: 一个 :class:`BackgroundTask <.background_tasks.BackgroundTask>` 实例或\n        :class:`BackgroundTasks <.background_tasks.BackgroundTasks>`，用于在响应完成后执行。\n        默认为 None。\n    cookies: 一组 :class:`Cookie <.datastructures.Cookie>` 实例，将设置在响应的\n        ``Set-Cookie`` 标头下。\n    encoding: 用于响应标头的编码。\n    headers: 一个以字符串为键的响应标头字典。标头键不区分大小写。\n    media_type: 响应 ``Content-Type`` 标头的值。\n    status_code: HTTP 状态码。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.streaming.Stream.to_asgi_response": {
+    "hash": "2c343e4f9673ef9a",
+    "text": "从 `StreamingResponse` 实例创建 `ASGIStreamingResponse`。\n\nArgs:\n    background: 响应发送后要执行的后台任务。\n    cookies: 要在响应上设置的 Cookie 列表。\n    headers: 要与响应头合并的额外头信息。响应头具有优先权。\n    is_head_response: 响应是否为 HEAD 响应。\n    media_type: 响应的媒体类型。如果响应上已设置 ``media_type``，则忽略此参数。\n    request: :class:`Request <.connection.Request>` 实例。\n    status_code: 响应的状态码。如果响应上已设置 ``status_code``，则忽略此参数。\n    type_encoders: 用于编码响应内容的类型编码器字典。\n\nReturns:\n    一个 `ASGIStreamingResponse` 实例。",
+    "type": "FunctionDef"
+  }
+}

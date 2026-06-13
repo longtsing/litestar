@@ -1,0 +1,14 @@
+{
+  "litestar.repository._exceptions.ConflictError": {
+    "hash": "ed4be66c2d9487d5",
+    "text": "数据完整性错误。"
+  },
+  "litestar.repository._exceptions.NotFoundError": {
+    "hash": "11fa5b6e91352d6d",
+    "text": "身份不存在。"
+  },
+  "litestar.repository._exceptions.RepositoryError": {
+    "hash": "a83bb91cc5564ff7",
+    "text": "基础仓库异常类型。"
+  }
+}

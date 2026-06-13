@@ -1,0 +1,10 @@
+{
+  "litestar.plugins.prometheus.config.PrometheusConfig": {
+    "hash": "386248dfeacbcbb8",
+    "text": "PrometheusConfig 中间件的配置类。"
+  },
+  "litestar.plugins.prometheus.config.PrometheusConfig.middleware": {
+    "hash": "3b7311ba0c351a81",
+    "text": "创建 :class:`DefineMiddleware <litestar.middleware.base.DefineMiddleware>` 的实例，用于包装 [PrometheusMiddleware][litestar.plugins.prometheus.PrometheusMiddleware]（Prometheus 中间件）或其子类。\n\nReturns:\n    ``DefineMiddleware`` 的实例。"
+  }
+}

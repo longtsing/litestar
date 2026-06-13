@@ -1,0 +1,18 @@
+{
+  "litestar.middleware._internal.cors.CORSMiddleware": {
+    "hash": "331edd0d5a5db1ad",
+    "text": "CORS 中间件。"
+  },
+  "litestar.middleware._internal.cors.CORSMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.middleware._internal.cors.CORSMiddleware.__init__": {
+    "hash": "6c950120205415f5",
+    "text": "为应用程序添加 CORS 验证的中间件。\n\nArgs:\n    app: 要调用的下一个 ASGI 应用。\n    config: :class:`CORSConfig <litestar.config.cors.CORSConfig>` 的实例。"
+  },
+  "litestar.middleware._internal.cors.CORSMiddleware.send_wrapper": {
+    "hash": "fd0dd62e637a61cc",
+    "text": "包装 ``send`` 以确保状态不会断开连接。\n\nArgs:\n    has_cookie: 布尔标志，指示连接是否设置了 cookie。\n    origin: ``Origin`` 头的值。\n    send: ASGI send 函数。\n\nReturns:\n    一个 ASGI send 函数。"
+  }
+}

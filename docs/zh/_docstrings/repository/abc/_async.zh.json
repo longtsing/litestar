@@ -1,0 +1,90 @@
+{
+  "litestar.repository.abc._async.AbstractAsyncRepository": {
+    "hash": "48590598d5acd4e0",
+    "text": "持久化数据交互的接口。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.__init__": {
+    "hash": "6a1828328708a468",
+    "text": "仓库构造函数接受任意关键字参数。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.add": {
+    "hash": "a2ba68486b25960c",
+    "text": "将 ``data`` 添加到集合中。\n\nArgs:\n    data: 要添加到集合的实例。\n\nReturns:\n    已添加的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.add_many": {
+    "hash": "d5495aff11a7c8f0",
+    "text": "向集合中添加多个 ``data``。\n\nArgs:\n    data: 要添加到集合的实例。\n\nReturns:\n    已添加的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.check_not_found": {
+    "hash": "f1d99af91cd44d3a",
+    "text": "如果 ``item_or_none`` 为 ``None``，则抛出 :class:`NotFoundError`。\n\nArgs:\n    item_or_none: 用于测试是否存在的项目（:class:`T <T>`）。\n\nReturns:\n    如果项目存在，则返回该项目。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.count": {
+    "hash": "207fa2fb46654a3b",
+    "text": "获取查询返回的记录数量。\n\nArgs:\n    *filters: 用于特定过滤操作的数据类型。\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    实例的数量"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.delete": {
+    "hash": "8608ca743b3165e2",
+    "text": "删除由 ``item_id`` 标识的实例。\n\nArgs:\n    item_id: 要删除的实例的标识符。\n\nReturns:\n    已删除的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``item_id`` 标识的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.delete_many": {
+    "hash": "089e0c10e4f44d37",
+    "text": "删除由 ID 列表 ``item_ids`` 标识的多个实例。\n\nArgs:\n    item_ids: 待删除的标识符（Identifiers）列表。\n\nReturns:\n    已删除的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.exists": {
+    "hash": "d7a07ce6cfda8fe2",
+    "text": "如果 ``kwargs`` 指定的对象存在，则返回 True。\n\nArgs:\n    *filters: 用于特定过滤操作的类型。\n    **kwargs: 要检索的实例的标识符。\n\nReturns:\n    如果找到实例，则返回 True。如果未找到，则返回 False。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.filter_collection_by_kwargs": {
+    "hash": "66d7c2277c6fb528",
+    "text": "通过 kwargs 过滤集合。\n\n当提供多个 kwargs 键/值对时，具有 ``AND`` 语义。\n\nArgs:\n    collection: 待过滤的对象\n    **kwargs: 键/值对，使得过滤后保留在集合中的对象满足其名为 ``key`` 的属性值等于 ``value``。\n\n\nReturns:\n    过滤后的对象\n\nRaises:\n    RepositoryError: 如果命名属性在 :attr:`model_type <AbstractAsyncRepository.model_type>` 上不存在。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.get": {
+    "hash": "9ef2d5e10ac28272",
+    "text": "获取由 ``item_id`` 标识的实例。\n\nArgs:\n    item_id: 要检索的实例的标识符。\n    **kwargs: 其他参数\n\nReturns:\n    检索到的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``item_id`` 标识的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.get_id_attribute_value": {
+    "hash": "30bb9766b5e1bfc6",
+    "text": "获取 ``item`` 上名为 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 的属性的值。\n\nArgs:\n    item: 任何应具有名为 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 的属性的对象。\n    id_attribute: 允许自定义用于模型获取的唯一标识符。\n        默认为 `None`，但可以引用表的任何代理键（surrogate key）或候选键（candidate key）。\n\nReturns:\n    ``item`` 上名为 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 的属性的值。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.get_one": {
+    "hash": "3fc8ac9324c1c536",
+    "text": "如果存在，则获取由 ``kwargs`` 过滤器指定的实例。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    检索到的实例。\n\nRaises:\n    NotFoundError: 如果未找到由 ``kwargs`` 标识的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.get_one_or_none": {
+    "hash": "d5c778c40cae8f28",
+    "text": "如果存在则获取实例，否则返回 None。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    检索到的实例或 None。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.get_or_create": {
+    "hash": "a8ad8eb55de9660c",
+    "text": "如果存在，则获取由 ``kwargs`` 过滤器指定的实例，否则创建它。\n\nArgs:\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    一个元组，包含检索到或创建的实例，以及一个布尔值，表示记录是否被创建。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.list": {
+    "hash": "e1954c28acd0fd12",
+    "text": "获取实例列表，可选择性地进行过滤。\n\nArgs:\n    *filters: 用于特定过滤操作的过滤器\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    应用过滤后的实例列表"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.list_and_count": {
+    "hash": "6fd7a5da526d194e",
+    "text": "列出记录并包含总数。\n\nArgs:\n    *filters: 用于特定过滤操作的数据类型。\n    **kwargs: 实例属性值过滤器。\n\nReturns:\n    一个元组，包含应用过滤后的实例列表，以及查询返回的记录总数（忽略分页）。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.set_id_attribute_value": {
+    "hash": "ae7c57934c3db604",
+    "text": "在将 ID 设置为适当的属性后返回 ``item``。\n\nArgs:\n    item_id: 要在实例上设置的 ID 值\n    item: 任何应具有名为 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 值的属性的对象。\n    id_attribute: 允许自定义用于模型获取的唯一标识符。\n        默认为 `None`，但可以引用表的任何代理键或候选键。\n\nReturns:\n    已将 ``item_id`` 设置为 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 的项"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.update": {
+    "hash": "e4c6bdd1a97dbc98",
+    "text": "使用 ``data`` 中存在的属性值更新实例。\n\nArgs:\n    data: 一个实例，该实例应包含存在于集合中的 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 值。\n\nReturns:\n    更新后的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.update_many": {
+    "hash": "9285fc1cb1c02e2d",
+    "text": "使用 ``data`` 中实例存在的属性值更新多个实例。\n\nArgs:\n    data: 一个实例列表，这些实例应包含存在于集合中的 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 值。\n\nReturns:\n    更新后的实例列表。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.upsert": {
+    "hash": "840d7ced9db3c5d8",
+    "text": "更新或创建实例。\n\n使用 ``data`` 中存在的属性值更新实例，如果实例不存在则创建新实例。\n\nArgs:\n    data: 要更新的现有实例，或待创建的实例。用于确定是否存在现有实例的标识符是 ``data`` 上名为 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 属性值的属性。\n\nReturns:\n    更新或创建后的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  },
+  "litestar.repository.abc._async.AbstractAsyncRepository.upsert_many": {
+    "hash": "a223fc0355390a4a",
+    "text": "更新或创建多个实例。\n\n使用 ``data`` 中存在的属性值更新实例，如果实例不存在则创建新实例。\n\nArgs:\n    data: 待更新或创建的实例。用于判断现有实例是否存在的标识符是 ``data`` 上名为 :attr:`id_attribute <AbstractAsyncRepository.id_attribute>` 属性值的属性。\n\nReturns:\n    更新或创建后的实例。\n\nRaises:\n    NotFoundError: 如果未找到与 ``data`` 具有相同标识符的实例。"
+  }
+}

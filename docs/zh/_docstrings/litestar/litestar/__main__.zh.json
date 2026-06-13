@@ -1,0 +1,7 @@
+{
+  "litestar.__main__.run_cli": {
+    "hash": "f205aa9d9e0ff19b",
+    "text": "应用程序入口点。",
+    "type": "FunctionDef"
+  }
+}

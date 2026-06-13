@@ -1,0 +1,30 @@
+{
+  "litestar.middleware._internal.exceptions.middleware.ExceptionHandlerMiddleware": {
+    "hash": "50ffa539e042cbbb",
+    "text": "用于在 try-catch 块中包装 ASGIApp 并处理任何引发的异常的中间件（Middleware）。\n\n此中间件在 Litestar 的多个层级中使用。"
+  },
+  "litestar.middleware._internal.exceptions.middleware.ExceptionHandlerMiddleware.__call__": {
+    "hash": "079fb060d717f7a8",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.middleware._internal.exceptions.middleware.ExceptionHandlerMiddleware.__init__": {
+    "hash": "11f6d170b7d823de",
+    "text": "初始化 ``ExceptionHandlerMiddleware``。\n\nArgs:\n    app: 要调用的下一个 ``next`` ASGI 应用。"
+  },
+  "litestar.middleware._internal.exceptions.middleware.ExceptionHandlerMiddleware.get_default_http_exception_handler": {
+    "hash": "79495637ccdab904",
+    "text": "通过返回适当的响应来处理 HTTP 异常。\n\nArgs:\n    request: 一个 HTTP Request 实例。\n    exc: 捕获的异常。\n\nReturns:\n    一个 HTTP 响应。"
+  },
+  "litestar.middleware._internal.exceptions.middleware.ExceptionHandlerMiddleware.handle_request_exception": {
+    "hash": "cebf7b487ac2ed31",
+    "text": "处理在 'http' 作用域路由中引发的异常。\n\nArgs:\n    litestar_app: Litestar 应用实例。\n    scope: ASGI 连接作用域。\n    receive: ASGI receive 函数。\n    send: ASGI send 函数。\n    exc: 捕获的异常。\n\nReturns:\n    None."
+  },
+  "litestar.middleware._internal.exceptions.middleware.ExceptionHandlerMiddleware.handle_websocket_exception": {
+    "hash": "adc4fcb05271e648",
+    "text": "处理在 'websocket' 作用域路由中引发的异常。\n\nArgs:\n    send: ASGI send 函数。\n    exc: 捕获的异常。\n\nReturns:\n    None."
+  },
+  "litestar.middleware._internal.exceptions.middleware.get_exception_handler": {
+    "hash": "7574d019dbfea4c7",
+    "text": "给定一个将异常和状态码映射到处理函数的字典，以及一个异常实例，如果存在则返回相应的处理函数。\n\n状态码的优先级高于异常类型。\n\n如果没有匹配的状态码，则检查异常类型的方法解析顺序（MRO）中的每个类，并返回第一个匹配的处理函数。\n\n最后，如果注册了 ``500`` 处理函数，则对于任何不是 :class:`HTTPException <litestar.exceptions.HTTPException>` 子类的异常，都将返回该处理函数。\n\nArgs:\n    exception_handlers: 状态码和异常类型到处理函数的映射。\n    exc: 需要解析为处理函数的异常实例。\n\nReturns:\n    可选的异常处理函数可调用对象。"
+  }
+}

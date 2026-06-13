@@ -1,0 +1,72 @@
+{
+  "litestar.utils.predicates.is_annotated_type": {
+    "hash": "db11ed7ad600bba8",
+    "text": "检查给定的注解是否为 `Annotated`。\n\nArgs:\n    annotation: 类型注解\n\nReturns:\n    布尔值。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_any": {
+    "hash": "e747040bfa6ecac0",
+    "text": "给定类型注解，判断该注解是否为 Any。\n\nArgs:\n    annotation: 一个类型。\n\nReturns:\n    一个类型守卫，用于判断该类型是否为 :data:`Any <typing.Any>`。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_async_callable": {
+    "hash": "0fde3f5f9d218b5f",
+    "text": "扩展 :func:`inspect.iscoroutinefunction`，使其能够额外检测异步 :func:`functools.partial` 对象以及定义了 ``async def __call__()`` 的类实例。\n\nArgs:\n    value: 任意类型\n\nReturns:\n    布尔值，用于判断 ``value`` 的类型是否为可等待对象（awaitable）。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_class_and_subclass": {
+    "hash": "e27414eab8086dd6",
+    "text": "如果 ``value`` 是一个 ``class`` 且是 ``t_type`` 的子类，则返回 ``True``。\n\n参见 https://github.com/litestar-org/litestar/issues/367\n\nArgs:\n    annotation: 要检查是否为 ``class`` 且为 ``t_type`` 子类的值。\n    type_or_type_tuple: 用于对 ``value`` 进行 :func:`issubclass` 检查的类型。\n\nReturns:\n    bool",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_class_var": {
+    "hash": "2c71999cb487ac52",
+    "text": "```\n检查给定的注解是否为 ClassVar。\n\nArgs:\n    annotation: 类型注解\n\nReturns:\n    布尔值。\n```",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_dataclass_class": {
+    "hash": "cf22ee67bbec380d",
+    "text": "将 :func:`is_dataclass <dataclasses.is_dataclass>` 包装为 :data:`typing.TypeGuard`。\n\nArgs:\n    annotation: 用于测试以确定是否为 :class:`dataclasses.dataclass` 的实例或类型。\n\nReturns:\n    如果为 ``dataclass`` 的实例或类型，则返回 ``True``。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_dataclass_instance": {
+    "hash": "f45f858da6bfc0b4",
+    "text": "```\n检查一个对象是否为 dataclass 实例。\n\nArgs:\n    obj: 要检查的对象。\n\nReturns:\n    如果对象是 dataclass 实例，则为 True。\n```",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_generic": {
+    "hash": "931cb58583fb04c7",
+    "text": "给定类型注解，判断该注解是否为泛型类。\n\nArgs:\nannotation: 一个类型。\n\nReturns:\n    如果该注解是 :data:`Generic <typing.Generic>` 的子类，则返回 ``True``，否则返回 ``False``。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_mapping": {
+    "hash": "8c0b98756273b898",
+    "text": "给定一个类型注解，判断该注解是否为映射类型。\n\nArgs:\nannotation: 一个类型。\n\nReturns:\n    一个类型守卫，用于判断该类型是否可以转换为 :class:`Mapping <typing.Mapping>`。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_non_string_iterable": {
+    "hash": "19a461979f441880",
+    "text": "给定类型注解，判断该注解是否为可迭代对象。\n\nArgs:\nannotation: 一个类型。\n\nReturns:\n    一个类型守卫，用于判断该类型是否可以转换为 :class:`Iterable <typing.Iterable>` 且不是字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_non_string_sequence": {
+    "hash": "9fbe0d9b6c387080",
+    "text": "给定一个类型注解，判断该注解是否为序列。\n\nArgs:\nannotation: 一个类型。\n\nReturns:\n    一个类型守卫，用于判断该类型是否可以转换为非字符串的 :class:`Sequence <typing.Sequence>`。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_optional_union": {
+    "hash": "df62a816950f103d",
+    "text": "给定一个类型注解，判断该注解是否推断出可选联合类型。\n\nArgs:\n    annotation: 一个类型。\n\nReturns:\n    一个类型守卫，用于判断该类型是否为包含 `None` 值的 `:data:`Union typing.Union>` 或等价的 `:data:`Optional <typing.Optional>`。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_undefined_sentinel": {
+    "hash": "6939e701c2613362",
+    "text": "```\n检查给定值是否为未定义哨兵值。\n\nArgs:\n    value: 待测试是否为未定义哨兵值的值。\n\nReturns:\n    布尔值。\n```",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.predicates.is_union": {
+    "hash": "c9afff3cc2c32792",
+    "text": "给定类型注解，判断该注解是否推断出可选联合类型。\n\nArgs:\n    annotation: 一个类型。\n\nReturns:\n    一个布尔值，用于判断该类型是否为 :data:`Union typing.Union>`。",
+    "type": "FunctionDef"
+  }
+}

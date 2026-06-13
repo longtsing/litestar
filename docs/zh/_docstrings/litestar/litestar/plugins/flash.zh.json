@@ -1,0 +1,27 @@
+{
+  "litestar.plugins.flash": {
+    "hash": "e11698245b888a49",
+    "text": "用于创建和检索闪存消息的插件。",
+    "type": "Module"
+  },
+  "litestar.plugins.flash.FlashConfig": {
+    "hash": "8ff80e355e59a640",
+    "text": "Flash 消息的配置。",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.flash.FlashPlugin": {
+    "hash": "22244d7d347b46b0",
+    "text": "Flash 消息插件。",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.flash.FlashPlugin.__init__": {
+    "hash": "266fad289c65d594",
+    "text": "初始化插件。\n\nArgs:\n    config: 闪信消息的配置，包括模板引擎实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.flash.FlashPlugin.on_app_init": {
+    "hash": "687b5a62f8a5ac55",
+    "text": "在模板引擎实例上注册消息可调用对象。\n\nArgs:\n    app_config: 应用程序配置。\n\nReturns:\n    已注册消息可调用对象的应用程序配置。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "litestar.middleware.session.client_side.ClientSideSessionBackend": {
+    "hash": "a0b3fd8b0d5e3848",
+    "text": "SessionMiddleware 的 Cookie 后端。"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend.__init__": {
+    "hash": "fe09a9f5b7716e41",
+    "text": "初始化 ``ClientSideSessionBackend``。\n\nArgs:\n    config: SessionCookieConfig 实例。"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend._create_session_cookies": {
+    "hash": "ea0f64bd7908cc45",
+    "text": "创建包含会话数据的 cookie 列表。\n如果数据被拆分为多个 cookie，键的格式将为 ``session-{segment number}``，\n但如果只需要一个 cookie，键将为 ``session``。"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend.dump_data": {
+    "hash": "1932e85839ddc03a",
+    "text": "给定可序列化数据（包括 pydantic 模型和 numpy 类型），将其序列化为字节字符串，进行加密、编码，并分割为指定大小的块。\n\nArgs:\n    data: 待序列化、加密、编码和分块的数据。\n    scope: ASGI 连接作用域（scope）。\n\nNotes:\n    - 返回的列表由单个 base64 编码字符串的块组成，该字符串使用 AES-CGM 加密。\n\nReturns:\n    编码后的字节字符串列表，每个字符串的最大长度等于 ``CHUNK_SIZE`` 常量。"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend.get_cookie_key_set": {
+    "hash": "5f25f4a0c4d40651",
+    "text": "从连接中返回一组 cookie 键，前提是它们与 session-cookie 模式匹配。\n\n.. versionadded:: 2.8.3\n\nArgs:\n    connection: 一个 ASGIConnection 实例\n\nReturns:\n    一组 session-cookie 键"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend.get_cookie_keys": {
+    "hash": "a32aabc8dd88731d",
+    "text": "如果匹配会话 cookie 模式，则从连接中返回 cookie 键列表。\n\nArgs:\n    connection: 一个 ASGIConnection 实例\n\nReturns:\n    会话 cookie 键的列表"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend.load_data": {
+    "hash": "48aa52264b88d332",
+    "text": "给定一个字符串列表，将其解码为会话对象。\n\nArgs:\n    data: 源自请求会话 cookie 的字符串列表。\n\nReturns:\n    反序列化的会话值。"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend.load_from_connection": {
+    "hash": "937c4bb18bbd9312",
+    "text": "从连接的 session-cookies 加载会话数据，并将其作为字典返回。\n\nArgs:\n    connection: 源 ASGIConnection\n\nReturns:\n    会话数据"
+  },
+  "litestar.middleware.session.client_side.ClientSideSessionBackend.store_in_message": {
+    "hash": "0ef0eae015f806ac",
+    "text": "将 ``scope_session`` 中的数据以 Cookie 的形式存储在 ``Message`` 中。如果 ``scope_session`` 的内容过大，无法放入单个 Cookie，则会按照 ``<cookie key>-<n>`` 的命名方案将其拆分到多个 Cookie 中。如果会话为空或数据量缩小，将通过将 Cookie 的值设置为 ``\"null\"`` 来清除它们。\n\nArgs:\n    scope_session: 当前要存储的会话\n    message: 待发送的 outgoing send-message\n    connection: 包含作用域（scope）的原始 ASGIConnection\n\nReturns:\n    None"
+  },
+  "litestar.middleware.session.client_side.CookieBackendConfig": {
+    "hash": "9fd0fa5a0ffd6e36",
+    "text": "[SessionMiddleware] 中间件的配置。"
+  }
+}

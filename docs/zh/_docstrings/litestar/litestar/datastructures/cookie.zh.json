@@ -1,0 +1,32 @@
+{
+  "litestar.datastructures.cookie.Cookie": {
+    "hash": "66e8d850a9a76cf3",
+    "text": "用于使用 ``Set-Cookie`` 标头定义 Cookie 的容器类。\n\n有关此标头的更多详细信息，请参阅：https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie。",
+    "type": "ClassDef"
+  },
+  "litestar.datastructures.cookie.Cookie.__eq__": {
+    "hash": "f96120d5bd420389",
+    "text": "根据 Cookie 规范判断两个 Cookie 实例是否相等，即它们具有相似的路径、域和键。\n\nArgs:\n    other: 任意值\n\nReturns:\n    布尔值",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.cookie.Cookie.dict": {
+    "hash": "7e9ed8c696cdf66a",
+    "text": "将 cookie 获取为字典。\n\nReturns:\n    一个包含值的字典",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.cookie.Cookie.simple_cookie": {
+    "hash": "d2efcb08b0347b25",
+    "text": "从值中获取一个简单的 cookie 对象。\n\nReturns:\n    一个 :class:`SimpleCookie <http.cookies.SimpleCookie>`",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.cookie.Cookie.to_encoded_header": {
+    "hash": "e029b43cfd51c88b",
+    "text": "为 ASGI ``send`` 创建编码后的标头。\n\nReturns:\n    一个包含两个字节的元组。",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.cookie.Cookie.to_header": {
+    "hash": "f9f97845ce56cfd4",
+    "text": "返回一个适合作为 HTTP 头发送的字符串表示。\n\nArgs:\n    **kwargs: 传递给简单 cookie 输出方法的任意 kwargs。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "litestar.cli.commands.schema._generate_openapi_schema": {
+    "hash": "4abeff4758ff49c9",
+    "text": "生成 OpenAPI 模式。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.schema.generate_openapi_schema": {
+    "hash": "4abeff4758ff49c9",
+    "text": "生成 OpenAPI 模式。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.schema.generate_typescript_specs": {
+    "hash": "acc29f306a0414a4",
+    "text": "从 OpenAPI 架构生成 TypeScript 规范。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.schema.schema_group": {
+    "hash": "1c2717903158e0d0",
+    "text": "管理服务器端的 OpenAPI 模式。",
+    "type": "FunctionDef"
+  }
+}

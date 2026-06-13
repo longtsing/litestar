@@ -1,0 +1,34 @@
+{
+  "litestar.config.cors.CORSConfig": {
+    "hash": "da41fb8fd29f7080",
+    "text": "CORS（跨域资源共享）的配置。\n\n要启用 CORS，请使用 `cors_config` 键将本类的实例传递给 :class:`Litestar <litestar.app.Litestar>` 构造函数。"
+  },
+  "litestar.config.cors.CORSConfig.allowed_origins_regex": {
+    "hash": "3932ba0990d9f989",
+    "text": "获取或创建允许来源的已编译正则表达式。\n\nReturns:\n    允许路径的已编译正则表达式。"
+  },
+  "litestar.config.cors.CORSConfig.is_allow_all_headers": {
+    "hash": "43f5a568f9118873",
+    "text": "获取一个缓存的布尔标志，用于指示是否允许所有标头。\n\nReturns:\n    指示是否允许所有标头的布尔值。"
+  },
+  "litestar.config.cors.CORSConfig.is_allow_all_methods": {
+    "hash": "d09cb2226cd9cb2a",
+    "text": "获取一个缓存的布尔标志，用于指示是否允许所有方法。\n\nReturns:\n    指示是否允许所有方法的布尔值。"
+  },
+  "litestar.config.cors.CORSConfig.is_allow_all_origins": {
+    "hash": "f363254b8a3a86bb",
+    "text": "获取一个缓存的布尔标志，用于指示是否允许所有来源。\n\nReturns:\n    指示是否允许所有来源的布尔值。"
+  },
+  "litestar.config.cors.CORSConfig.is_origin_allowed": {
+    "hash": "54d9fd4fd9dd5808",
+    "text": "检查给定的源（origin）是否被允许。\n\nArgs:\n    origin: 一个源头（origin header）值。\n\nReturns:\n    布尔值，用于确定源是否被允许。"
+  },
+  "litestar.config.cors.CORSConfig.preflight_headers": {
+    "hash": "f76a0b445cf25b35",
+    "text": "获取缓存的预检请求头。\n\nReturns:\n    要在响应对象上设置的头字典。"
+  },
+  "litestar.config.cors.CORSConfig.simple_headers": {
+    "hash": "1966d013dedac5ee",
+    "text": "获取缓存的简单标头。\n\nReturns:\n    要在响应对象上设置的标头字典。"
+  }
+}

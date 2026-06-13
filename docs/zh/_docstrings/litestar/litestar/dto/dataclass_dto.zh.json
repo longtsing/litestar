@@ -1,0 +1,7 @@
+{
+  "litestar.dto.dataclass_dto.DataclassDTO": {
+    "hash": "98487a1e0f999d48",
+    "text": "支持使用 dataclasses 进行领域建模。",
+    "type": "ClassDef"
+  }
+}

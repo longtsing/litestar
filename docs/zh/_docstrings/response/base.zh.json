@@ -1,0 +1,66 @@
+{
+  "litestar.response.base.ASGIResponse": {
+    "hash": "ff0d3b85ac64bbf6",
+    "text": "一个底层的 ASGI 响应类。"
+  },
+  "litestar.response.base.ASGIResponse.__call__": {
+    "hash": "7674bfb3cc7407b3",
+    "text": "``Response`` 的 ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.response.base.ASGIResponse.__init__": {
+    "hash": "31468a64c59ba96b",
+    "text": "一个底层的 ASGI 响应类。\n\nArgs:\n    background: 在响应发送后执行的后台任务或后台任务列表。\n    body: 要在响应体中发送的编码内容。\n    content_length: 响应内容长度。\n    cookies: 响应 Cookie。\n    encoding: 响应编码。\n    headers: 响应头。\n    is_head_response: 一个布尔值，指示该响应是否为 HEAD 响应。\n    media_type: 响应媒体类型。\n    status_code: 响应状态码。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.base.ASGIResponse.after_response": {
+    "hash": "1bb692315b2f8672",
+    "text": "在响应发送后执行。\n\nReturns:\n    None"
+  },
+  "litestar.response.base.ASGIResponse.encode_headers": {
+    "hash": "f01c08ba9e4a8d00",
+    "text": "返回此响应的标头列表。\n\n该列表包含标头和编码后的 cookie，以元组形式表示，其中每个元组代表一个以字节编码的单个标头键值对。"
+  },
+  "litestar.response.base.ASGIResponse.send_body": {
+    "hash": "443c6dcedd9779d1",
+    "text": "发送响应体。\n\nArgs:\n    send: ASGI send 函数。\n    receive: ASGI receive 函数。\n\nNotes:\n    - 如果需要对发送数据进行自定义，响应子类应自定义此方法。\n\nReturns:\n    None"
+  },
+  "litestar.response.base.ASGIResponse.start_response": {
+    "hash": "6a817031ca467597",
+    "text": "发出响应的开始事件。此事件包含头部信息和状态码。\n\nArgs:\n    send: ASGI send 函数。\n\nReturns:\n    None"
+  },
+  "litestar.response.base.Response": {
+    "hash": "07c2521ea64d23fb",
+    "text": "Litestar 基础 HTTP 响应类，用作所有其他响应类的基础。"
+  },
+  "litestar.response.base.Response.__init__": {
+    "hash": "03202ad14069bdb4",
+    "text": "初始化响应。\n\nArgs:\n    content: 响应体的值，将被渲染为字节字符串。\n    status_code: HTTP 状态码。\n    media_type: 响应 ``Content-Type`` 头的值。\n    background: 一个 :class:`BackgroundTask <.background_tasks.BackgroundTask>` 实例或 :class:`BackgroundTasks <.background_tasks.BackgroundTasks>`，用于在响应完成后执行。默认为 ``None``。\n    headers: 以字符串为键的响应头字典。头键不区分大小写。\n    cookies: 要在响应 ``Set-Cookie`` 头下设置的 :class:`Cookie <.datastructures.Cookie>` 实例列表。\n    encoding: 用于响应头的编码。\n    type_encoders: 类型到可调用对象的映射，用于将它们转换为支持序列化的类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.base.Response.delete_cookie": {
+    "hash": "01e98760735bf666",
+    "text": "删除一个 Cookie。\n\nArgs:\n    key: Cookie 的键。\n    path: Cookie 的路径。\n    domain: Cookie 的域名。\n\nReturns:\n    None。"
+  },
+  "litestar.response.base.Response.render": {
+    "hash": "c520e59efcceb780",
+    "text": "将内容渲染为字节字符串。\n\nReturns:\n    一个编码后的字节字符串"
+  },
+  "litestar.response.base.Response.set_cookie": {
+    "hash": "c4b4c962c8d3b2c0",
+    "text": "在响应中设置一个 Cookie。如果传入的是 :class:`Cookie <.datastructures.Cookie>` 实例，则忽略关键字参数。\n\nArgs:\n    key: Cookie 的键，或一个 :class:`Cookie <.datastructures.Cookie>` 实例。\n    value: Cookie 的值，如果未提供则默认为空字符串。\n    max_age: Cookie 在被失效前的最大存活时间。\n    expires: Cookie 过期所需的秒数（从当前时间起算）。\n    path: 请求 URL 中必须存在的路径片段，以使 Cookie 有效。默认为 ``/``。\n    domain: Cookie 有效的域名。\n    secure: 要求使用 Https 才能设置该 Cookie。\n    httponly: 禁止通过 ``document.cookie`` 使用 JavaScript 访问该 Cookie。\n    samesite: 控制 Cookie 是否随跨站请求发送。默认为 ``lax``。\n\nReturns:\n    None.",
+    "type": "FunctionDef"
+  },
+  "litestar.response.base.Response.set_etag": {
+    "hash": "c20878e5eaf5e993",
+    "text": "设置 etag 头。\n\nArgs:\n    etag: etag 值。\n\nReturns:\n    None"
+  },
+  "litestar.response.base.Response.set_header": {
+    "hash": "c397ef472aea111d",
+    "text": "在响应上设置一个标头。\n\nArgs:\n    key: 标头键。\n    value: 标头值。\n\nReturns:\n    None."
+  },
+  "litestar.response.base.Response.to_asgi_response": {
+    "hash": "23dd4a84ab97a1ea",
+    "text": "从 `Response` 实例创建 `ASGIResponse`。\n\nArgs:\n    background: 响应发送后执行的后台任务。\n    cookies: 要在响应上设置的 Cookie 列表。\n    headers: 要与响应头合并的额外头信息。响应头具有优先权。\n    is_head_response: 响应是否为 HEAD 响应。\n    media_type: 响应的媒体类型。如果响应上已设置 ``media_type``，则忽略此参数。\n    request: :class:`Request <.connection.Request>` 实例。\n    status_code: 响应的状态码。如果响应上已设置 ``status_code``，则忽略此参数。\n    type_encoders: 用于编码响应内容的类型编码器字典。\n\nReturns:\n    一个 `ASGIResponse` 实例。",
+    "type": "FunctionDef"
+  }
+}

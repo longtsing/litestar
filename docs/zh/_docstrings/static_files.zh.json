@@ -1,0 +1,10 @@
+{
+  "litestar.static_files._get_fs_info": {
+    "hash": "812540bf88833857",
+    "text": "返回解析后的路径和 :class:`~litestar.file_system.FileInfo`（文件信息对象）"
+  },
+  "litestar.static_files.create_static_files_router": {
+    "hash": "9fc4de2add357dcd",
+    "text": "创建带有处理静态文件的处理器的路由器。\n\nArgs:\n    path: 提供静态文件的路径\n    directories: 提供静态文件的目录\n    file_system: 用于加载文件的文件系统。:class:`~litestar.file_system.BaseFileSystem`、:class:`fsspec.spec.AbstractFileSystem`、:class:`fsspec.asyn.AsyncFileSystem` 的实例将直接使用。如果传入字符串，则使用它从 :class:`~litestar.file_system.FileSystemRegistry` 中查找对应的文件系统。如果未提供，文件将从 :attr:`~litestar.file_system.FileSystemRegistry.default` 加载\n    send_as_attachment: 是否将文件作为附件发送\n    html_mode: 在 HTML 模式下：\n        - 从 ``/`` 提供 ``index.html`` 文件\n        - 当找不到文件时提供 ``404.html``\n    name: 传递给生成的处理器的名称\n    after_request: 传递给路由器的 ``after_request`` 处理器\n    after_response: 传递给路由器的 ``after_response`` 处理器\n    before_request: 传递给路由器的 ``before_request`` 处理器\n    cache_control: 传递给路由器的 ``cache_control``\n    exception_handlers: 传递给路由器的异常处理器\n    guards: 传递给路由器的守卫（Guards）\n    include_in_schema: 是否在 OpenAPI 架构中包含路由/路由器\n    middleware: 传递给路由器的中间件（Middlewares）\n    opt: 传递给路由器的选项（Opts）\n    security: 传递给路由器的安全选项\n    tags: 传递给路由器的 ``tags``\n    router_class: 用于构造路由器的类\n    allow_symlinks_outside_directory: 允许提供链接到基础目录（在 'directories' 中指定）内部路径到外部路径的文件。此操作应谨慎处理，因为它允许通过符号链接链潜在地意外访问定义 'directories' 之外的文件。\n\n        .. seealso::\n\n            :ref:`usage/static-files:Handling symlinks`"
+  }
+}

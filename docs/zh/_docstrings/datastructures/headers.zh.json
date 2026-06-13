@@ -1,0 +1,118 @@
+{
+  "litestar.datastructures.headers.Accept": {
+    "hash": "f945c38cf27ea07b",
+    "text": "一个 ``Accept`` 标头。"
+  },
+  "litestar.datastructures.headers.Accept.accepts": {
+    "hash": "898186915415f5cc",
+    "text": "检查请求是否接受指定的媒体类型。\n\n如果可以提供多种媒体类型，最好使用 :func:`best_match`。\n\nArgs:\n    media_type: 要检查的媒体类型。\n\nReturns:\n    如果请求接受 ``media_type``，则返回 True。"
+  },
+  "litestar.datastructures.headers.Accept.best_match": {
+    "hash": "ea1ce97f8e4d3926",
+    "text": "查找请求的最佳匹配媒体类型。\n\nArgs:\n    provided_types: 可作为响应提供的媒体类型列表。这些类型可以在主类型或子类型部分包含通配符 ``*`` 字符。\n    default: 如果提供的类型均不匹配时返回的媒体类型。\n\nReturns:\n    最佳匹配的媒体类型。如果匹配的提供类型包含通配符字符，则它们将被替换为接受类型中对应的部分。否则，将原样返回提供的类型。"
+  },
+  "litestar.datastructures.headers.CacheControlHeader": {
+    "hash": "de9e5092bcea5c5b",
+    "text": "一个 ``cache-control`` 标头。"
+  },
+  "litestar.datastructures.headers.CacheControlHeader._get_header_value": {
+    "hash": "391986b3417c165d",
+    "text": "获取字符串形式的头部值。"
+  },
+  "litestar.datastructures.headers.CacheControlHeader.from_header": {
+    "hash": "e473ee93cb620bf3",
+    "text": "从头部值创建 ``CacheControlHeader`` 实例。\n\nArgs:\n    header_value: 作为字符串的头部值\n\nReturns:\n    ``CacheControlHeader`` 的实例"
+  },
+  "litestar.datastructures.headers.CacheControlHeader.prevent_storing": {
+    "hash": "217c566c1169958b",
+    "text": "创建一个带有 ``no-store`` 指令的 ``cache-control`` 头，指示任何类型的缓存（私有或共享）都不应存储此响应。"
+  },
+  "litestar.datastructures.headers.ETag": {
+    "hash": "c53bcde257d8c598",
+    "text": "一个 ``etag`` 标头。"
+  },
+  "litestar.datastructures.headers.ETag.from_header": {
+    "hash": "bc2175d3d86b87c9",
+    "text": "从字符串表示形式构建 ``etag`` 标头。\n\n注意，这将取消 etag 值的引用。"
+  },
+  "litestar.datastructures.headers.Header": {
+    "hash": "dc2e7ef846a1ad81",
+    "text": "HTTP 标头的抽象类型。"
+  },
+  "litestar.datastructures.headers.Header._get_header_value": {
+    "hash": "391986b3417c165d",
+    "text": "将头部值作为字符串获取。"
+  },
+  "litestar.datastructures.headers.Header.from_header": {
+    "hash": "53e5d445c0b7a31d",
+    "text": "从字符串表示构造一个标头。"
+  },
+  "litestar.datastructures.headers.Header.to_header": {
+    "hash": "6f1a30efe125ee1b",
+    "text": "将头部信息作为字符串获取。\n\nArgs:\n    include_header_name: 是否应在返回值中包含头部名称。如果设置为 false，返回值将仅包含头部值。如果设置为 true，返回值将为：``<header name>: <header value>``。默认为 false。"
+  },
+  "litestar.datastructures.headers.Headers": {
+    "hash": "8848fd14be3ead52",
+    "text": "用于 HTTP 标头的不可变、不区分大小写的多值字典。"
+  },
+  "litestar.datastructures.headers.Headers.__init__": {
+    "hash": "8a3e784914291b8b",
+    "text": "初始化 ``Headers``。\n\nArgs:\n    headers: 初始值。"
+  },
+  "litestar.datastructures.headers.Headers.from_scope": {
+    "hash": "5aa27f55f7de45e7",
+    "text": "从发送消息中创建请求头。\n\nArgs:\n    scope: ASGI 连接作用域。\n\nReturns:\n    请求头\n\nRaises:\n    ValueError: 如果消息不包含 ``headers`` 键"
+  },
+  "litestar.datastructures.headers.Headers.to_header_list": {
+    "hash": "be05b73af728cc85",
+    "text": "原始头部值。\n\nReturns:\n    一个包含头部和头部值的字节元组列表"
+  },
+  "litestar.datastructures.headers.MediaTypeHeader": {
+    "hash": "067e850067c502c5",
+    "text": "用于解析 ``Accept`` 标头的辅助类。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders": {
+    "hash": "e1913f1fd500a842",
+    "text": "一个不区分大小写的、类似 multidict 的结构，可用于在 :class:`Scope <.types.Scope>` 中修改 headers（请求头）。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.__delitem__": {
+    "hash": "1c4c00d0d3dbbd39",
+    "text": "删除所有匹配 ``name`` 的标头"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.__getitem__": {
+    "hash": "ee7c4311a8cc17be",
+    "text": "获取第一个匹配 ``name`` 的头部"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.__init__": {
+    "hash": "4373638d014c41cb",
+    "text": "从 ``HeaderScope`` 初始化 ``MutableScopeHeaders``。\n\nArgs:\n    scope: ASGI 连接作用域。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.__iter__": {
+    "hash": "933d2c6c8727dae4",
+    "text": "创建一个包含重复项的标头名称迭代器。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.__len__": {
+    "hash": "7e4512cbc8799818",
+    "text": "返回内部存储的 headers 的长度，包括重复项。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.__setitem__": {
+    "hash": "04d9a8910e972901",
+    "text": "在作用域中设置一个标头，覆盖重复项。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.add": {
+    "hash": "8c1c9807943790b3",
+    "text": "向作用域添加一个标头。\n\nNotes:\n     - 此方法会保留重复项。\n\nArgs:\n    key: 标头键。\n    value: 标头值。\n\nReturns:\n    None。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.extend_header_value": {
+    "hash": "f12f282a4878874b",
+    "text": "扩展多值头部。\n\nNotes:\n    - 多值头部是指可以接受逗号分隔列表的头部。\n    - 如果该头部之前不存在，将被添加。\n\nArgs:\n    key: 头部键。\n    value: 要添加的头部值。\n\nReturns:\n    None"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.from_message": {
+    "hash": "58999377f08fc740",
+    "text": "从消息对象构建标头。\n\nArgs:\n    message: :class:`Message <.types.Message>`。\n\nReturns:\n    MutableScopeHeaders。\n\nRaises:\n    ValueError: 如果消息不包含 ``headers`` 键。"
+  },
+  "litestar.datastructures.headers.MutableScopeHeaders.getall": {
+    "hash": "5caa16c58b3ac7d9",
+    "text": "获取某个标头的所有值。\n\nArgs:\n    key: 标头键。\n    default: 如果未找到 ``name`` 时返回的默认值。\n\nReturns:\n    字符串列表。\n\nRaises:\n    KeyError: 如果未找到 ``name`` 对应的标头且未提供 ``default``。"
+  }
+}

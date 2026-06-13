@@ -1,0 +1,30 @@
+{
+  "litestar.channels.subscriber.Subscriber": {
+    "hash": "d875beb94720fb82",
+    "text": "订阅频道上发布的事件流的包装器"
+  },
+  "litestar.channels.subscriber.Subscriber._start_in_background": {
+    "hash": "9bc5295a3078c1e3",
+    "text": "在后台启动一个任务，将订阅者流中的事件在可用时发送到 ``socket``。\n\nArgs:\n    on_event: 用于对每个事件调用事件数据的回调函数"
+  },
+  "litestar.channels.subscriber.Subscriber.is_running": {
+    "hash": "2fb4c1cec4ac751e",
+    "text": "返回发送任务是否正在运行"
+  },
+  "litestar.channels.subscriber.Subscriber.iter_events": {
+    "hash": "596366230e2a2b49",
+    "text": "遍历事件流。如果没有可用项，则阻塞直到有项可用。"
+  },
+  "litestar.channels.subscriber.Subscriber.put_nowait": {
+    "hash": "9ea1dc8277823067",
+    "text": "将一项放入订阅者的流中，无需等待"
+  },
+  "litestar.channels.subscriber.Subscriber.run_in_background": {
+    "hash": "0616044204116767",
+    "text": "在后台启动一个任务，将订阅者流中的事件在可用时发送到 ``socket``。退出时，它将阻止流接收新事件，并等待当前已排队的消息处理完毕。如果上下文因异常而退出，该任务将立即被取消。\n\nArgs:\n    on_event: 用于对每个事件调用事件数据的回调函数\n    join: 如果为 ``True``，则在停止工作线程之前等待流中的所有项目处理完毕。请注意，上下文内发生的错误将始终导致工作线程立即被取消"
+  },
+  "litestar.channels.subscriber.Subscriber.stop": {
+    "hash": "7248b3db64c26ed1",
+    "text": "停止一个之前通过 :meth:`run_in_background` 启动的任务。如果任务尚未完成，它将被取消并等待。\n\nArgs:\n    join: 如果为 ``True``，则在停止任务前等待所有项目处理完成。"
+  }
+}

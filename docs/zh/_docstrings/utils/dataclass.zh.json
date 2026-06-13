@@ -1,0 +1,17 @@
+{
+  "litestar.utils.dataclass.extract_dataclass_fields": {
+    "hash": "76fef0db66e07c4d",
+    "text": "提取数据类字段。\n\nArgs:\n    dt: 一个数据类实例。\n    exclude_none: 是否排除 None 值。\n    exclude_empty: 是否排除 Empty 值。\n    include: 要包含的字段的可迭代对象。\n    exclude: 要排除的字段的可迭代对象。\n\n\nReturns:\n    数据类字段的元组。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.dataclass.extract_dataclass_items": {
+    "hash": "273e0f12f20df278",
+    "text": "提取数据类（dataclass）的名称与值对。\n\n与标准库提供的 `asdict` 方法不同，此函数不会对值进行 pickle 序列化。\n\nArgs:\n    dt: 一个数据类实例。\n    exclude_none: 是否排除 None 值。\n    exclude_empty: 是否排除 Empty 值。\n    include: 要包含的字段的可迭代对象。\n    exclude: 要排除的字段的可迭代对象。\n\nReturns:\n    键/值对的元组。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.dataclass.simple_asdict": {
+    "hash": "e68fae6219deeed4",
+    "text": "将数据类转换为字典。\n\n此方法与标准库版本有重要区别：\n- 它不对值进行深拷贝\n- 它不会递归进入集合\n\nArgs:\n    obj: 一个数据类实例。\n    exclude_none: 是否排除 None 值。\n    exclude_empty: 是否排除 Empty 值。\n    convert_nested: 是否递归转换嵌套的数据类。\n    exclude: 要排除的字段的可迭代对象。\n\nReturns:\n    一个键/值对的字典。",
+    "type": "FunctionDef"
+  }
+}

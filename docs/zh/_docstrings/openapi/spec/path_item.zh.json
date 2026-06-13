@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.path_item.PathItem": {
+    "hash": "e4b830a7d2bb110a",
+    "text": "描述单个路径上可用的操作。\n\n由于 `ACL 约束 <https://spec.openapis.org/oas/v3.1.0#securityFiltering>`_，路径项（Path Item）可能为空。该路径本身仍会暴露给文档查看器，但查看器将无法知晓哪些操作和参数是可用的。"
+  }
+}

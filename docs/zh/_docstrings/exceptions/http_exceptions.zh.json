@@ -1,0 +1,62 @@
+{
+  "litestar.exceptions.http_exceptions.ClientException": {
+    "hash": "1b8c4289e6580a3b",
+    "text": "客户端错误。"
+  },
+  "litestar.exceptions.http_exceptions.HTTPException": {
+    "hash": "5c7b776bc59f3a0c",
+    "text": "HTTP 错误响应的基类异常。\n\n这些异常携带用于构建 HTTP 响应的信息。"
+  },
+  "litestar.exceptions.http_exceptions.HTTPException.__init__": {
+    "hash": "bed3fe6fe845293e",
+    "text": "初始化 ``HTTPException``。\n\n如果未提供，则设置 ``detail`` 和 ``args``。\n\nArgs:\n    *args: 如果未提供 ``detail`` 关键字参数，则第一个参数应为错误详情。\n    detail: 异常详情或消息。如果未提供，将默认为 args[0]。\n    status_code: 异常的 HTTP 状态码。\n    headers: 要在响应上设置的标头。\n        如果未提供，默认为类的 ``headers``。\n        显式设置为 ``None`` 以取消默认设置。\n    extra: 要附加到异常上的额外映射。\n        如果未提供，默认为类的 ``extra``。\n        显式设置为 ``None`` 以取消默认设置。"
+  },
+  "litestar.exceptions.http_exceptions.ImproperlyConfiguredException": {
+    "hash": "8427aa9f64beb2fb",
+    "text": "应用程序配置不当。"
+  },
+  "litestar.exceptions.http_exceptions.InternalServerException": {
+    "hash": "3f323add50b0b860",
+    "text": "服务器遇到意外情况，无法完成请求。"
+  },
+  "litestar.exceptions.http_exceptions.MethodNotAllowedException": {
+    "hash": "421c4cdbdd8ea6e3",
+    "text": "服务器知道请求方法，但目标资源不支持此方法。"
+  },
+  "litestar.exceptions.http_exceptions.NoRouteMatchFoundException": {
+    "hash": "c41e9de5787af42f",
+    "text": "找不到具有给定名称的路由。"
+  },
+  "litestar.exceptions.http_exceptions.NotAuthorizedException": {
+    "hash": "58280e58ced69d5a",
+    "text": "请求缺少请求资源所需的有效身份验证凭据。"
+  },
+  "litestar.exceptions.http_exceptions.NotFoundException": {
+    "hash": "98c98181f7e8248f",
+    "text": "无法找到请求的资源。"
+  },
+  "litestar.exceptions.http_exceptions.PermissionDeniedException": {
+    "hash": "43bba36f17015db1",
+    "text": "请求已理解，但未获授权。"
+  },
+  "litestar.exceptions.http_exceptions.ServiceUnavailableException": {
+    "hash": "fdea38d2cec9baea",
+    "text": "服务器尚未准备好处理请求。"
+  },
+  "litestar.exceptions.http_exceptions.TemplateNotFoundException": {
+    "hash": "49e77ac4071204c7",
+    "text": "找不到引用的模板。"
+  },
+  "litestar.exceptions.http_exceptions.TemplateNotFoundException.__init__": {
+    "hash": "1404caffd3dffd70",
+    "text": "初始化 ``TemplateNotFoundException``。\n\nArgs:\n    *args (Any): 传递给 ``super().__init__()`` —— 不应包含 ``detail``。\n    template_name (str): 无法找到的模板名称。"
+  },
+  "litestar.exceptions.http_exceptions.TooManyRequestsException": {
+    "hash": "1f6154c03270d94c",
+    "text": "请求限制已超出。"
+  },
+  "litestar.exceptions.http_exceptions.ValidationException": {
+    "hash": "a443457ffedfc085",
+    "text": "客户端数据验证错误。"
+  }
+}

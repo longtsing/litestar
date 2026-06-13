@@ -1,0 +1,92 @@
+{
+  "litestar.security.jwt.auth.BaseJWTAuth": {
+    "hash": "5563599a34a88688",
+    "text": "JWT 认证后端的基类",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.auth.BaseJWTAuth.create_token": {
+    "hash": "bd25e57aa8881c90",
+    "text": "从传入的参数创建 Token 实例，持久化并返回该实例。\n\nArgs:\n    identifier: Token 主体的唯一标识符。通常这是用户 ID 或类似类型的值。\n    token_expiration: 可选的 Token 过期时间增量（timedelta）。\n    token_issuer: Token ``iss`` 字段的可选值。\n    token_audience: Token ``aud`` 字段的可选值。\n    token_unique_jwt_id: Token ``jti`` 字段的可选值。\n    token_extras: 包含在 Token ``extras`` 字段中的可选字典。\n    **kwargs: 要设置在 Token 上的其他属性。\n\nReturns:\n    创建的 Token。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.BaseJWTAuth.format_auth_header": {
+    "hash": "2ffbb8c7e250edeb",
+    "text": "根据指定的 OpenAPI 方案格式化令牌。\n\nArgs:\n    encoded_token: 一个编码后的 JWT 令牌\n\nReturns:\n    为 HTTP 头格式化的编码令牌",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.BaseJWTAuth.login": {
+    "hash": "b370c218e8818955",
+    "text": "创建带有 JWT 头的响应。\n\nArgs:\n    identifier: 令牌主题的唯标识符。通常这是用户 ID 或等效类型的值。\n    response_body: 要发送的可选响应体。\n    response_media_type: 可选的 ``Content-Type``。默认为 ``application/json``。\n    response_status_code: 响应的可选状态码。默认为 ``201``。\n    token_expiration: 令牌过期的可选 timedelta。\n    token_issuer: 令牌 ``iss`` 字段的可选值。\n    token_audience: 令牌 ``aud`` 字段的可选值。\n    token_unique_jwt_id: 令牌 ``jti`` 字段的可选值。\n    token_extras: 要包含在令牌 ``extras`` 字段中的可选字典。\n    send_token_as_response_body: 如果为 ``True``，响应将是一个包含令牌的字典：``{ \"token\": <token> }`` 将作为响应体返回。注意：如果传递了响应体，此设置将被忽略。\n\nReturns:\n    一个 :class:`Response <.response.Response>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.BaseJWTAuth.middleware": {
+    "hash": "d16056c32a029238",
+    "text": "创建包裹在 :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` 中的 :class:`JWTAuthenticationMiddleware`。\n\nReturns:\n    一个 :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.BaseJWTAuth.openapi_components": {
+    "hash": "96b4ee256b7bec84",
+    "text": "为所使用的 JWT 认证模式创建 OpenAPI 文档。\n\nReturns:\n    一个 :class:`Components <litestar.openapi.spec.components.Components>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.BaseJWTAuth.security_requirement": {
+    "hash": "448b4fd18c4b1bcd",
+    "text": "返回 OpenAPI 3.1。\n\n:data:`SecurityRequirement <.openapi.spec.SecurityRequirement>`\n\nReturns:\n    一个 OpenAPI 3.1\n    :data:`SecurityRequirement <.openapi.spec.SecurityRequirement>`\n    字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.JWTAuth": {
+    "hash": "60e13fa349d17334",
+    "text": "JWT 认证配置。\n\n此类是库的主要入口点，包含创建中间件、提供登录功能以及生成 OpenAPI 文档的方法。",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.auth.JWTCookieAuth": {
+    "hash": "746583b8ac8c2e70",
+    "text": "JWT Cookie 身份验证配置。\n\n此类是库的替代入口点，它包含 :class:`JWTAuth` 类的所有功能，并增加了对通过 ``HttpOnly`` Cookie 传递 JWT 令牌的支持。",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.auth.JWTCookieAuth.login": {
+    "hash": "9bf23f5410f6c0e7",
+    "text": "创建带有 JWT 标头的响应。\n\nArgs:\n    identifier: 令牌主题的唯标识符。通常这是用户 ID 或类似类型的值。\n    response_body: 要发送的可选响应体。\n    response_media_type: 可选的 'Content-Type'。默认为 'application/json'。\n    response_status_code: 响应的可选状态码。默认为 '201 Created'。\n    token_expiration: 令牌过期的可选 timedelta。\n    token_issuer: 令牌 ``iss`` 字段的可选值。\n    token_audience: 令牌 ``aud`` 字段的可选值。\n    token_unique_jwt_id: 令牌 ``jti`` 字段的可选值。\n    token_extras: 要包含在令牌 ``extras`` 字段中的可选字典。\n    send_token_as_response_body: 如果为 ``True``，响应将是一个包含令牌的字典：``{ \"token\": <token> }`` 将作为响应体返回。注意：如果传递了响应体，此设置将被忽略。\n\nReturns:\n    一个 :class:`Response <.response.Response>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.JWTCookieAuth.middleware": {
+    "hash": "a72b95a78e6bfd0c",
+    "text": "创建包裹在 :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` 中的 :class:`JWTCookieAuthenticationMiddleware`。\n\nReturns:\n    一个 :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.JWTCookieAuth.openapi_components": {
+    "hash": "44373ec76129f870",
+    "text": "为 JWT Cookie 认证方案创建 OpenAPI 文档。\n\nReturns:\n    一个 :class:`Components <litestar.openapi.spec.components.Components>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.OAuth2Login": {
+    "hash": "3848f71f4507f81a",
+    "text": "OAuth2 登录 DTO",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.auth.OAuth2PasswordBearerAuth": {
+    "hash": "42158ab79fcfe989",
+    "text": "用于密码承载身份验证的 OAUTH2 架构。\n\n该类实现了库的 OAUTH2 身份验证流程入口点，包含 :class:`JWTAuth` 类的所有功能，并增加了对通过 ``HttpOnly`` Cookie 传递 JWT 令牌的支持。\n\n``token_url`` 是唯一必需的额外参数，它应指向您的登录路由。",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.auth.OAuth2PasswordBearerAuth.login": {
+    "hash": "578fb31ab7e62f0e",
+    "text": "创建带有 JWT 标头的响应。\n\nArgs:\n    identifier: 令牌主题的唯标识符。通常这是用户 ID 或等效类型的值。\n    response_body: 要发送的可选响应体。\n    response_media_type: 可选的 ``Content-Type``。默认为 ``application/json``。\n    response_status_code: 响应的可选状态码。默认为 ``201``。\n    token_expiration: 令牌过期的可选 timedelta。\n    token_issuer: 令牌 ``iss`` 字段的可选值。\n    token_audience: 令牌 ``aud`` 字段的可选值。\n    token_unique_jwt_id: 令牌 ``jti`` 字段的可选值。\n    token_extras: 要包含在令牌 ``extras`` 字段中的可选字典。\n    send_token_as_response_body: 如果为 ``True``，响应将是一个 oAuth2 令牌响应字典。\n        Note: 如果传递了响应体，此设置将被忽略。\n\nReturns:\n    一个 :class:`Response <.response.Response>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.OAuth2PasswordBearerAuth.middleware": {
+    "hash": "3a2bde1e99624ddc",
+    "text": "创建包裹在 :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` 中的 ``JWTCookieAuthenticationMiddleware``。\n\nReturns:\n    一个 :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.OAuth2PasswordBearerAuth.oauth_flow": {
+    "hash": "0c4275630831e039",
+    "text": "为密码承载（password bearer）认证方案创建 OpenAPI OAuth2 流程。\n\nReturns:\n    一个 :class:`OAuthFlow <litestar.openapi.spec.oauth_flow.OAuthFlow>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.auth.OAuth2PasswordBearerAuth.openapi_components": {
+    "hash": "6d60baa66f07d795",
+    "text": "为 OAUTH2 密码承载（Bearer）认证方案创建 OpenAPI 文档。\n\nReturns:\n    一个 :class:`Components <litestar.openapi.spec.components.Components>` 实例。",
+    "type": "FunctionDef"
+  }
+}

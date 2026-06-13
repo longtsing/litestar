@@ -1,0 +1,12 @@
+{
+  "litestar.openapi.spec.schema.Schema": {
+    "hash": "37c5c72292804ab5",
+    "text": "Schema 对象允许定义输入和输出数据类型。这些类型可以是对象，也可以是基本类型和数组。该对象是 `JSON Schema Specification Draft 2020-12 <https://tools.ietf.org/html/draft-bhutton-json-schema-00>`_ 的超集。\n\n有关属性的更多信息，请参阅 `JSON Schema Core <https://tools.ietf.org/html/draft-wright-json-schema-00>`_ 和 `JSON Schema Validation <https://tools.ietf.org/html/draft-wright-json-schema-validation-00>`_。\n\n除非另有说明，属性定义遵循 JSON Schema 的定义，不添加任何额外的语义。当 JSON Schema 指出行为由应用程序定义时（例如用于注解），OAS 也将语义的定义权交给消费 OpenAPI 文档的应用程序。\n\n以下属性直接取自 `JSON Schema Core <https://tools.ietf.org/html/draft-wright-json-schema-00>`_，并遵循相同的规范。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.spec.schema.SchemaDataContainer": {
+    "hash": "8161721d286365cf",
+    "text": "允许使用 Python 数据容器（例如 dataclasses 或 pydantic 模型）来表示 schema 的特殊类。",
+    "type": "ClassDef"
+  }
+}

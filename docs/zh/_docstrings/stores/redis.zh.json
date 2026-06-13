@@ -1,0 +1,52 @@
+{
+  "litestar.stores.redis.RedisStore": {
+    "hash": "72bd7c80bb93f903",
+    "text": "基于 Redis 的线程和进程安全的异步键值存储。",
+    "type": "ClassDef"
+  },
+  "litestar.stores.redis.RedisStore.__init__": {
+    "hash": "98b5b7164610194e",
+    "text": "初始化 :class:`RedisStore`\n\nArgs:\n    redis: 一个 :class:`redis.asyncio.Redis` 实例\n    namespace: 用于在 Redis 中模拟命名空间的键前缀。如果未提供，默认为 ``LITESTAR``。可以通过传递 ``None`` 显式禁用命名空间。这将导致 :meth:`.delete_all` 不可用。\n    handle_client_shutdown: 如果为 ``True``，则在存储的生命周期内自动处理 `redis` 实例的关闭。除非在外部处理关闭，否则应设置为 `True`。",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.delete": {
+    "hash": "1d5985dd9f903481",
+    "text": "删除一个值。\n\n如果该键不存在，则不执行任何操作。\n\nArgs:\n    key: 要删除的值的键",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.delete_all": {
+    "hash": "c5317f26e5eadb74",
+    "text": "删除虚拟键命名空间中的所有存储值。\n\nRaises:\n    ImproperlyConfiguredException: 如果未配置命名空间",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.exists": {
+    "hash": "a4186f53ed052ca3",
+    "text": "检查给定的 ``key`` 是否存在。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.expires_in": {
+    "hash": "c75cac70e7cc8cd5",
+    "text": "获取 ``key`` 的过期时间（秒）。如果不存在该 ``key`` 或未设置过期时间，则返回 ``None``。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.get": {
+    "hash": "ec337427627f2d3b",
+    "text": "获取一个值。\n\nArgs:\n    key: 与值关联的键\n    renew_for: 如果提供且该值已设置初始过期时间，则将过期时间续期 ``renew_for`` 秒。如果该值未设置过期时间，则此操作无效。此步骤的原子性通过使用 Lua 脚本执行获取和续期来保证。如果未提供 ``renew_for``，脚本将被绕过，因此不会产生任何开销。\n\nReturns:\n    如果 ``key`` 对应的值存在且未过期，则返回该值，否则返回 ``None``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.set": {
+    "hash": "307d4c5d6058802d",
+    "text": "设置一个值。\n\nArgs:\n    key: 用于关联值的键\n    value: 要存储的值\n    expires_in: 键被视为过期前的秒数\n    keep_ttl: 如果为 ``True``，键的 TTL 将不会改变。如果为 ``False``，键的 TTL 将设置为 ``expires_in`` 的值\n\nRaises:\n    ValueError: 如果同时设置了 ``expires_in`` 和 ``keep_ttl``，因为这两个选项是互斥的\n\nReturns:\n    ``None``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.with_client": {
+    "hash": "9a4a596c3ba54d3a",
+    "text": "使用新的 :class:`redis.asyncio.Redis` 实例初始化一个 :class:`RedisStore` 实例。\n\nArgs:\n    url: 要连接的 Redis URL\n    db: 要使用的 Redis 数据库\n    port: 要使用的 Redis 端口\n    username: 要使用的 Redis 用户名\n    password: 要使用的 Redis 密码\n    namespace: 要使用的虚拟键命名空间",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.redis.RedisStore.with_namespace": {
+    "hash": "77019a2bc1864094",
+    "text": "返回一个带有嵌套虚拟键命名空间的新 :class:`RedisStore` 实例。当前实例的命名空间将作为新命名空间的前缀，因此可被视为父命名空间。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "litestar.connection.websocket.WebSocket": {
+    "hash": "44baf5b74bc4d1bd",
+    "text": "Litestar WebSocket 类。",
+    "type": "ClassDef"
+  },
+  "litestar.connection.websocket.WebSocket.__init__": {
+    "hash": "17b17c0d1ed9cfb9",
+    "text": "初始化 ``WebSocket``。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.accept": {
+    "hash": "d2d710a64dfe75e6",
+    "text": "接受传入的连接。在接收数据之前应调用此方法。\n\nArgs:\n    subprotocols: 要使用的 Websocket 子协议。\n    headers: 要在发送的数据上设置的标头。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.close": {
+    "hash": "6f1058d59c8a41e1",
+    "text": "发送一个 'websocket.close' 事件。\n\nArgs:\n    code: 状态码。\n    reason: 关闭连接的原因\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.iter_data": {
+    "hash": "ccad4486350dcae9",
+    "text": "持续接收数据并生成它\n\nArgs:\n    mode: 要使用的套接字模式。可以是 ``text`` 或 ``binary``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.iter_json": {
+    "hash": "e6a3a48fd0783a27",
+    "text": "持续接收数据并生成（yield）它，在此过程中将其解码为 JSON。\n\nArgs:\n    mode: 要使用的套接字模式。可以是 ``text`` 或 ``binary``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.iter_msgpack": {
+    "hash": "c5fd883200d2feba",
+    "text": "持续接收数据并生成（yield）它，在此过程中将其解码为 MessagePack 格式。\n\n请注意，由于 MessagePack 是一种二进制格式，此方法将始终以 ``binary`` 模式接收数据。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.receive_bytes": {
+    "hash": "bae081673c1cb035",
+    "text": "以字节形式接收数据。\n\nReturns:\n    一个字节字符串。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.receive_data": {
+    "hash": "d31b6bf987c9a3fe",
+    "text": "接收一个 'websocket.receive' 事件并返回其中存储的数据。\n\nArgs:\n    mode: 要使用的相应事件键。\n\nReturns:\n    事件的数据。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.receive_json": {
+    "hash": "2b32ce59927510c0",
+    "text": "接收数据并将其解码为 JSON。\n\nArgs:\n    mode: 可以是 ``text`` 或 ``binary``。\n\nReturns:\n    任意值",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.receive_msgpack": {
+    "hash": "51016f7f5744edac",
+    "text": "接收数据并将其解码为 MessagePack 格式。\n\n请注意，由于 MessagePack 是一种二进制格式，此方法将始终以 ``binary`` 模式接收数据。\n\nReturns:\n    任意值",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.receive_text": {
+    "hash": "dd93a211a14eeff4",
+    "text": "以文本形式接收数据。\n\nReturns:\n    一个字符串。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.receive_wrapper": {
+    "hash": "f2a70eaf3bc16698",
+    "text": "包装 ``receive`` 以设置 'self.connection_state' 并验证事件。\n\nArgs:\n    receive: ASGI receive 函数。\n\nReturns:\n    一个 ASGI receive 函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.send_bytes": {
+    "hash": "543574da56b17520",
+    "text": "使用发送事件的 ``bytes`` 键发送数据。\n\nArgs:\n    data: 要发送的数据\n    encoding: 用于二进制数据的编码。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.send_data": {
+    "hash": "75a2e03b3cce3866",
+    "text": "发送一个 'websocket.send' 事件。\n\nArgs:\n    data: 要发送的数据。\n    mode: 要使用的相应事件键。\n    encoding: 转换 bytes / str 时使用的编码。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.send_json": {
+    "hash": "0409a55653fa57b0",
+    "text": "以 JSON 格式发送数据。\n\nArgs:\n    data: 要序列化的值。\n    mode: 可以是 ``text`` 或 ``binary``。\n    encoding: 用于二进制数据的编码。\n    serializer: 序列化函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.send_msgpack": {
+    "hash": "6cbc8e2607dcee38",
+    "text": "以 MessagePack 格式发送数据。\n\n请注意，由于 MessagePack 是一种二进制格式，此方法将始终以 ``binary`` 模式发送数据。\n\nArgs:\n    data: 要序列化的值。\n    encoding: 用于二进制数据的编码。\n    serializer: 序列化函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.send_text": {
+    "hash": "1768c2aad3244899",
+    "text": "使用发送事件的 ``text`` 键发送数据。\n\nArgs:\n    data: 要发送的数据\n    encoding: 用于二进制数据的编码。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.connection.websocket.WebSocket.send_wrapper": {
+    "hash": "17f4beb22e39f2a7",
+    "text": "包装 ``send`` 以确保状态不会断开连接。\n\nArgs:\n    send: ASGI send 函数。\n\nReturns:\n    一个 ASGI send 函数。",
+    "type": "FunctionDef"
+  }
+}

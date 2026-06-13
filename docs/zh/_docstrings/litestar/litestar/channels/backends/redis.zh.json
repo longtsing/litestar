@@ -1,0 +1,92 @@
+{
+  "litestar.channels.backends.redis.RedisChannelsBackend.__init__": {
+    "hash": "b9ed7fe2c4a4edbe",
+    "text": "基于 Redis 通道的后端。\n\nArgs:\n    redis: 一个 :class:`redis.asyncio.Redis` 实例\n    key_prefix: 用于在 Redis 中存储数据的键前缀\n    stream_sleep_no_subscriptions: 当不存在订阅者时，暂停 :meth:`stream_events` 生成器的时间（毫秒）",
+    "type": "FunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsPubSubBackend.__init__": {
+    "hash": "497d0409e3990178",
+    "text": "Redis 频道后端，`Pub/Sub <https://redis.io/docs/manual/pubsub/>`_。\n\n该后端提供低开销和资源占用，但不支持历史记录。\n\nArgs:\n    redis: 一个 :class:`redis.asyncio.Redis` 实例\n    key_prefix: 用于在 Redis 中存储数据的键前缀\n    stream_sleep_no_subscriptions: 当不存在订阅者时，暂停 :meth:`stream_events` 生成器的时间（毫秒）",
+    "type": "FunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsPubSubBackend.get_history": {
+    "hash": "ac15bca5bbea06cd",
+    "text": "未实现",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsPubSubBackend.publish": {
+    "hash": "ba6d31cf4a55fe23",
+    "text": "将 ``data`` 发布到 ``channels``\n\n.. note::\n    此操作使用 Lua 脚本原子性地执行",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsPubSubBackend.stream_events": {
+    "hash": "3ceea6176343f4ac",
+    "text": "返回一个生成器，迭代订阅通道的可用事件。\n\n如果尚未通过 :meth:`subscribe` 订阅任何通道，则休眠 ``stream_sleep_no_subscriptions`` 毫秒。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsPubSubBackend.subscribe": {
+    "hash": "8b4e425999d02a03",
+    "text": "订阅 ``channels`` 并启用向它们发布",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsPubSubBackend.unsubscribe": {
+    "hash": "35df7bd74653a95a",
+    "text": "停止在 ``channels`` 上监听事件",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.__init__": {
+    "hash": "9bbcd1e040ec685b",
+    "text": "Redis 频道后端，基于 `streams <https://redis.io/docs/data-types/streams/>`_。\n\nArgs:\n    history: 保留的消息数量。这将为流设置 ``MAXLEN``。\n    redis: 一个 :class:`redis.asyncio.Redis` 实例。\n    key_prefix: 用于流的键前缀。\n    stream_sleep_no_subscriptions: 当不存在订阅者时，暂停 :meth:`stream_events` 生成器的时间（毫秒）。\n    cap_streams_approximate: 使用 ``~`` 近似运算符设置流的 ``MAXLEN`` 以提升性能。\n    stream_ttl: 流的生存时间（TTL），单位为毫秒或 timedelta 对象。每次发布操作时，将使用 ``PEXPIRE`` 设置流的 TTL。",
+    "type": "FunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend._get_subscribed_channels": {
+    "hash": "3f551c6a0308d7be",
+    "text": "获取已订阅的频道。如果当前没有订阅任何频道，则等待",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.flush_all": {
+    "hash": "5edc8eee950fe7a2",
+    "text": "删除所有带有 ``key_prefix`` 的流密钥。\n\n.. important::\n    此方法与 Redis 集群不兼容",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.get_history": {
+    "hash": "91bf8d5d4f0a75ce",
+    "text": "返回 ``channels`` 的历史记录，最多返回 ``limit`` 条消息。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.on_shutdown": {
+    "hash": "4434b9c298a9e954",
+    "text": "在应用程序关闭时调用",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.on_startup": {
+    "hash": "c63104e8a75f626d",
+    "text": "在应用程序启动时调用",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.publish": {
+    "hash": "926667bb408683e0",
+    "text": "将 ``data`` 发布到 ``channels``。\n\n.. note::\n    此操作使用 Lua 脚本原子性地执行。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.stream_events": {
+    "hash": "3ceea6176343f4ac",
+    "text": "返回一个生成器，迭代订阅通道的可用事件。\n\n如果尚未通过 :meth:`subscribe` 订阅任何通道，则休眠 ``stream_sleep_no_subscriptions`` 毫秒。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.subscribe": {
+    "hash": "9f947090d886011f",
+    "text": "订阅 ``channels``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis.RedisChannelsStreamBackend.unsubscribe": {
+    "hash": "dc9b3035d5c453c8",
+    "text": "从 ``channels`` 取消订阅",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.channels.backends.redis._LazyEvent": {
+    "hash": "51e5771e189ac9a5",
+    "text": "一个 `asyncio.Event` 的惰性代理，仅在访问时才创建事件。\n\n它确保 `Event` 在运行的事件循环中创建。如果未在此环境中创建，则事件内部的 `future` 可能会附加到不同的循环，从而引发问题。\n\n这种情况会出现在我们的测试中，也可能发生在用户于事件循环之外创建后端实例的应用场景中。",
+    "type": "ClassDef"
+  }
+}

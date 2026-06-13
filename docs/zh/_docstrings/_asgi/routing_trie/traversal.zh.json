@@ -1,0 +1,22 @@
+{
+  "litestar._asgi.routing_trie.traversal.parse_node_handlers": {
+    "hash": "8c7866add929a52c",
+    "text": "从节点中检索处理程序元组。\n\nArgs:\n    node: 要解析的 Trie 节点。\n    method: 作用域的方法。\n\nRaises:\n    KeyError: 如果未找到匹配的方法。\n\nReturns:\n    一个 ASGI 处理程序元组。",
+    "type": "FunctionDef"
+  },
+  "litestar._asgi.routing_trie.traversal.parse_path_params": {
+    "hash": "d980717a6feef6ed",
+    "text": "将路径参数解析为值字典。\n\nArgs:\n    parameter_definitions: 来自路由的参数定义元组。\n    path_param_values: 从 URL 中提取的字符串值。\n\nRaises:\n    ValueError: 如果任何路径参数无法解析为值。\n\nReturns:\n    解析后的路径参数字典。",
+    "type": "FunctionDef"
+  },
+  "litestar._asgi.routing_trie.traversal.parse_path_to_route": {
+    "hash": "b8074318c317d41e",
+    "text": "给定一个 scope 对象，从正确的 trie 节点中检索 `asgi_handlers` 和 `is_mount` 布尔值。\n\nArgs:\n    method: scope 的方法（如果存在）。\n    root_node: 根 trie 节点。\n    path: 要解析的 scope 实例的路径。\n    plain_routes: 普通路由的集合。\n    mount_routes: 挂载路由到 trie 节点的映射。\n    mount_paths_regex: 用于匹配挂载路由的已编译正则表达式。\n\nRaises:\n    MethodNotAllowedException: 如果未找到匹配的方法。\n    NotFoundException: 如果未找到对应的节点，或者路径参数无法根据节点定义解析为值。\n\nReturns:\n    一个元组，包含中间件栈以及被其包装的路由处理器。",
+    "type": "FunctionDef"
+  },
+  "litestar._asgi.routing_trie.traversal.traverse_route_map": {
+    "hash": "137397e1c9012f79",
+    "text": "遍历应用程序的路由映射，并检索请求 URL 对应的正确节点。\n\nArgs:\n    root_node: 根 trie 节点。\n    path: 请求的路径。\n\nRaises:\n    NotFoundException: 如果未找到对应的节点。\n\nReturns:\n    一个元组，包含目标 RouteMapNode 和一个包含所有路径参数值的列表。",
+    "type": "FunctionDef"
+  }
+}

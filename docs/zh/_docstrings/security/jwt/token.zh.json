@@ -1,0 +1,32 @@
+{
+  "litestar.security.jwt.token.JWTDecodeOptions": {
+    "hash": "1422e29dc58c5ed1",
+    "text": "``options`` for PyJWTs :func:`jwt.decode`",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.token.Token": {
+    "hash": "1f5f8c61d2739548",
+    "text": "JWT Token DTO。",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.token.Token.decode": {
+    "hash": "3f37f98b37068e5e",
+    "text": "解码传入的令牌字符串并返回一个 Token 实例。\n\nArgs:\n    encoded_token: 包含编码后 JWT 的 base64 字符串。\n    secret: 用于编码 JWT 的密钥。\n    algorithm: 用于编码 JWT 的算法。\n    audience: 解码令牌时验证受众。如果令牌中的受众与提供的任何受众不匹配，则引发\n        :exc:`NotAuthorizedException`\n    issuer: 解码令牌时验证签发者。如果令牌中的签发者与提供的任何签发者不匹配，则引发\n        :exc:`NotAuthorizedException`\n    require_claims: 验证给定的声明是否存在于令牌中\n    verify_exp: 验证 ``exp`` (*expiration*) 声明的值是否在未来\n    verify_nbf: 验证 ``nbf`` (*not before*) 声明的值是否在过去\n    strict_audience: 验证 ``aud`` (*audience*) 声明的值是否为单个值而非值列表，并且与 ``audience``\n        完全匹配。要求传递给 ``audience`` 的值是长度为 1 的序列\n\nReturns:\n    解码后的 Token 实例。\n\nRaises:\n    NotAuthorizedException: 如果令牌无效。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.token.Token.decode_payload": {
+    "hash": "f413b298c438f58a",
+    "text": "解码并验证 JWT，返回其负载",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.token.Token.encode": {
+    "hash": "40d00ab0479acba5",
+    "text": "将令牌实例编码为字符串。\n\nArgs:\n    secret: 用于编码 JWT 的密钥。\n    algorithm: 用于编码 JWT 的算法。\n    headers: 可选的 JWT 标头（例如 `{\"kid\": \"...\"}`）。\n\nReturns:\n    编码后的令牌字符串。\n\nRaises:\n    ImproperlyConfiguredException: 如果编码失败。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.token._normalize_datetime": {
+    "hash": "6c31034a0fa3799a",
+    "text": "将给定值转换为 UTC 并去除微秒。\n\nArgs:\n    value: 一个 datetime 实例\n\nReturns:\n    一个 datetime 实例",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "litestar._openapi.utils.default_operation_id_creator": {
+    "hash": "eebb96e7a6c66de5",
+    "text": "为 OpenAPI PathItem 条目创建唯一的 'operationId'。\n\nArgs:\n    route_handler: HTTP 路由处理器实例。\n    http_method: 给定 PathItem 的 HTTP 方法。\n    path_components: 路径组件列表。\n\nReturns:\n    由处理器函数名、HTTP 方法和路径组件生成的 camelCased 格式的 operationId。",
+    "type": "FunctionDef"
+  }
+}

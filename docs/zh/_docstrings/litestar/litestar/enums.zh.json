@@ -1,0 +1,42 @@
+{
+  "litestar.enums.ASGIExtension": {
+    "hash": "2a7b2ec45f29fd49",
+    "text": "ASGI 扩展键：https://asgi.readthedocs.io/en/latest/extensions.html",
+    "type": "ClassDef"
+  },
+  "litestar.enums.CompressionEncoding": {
+    "hash": "da1287f163a4d7a4",
+    "text": "支持的压缩编码的枚举。",
+    "type": "ClassDef"
+  },
+  "litestar.enums.HttpMethod": {
+    "hash": "192f961e6fb2f127",
+    "text": "HTTP 方法的枚举。",
+    "type": "ClassDef"
+  },
+  "litestar.enums.MediaType": {
+    "hash": "49621bf60adb0453",
+    "text": "用于 ``Content-Type`` 头部值的枚举。",
+    "type": "ClassDef"
+  },
+  "litestar.enums.OpenAPIMediaType": {
+    "hash": "0e55718544664f21",
+    "text": "OpenAPI 特定响应 ``Content-Type`` 头部值的枚举。",
+    "type": "ClassDef"
+  },
+  "litestar.enums.ParamType": {
+    "hash": "288c5ac8a0c39719",
+    "text": "请求可接收的参数类型的枚举。",
+    "type": "ClassDef"
+  },
+  "litestar.enums.RequestEncodingType": {
+    "hash": "58f655222e1cc59c",
+    "text": "用于指定编码格式的 ``Content-Type`` 请求头值的枚举。",
+    "type": "ClassDef"
+  },
+  "litestar.enums.ScopeType": {
+    "hash": "972babd552f2b6d0",
+    "text": "存储于 `Scope` 下的 `'http'` 键的枚举。\n\nNotes:\n    - ``asgi`` 由 Litestar 内部使用，不属于规范的一部分。",
+    "type": "ClassDef"
+  }
+}

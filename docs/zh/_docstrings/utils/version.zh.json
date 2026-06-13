@@ -1,0 +1,17 @@
+{
+  "litestar.utils.version.Version": {
+    "hash": "36238356d4be2c0c",
+    "text": "Litestar 版本信息",
+    "type": "ClassDef"
+  },
+  "litestar.utils.version.get_version": {
+    "hash": "b53633498dc44272",
+    "text": "获取已安装的 litestar 包的版本",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.version.parse_version": {
+    "hash": "2d0f7b34424c11a0",
+    "text": "将版本字符串解析为 :class:`Version`",
+    "type": "FunctionDef"
+  }
+}

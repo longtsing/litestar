@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.license.License": {
+    "hash": "9312bffe323deed5",
+    "text": "暴露 API 的许可证信息。",
+    "type": "ClassDef"
+  }
+}

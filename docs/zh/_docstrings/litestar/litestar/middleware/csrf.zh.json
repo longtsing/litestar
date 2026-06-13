@@ -1,0 +1,47 @@
+{
+  "litestar.middleware.csrf.CSRFMiddleware": {
+    "hash": "a198f3a45ec86c44",
+    "text": "CSRF 中间件类。\n\n该中间件通过设置带有令牌的 CSRF Cookie 并在请求头中验证该令牌，来防御攻击。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.csrf.CSRFMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.csrf.CSRFMiddleware.__init__": {
+    "hash": "b1afce453cbc0152",
+    "text": "初始化 ``CSRFMiddleware``。\n\nArgs:\n    app: 要调用的下一个 ``next`` ASGI 应用。\n    config: ``CSRFConfig`` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.csrf.CSRFMiddleware._csrf_tokens_match": {
+    "hash": "54ff4ba548d5fbf6",
+    "text": "从请求和 Cookie 中获取 CSRF 令牌，并验证两者均有效且一致。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.csrf.CSRFMiddleware._decode_csrf_token": {
+    "hash": "007a76f8c0bfd69a",
+    "text": "解码 CSRF 令牌并验证其 HMAC。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper": {
+    "hash": "b75da95af1ebd368",
+    "text": "包装 ``send`` 以处理 CSRF 验证。\n\nArgs:\n    token: CSRF 令牌。\n    send: ASGI send 函数。\n    csrf_cookie: CSRF cookie。\n\nReturns:\n    一个 ASGI send 函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.csrf.CSRFMiddleware.create_send_wrapper.send_wrapper": {
+    "hash": "39bda82c53aceb1b",
+    "text": "```\n发送函数，用于包装原始发送函数以注入 Cookie。\n\nArgs:\n    message: 一个 ASGI ``Message``\n\nReturns:\n    None\n```",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.csrf.generate_csrf_hash": {
+    "hash": "3adaaba4f9902cd8",
+    "text": "生成对 CSRF 令牌进行签名的 HMAC。\n\nArgs:\n    token: 已哈希的令牌。\n    secret: 秘密值。\n\nReturns:\n    CSRF 哈希值。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.csrf.generate_csrf_token": {
+    "hash": "e330886927ca8a0a",
+    "text": "生成一个包含由 HMAC 签名的随机生成字符串的 CSRF 令牌。\n\nArgs:\n    secret: 一个秘密字符串。\n\nReturns:\n    一个唯一的 CSRF 令牌。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "litestar.utils.scope.get_serializer_from_scope": {
+    "hash": "4204614183022654",
+    "text": "给定一个 scope 对象，返回一个序列化器。\n\nArgs:\n    scope: ASGI 连接 scope。\n\nReturns:\n    一个序列化器函数",
+    "type": "FunctionDef"
+  }
+}

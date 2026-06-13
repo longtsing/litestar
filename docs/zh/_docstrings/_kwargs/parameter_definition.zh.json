@@ -1,0 +1,17 @@
+{
+  "litestar._kwargs.parameter_definition.ParameterDefinition": {
+    "hash": "1c565c30904c23f1",
+    "text": "定义表示请求参数的关键字参数的元组。",
+    "type": "ClassDef"
+  },
+  "litestar._kwargs.parameter_definition.create_parameter_definition": {
+    "hash": "0f2f2af323044d01",
+    "text": "为给定的 FieldDefinition 创建 ParameterDefinition。\n\nArgs:\n    field_definition: FieldDefinition 实例。\n    field_name: 字段名称。\n    path_parameters: 路径参数名称集合。\n\nReturns:\n    ParameterDefinition 元组。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.parameter_definition.merge_parameter_sets": {
+    "hash": "a5e4a9bbca8f1c00",
+    "text": "给定两组参数定义（例如来自不同的依赖项），将它们合并为一组。",
+    "type": "FunctionDef"
+  }
+}

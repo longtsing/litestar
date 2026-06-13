@@ -1,0 +1,14 @@
+{
+  "litestar._parsers.parse_cookie_string": {
+    "hash": "ab89bca4f2930b0f",
+    "text": "将 cookie 字符串解析为值的字典。\n\nArgs:\n    cookie_string: 一个 cookie 字符串。\n\nReturns:\n    一个以字符串为键的值字典"
+  },
+  "litestar._parsers.parse_query_string": {
+    "hash": "237391394ed5515c",
+    "text": "将查询字符串解析为键值对元组。\n\nArgs:\n    query_string: 查询字符串。\n\nReturns:\n    键值对元组。"
+  },
+  "litestar._parsers.parse_url_encoded_form_data": {
+    "hash": "b130df1de1ba3cf3",
+    "text": "解析 URL 编码的表单数据字典。\n\nArgs:\n    encoded_data: 编码后的字节字符串。\n\nReturns:\n    解析后的字典。"
+  }
+}

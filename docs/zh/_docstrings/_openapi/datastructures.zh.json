@@ -1,0 +1,67 @@
+{
+  "litestar._openapi.datastructures.OpenAPIContext.add_operation_id": {
+    "hash": "2ccb3480bf06af34",
+    "text": "向上下文中添加操作 ID。\n\nArgs:\n    operation_id: 要添加的操作 ID。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.RegisteredSchema": {
+    "hash": "7ac0c323eb2df7aa",
+    "text": "用于存储模式及其任何引用的对象。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.datastructures.RegisteredSchema.__init__": {
+    "hash": "029e4c688a66c609",
+    "text": "创建一个新的 RegisteredSchema 对象。\n\nArgs:\n    key: 用于注册 schema 的键。\n    schema: schema 对象。\n    references: 指向 schema 的引用列表。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry": {
+    "hash": "3527b63472e19cd2",
+    "text": "对象模式的注册表。\n\n该类用于存储我们在规范的其他部分引用的模式。\n\n其主要目的是在收集所有应包含的模式后，允许我们生成规范的 `components/schemas` 部分。\n\n这使我们能够确定规范中 `components/schemas` 部分内模式的路径，该路径是唯一的且尽可能短。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry.__iter__": {
+    "hash": "d6127254a482c337",
+    "text": "遍历已注册的架构。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry.from_reference": {
+    "hash": "afac8ea35859bc02",
+    "text": "通过引用获取已注册的架构。\n\nArgs:\n    reference: 要获取的架构的引用。\n\nReturns:\n    一个 RegisteredSchema 对象。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry.generate_components_schemas": {
+    "hash": "31780b3985babc46",
+    "text": "生成规范的 components/schemas 部分。\n\nReturns:\n    一个包含 schemas 的字典。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry.get_reference_for_field_definition": {
+    "hash": "27ef0aa4fb164379",
+    "text": "通过键获取已注册模式的引用。\n\nArgs:\n    field: 要获取引用的字段定义\n\nReturns:\n    一个 Reference 对象。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry.get_schema_for_field_definition": {
+    "hash": "1b67f0badfd29a7e",
+    "text": "通过其键获取已注册的架构。\n\nArgs:\n    field: 要获取其架构的字段定义\n\nReturns:\n    一个 RegisteredSchema 对象。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry.remove_common_prefix": {
+    "hash": "f8f51a1d97f6b80e",
+    "text": "从元组列表中移除公共前缀。\n\nArgs:\n    tuples: 要移除公共前缀的元组列表。\n\nReturns:\n    移除公共前缀后的元组列表。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures.SchemaRegistry.set_reference_paths": {
+    "hash": "16f7a6e53aba91dd",
+    "text": "为已注册的架构设置参考路径。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures._get_normalized_schema_key": {
+    "hash": "f3cdede81855d2ae",
+    "text": "为类型注解创建键。\n\n该键应为一个元组，例如 ``(\"path\", \"to\", \"type\", \"TypeName\")``。\n\nArgs:\n    field_definition: 字段定义\n\nReturns:\n    字符串元组。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.datastructures._longest_common_prefix": {
+    "hash": "1ba94d33713fb424",
+    "text": "查找元组列表的最长公共前缀。\n\nArgs:\n    tuples_: 要查找最长公共前缀的元组列表。\n\nReturns:\n    元组的最长公共前缀。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "litestar.plugins.opentelemetry.config.ClientRequestHookHandler": {
+    "hash": "85877cff56bc817a",
+    "text": "当调用 ``receive`` 时，使用内部 span、ASGI scope 和 ASGI message 调用的钩子。",
+    "type": "Variable"
+  },
+  "litestar.plugins.opentelemetry.config.ClientResponseHookHandler": {
+    "hash": "649e6808fb739b6c",
+    "text": "当调用 ``send`` 时，使用内部 span、ASGI scope 和 ASGI message 调用的钩子。",
+    "type": "Variable"
+  },
+  "litestar.plugins.opentelemetry.config.OpenTelemetryConfig": {
+    "hash": "6245179d31b41b91",
+    "text": "OpenTelemetry 中间件的配置类。\n\n有关配置选项的更多信息，请参阅 `OpenTelemetry ASGI 文档 <https://opentelemetry-python-contrib.readthedocs.io/en/latest/instrumentation/asgi/asgi.html>`_。",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.opentelemetry.config.OpenTelemetryConfig.middleware": {
+    "hash": "facaae16345c5605",
+    "text": "创建 :class:`DefineMiddleware <litestar.middleware.base.DefineMiddleware>` 的实例。\n\nReturns:\n    ``DefineMiddleware`` 的实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.opentelemetry.config.ServerRequestHookHandler": {
+    "hash": "3f959a18cec34313",
+    "text": "为每个传入请求，使用服务器 span 和 ASGI scope 调用的钩子。",
+    "type": "Variable"
+  }
+}

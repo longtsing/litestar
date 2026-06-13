@@ -1,0 +1,6 @@
+{
+  "litestar.plugins.opentelemetry._utils.get_route_details_from_scope": {
+    "hash": "3bd29b0624c4c929",
+    "text": "从 ASGI 作用域中检索 span 名称和属性。\n\nArgs:\n    scope: ASGI 作用域实例。\n\nReturns:\n    一个包含 span 名称和属性字典的元组。"
+  }
+}

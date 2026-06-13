@@ -1,0 +1,12 @@
+{
+  "litestar._multipart.parse_content_header": {
+    "hash": "9715f58b7ae0f04c",
+    "text": "解析 content-type 和 content-disposition 头部值。\n\nArgs:\n    value: 要解析的头部字符串值。\n\nReturns:\n    一个包含规范化头部字符串和参数字典的元组。",
+    "type": "FunctionDef"
+  },
+  "litestar._multipart.parse_multipart_form": {
+    "hash": "1627c371cafda132",
+    "text": "解析多部分表单数据。\n\nArgs:\n    stream: 请求体。\n    boundary: 多部分消息的分隔符。\n    multipart_form_part_limit: 允许的部分数量限制。\n    type_decoders: 要使用的类型解码器序列。\n\nReturns:\n    解析结果的字典。",
+    "type": "AsyncFunctionDef"
+  }
+}

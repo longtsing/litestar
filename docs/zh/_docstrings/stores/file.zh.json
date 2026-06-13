@@ -1,0 +1,52 @@
+{
+  "litestar.stores.file.FileStore": {
+    "hash": "622159ff0c1ecf84",
+    "text": "基于文件、线程和进程安全、异步的键/值存储。\n\n.. note::\n\n    为确保任意键能在任何文件系统上安全存储，避免因路径分隔符或冲突引发潜在问题，在将其解释为文件路径之前，会使用 BLAKE2 对其进行哈希处理。这意味着缓存键在存储内部变得不透明，且一个键不会对应文件系统中同名文件。",
+    "type": "ClassDef"
+  },
+  "litestar.stores.file.FileStore.__init__": {
+    "hash": "0d205c7a0617574a",
+    "text": "初始化 ``FileStorage``。\n\nArgs:\n    path: 存储数据的路径\n    create_directories: 如果 ``path`` 中的目录不存在则创建它们\n        默认值：``False``\n\n        .. versionadded:: 2.9.0",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.file.FileStore.delete": {
+    "hash": "1d5985dd9f903481",
+    "text": "删除一个值。\n\n如果该键不存在，则不执行任何操作。\n\nArgs:\n    key: 要删除的值的键",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.file.FileStore.delete_all": {
+    "hash": "0d9af2ad0897a419",
+    "text": "删除所有存储的值。\n\nNote:\n    这将删除并重新创建 :attr:`FileStore.path`",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.file.FileStore.delete_expired": {
+    "hash": "ed8bf4537dbc941c",
+    "text": "删除过期项。\n\n由于过期项通常仅在访问时（即调用 :meth:`.get` 时）才会被清除，因此应定期调用此方法以释放磁盘空间。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.file.FileStore.exists": {
+    "hash": "a4186f53ed052ca3",
+    "text": "检查给定的 ``key`` 是否存在。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.file.FileStore.expires_in": {
+    "hash": "c75cac70e7cc8cd5",
+    "text": "获取 ``key`` 过期的秒数。如果不存在该 ``key`` 或未设置过期时间，则返回 ``None``。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.file.FileStore.get": {
+    "hash": "0304954c2a8af614",
+    "text": "获取一个值。\n\nArgs:\n    key: 与值关联的键\n    renew_for: 如果提供且该值已设置初始过期时间，则将过期时间延长 ``renew_for`` 秒。如果该值未设置过期时间，则此操作无效\n\nReturns:\n    如果与 ``key`` 关联的值存在且未过期，则返回该值；否则返回 ``None``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.file.FileStore.set": {
+    "hash": "7025011b98b86296",
+    "text": "设置一个值。\n\nArgs:\n    key: 用于关联值的键\n    value: 要存储的值\n    expires_in: 键被视为过期前的秒数\n\nReturns:\n    ``None``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.file.FileStore.with_namespace": {
+    "hash": "4d5f44f2d263fb61",
+    "text": "返回 :class:`FileStore` 的新实例，使用当前存储路径的子路径。",
+    "type": "FunctionDef"
+  }
+}

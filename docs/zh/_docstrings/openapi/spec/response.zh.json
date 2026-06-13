@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.response.OpenAPIResponse": {
+    "hash": "8691e40c36b1a44b",
+    "text": "描述来自 API 操作（Operation）的单个响应，包括基于该响应的运行时静态 ``links``（链接）到相关操作。"
+  }
+}

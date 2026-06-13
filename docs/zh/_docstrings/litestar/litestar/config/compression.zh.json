@@ -1,0 +1,7 @@
+{
+  "litestar.config.compression.CompressionConfig": {
+    "hash": "4d513fe349ac0bdd",
+    "text": "响应压缩的配置。\n\n要启用响应压缩，请使用 ``compression_config`` 键将本类的实例传递给 :class:`Litestar <.app.Litestar>` 构造函数。",
+    "type": "ClassDef"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "litestar.exceptions.base_exceptions.LitestarException": {
+    "hash": "f511d5121b372633",
+    "text": "Litestar 所有异常类的基异常类。",
+    "type": "ClassDef"
+  },
+  "litestar.exceptions.base_exceptions.LitestarException.__init__": {
+    "hash": "9358a66cd0351f1b",
+    "text": "初始化 ``LitestarException``。\n\nArgs:\n    *args: 参数在传递给 :class:`Exception` 之前会被转换为 :class:`str`。\n    detail: 异常的详细信息。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.base_exceptions.LitestarWarning": {
+    "hash": "f99d75391b5b7e74",
+    "text": "Litestar 警告的基类",
+    "type": "ClassDef"
+  },
+  "litestar.exceptions.base_exceptions.MissingDependencyException": {
+    "hash": "36fa20971deadd6e",
+    "text": "缺少可选依赖项。\n\n仅当模块依赖于未安装的依赖项时，才会引发此异常。",
+    "type": "ClassDef"
+  },
+  "litestar.exceptions.base_exceptions.SerializationException": {
+    "hash": "f64a596bce48b527",
+    "text": "对象编码或解码失败。",
+    "type": "ClassDef"
+  }
+}

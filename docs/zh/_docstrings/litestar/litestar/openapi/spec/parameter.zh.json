@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.parameter.Parameter": {
+    "hash": "6b664d934f3f5bfe",
+    "text": "描述单个操作参数。\n\n唯一参数由 `name <https://spec.openapis.org/oas/v3.1.0#parameterName>`_ 和 `location <https://spec.openapis.org/oas/v3.1.0#parameterIn>`_ 的组合定义。",
+    "type": "ClassDef"
+  }
+}

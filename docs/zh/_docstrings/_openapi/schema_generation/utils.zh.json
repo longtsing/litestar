@@ -1,0 +1,22 @@
+{
+  "litestar._openapi.schema_generation.utils._should_create_literal_schema": {
+    "hash": "3414671709ab2991",
+    "text": "用于判断是否应为字段定义创建字面量（literal）模式的谓词。\n\n如果字段定义是字面量，或者是字面量与 `None` 的联合类型，则返回 ``True``。\n\n当注解为 `Literal[\"anything\"] | None` 时，我们应为字面量创建模式，并在枚举值中包含 `null`。\n\nArgs:\n    field_definition: 字段定义实例。\n\nReturns:\n    布尔值",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.utils.get_example_id": {
+    "hash": "e1f8e0a812414b7b",
+    "text": "获取示例 ID。\n\nArgs:\n    example: 示例实例。\n    name: 字段名称。\n    index: 示例的索引。\n\nReturns:\n    示例 ID。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.utils.get_formatted_examples": {
+    "hash": "f3b61fd4fde7c20e",
+    "text": "将示例格式化为 OpenAPI 架构格式。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.utils.get_json_schema_formatted_examples": {
+    "hash": "298ba1ec182fd685",
+    "text": "将示例格式化为 JSON 模式格式。",
+    "type": "FunctionDef"
+  }
+}

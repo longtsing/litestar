@@ -1,0 +1,7 @@
+{
+  "litestar.types.internal_types.PathParameterDefinition": {
+    "hash": "9966c9d81854defd",
+    "text": "路径参数元组。",
+    "type": "ClassDef"
+  }
+}

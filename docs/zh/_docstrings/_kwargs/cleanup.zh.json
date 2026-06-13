@@ -1,0 +1,37 @@
+{
+  "litestar._kwargs.cleanup.DependencyCleanupGroup": {
+    "hash": "5ff0b10cb9e259a9",
+    "text": "基于生成器的依赖项的包装器。\n\n通过包装 :func:`next` / :func:`anext` 调用，并提供向所有生成器依次 :meth:`throw <generator.throw>` / :meth:`athrow <agen.athrow>` 异常的功能，从而简化清理工作。该类的实例可用作上下文管理器，它将自动向其中的生成器抛出任何异常。以这种方式捕获的所有异常在抛入生成器后将被重新抛出。",
+    "type": "ClassDef"
+  },
+  "litestar._kwargs.cleanup.DependencyCleanupGroup.__aenter__": {
+    "hash": "d41f9b356b969872",
+    "text": "支持异步上下文管理器协议，以便更轻松地捕获异常并将其抛出到生成器中。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.cleanup.DependencyCleanupGroup.__aexit__": {
+    "hash": "909e7e2e1c586e1b",
+    "text": "如果在 contextmanager 块中引发了异常，则将其抛出到所有生成器中。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.cleanup.DependencyCleanupGroup.__init__": {
+    "hash": "052d7c6a4be75a53",
+    "text": "初始化 ``DependencyCleanupGroup``。\n\nArgs:\n    generators: 一个可选的生成器列表，将在清理时调用",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.cleanup.DependencyCleanupGroup._cleanup": {
+    "hash": "ddd5d0a9c3d897a3",
+    "text": "通过在所有生成器上调用 :func:`next` / :func:`anext` 来执行清理操作。\n\n如果要调用的生成器有多个，它们将在 :class:`anyio.TaskGroup` 中执行。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.cleanup.DependencyCleanupGroup._throw": {
+    "hash": "9b39101b6029dc42",
+    "text": "在所有生成器中依次抛出异常。\n\nArgs:\n    exc: 要抛出的异常",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.cleanup.DependencyCleanupGroup.add": {
+    "hash": "40badc2e8360ccb5",
+    "text": "向组中添加一个新的生成器。\n\nArgs:\n    generator: 要添加的生成器\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  }
+}

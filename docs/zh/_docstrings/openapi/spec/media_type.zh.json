@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.media_type.OpenAPIMediaType": {
+    "hash": "18b91460313511f1",
+    "text": "每个媒体类型对象都为其键标识的媒体类型提供架构和示例。"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "litestar.datastructures.upload_file.UploadFile": {
+    "hash": "4f50bda4dde525e6",
+    "text": "文件上传的表示"
+  },
+  "litestar.datastructures.upload_file.UploadFile.__init__": {
+    "hash": "d959fc5a6e11f92c",
+    "text": "将文件上传到内存容器。\n\nArgs:\n    content_type: 文件的内容类型。\n    filename: 文件名。\n    file_data: 文件数据。\n    headers: 任何附加的标头。\n    max_spool_size: 临时文件将滚动到磁盘的大小阈值。"
+  },
+  "litestar.datastructures.upload_file.UploadFile.close": {
+    "hash": "50e1227e6a0ad29a",
+    "text": "文件的异步关闭代理。\n\nReturns:\n    None."
+  },
+  "litestar.datastructures.upload_file.UploadFile.read": {
+    "hash": "fbbae2d7e7150238",
+    "text": "数据读取的代理。\n\nArgs:\n    size: 读取的起始位置。\n\nReturns:\n    字节字符串。"
+  },
+  "litestar.datastructures.upload_file.UploadFile.rolled_to_disk": {
+    "hash": "0ecef4c685098bd2",
+    "text": "确定临时文件是否已超过写入磁盘的阈值，从而不再驻留在内存中。\n\nReturns:\n    一个布尔标志"
+  },
+  "litestar.datastructures.upload_file.UploadFile.seek": {
+    "hash": "fa9726b60bf9d52f",
+    "text": "文件异步 seek 代理。\n\nArgs:\n    offset: 起始位置。\n\nReturns:\n    seek 操作后的新绝对文件位置（以字节为单位）。"
+  },
+  "litestar.datastructures.upload_file.UploadFile.write": {
+    "hash": "fcc0310abc2d6182",
+    "text": "数据写入的代理。\n\nArgs:\n    data: 要写入的字节字符串。\n\nReturns:\n    写入的字节数 (int)。"
+  }
+}

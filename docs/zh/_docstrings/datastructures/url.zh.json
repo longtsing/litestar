@@ -1,0 +1,34 @@
+{
+  "litestar.datastructures.url.Address": {
+    "hash": "b192fb871503d019",
+    "text": "只是一个网络地址。"
+  },
+  "litestar.datastructures.url.URL": {
+    "hash": "4a5c5cc26ee08dba",
+    "text": "URL 的表示和修改工具。"
+  },
+  "litestar.datastructures.url.URL.__new__": {
+    "hash": "9d1475982af9f97b",
+    "text": "创建新实例。\n\nArgs:\n    url: 表示的 URL 字符串或拆分结果。"
+  },
+  "litestar.datastructures.url.URL.from_components": {
+    "hash": "3d872e265210db31",
+    "text": "从组件创建新的 URL。\n\nArgs:\n    scheme: URL 方案\n    netloc: 网络位置\n    path: 分层路径\n    query: 查询组件\n    fragment: 片段标识符\n\nReturns:\n    一个包含给定组件的新 URL"
+  },
+  "litestar.datastructures.url.URL.from_scope": {
+    "hash": "ca164dea6bbbccb6",
+    "text": "从 :class:`Scope <.types.Scope>` 构建一个 URL\n\nArgs:\n    scope: 一个作用域\n\nReturns:\n    一个 URL"
+  },
+  "litestar.datastructures.url.URL.query_params": {
+    "hash": "da05df95980a57b0",
+    "text": "URL 的查询参数，表示为 :class:`MultiDict <.datastructures.multi_dicts.MultiDict>`\n\nReturns:\n    一个包含查询参数的 :class:`MultiDict <.datastructures.multi_dicts.MultiDict>`\n\nNotes:\n    - 返回的 ``MultiDict`` 是可变的，而 :class:`URL` 本身是*不可变*的，\n        因此修改查询参数不会直接改变 ``URL``。\n        如果您想修改查询参数，请在多维字典（MultiDict）中进行修改，\n        然后将它们传回 :meth:`with_replacements`"
+  },
+  "litestar.datastructures.url.URL.with_replacements": {
+    "hash": "6f4df1e60d33b501",
+    "text": "创建一个新的 URL，替换给定的组件。\n\nArgs:\n    scheme: URL 方案\n    netloc: 网络位置\n    path: 分层路径\n    query: 原始查询字符串\n    fragment: 片段标识符\n\nReturns:\n    一个替换了给定组件的新 URL"
+  },
+  "litestar.datastructures.url.make_absolute_url": {
+    "hash": "715a1a8ecf9b7394",
+    "text": "创建一个绝对 URL。\n\nArgs:\n    path: 要转换为绝对路径的 URL 路径\n    base: 用作基础的 URL\n\nReturns:\n    表示新绝对 URL 的字符串"
+  }
+}

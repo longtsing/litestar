@@ -1,0 +1,117 @@
+{
+  "litestar.data_extractors.ConnectionDataExtractor": {
+    "hash": "30db39641ca2b0d9",
+    "text": "用于从 :class:`ASGIConnection <litestar.connection.ASGIConnection>`、\n:class:`Request <litestar.connection.Request>` 或 :class:`WebSocket <litestar.connection.WebSocket>` 实例中提取数据的工具类。",
+    "type": "ClassDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.__call__": {
+    "hash": "878a185723def032",
+    "text": "从连接中提取数据，返回一个包含值的字典。\n\nNotes:\n    - ``body`` 的值（如果存在）是一个未解析的协程，因此接收方应对其进行 await。\n\nArgs:\n    connection: 一个 ASGI 连接或其子类。\n\nReturns:\n    一个以字符串为键的字典，包含提取的值。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.__init__": {
+    "hash": "4739535b6397430f",
+    "text": "初始化 ``ConnectionDataExtractor``\n\nArgs:\n    extract_body: 是否提取请求体（仅适用于请求）。\n    extract_client: 是否提取客户端（主机、端口）映射。\n    extract_content_type: 是否提取内容类型及任何选项。\n    extract_cookies: 是否提取 Cookie。\n    extract_headers: 是否提取请求头。\n    extract_method: 是否提取 HTTP 方法（仅适用于请求）。\n    extract_path: 是否提取路径。\n    extract_path_params: 是否提取路径参数。\n    extract_query: 是否提取查询参数。\n    extract_scheme: 是否提取 HTTP 协议方案。\n    obfuscate_headers: 需要混淆的请求头键。混淆后的值将被替换为 '*****'。\n    obfuscate_cookies: 需要混淆的 Cookie 键。混淆后的值将被替换为 '*****'。\n    parse_body: 是否解析请求体值或返回原始字节字符串（仅适用于请求）。\n    parse_query: 是否解析查询参数或返回原始字节字符串。\n    skip_parse_malformed_body: 如果请求体格式错误，是否跳过解析。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_body": {
+    "hash": "f79c9cc9939c3ebc",
+    "text": "从 ``ASGIConnection`` 中提取主体\n\nArgs:\n    request: 一个 :class:`Request <litestar.connection.Request>` 实例。\n\nReturns:\n    解析后的请求主体或原始字节字符串。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_client": {
+    "hash": "b1800769c6ddb7f4",
+    "text": "从 ``ASGIConnection`` 中提取客户端\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nReturns:\n    连接的 scope[\"client\"] 值或默认值。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_content_type": {
+    "hash": "19f32bd281776204",
+    "text": "从 ``ASGIConnection`` 中提取 content-type\n\nArgs:\n    request: 一个 :class:`Request <litestar.connection.Request>` 实例。\n\nReturns:\n    一个包含请求解析后的 'Content-Type' 头的元组。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_cookies": {
+    "hash": "68390bb98c28eddf",
+    "text": "从 ``ASGIConnection`` 中提取 cookies\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nReturns:\n    包含连接 cookies 的字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_headers": {
+    "hash": "2a9e19bdc4230171",
+    "text": "从 ``ASGIConnection`` 中提取标头\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nReturns:\n    包含连接标头的字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_method": {
+    "hash": "d37ec9f256a64cea",
+    "text": "从 ``ASGIConnection`` 中提取方法\n\nArgs:\n    request: 一个 :class:`Request <litestar.connection.Request>` 实例。\n\nReturns:\n    请求的 scope[\"method\"] 值。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_path": {
+    "hash": "f485e56e568b856f",
+    "text": "从 ``ASGIConnection`` 中提取路径\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nReturns:\n    连接的 scope[\"path\"] 值",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_path_params": {
+    "hash": "8b04c51bd35d11ac",
+    "text": "从 ``ASGIConnection`` 中提取路径参数\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nReturns:\n    包含连接路径参数的字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_query": {
+    "hash": "372fe10c87324cf2",
+    "text": "从 ``ASGIConnection`` 中提取查询参数\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nReturns:\n    包含连接已解析查询字符串的字典，或原始查询字节字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ConnectionDataExtractor.extract_scheme": {
+    "hash": "c04f90a81275ac67",
+    "text": "从 ``ASGIConnection`` 中提取协议方案\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nReturns:\n    连接的 scope[\"scheme\"] 值",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ExtractedRequestData": {
+    "hash": "495de878b28e6ed1",
+    "text": "表示提取的请求数据的字典。",
+    "type": "ClassDef"
+  },
+  "litestar.data_extractors.ExtractedResponseData": {
+    "hash": "03f3ce96bb1421a4",
+    "text": "表示提取的响应数据的字典。",
+    "type": "ClassDef"
+  },
+  "litestar.data_extractors.ResponseDataExtractor": {
+    "hash": "52e184ac227e2f31",
+    "text": "从 ``Message`` 中提取数据的工具类",
+    "type": "ClassDef"
+  },
+  "litestar.data_extractors.ResponseDataExtractor.__call__": {
+    "hash": "3d7fc4ca596c723a",
+    "text": "从响应中提取数据，返回一个包含值的字典。\n\nArgs:\n    messages: 一个元组，包含\n        :class:`HTTPResponseStartEvent <litestar.types.asgi_types.HTTPResponseStartEvent>`\n        和 :class:`HTTPResponseBodyEvent <litestar.types.asgi_types.HTTPResponseBodyEvent>`。\n\nReturns:\n    一个以字符串为键的字典，包含提取的值。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ResponseDataExtractor.__init__": {
+    "hash": "3a583c61375d0c08",
+    "text": "使用选项初始化 ``ResponseDataExtractor``。\n\nArgs:\n    extract_body: 是否提取响应体。\n    extract_cookies: 是否提取 Cookie。\n    extract_headers: 是否提取请求头。\n    extract_status_code: 是否提取状态码。\n    obfuscate_cookies: 需要混淆的 Cookie 键。混淆后的值将被替换为 '*****'。\n    obfuscate_headers: 需要混淆的请求头键。混淆后的值将被替换为 '*****'。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ResponseDataExtractor.extract_cookies": {
+    "hash": "a463ec61e296e5b0",
+    "text": "从 ``Message`` 中提取 cookies\n\nArgs:\n    messages: 一个包含\n        :class:`HTTPResponseStartEvent <litestar.types.asgi_types.HTTPResponseStartEvent>`\n        和 :class:`HTTPResponseBodyEvent <litestar.types.asgi_types.HTTPResponseBodyEvent>` 的元组。\n\nReturns:\n    响应的 cookies 字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ResponseDataExtractor.extract_headers": {
+    "hash": "aea1450201d0296c",
+    "text": "从 ``Message`` 中提取标头\n\nArgs:\n    messages: 一个元组，包含\n        :class:`HTTPResponseStartEvent <litestar.types.asgi_types.HTTPResponseStartEvent>`\n        和 :class:`HTTPResponseBodyEvent <litestar.types.asgi_types.HTTPResponseBodyEvent>`。\n\nReturns:\n    响应的标头字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ResponseDataExtractor.extract_response_body": {
+    "hash": "0410804550494fbe",
+    "text": "从 ``Message`` 中提取响应体\n\nArgs:\n    messages: 一个元组，包含\n        :class:`HTTPResponseStartEvent <litestar.types.asgi_types.HTTPResponseStartEvent>`\n        和 :class:`HTTPResponseBodyEvent <litestar.types.asgi_types.HTTPResponseBodyEvent>`。\n\nReturns:\n    响应体，以字节字符串形式返回。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors.ResponseDataExtractor.extract_status_code": {
+    "hash": "c32f56b72c378181",
+    "text": "从 ``Message`` 中提取状态码\n\nArgs:\n    messages: 一个包含\n        :class:`HTTPResponseStartEvent <litestar.types.asgi_types.HTTPResponseStartEvent>`\n        和 :class:`HTTPResponseBodyEvent <litestar.types.asgi_types.HTTPResponseBodyEvent>` 的元组。\n\nReturns:\n    响应的状态码。",
+    "type": "FunctionDef"
+  },
+  "litestar.data_extractors._obfuscate": {
+    "hash": "df9de4fc09d72312",
+    "text": "在字典中混淆值，将值替换为 `******`\n\nArgs:\n    values: 字符串字典\n    fields_to_obfuscate: 需要混淆的键\n\nReturns:\n    包含混淆后字符串的字典",
+    "type": "FunctionDef"
+  }
+}

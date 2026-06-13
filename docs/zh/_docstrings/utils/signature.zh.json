@@ -1,0 +1,52 @@
+{
+  "litestar.utils.signature.ParsedSignature": {
+    "hash": "576c5aa80ada0b72",
+    "text": "已解析的签名。\n\n该对象是处理程序/依赖项签名信息的主要来源。\n\n唯一发生的后处理是将任何前向引用的类型注解进行转换。",
+    "type": "ClassDef"
+  },
+  "litestar.utils.signature.ParsedSignature.from_fn": {
+    "hash": "fad179d30fab57c5",
+    "text": "解析函数签名。\n\nArgs:\n    fn: 任意可调用对象。\n    signature_namespace: 用于前向引用解析的名称到类型的映射。\n\nReturns:\n    ParsedSignature",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.signature.ParsedSignature.from_signature": {
+    "hash": "a0278dea42413ada",
+    "text": "解析一个 :class:`inspect.Signature` 实例。\n\nArgs:\n    signature: 一个 :class:`inspect.Signature` 实例。\n    fn_type_hints: 类型映射\n\nReturns:\n    ParsedSignature",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.signature._GLOBAL_NAMES": {
+    "hash": "ab1711a13bb8003c",
+    "text": "用于处理程序签名前向引用解析的名称映射。\n\n这允许用户在处理程序模块中的 `if TYPE_CHECKING:` 代码块内包含这些名称。",
+    "type": "Variable"
+  },
+  "litestar.utils.signature._unwrap_implicit_optional_hints": {
+    "hash": "2eb93e76afd4efdb",
+    "text": "解包隐式可选提示。\n\n在 Python < 3.11 版本中，如果函数参数注解具有 ``None`` 默认值，则无条件地将其包装在 ``Optional`` 类型中。\n\n如果注解未被标注（即未使用 `Annotated` 等），则任何嵌套的联合类型（unions）将被展平，例如：\n\n.. code-block:: python\n\n    def foo(a: Optional[Union[str, int]] = None): ...\n\n...将变为 `Union[str, int, NoneType]`。\n\n然而，如果注解已被标注，则最终会在标注类型周围形成一个可选联合类型，例如：\n\n.. code-block:: python\n\n    def foo(a: Annotated[Optional[Union[str, int]], ...] = None): ...\n\n...将变为 `Union[Annotated[Union[str, int, NoneType], ...], NoneType]`。\n\n此函数通过移除冗余的外部联合类型或展平非冗余的联合类型，使后一种情况与前一种情况保持一致。后一种情况将变为 `Annotated[Union[str, int, NoneType], ...]`。\n\nArgs:\n    defaults: 名称到默认值的映射。\n    hints: 名称到类型的映射。\n\nReturns:\n    名称到类型的映射。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.signature._unwrap_implicit_optional_hints._is_any_optional": {
+    "hash": "5527b59302000eaa",
+    "text": "检测类型是否为包含 `NoneType` 的联合类型。\n\n在检测到类型为双参数的可选类型后，此函数可用于检测内部类型是否实际上是与 `NoneType` 的联合类型。\n\n仅当内部类型也是可选类型时，我们才希望执行可选联合类型的解包操作。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.signature._unwrap_implicit_optional_hints._is_two_arg_optional": {
+    "hash": "056461922b363463",
+    "text": "检查一个类型是否为双参数的可选类型。\n\n如果该类型已被 `get_type_hints()` 包装在 `Optional` 中，它将始终是一个类型与 `NoneType` 的联合。\n\n参见：https://github.com/litestar-org/litestar/pull/2516",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.signature.add_types_to_signature_namespace": {
+    "hash": "d5783100859e3a54",
+    "text": "为签名命名空间映射添加类型。\n\n类型将映射到其 `__name__` 属性后添加。\n\nArgs:\n    signature_types: 要添加到签名命名空间的类型列表。\n    signature_namespace: 要添加类型的签名命名空间。\n\nRaises:\n    AttributeError: 如果某个类型没有 `__name__` 属性。\n\nReturns:\n    更新后的签名命名空间。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.signature.get_fn_type_hints": {
+    "hash": "3555c2863f6230d1",
+    "text": "解析 ``fn`` 的类型提示。\n\nArgs:\n    fn: 待检查的可调用对象\n    namespace: 用于解析前向引用的额外名称。\n\nReturns:\n    名称到类型的映射。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.signature.merge_signature_namespaces": {
+    "hash": "36e2ac29874d042b",
+    "text": "向签名命名空间映射中添加类型。\n\n类型将映射到其 `__name__` 属性。\n\nArgs:\n    signature_namespace: 要添加类型的签名命名空间。\n    additional_signature_namespace: 要合并的签名命名空间。\n\nRaises:\n    AttributeError: 如果某个类型没有 `__name__` 属性。\n\nReturns:\n    更新后的签名命名空间。",
+    "type": "FunctionDef"
+  }
+}

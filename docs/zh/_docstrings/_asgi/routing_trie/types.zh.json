@@ -1,0 +1,22 @@
+{
+  "litestar._asgi.routing_trie.types.ASGIHandlerTuple": {
+    "hash": "ad6d0d0a9417508e",
+    "text": "路由处理程序节点的封装。",
+    "type": "ClassDef"
+  },
+  "litestar._asgi.routing_trie.types.PathParameterSentinel": {
+    "hash": "8558449a50c86188",
+    "text": "标记路径参数的哨兵类。",
+    "type": "ClassDef"
+  },
+  "litestar._asgi.routing_trie.types.RouteTrieNode": {
+    "hash": "4230b652465d261c",
+    "text": "基数 Trie 节点。",
+    "type": "ClassDef"
+  },
+  "litestar._asgi.routing_trie.types.create_node": {
+    "hash": "cc8f4a0f23e9c6f8",
+    "text": "创建 RouteMapNode 实例。\n\nReturns:\n    一个路由映射节点实例。",
+    "type": "FunctionDef"
+  }
+}

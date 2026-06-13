@@ -1,0 +1,7 @@
+{
+  "litestar.plugins.core._msgspec._unwrap_optional": {
+    "hash": "f1f4f57df29dc3e0",
+    "text": "返回 ``Optional[X]`` 的内部类型，以便下游的 ``isinstance`` 检查直接看到 ``X``。\n\nmsgspec 将其包装为 ``UnionType((<inner>, NoneType))``，其中 ``<inner>`` 要么是 ``Metadata`` 包装器（用于描述/示例），要么是带有约束的原始类型（例如 ``IntType(gt=1, ...)``）——从 ``Meta`` 派生的约束会被提升到类型上。异构联合类型保持不变。",
+    "type": "FunctionDef"
+  }
+}

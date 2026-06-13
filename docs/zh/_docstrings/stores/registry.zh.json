@@ -1,0 +1,22 @@
+{
+  "litestar.stores.registry.StoreRegistry": {
+    "hash": "3aa9fd66495ed107",
+    "text": ":class:`Store <.base.Store>` 实例的注册表。",
+    "type": "ClassDef"
+  },
+  "litestar.stores.registry.StoreRegistry.__init__": {
+    "hash": "165e91b53924e933",
+    "text": "初始化 ``StoreRegistry``。\n\nArgs:\n    stores: 一个将存储名称映射到存储实例的字典，用于初始化注册表。\n    default_factory: 一个可调用对象，当请求的名称尚未注册时，由 :meth:`StoreRegistry.get` 调用以提供存储实例。该可调用对象接收请求的名称，并应返回一个 :class:`Store <.base.Store>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.registry.StoreRegistry.get": {
+    "hash": "18e9b7e8ce27836f",
+    "text": "获取以 ``name`` 注册的存储。如果没有注册该存储，则使用默认工厂创建以 ``name`` 命名的存储，并将返回的存储注册在 ``name`` 下。\n\nArgs:\n    name: 存储的名称\n\nReturns:\n    一个 :class:`Store <.base.Store>`",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.registry.StoreRegistry.register": {
+    "hash": "8650076e3372895a",
+    "text": "注册一个新的 :class:`Store <.base.Store>`。\n\nArgs:\n    name: 注册该存储时使用的名称\n    store: 要注册的存储\n    allow_override: 是否允许覆盖同名的现有存储\n\nRaises:\n    ValueError: 如果该名称下已注册了存储且 ``override`` 不为 ``True``",
+    "type": "FunctionDef"
+  }
+}

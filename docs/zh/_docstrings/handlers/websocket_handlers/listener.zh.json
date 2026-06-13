@@ -1,0 +1,34 @@
+{
+  "litestar.handlers.websocket_handlers.listener.WebsocketListener.on_accept": {
+    "hash": "9c664df7510278e4",
+    "text": "在 :class:`WebSocket <.connection.WebSocket>` 连接被接受后调用。可以接收任何依赖项（dependencies）。"
+  },
+  "litestar.handlers.websocket_handlers.listener.WebsocketListener.on_disconnect": {
+    "hash": "dbb2c7c06053dc55",
+    "text": "在 :class:`WebSocket <.connection.WebSocket>` 连接断开后调用。可以接收任何依赖项（dependencies）。"
+  },
+  "litestar.handlers.websocket_handlers.listener.WebsocketListener.on_receive": {
+    "hash": "890f8584e9e82770",
+    "text": "在从 WebSocket 接收数据后调用。\n\n该函数应接受一个 ``data`` 参数，用于接收处理后的 WebSocket 数据，并且可以额外包含处理器依赖项（如 ``state``）或其他常规依赖项。\n\n从此函数返回的数据将根据处理器配置进行序列化并通过套接字发送。"
+  },
+  "litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler": {
+    "hash": "b9446cd150215881",
+    "text": "一个 WebSocket 监听器，自动接受连接、处理断开连接，在每次收到新数据时调用回调函数，并发送任何返回的数据。"
+  },
+  "litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.__init__": {
+    "hash": "f8c334baf19508d2",
+    "text": "初始化 ``WebsocketRouteHandler``\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段序列。若未提供，默认为 ``/``\n    fn: 处理函数\n    connection_accept_handler: 一个可调用对象，接受一个 :class:`WebSocket <.connection.WebSocket>` 实例，并返回一个协程，等待该协程后将接受连接。默认为 ``WebSocket.accept``。\n    connection_lifespan: 一个异步上下文管理器，用于管理连接的生命周期。默认情况下，它会调用 ``connection_accept_handler``、``on_connect`` 和 ``on_disconnect``。可以请求任何依赖项，例如 :class:`WebSocket <.connection.WebSocket>` 连接。\n    dependencies: 以字符串为键的依赖项 :class:`Provider <.di.Provide>` 实例映射。\n    dto: 用于请求数据（反）序列化和验证的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    exception_handlers: 状态码和/或异常类型到处理函数的映射。\n    guards: :class:`Guard <.types.Guard>` 可调用对象序列。\n    middleware: :class:`Middleware <.types.Middleware>` 序列。\n    receive_mode: 接收数据的 WebSocket 模式，可以是 `text` 或 `binary`。\n    send_mode: 发送数据的 WebSocket 模式，可以是 `text` 或 `binary`。\n    name: 标识路由处理函数的字符串。\n    on_accept: 连接被接受后调用的回调函数。可以请求任何依赖项，例如 :class:`WebSocket <.connection.WebSocket>` 连接。\n    on_disconnect: 连接关闭后调用的回调函数。可以请求任何依赖项，例如 :class:`WebSocket <.connection.WebSocket>` 连接。\n    opt: 以字符串为键的任意值映射，可在 :class:`Guards <.types.Guard>` 中访问，或在拥有 :class:`Request <.connection.Request>` 或 :class:`ASGI Scope <.types.Scope>` 访问权限的任何地方访问。\n    return_dto: 用于序列化出站响应数据的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    type_decoders: 元组序列，每个元组由测试类型身份的谓词和用于反序列化的 msgspec 钩子组成。\n    type_encoders: 类型到可调用对象的映射，用于将它们转换为支持序列化的类型。\n    websocket_class: 用作路由处理程序默认 WebSocket 类的 :class:`WebSocket <.connection.WebSocket>` 自定义子类。\n    parameters: :func:`Parameter <.params.Parameter>` 定义的映射。\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。"
+  },
+  "litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler._validate_handler_function": {
+    "hash": "f90555565e005996",
+    "text": "验证路由处理函数，在其设置后通过检查其返回注解进行验证。"
+  },
+  "litestar.handlers.websocket_handlers.listener.WebsocketListenerRouteHandler.default_connection_lifespan": {
+    "hash": "b3e33ba5f6367dde",
+    "text": "处理 :class:`WebSocket <.connection.WebSocket>` 的连接生命周期。\n\nArgs:\n    socket: :class:`WebSocket <.connection.WebSocket>` 连接\n    on_accept_dependencies: :attr:`on_accept` 钩子请求的依赖项\n    on_disconnect_dependencies: :attr:`on_disconnect` 钩子请求的依赖项\n\n默认情况下，这将：\n\n    - 调用 :attr:`connection_accept_handler` 以接受连接\n    - 在连接被接受后，如果定义了 :attr:`on_accept` 则调用它\n    - 在离开上下文时调用 :attr:`on_disconnect`"
+  },
+  "litestar.handlers.websocket_handlers.listener.websocket_listener": {
+    "hash": "f16df541f265879d",
+    "text": "创建 :class:`WebsocketListenerRouteHandler`。\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段序列。如果未提供，默认为 ``/``\n    connection_accept_handler: 一个可调用对象，接受 :class:`WebSocket <.connection.WebSocket>` 实例并返回一个协程，等待该协程后将接受连接。默认为 ``WebSocket.accept``。\n    connection_lifespan: 一个异步上下文管理器，用于处理连接的生命周期。默认情况下，它会调用 ``connection_accept_handler``、``on_connect`` 和 ``on_disconnect``。可以请求任何依赖项，例如 :class:`WebSocket <.connection.WebSocket>` 连接。\n    dependencies: 以字符串为键的依赖项 :class:`Provider <.di.Provide>` 实例映射。\n    dto: 用于请求数据（反）序列化和验证的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    exception_handlers: 状态码和/或异常类型到处理函数函数的映射。\n    guards: :class:`Guard <.types.Guard>` 可调用对象序列。\n    middleware: :class:`Middleware <.types.Middleware>` 序列。\n    receive_mode: 接收数据的 Websocket 模式，可以是 `text` 或 `binary`。\n    send_mode: 发送数据的 Websocket 模式，可以是 `text` 或 `binary`。\n    name: 标识路由处理函数的字符串。\n    on_accept: 连接被接受后调用的回调函数。可以请求任何依赖项，例如 :class:`WebSocket <.connection.WebSocket>` 连接。\n    on_disconnect: 连接关闭后调用的回调函数。可以请求任何依赖项，例如 :class:`WebSocket <.connection.WebSocket>` 连接。\n    opt: 以字符串为键的任意值映射，可在 :class:`Guards <.types.Guard>` 中访问，或在任何可访问 :class:`Request <.connection.Request>` 或 :class:`ASGI Scope <.types.Scope>` 的地方访问。\n    return_dto: 用于序列化出站响应数据的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    type_decoders: 元组序列，每个元组由测试类型身份的谓词和用于反序列化的 msgspec 钩子组成。\n    type_encoders: 类型到可调用对象的映射，用于将它们转换为支持序列化的类型。\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。\n    websocket_class: 用作路由处理程序默认 Websocket 类的 :class:`WebSocket <.connection.WebSocket>` 自定义子类。"
+  }
+}

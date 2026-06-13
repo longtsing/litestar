@@ -1,0 +1,7 @@
+{
+  "litestar.dto.msgspec_dto.MsgspecDTO": {
+    "hash": "8afe967dd4c7a14e",
+    "text": "支持使用 Msgspec 进行领域建模。",
+    "type": "ClassDef"
+  }
+}

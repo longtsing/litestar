@@ -1,0 +1,46 @@
+{
+  "litestar.connection.request.Request": {
+    "hash": "30c1d00244004be6",
+    "text": "Litestar 请求类。"
+  },
+  "litestar.connection.request.Request.__init__": {
+    "hash": "2525f7e4adf9725f",
+    "text": "初始化 ``Request``。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。"
+  },
+  "litestar.connection.request.Request.accept": {
+    "hash": "e6c138f8e6c37cda",
+    "text": "解析请求的 'Accept' 头，返回一个 :class:`Accept <litestar.datastructures.headers.Accept>` 实例。\n\nReturns:\n    一个 :class:`Accept <litestar.datastructures.headers.Accept>` 实例，表示可接受的媒体类型列表。"
+  },
+  "litestar.connection.request.Request.body": {
+    "hash": "ca3a17002378697d",
+    "text": "返回请求的主体。\n\nReturns:\n    表示请求主体的字节字符串。"
+  },
+  "litestar.connection.request.Request.content_type": {
+    "hash": "8488da11b1fb425a",
+    "text": "解析请求的 'Content-Type' 标头，返回标头值及任何选项组成的字典。\n\nReturns:\n    一个元组，包含解析后的值以及其中发送的任何选项组成的字典。"
+  },
+  "litestar.connection.request.Request.form": {
+    "hash": "e9b7047943dfcba0",
+    "text": "从请求中检索表单数据。如果请求是 'multipart/form-data' 或 'application/x-www-form-urlencoded'，则返回一个填充了请求中发送值的 FormMultiDict 实例，否则返回一个空实例。\n\nReturns:\n    一个 FormMultiDict 实例"
+  },
+  "litestar.connection.request.Request.json": {
+    "hash": "e91f3c3f940d06e6",
+    "text": "从请求中检索 JSON 请求体。\n\nReturns:\n    任意值"
+  },
+  "litestar.connection.request.Request.method": {
+    "hash": "7c51a1eb4c270f30",
+    "text": "返回请求方法。\n\nReturns:\n    请求 :class:`Method <litestar.types.Method>`"
+  },
+  "litestar.connection.request.Request.msgpack": {
+    "hash": "c12fa650516fdc7f",
+    "text": "从请求中检索 MessagePack 请求体。\n\nReturns:\n    任意值"
+  },
+  "litestar.connection.request.Request.send_push_promise": {
+    "hash": "bc8fcb5b08e324c9",
+    "text": "发送推送承诺。\n\n此方法要求 ASGI 服务器发送 `http.response.push` 扩展。\n\nArgs:\n    path: 发送承诺的目标路径。\n    raise_if_unavailable: 如果服务器不支持服务器推送（server push），则抛出异常。\n\nReturns:\n    None"
+  },
+  "litestar.connection.request.Request.stream": {
+    "hash": "d9d389fa3357b38d",
+    "text": "返回一个流式字节块的异步生成器。\n\nReturns:\n    一个异步生成器。\n\nRaises:\n    RuntimeError: 如果流已被消费"
+  }
+}

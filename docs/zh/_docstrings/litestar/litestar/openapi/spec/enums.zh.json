@@ -1,0 +1,12 @@
+{
+  "litestar.openapi.spec.enums.OpenAPIFormat": {
+    "hash": "735782a38eae3986",
+    "text": "从以下地址提取的格式：https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-00#page-13",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.spec.enums.OpenAPIType": {
+    "hash": "63efca72eec50766",
+    "text": "一个 OpenAPI 类型。",
+    "type": "ClassDef"
+  }
+}

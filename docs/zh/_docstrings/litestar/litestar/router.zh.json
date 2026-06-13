@@ -1,0 +1,17 @@
+{
+  "litestar.router.Router": {
+    "hash": "795578a4280dbe6a",
+    "text": "Litestar 路由类。\n\nRouter 实例用于在共享的路径片段下对控制器、路由器和路由处理函数进行分组。",
+    "type": "ClassDef"
+  },
+  "litestar.router.Router.__init__": {
+    "hash": "460198e0d57165cc",
+    "text": "初始化一个 ``Router``。\n\nArgs:\n    after_request: 一个同步或异步函数，在 :class:`Request <.connection.Request>` 传递给任何路由处理器之前执行。如果此函数返回一个值，请求将不会到达路由处理器，而是使用该返回值。\n    after_response: 一个同步或异步函数，在响应被等待（await）后调用。它接收 :class:`Request <.connection.Request>` 对象，且不应返回任何值。\n    before_request: 一个同步或异步函数，在调用路由处理器之前立即执行。接收 :class:`litestar.connection.Request` 实例，任何非 ``None`` 的返回值都将用于响应，从而绕过路由处理器。\n    cache_control: 一个类型为 :class:`CacheControlHeader <.datastructures.CacheControlHeader>` 的 ``cache-control`` 头部，将添加到本路由器的路由处理器中。可以被路由处理器覆盖。\n    dependencies: 一个以字符串为键的映射，包含依赖 :class:`Provide <.di.Provide>` 实例。\n    dto: 用于请求数据（反）序列化和验证的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    etag: 一个类型为 :class:`ETag <.datastructures.ETag>` 的 ``etag`` 头部，将添加到本应用的路由处理器中。\n    exception_handlers: 一个将状态码和/或异常类型映射到处理函数的映射。\n    guards: 一个 :data:`Guard <.types.Guard>` 可调用对象的序列。\n    include_in_schema: 一个布尔标志，决定路由处理器是否应在 OpenAPI 架构中记录。\n    middleware: 一个 :data:`Middleware <.types.Middleware>` 序列。\n    opt: 一个以字符串为键的映射，包含任意值，可在 :data:`Guards <.types.Guard>` 中访问，或在任何可访问 :class:`Request <.connection.Request>` 或 :data:`ASGI Scope <.types.Scope>` 的地方访问。\n    parameters: 一个 :func:`Parameter <.params.Parameter>` 定义的映射，可供所有应用路径使用。\n    path: 一个路径片段，将作为前缀添加到与本路由器实例关联的所有路由处理器、控制器和其他路由器上。\n    request_class: 一个 :class:`Request <.connection.Request>` 的自定义子类，将作为与本路由器实例关联的所有路由处理器、控制器和其他路由器的默认值。\n    request_max_body_size: 请求体的最大允许大小（字节）。如果超过此大小，将返回 '413 - Request Entity Too Large' 错误响应。\n    response_class: 一个 :class:`Response <.response.Response>` 的自定义子类，将作为与本路由器实例关联的所有路由处理器、控制器和其他路由器的默认值。\n    response_cookies: 一个 :class:`Cookie <.datastructures.Cookie>` 实例序列。\n    response_headers: 一个以字符串为键的映射，包含 :class:`ResponseHeader <.datastructures.ResponseHeader>` 实例。\n    return_dto: 用于序列化出站响应数据的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    route_handlers: 必需的路由处理器序列，可包含 :class:`Router <.router.Router>` 实例、:class:`Controller <.controller.Controller>` 子类或由路由处理器装饰器装饰的任何函数。\n    security: 一个字典序列，将添加到应用中所有路由处理器的架构中。详见 :data:`SecurityRequirement <.openapi.spec.SecurityRequirement>`。\n    signature_namespace: 一个名称到类型的映射，用于签名建模期间的正向引用解析。\n    signature_types: 一个类型序列，用于签名建模期间的正向引用解析。这些类型将使用其 ``__name__`` 属性添加到签名命名空间中。\n    tags: 一个字符串标签序列，将追加到应用中所有路由处理器的架构中。\n    type_decoders: 一个元组序列，每个元组由一个测试类型身份的谓词和一个用于反序列化的 msgspec 钩子组成。\n    type_encoders: 一个将类型映射到可调用对象的映射，这些可调用对象将类型转换为支持序列化的类型。\n    websocket_class: 一个 :class:`WebSocket <.connection.WebSocket>` 的自定义子类，将作为与本路由器实例关联的所有路由处理器、控制器和其他路由器的默认值。",
+    "type": "FunctionDef"
+  },
+  "litestar.router.Router.register": {
+    "hash": "26990744d825ca5e",
+    "text": "在路由器上注册 Controller、Route 实例或 RouteHandler",
+    "type": "FunctionDef"
+  }
+}

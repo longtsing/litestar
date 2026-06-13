@@ -1,0 +1,7 @@
+{
+  "litestar._asgi.routing_trie.validate.validate_node": {
+    "hash": "9211e0526b2272dc",
+    "text": "从给定节点向上递归遍历字典树。\n\nArgs:\n    node: 一个字典树节点。\n\nRaises:\n    ImproperlyConfiguredException\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  }
+}

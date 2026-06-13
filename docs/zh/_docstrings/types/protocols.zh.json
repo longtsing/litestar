@@ -1,0 +1,62 @@
+{
+  "litestar.types.protocols.DataclassProtocol": {
+    "hash": "76b855d7e9baed6f",
+    "text": "用于检查数据类实例的协议",
+    "type": "ClassDef"
+  },
+  "litestar.types.protocols.InstantiableCollection": {
+    "hash": "e4a311c5bbd7c361",
+    "text": "可实例化集合类型的协议。",
+    "type": "ClassDef"
+  },
+  "litestar.types.protocols.Logger": {
+    "hash": "9e8007388ed5c90e",
+    "text": "日志记录器协议。",
+    "type": "ClassDef"
+  },
+  "litestar.types.protocols.Logger.critical": {
+    "hash": "14966c09326b2708",
+    "text": "在 'INFO' 级别输出日志消息。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.debug": {
+    "hash": "df0e806d3af75ea2",
+    "text": "在 'DEBUG' 级别输出日志消息。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.error": {
+    "hash": "d6433c7b3291433c",
+    "text": "在 'ERROR' 级别输出日志消息。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.exception": {
+    "hash": "89c8955358737741",
+    "text": "在此记录器上以 'ERROR' 级别记录一条消息。参数的解释方式与 debug() 相同。异常信息会被添加到日志消息中。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.fatal": {
+    "hash": "b7ad3adc16d2e6b8",
+    "text": "在 'FATAL' 级别输出日志消息。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.info": {
+    "hash": "14966c09326b2708",
+    "text": "在 'INFO' 级别输出日志消息。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.setLevel": {
+    "hash": "947657aa7051b46e",
+    "text": "设置日志级别\n\nArgs:\n    level: 要设置的日志级别，以整数形式表示\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.warn": {
+    "hash": "e195b2307aff0369",
+    "text": "在 'WARN' 级别输出日志消息。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  },
+  "litestar.types.protocols.Logger.warning": {
+    "hash": "552dd57aa7d54556",
+    "text": "在 'WARNING' 级别输出日志消息。\n\nArgs:\n     event: 日志消息。\n     *args: 任意参数。\n     **kwargs: 任意关键字参数。",
+    "type": "FunctionDef"
+  }
+}

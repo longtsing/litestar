@@ -1,0 +1,42 @@
+{
+  "litestar.middleware.constraints.MiddlewareConstraints": {
+    "hash": "0762b548fc399298",
+    "text": "中间件的约束。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.constraints.MiddlewareConstraints.apply_after": {
+    "hash": "df06e254aa4d1397",
+    "text": "返回新的 :class:`~litestar.middleware.constraints.MiddlewareConstraints` 实例，将 ``other`` 添加到现有的 ``after`` 约束中。\n\n:param other: 需要在此中间件之前应用的中间件。如果传入字符串，则创建 :class:`~litestar.middleware.constraints.MiddlewareForwardRef`，该引用将在运行时解析为实际的中间件。\n:param ignore_import_error: 如果为 ``True`` 且 ``other`` 是字符串，则在尝试导入该中间件时发生 :exc:`ImportError` 则忽略该约束。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.constraints.MiddlewareConstraints.apply_before": {
+    "hash": "652f2770b30005e5",
+    "text": "返回新的 :class:`~litestar.middleware.constraints.MiddlewareConstraints`，其中将 ``other`` 添加到现有的 ``before`` 约束中。\n\n:param other: 此中间件需要在其之前应用的中间件。如果传入字符串，则创建 :class:`~litestar.middleware.constraints.MiddlewareForwardRef`，该引用将在运行时解析为实际的中间件。\n:param ignore_import_error: 如果为 ``True`` 且 ``other`` 是字符串，则在尝试导入该中间件时发生 :exc:`ImportError` 则忽略该约束。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.constraints.MiddlewareConstraints.apply_first": {
+    "hash": "7da782e6966523af",
+    "text": "返回一个带有 ``first=True`` 的新约束。覆盖 ``last=True``。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.constraints.MiddlewareConstraints.apply_last": {
+    "hash": "559f7aa18b3dd541",
+    "text": "返回一个带有 ``first=True`` 的新约束。覆盖 ``first=True``。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.constraints.MiddlewareConstraints.require_unique": {
+    "hash": "bec24c6ef000af39",
+    "text": "返回一个设置了 ``unique`` 值的新约束",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.constraints.MiddlewareForwardRef": {
+    "hash": "3f66e10ede1968f7",
+    "text": "对中间件的前向引用",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.constraints.MiddlewareForwardRef.resolve": {
+    "hash": "ce34abae25e49e6c",
+    "text": "通过导入目标路径来解析对具体值的引用。\n\n如果 ``ignore_import_error=True`` 且引发 :exc:`ImportError`，则忽略该错误并返回 ``None``。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.contact.Contact": {
+    "hash": "a967e103cf623f15",
+    "text": "暴露 API 的联系信息。",
+    "type": "ClassDef"
+  }
+}

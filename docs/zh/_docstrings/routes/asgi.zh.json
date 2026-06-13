@@ -1,0 +1,14 @@
+{
+  "litestar.routes.asgi.ASGIRoute": {
+    "hash": "be97f70fdaa5cf10",
+    "text": "一个 ASGI 路由，用于处理单个 ``ASGIRouteHandler``（ASGI 路由处理器）。"
+  },
+  "litestar.routes.asgi.ASGIRoute.__init__": {
+    "hash": "135ea9f78fa8e2b7",
+    "text": "初始化路由。\n\nArgs:\n    path: 路由的路径。\n    route_handler: :class:`~.handlers.ASGIRouteHandler` 的实例。"
+  },
+  "litestar.routes.asgi.ASGIRoute.handle": {
+    "hash": "cf26765e49264458",
+    "text": "允许授权连接并等待处理函数执行的 ASGI 应用。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  }
+}

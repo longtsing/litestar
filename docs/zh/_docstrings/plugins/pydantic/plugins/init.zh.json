@@ -1,0 +1,6 @@
+{
+  "litestar.plugins.pydantic.plugins.init.PydanticInitPlugin.__init__": {
+    "hash": "608d2fa1b4ba02a4",
+    "text": "支持 Pydantic 类型/模型序列化/验证的 Pydantic 插件\n\n:param exclude: 序列化时要排除的字段\n:param exclude_defaults: 当字段被设置为其默认值时，在序列化过程中排除这些字段\n:param exclude_none: 当字段被设置为 ``None`` 时，在序列化过程中排除这些字段\n:param exclude_unset: 当字段未被设置时，在序列化过程中排除这些字段\n:param include: 序列化时要包含的字段（注：原文描述为“排除”，根据参数名 `include` 修正为“包含”）\n:param prefer_alias: 在序列化模型时使用 ``by_alias=True`` 标志\n:param validate_strict: 在 Pydantic 2.x 模型上调用 ``.model_validate`` 时使用 ``strict=True``\n:param round_trip: 在 Pydantic 2.x 模型上调用 ``.model_dump`` 和 ``.model_dump_json`` 时使用 ``round_trip=True``"
+  }
+}

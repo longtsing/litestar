@@ -1,0 +1,14 @@
+{
+  "litestar.middleware.allowed_hosts.AllowedHostsMiddleware": {
+    "hash": "ec69d823c7a3dba5",
+    "text": "确保请求源自受信任主机的中间件。"
+  },
+  "litestar.middleware.allowed_hosts.AllowedHostsMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.middleware.allowed_hosts.AllowedHostsMiddleware.__init__": {
+    "hash": "839f4b40f398d1fd",
+    "text": "初始化 ``AllowedHostsMiddleware``。\n\nArgs:\n    app: 要调用的下一个 ASGI 应用（``next``）。\n    config: AllowedHostsConfig 的实例。"
+  }
+}

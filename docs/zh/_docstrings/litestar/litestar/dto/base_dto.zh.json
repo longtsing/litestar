@@ -1,0 +1,72 @@
+{
+  "litestar.dto.base_dto.AbstractDTO": {
+    "hash": "808e26670cb78697",
+    "text": "DTO 类型的基类。",
+    "type": "ClassDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.__init__": {
+    "hash": "e6cc7f2ff8dcd9d9",
+    "text": "创建 AbstractDTOFactory 类型。\n\nArgs:\n    asgi_connection: 一个 :class:`ASGIConnection <litestar.connection.base.ASGIConnection>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.create_for_field_definition": {
+    "hash": "401cae088bf21df3",
+    "text": "为字段定义创建 DTO 子类。\n\nArgs:\n    field_definition: 一个 :class:`FieldDefinition <litestar.typing.FieldDefinition>` 实例。\n    handler_id: 要为其创建 DTO 实例的路由处理程序的 ID。\n    backend_cls: 要使用的替代 DTO 后端类\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.create_openapi_schema": {
+    "hash": "b079eab613ff40d4",
+    "text": "创建 OpenAPI 请求体。\n\nArgs:\n    field_definition: 已解析的类型注解，表示处理程序上使用的注解。\n    handler_id: 要为其创建 DTO 实例的路由处理程序的 ID。\n    schema_creator: 用于创建模式的工厂。具有一个 ``for_field_definition()`` 方法，该方法接受一个 :class:`~litestar.typing.FieldDefinition` 实例。\n\nReturns:\n    OpenAPI 请求体。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.decode_builtins": {
+    "hash": "12c56f845280c992",
+    "text": "将 Python 值字典解码为 DTO 的数据类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.decode_bytes": {
+    "hash": "9598f28ed5ac221e",
+    "text": "将字节字符串解码为 DTO 的数据类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.detect_nested_field": {
+    "hash": "40dfda880dd4af2a",
+    "text": "如果 ``field_definition`` 表示嵌套模型字段，则返回 ``True``。\n\nArgs:\n    field_definition: 检查类型以确定该字段是否表示嵌套模型。\n\nReturns:\n    如果 ``field_definition`` 表示嵌套模型字段，则返回 ``True``。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.generate_field_definitions": {
+    "hash": "422ad73f5b6ed2d5",
+    "text": "从 ``model_type`` 生成 ``FieldDefinition`` 实例。\n\nYields:\n    ``FieldDefinition`` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.get_config_for_model_type": {
+    "hash": "17fd159d8bc0f52a",
+    "text": "在工厂创建期间，为此特定的 ``model_type`` 创建新配置。\n\n返回的配置对象将被设置为新定义的工厂类上的 ``config`` 属性。\n\n.. versionadded: 2.11",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.get_dto_config_from_annotated_type": {
+    "hash": "68d319693dacb554",
+    "text": "从 ``Annotated`` 注解中提取数据类型和配置实例。\n\nArgs:\n    field_definition: 一个已解析的类型注解，代表用于缩小 DTO 类型的注解。\n\nReturns:\n    从注解中提取的类型和配置对象。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.get_model_type_hints": {
+    "hash": "50fd8189d76bcc8a",
+    "text": "获取 ``model_type`` 的类型注解。\n\nArgs:\n    model_type: 任意带有类型注解的类。\n    namespace: 用于解析类型提示的可选命名空间。\n\nReturns:\n    在 ``model_type`` 所属模块的作用域内解析后的类型提示。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.is_supported_model_type_field": {
+    "hash": "b90b0a17f33a667c",
+    "text": "检查对给定类型的支持。\n\nArgs:\n    field_definition: 一个 :class:`FieldDefinition <litestar.typing.FieldDefinition>` 实例。\n\nReturns:\n    字段定义的类型是否被 DTO 支持。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.resolve_generic_wrapper_type": {
+    "hash": "afba72e888f5037e",
+    "text": "处理 DTO 支持的数据被包装在泛型容器类型中的情况。\n\nArgs:\n    field_definition: 一个已解析的类型注解，代表用于限定 DTO 类型的注解。\n\nReturns:\n    数据模型类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.base_dto.AbstractDTO.resolve_model_type": {
+    "hash": "e227f487e2e59ad4",
+    "text": "从已解析的类型中解析数据模型类型。\n\nArgs:\n    field_definition: 一个已解析的类型注解，代表用于缩小 DTO 类型的注解。\n\nReturns:\n    一个 :class:`FieldDefinition <.typing.FieldDefinition>`，代表数据模型类型。",
+    "type": "FunctionDef"
+  }
+}

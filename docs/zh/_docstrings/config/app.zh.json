@@ -1,0 +1,10 @@
+{
+  "litestar.config.app.AppConfig": {
+    "hash": "226f9fb9036eca9c",
+    "text": "传递给 ``Litestar`` 应用的参数用于实例化一个实例，然后该实例会按照提供的顺序传递给注册到 ``on_app_init`` 的任何回调函数。\n\n最终的属性值将用于实例化应用对象。"
+  },
+  "litestar.config.app.AppConfig.__post_init__": {
+    "hash": "0d22a93e728a0b2f",
+    "text": "将允许的主机规范化为配置或 None。\n\nReturns:\n    可选配置。"
+  }
+}

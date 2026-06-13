@@ -1,0 +1,32 @@
+{
+  "litestar.security.base.AbstractSecurityConfig": {
+    "hash": "f26af7371cb02b52",
+    "text": "安全配置的基类——此类可用于应用级别，也可在路由器/控制器级别手动配置以提供身份验证。",
+    "type": "ClassDef"
+  },
+  "litestar.security.base.AbstractSecurityConfig.create_response": {
+    "hash": "941170483a42ae72",
+    "text": "创建响应对象。\n\n负责在响应上设置类型编码器映射。\n\nArgs:\n    content: 响应体的值，将被渲染为字节字符串。\n    status_code: HTTP 状态码。\n    media_type: 响应 'Content-Type' 头的值。\n    headers: 以字符串为键的响应头字典。头键不区分大小写。\n    cookies: 要在响应 'Set-Cookie' 头下设置的 :class:`Cookie <litestar.datastructures.Cookie>` 实例列表。\n\nReturns:\n    一个响应对象。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.base.AbstractSecurityConfig.middleware": {
+    "hash": "b966f8898b367b3a",
+    "text": "创建配置中 ``authentication_middleware_class`` 属性的实例及其所需的 ``kwargs``，并将其包装在 Litestar 的 ``DefineMiddleware`` 中。\n\nReturns:\n    :class:`DefineMiddleware <litestar.middleware.base.DefineMiddleware>` 的实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.base.AbstractSecurityConfig.on_app_init": {
+    "hash": "7e25706088d9cedb",
+    "text": "通过向应用注入中间件、守卫等来处理应用初始化。此方法仅可在应用级别使用。\n\nArgs:\n    app_config: :class:`AppConfig <.config.app.AppConfig>` 的实例\n\nReturns:\n    :class:`AppConfig <.config.app.AppConfig>`。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.base.AbstractSecurityConfig.openapi_components": {
+    "hash": "96b4ee256b7bec84",
+    "text": "为所使用的 JWT 认证模式创建 OpenAPI 文档。\n\nReturns:\n    一个 :class:`Components <litestar.openapi.spec.components.Components>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.base.AbstractSecurityConfig.security_requirement": {
+    "hash": "f12f637a12dd40bd",
+    "text": "返回 OpenAPI 3.1。\n\n认证后端所需的 :data:`SecurityRequirement <.openapi.spec.SecurityRequirement>`。\n\nReturns:\n    一个 OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec.SecurityRequirement>` 字典。",
+    "type": "FunctionDef"
+  }
+}

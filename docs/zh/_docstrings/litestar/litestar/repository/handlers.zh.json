@@ -1,0 +1,7 @@
+{
+  "litestar.repository.handlers.on_app_init": {
+    "hash": "d4eb6daeb945aa20",
+    "text": "在签名建模期间为应用程序添加自定义过滤器。",
+    "type": "FunctionDef"
+  }
+}

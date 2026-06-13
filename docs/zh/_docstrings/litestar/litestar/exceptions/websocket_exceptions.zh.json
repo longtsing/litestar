@@ -1,0 +1,22 @@
+{
+  "litestar.exceptions.websocket_exceptions.WebSocketDisconnect": {
+    "hash": "d3f26db13f4fea10",
+    "text": "用于 websocket 断开连接事件的异常类。",
+    "type": "ClassDef"
+  },
+  "litestar.exceptions.websocket_exceptions.WebSocketDisconnect.__init__": {
+    "hash": "00707fb8e14f6c11",
+    "text": "初始化 ``WebSocketDisconnect``。\n\nArgs:\n    *args: 任何异常参数。\n    detail: 异常详情。\n    code: 异常代码。应为 >= 1000 的数字。",
+    "type": "FunctionDef"
+  },
+  "litestar.exceptions.websocket_exceptions.WebSocketException": {
+    "hash": "889f66d210b946b1",
+    "text": "用于 websocket 相关事件的异常类。",
+    "type": "ClassDef"
+  },
+  "litestar.exceptions.websocket_exceptions.WebSocketException.__init__": {
+    "hash": "7fa5a41e04fe0ba4",
+    "text": "初始化 ``WebSocketException``。\n\nArgs:\n    *args: 任意异常参数。\n    detail: 异常详情。\n    code: 异常代码。应为大于等于 1000 的数字。",
+    "type": "FunctionDef"
+  }
+}

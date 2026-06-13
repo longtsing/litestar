@@ -1,0 +1,57 @@
+{
+  "litestar.middleware.session.server_side.ServerSideSessionBackend": {
+    "hash": "66c3e8529d95c7e9",
+    "text": "服务器端后端的基类。\n\n实现了 :class:`BaseSessionBackend`，并定义了一个接口，子类可以实现该接口以促进会话数据的存储。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.__init__": {
+    "hash": "205221d342e1ce22",
+    "text": "初始化 ``ServerSideSessionBackend``\n\nArgs:\n    config: ``ServerSideSessionConfig`` 的子类",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.delete": {
+    "hash": "e939e58c77a8d27c",
+    "text": "删除与 ``session_id`` 关联的数据。如果不存在该 session-ID，则静默失败。\n\nArgs:\n    session_id: session-ID\n    store: 从中删除会话数据的存储\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.generate_session_id": {
+    "hash": "23acbbd3a2afde12",
+    "text": "生成一个新的会话 ID，包含 `n` = :attr:`session_id_bytes <ServerSideSessionConfig.session_id_bytes>` 个随机字节。\n\nReturns:\n    一个会话 ID",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.get": {
+    "hash": "23eec86f808b334d",
+    "text": "获取与 ``session_id`` 关联的数据。\n\nArgs:\n    session_id: 会话 ID\n    store: 从中检索会话数据的存储区\n\nReturns:\n    会话数据（如果存在），否则为 ``None``。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.get_session_id": {
+    "hash": "be2524612a6123f2",
+    "text": "尝试从连接中获取会话 ID。如果不存在，则生成一个。\n\n如果 Cookie 中已存在会话 ID，则返回该 ID。\n如果 Cookie 中没有 ID，但连接状态中存在 ID，则说明会话已存在但尚未返回给用户。\n否则，必须创建新会话。\n\nArgs:\n    connection: 包含 scope 的原始 ASGIConnection\nReturns:\n    会话 ID 字符串，如果会话 ID 的概念不适用则返回 None。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.load_from_connection": {
+    "hash": "c5eb33369d0ae596",
+    "text": "从连接中加载会话数据，并将其作为字典返回，以便在当前应用作用域中使用。\n\n会话 ID 将从键名在 :attr:`BaseBackendConfig.key` 中设置的 Cookie 中获取。如果找到 Cookie，其值将用作会话 ID，并使用 :meth:`get <ServerSideSessionBackend.get>` 加载与该 ID 关联的数据。\n如果未找到 Cookie 或存储中未加载到任何数据，则返回一个空字典。\n\nArgs:\n    connection: 一个 ASGIConnection 实例\n\nReturns:\n    当前会话数据",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.set": {
+    "hash": "eb2d85e68cf57857",
+    "text": "将 ``data`` 存储在 ``session_id`` 下以供后续检索。\n\n如果 ``session_id`` 已有关联数据，则用 ``data`` 替换它，并重置其过期时间。\n\nArgs:\n    session_id: 会话 ID\n    data: 序列化的会话数据\n    store: 用于保存会话数据的存储后端\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionBackend.store_in_message": {
+    "hash": "69212c3036020f32",
+    "text": "通过在 outgoing ``Message`` 中设置包含 session-ID 的 cookie，来存储必要的信息。\n\n如果 session 为空，将设置一个 null-cookie。否则，序列化后的数据将使用 :meth:`set <ServerSideSessionBackend.set>` 存储在当前 session-id 下。如果不存在 session-ID，将使用 :meth:`generate_session_id <ServerSideSessionBackend.generate_session_id>` 生成一个新的 ID。\n\nArgs:\n    scope_session: 要存储的当前 session\n    message:  outgoing 发送消息\n    connection: 包含 scope 的原始 ASGIConnection\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionConfig": {
+    "hash": "28b236a46c4452d6",
+    "text": "服务器端后端的基配置。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.session.server_side.ServerSideSessionConfig.get_store_from_app": {
+    "hash": "4f044b2f59b4aa85",
+    "text": "从 :class:`Litestar <.app.Litestar>` 实例中获取在 :attr:`store` 中定义的存储。",
+    "type": "FunctionDef"
+  }
+}

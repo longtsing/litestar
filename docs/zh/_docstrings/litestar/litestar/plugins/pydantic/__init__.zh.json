@@ -1,0 +1,12 @@
+{
+  "litestar.plugins.pydantic.PydanticPlugin": {
+    "hash": "5f2a4afb272450e5",
+    "text": "提供 Pydantic 集成的插件。",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.pydantic.PydanticPlugin.on_app_init": {
+    "hash": "d34ed1d73a774cbb",
+    "text": "为与 Pydantic 配合使用而配置应用程序。\n\nArgs:\n    app_config: :class:`AppConfig <.config.app.AppConfig>` 实例。",
+    "type": "FunctionDef"
+  }
+}

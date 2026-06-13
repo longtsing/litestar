@@ -1,0 +1,72 @@
+{
+  "litestar.middleware.session.base.BaseBackendConfig": {
+    "hash": "e4325ab41481ec26",
+    "text": "会话中间件后端的配置。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.session.base.BaseBackendConfig.middleware": {
+    "hash": "7526fb5308f43460",
+    "text": "使用此属性将配置插入到应用层之一的中间件列表中。\n\n示例：\n```python\nfrom os import urandom\n\nfrom litestar import Litestar, Request, get\nfrom litestar.middleware.sessions.cookie_backend import CookieBackendConfig\n\nsession_config = CookieBackendConfig(secret=urandom(16))\n\n\n@get(\"/\")\ndef my_handler(request: Request) -> None: ...\n\n\napp = Litestar(route_handlers=[my_handler], middleware=[session_config.middleware])\n```\n\nReturns:\n    一个 `DefineMiddleware` 实例，其中包含以 `self` 作为 `config` 关键字参数的值。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.base.BaseSessionBackend": {
+    "hash": "10161a5a6e62821f",
+    "text": "定义存储机制与 :class:`SessionMiddleware` 应用程序之间接口的抽象会话后端。\n\n此类是所有客户端和服务器端后端的基础类。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.session.base.BaseSessionBackend.__init__": {
+    "hash": "1612b17689a2d334",
+    "text": "初始化 ``BaseSessionBackend``\n\nArgs:\n    config: ``BaseBackendConfig`` 子类的实例",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.base.BaseSessionBackend.deserialize_data": {
+    "hash": "e5cd9f36429c86d7",
+    "text": "将数据反序列化为字典，以便在应用作用域中使用。\n\nArgs:\n    data: 待反序列化的数据\n\nReturns:\n    反序列化后的字典数据",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.base.BaseSessionBackend.get_session_id": {
+    "hash": "5ea8895cb5d42e47",
+    "text": "尝试从连接 ScopeState 中获取会话 ID。如果不存在，则生成一个。\n\nArgs:\n    connection: 包含作用域的原始 ASGIConnection\n\nReturns:\n    会话 ID 字符串，如果会话 ID 的概念不适用则返回 None。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.base.BaseSessionBackend.load_from_connection": {
+    "hash": "5ae6f7b09ed9c3c4",
+    "text": "从连接中加载会话数据，并将其作为字典返回，以便在当前应用作用域中使用。\n\nArgs:\n    connection: 一个 ASGIConnection 实例\n\nReturns:\n    会话数据\n\nNotes:\n    - 此方法不应修改连接的作用域。此方法返回的数据将由中间件存储到应用作用域中。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.base.BaseSessionBackend.serialize_data": {
+    "hash": "9ebe9358728bf42f",
+    "text": "将数据序列化为字节，以便在后端存储。\n\nArgs:\n    data: 当前作用域的会话数据。\n    scope: 一个作用域（如果适用），用于从中提取序列化器。\n\nNotes:\n    - 序列化器将从 ``scope`` 中提取，如果无法提取，则回退到\n        :func:`default_serializer <.serialization.default_serializer>`\n\nReturns:\n    序列化为字节的 ``data``。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.base.BaseSessionBackend.store_in_message": {
+    "hash": "83565e46c176b5b6",
+    "text": "将必要信息存储到发出的 ``Message`` 中\n\nArgs:\n    scope_session: 当前要存储的会话\n    message: 发出的发送消息\n    connection: 包含作用域的原始 ASGIConnection\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.base.SessionMiddleware": {
+    "hash": "25984ec3c511be20",
+    "text": "用于存储会话数据的 Litestar 会话中间件。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.session.base.SessionMiddleware.__call__": {
+    "hash": "079fb060d717f7a8",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.session.base.SessionMiddleware.__init__": {
+    "hash": "c54ecbb648be0f8e",
+    "text": "初始化 ``SessionMiddleware``\n\nArgs:\n    app: 一个 ASGI 应用\n    backend: 一个用于存储和检索会话数据的 :class:`BaseSessionBackend` 实例",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.base.SessionMiddleware.create_send_wrapper": {
+    "hash": "353313714c04ac9d",
+    "text": "为 ASGI send 函数创建一个包装器，用于处理在 outgoing 响应中设置 cookies。\n\nArgs:\n    connection: ASGIConnection\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.session.base.SessionMiddleware.create_send_wrapper.wrapped_send": {
+    "hash": "f465c56cf4c5b247",
+    "text": "包装 ``send`` 函数。\n\n在局部作用域中声明，以便利用闭包值。\n\nArgs:\n    message: 一个 ASGI 消息。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  }
+}

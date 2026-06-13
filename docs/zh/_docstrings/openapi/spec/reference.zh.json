@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.reference.Reference": {
+    "hash": "1e4228af5a39feee",
+    "text": "一个简单对象，用于在 OpenAPI 文档内部和外部引用其他组件。\n\n``$ref`` 字符串值包含一个 URI `RFC3986 <https://tools.ietf.org/html/rfc3986>`_，用于标识被引用值的位置。\n\n请参阅解析 `相对引用 <https://spec.openapis.org/oas/v3.1.0#relativeReferencesURI>`_ 的规则。"
+  }
+}

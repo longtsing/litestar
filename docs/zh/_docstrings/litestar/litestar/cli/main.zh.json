@@ -1,0 +1,7 @@
+{
+  "litestar.cli.main.litestar_group": {
+    "hash": "5159694c234a1d9d",
+    "text": "Litestar 命令行界面 (CLI)。\n\n如果应用程序位于以下标准路径之一中，它将自动被发现：`app.py`、`asgi.py`、`application.py` 或 `app/__init__.py`。\n在自动发现应用程序工厂时，将考虑名为 `create_app` 的函数，或者被注解为返回 `Litestar` 实例的函数。\n\n或者，可以通过 `--app` 选项（`litestar --app=<模块名>.<子模块>:<应用程序实例或工厂>`）或同名的 `LITESTAR_APP` 环境变量显式指定应用程序。",
+    "type": "FunctionDef"
+  }
+}

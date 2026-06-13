@@ -1,0 +1,37 @@
+{
+  "litestar._openapi.path_item.PathItemFactory": {
+    "hash": "2f411bb17ccb8acc",
+    "text": "为给定路由创建 PathItem 实例的工厂。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.path_item.PathItemFactory.create_description_for_handler": {
+    "hash": "c69025b50fe35788",
+    "text": "为路由处理器生成操作描述。\n\nArgs:\n    route_handler: 一个路由处理器实例。\n\nReturns:\n    一个可选的描述字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.path_item.PathItemFactory.create_operation_for_handler_method": {
+    "hash": "597db6578213bb45",
+    "text": "为给定的路由处理程序和 HTTP 方法创建 Operation 实例。\n\nArgs:\n    route_handler: 路由处理程序实例。\n    http_method: HttpMethod 枚举值。\n\nReturns:\n    一个 Operation 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.path_item.PathItemFactory.create_operation_id": {
+    "hash": "cbd584710d2140a1",
+    "text": "为给定的路由处理程序和 HTTP 方法创建操作 ID。\n\n将操作 ID 添加到上下文的操作 ID 集合中，并在此处检查其唯一性。\n\nArgs:\n    route_handler: 路由处理程序实例。\n    http_method: HttpMethod 枚举值。\n\nReturns:\n    操作 ID 字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.path_item.PathItemFactory.create_path_item": {
+    "hash": "85bf8c433b8373d1",
+    "text": "为给定路由创建 PathItem，并将所有 http_methods 解析为 Operation 模型。\n\nReturns:\n    一个 PathItem 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.path_item.create_path_item_for_route": {
+    "hash": "6cd5c5cb0d4d5a13",
+    "text": "为给定路由创建 PathItem，并将所有 http_methods 解析为 Operation 模型。\n\nArgs:\n    openapi_context: OpenAPIContext 实例。\n    route: 要为其创建 PathItem 的路由。\n\nReturns:\n    PathItem 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.path_item.merge_path_item_operations": {
+    "hash": "5c8fc4d94b8d2781",
+    "text": "合并路径项中的操作，创建一个包含两者操作的新路径项。",
+    "type": "FunctionDef"
+  }
+}

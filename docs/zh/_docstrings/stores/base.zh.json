@@ -1,0 +1,77 @@
+{
+  "litestar.stores.base.NamespacedStore": {
+    "hash": "d95cb75fad2f3194",
+    "text": ":class:`Store` 的子类，提供分层命名空间。\n\n对父命名空间的批量操作应影响所有子命名空间，而对所有命名空间的其他操作则应相互隔离。",
+    "type": "ClassDef"
+  },
+  "litestar.stores.base.NamespacedStore.with_namespace": {
+    "hash": "0c1b3a47fbffd04f",
+    "text": "返回一个新的 :class:`NamespacedStore` 实例，该实例存在于当前命名空间的子命名空间中。\n父命名空间上的批量操作应影响所有子命名空间，而其他命名空间上的操作则应相互隔离。",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.base.StorageObject": {
+    "hash": "99d4f679775fa5bd",
+    "text": "使用 :class:`msgspec.Struct` 存储序列化数据及其过期时间。",
+    "type": "ClassDef"
+  },
+  "litestar.stores.base.StorageObject.expired": {
+    "hash": "70627cfea34bf9b0",
+    "text": "返回 :class:`StorageObject` 是否已过期",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.base.StorageObject.expires_in": {
+    "hash": "dd5a06435194cc83",
+    "text": "返回此 ``StorageObject`` 的过期时间（单位：秒）。如果未设置过期时间，则返回 ``-1``。",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.base.StorageObject.from_bytes": {
+    "hash": "4a9b881ac4df02c3",
+    "text": "加载先前通过 :meth:`StorageObject.to_bytes` 编码的数据",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.base.StorageObject.new": {
+    "hash": "e14aa9569114457c",
+    "text": "构造一个新的 :class:`StorageObject` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.base.StorageObject.to_bytes": {
+    "hash": "0240fd58af7345d0",
+    "text": "将实例编码为字节",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.base.Store": {
+    "hash": "79756e41e40472cb",
+    "text": "线程和进程安全的异步键/值存储。",
+    "type": "ClassDef"
+  },
+  "litestar.stores.base.Store.delete": {
+    "hash": "1d5985dd9f903481",
+    "text": "删除一个值。\n\n如果该键不存在，则不执行任何操作。\n\nArgs:\n    key: 要删除的值的键",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.base.Store.delete_all": {
+    "hash": "1d5c45a3e8f22700",
+    "text": "删除所有存储的值。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.base.Store.exists": {
+    "hash": "a4186f53ed052ca3",
+    "text": "检查给定的 ``key`` 是否存在。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.base.Store.expires_in": {
+    "hash": "c75cac70e7cc8cd5",
+    "text": "获取 ``key`` 的过期时间（秒）。如果不存在该 ``key`` 或未设置过期时间，则返回 ``None``。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.base.Store.get": {
+    "hash": "0304954c2a8af614",
+    "text": "获取一个值。\n\nArgs:\n    key: 与值关联的键\n    renew_for: 如果提供且该值已设置初始过期时间，则将过期时间延长 ``renew_for`` 秒。如果该值未设置过期时间，则此操作无效\n\nReturns:\n    如果 ``key`` 对应的值存在且未过期，则返回该值；否则返回 ``None``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.base.Store.set": {
+    "hash": "7025011b98b86296",
+    "text": "设置一个值。\n\nArgs:\n    key: 用于关联值的键\n    value: 要存储的值\n    expires_in: 键被视为过期前的秒数\n\nReturns:\n    ``None``",
+    "type": "AsyncFunctionDef"
+  }
+}

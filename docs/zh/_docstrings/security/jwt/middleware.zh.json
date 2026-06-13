@@ -1,0 +1,37 @@
+{
+  "litestar.security.jwt.middleware.JWTAuthenticationMiddleware": {
+    "hash": "8876f2d4665f1322",
+    "text": "JWT 认证中间件。\n\n此类提供 JWT 认证功能。",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.middleware.JWTAuthenticationMiddleware.__init__": {
+    "hash": "1d16bbea53ba705f",
+    "text": "检查指定认证头中的传入请求是否包含编码令牌，如果存在，则使用提供的函数从持久化存储中检索用户。\n\nArgs:\n    algorithm: 要使用的 JWT 哈希算法。\n    app: 一个 ASGIApp，该值是中间件堆栈中要调用的下一个 ASGI 处理器。\n    auth_header: 从中检索令牌的请求头键。例如 ``Authorization`` 或 ``X-Api-Key``。\n    exclude: 要跳过的模式或模式列表。\n    exclude_opt_key: 用于在路由上禁用特定路由认证的标识符。\n    exclude_http_methods: 不需要认证的 HTTP 方法序列。\n    retrieve_user_handler: 一个接收 :class:`Token <.security.jwt.Token>` 并返回用户的函数，该用户可以是任意值。\n    scopes: 由认证中间件处理的 ASGI 作用域。\n    token_secret: 用于解码 JWT 的密钥。该值应与用于编码它的密钥等效。\n    token_cls: 编码/解码 JWT 时使用的令牌类。\n    token_audience: 解码令牌时验证受众。如果令牌中的受众与给定的任何受众不匹配，则引发 :exc:`NotAuthorizedException`。\n    token_issuer: 解码令牌时验证颁发者。如果令牌中的颁发者与给定的任何颁发者不匹配，则引发 :exc:`NotAuthorizedException`。\n    require_claims: 要求 JWT 负载中存在这些声明。\n    verify_expiry: 验证 ``exp`` (*expiration*) 声明的值是否在未来。\n    verify_not_before: 验证 ``nbf`` (*not before*) 声明的值是否在过去。\n    strict_audience: 验证 ``aud`` (*audience*) 声明的值是否为单个值而非值列表，并且与 ``audience`` 完全匹配。要求 ``accepted_audiences`` 是长度为 1 的序列。\n    revoked_token_handler: 一个接收 :class:`Token <.security.jwt.Token>` 并返回布尔值的函数，指示令牌是否已被撤销。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_request": {
+    "hash": "5031d0b8300e595e",
+    "text": "给定一个 HTTP 连接，解析存储在请求头中的 JWT API 密钥，并从数据库中检索与该令牌关联的用户。\n\nArgs:\n    connection: 一个 Litestar HTTPConnection 实例。\n\nReturns:\n    AuthenticationResult\n\nRaises:\n    NotAuthorizedException: 如果令牌无效或找不到用户。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.security.jwt.middleware.JWTAuthenticationMiddleware.authenticate_token": {
+    "hash": "79178f40a60fa979",
+    "text": "给定一个编码后的 JWT 令牌，解析、验证并查找令牌中的 `sub` 字段。\n\nArgs:\n    encoded_token: 编码后的 JWT 令牌。\n    connection: 一个 ASGI 连接实例。\n\nRaises:\n    NotAuthorizedException: 如果令牌无效或用户未找到。\n\nReturns:\n    AuthenticationResult",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware": {
+    "hash": "1465c82a51f2af77",
+    "text": "基于 Cookie 的 JWT 认证中间件。",
+    "type": "ClassDef"
+  },
+  "litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.__init__": {
+    "hash": "379a3b71d71f75ee",
+    "text": "检查授权头或指定 Cookie 名称中是否包含编码令牌，如果存在，则使用提供的函数从持久化存储中检索用户。\n\nArgs:\n    algorithm: 要使用的 JWT 哈希算法。\n    app: 一个 ASGIApp，该值是中间件堆栈中要调用的下一个 ASGI 处理器。\n    auth_cookie_key: 从中检索令牌的 Cookie 名称。例如 ``token`` 或 ``accessToken``。\n    auth_header: 从中检索令牌的请求头键。例如 ``Authorization`` 或 ``X-Api-Key``。\n    exclude: 要跳过的模式或模式列表。\n    exclude_opt_key: 用于在路由上禁用特定路由身份验证的标识符。\n    exclude_http_methods: 不需要身份验证的 HTTP 方法序列。\n    retrieve_user_handler: 一个接收 :class:`Token <.security.jwt.Token>` 并返回用户的函数，该用户可以是任意值。\n    scopes: 由身份验证中间件处理的 ASGI 作用域。\n    token_secret: 用于解码 JWT 的密钥。该值应与用于编码它的密钥等效。\n    token_cls: 编码/解码 JWT 时使用的令牌类。\n    token_audience: 解码令牌时验证受众。如果令牌中的受众与给定的任何受众不匹配，则引发 :exc:`NotAuthorizedException`。\n    token_issuer: 解码令牌时验证颁发者。如果令牌中的颁发者与给定的任何颁发者不匹配，则引发 :exc:`NotAuthorizedException`。\n    require_claims: 要求这些声明存在于 JWT 负载中。\n    verify_expiry: 验证 ``exp`` (*expiration*) 声明的值是否在未来。\n    verify_not_before: 验证 ``nbf`` (*not before*) 声明的值是否在过去。\n    strict_audience: 验证 ``aud`` (*audience*) 声明的值是否为单个值而非值列表，并且与 ``audience`` 完全匹配。要求 ``accepted_audiences`` 是长度为 1 的序列。\n    revoked_token_handler: 一个接收 :class:`Token <.security.jwt.Token>` 并返回布尔值的函数，指示令牌是否已被撤销。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.jwt.middleware.JWTCookieAuthenticationMiddleware.authenticate_request": {
+    "hash": "cca00d47f7ad0bff",
+    "text": "给定一个 HTTP 连接，解析存储在请求头中的 JWT API 密钥，并从数据库中检索与该令牌关联的用户。\n\nArgs:\n    connection: 一个 Litestar HTTPConnection 实例。\n\nRaises:\n    NotAuthorizedException: 如果令牌无效或找不到用户。\n\nReturns:\n    AuthenticationResult",
+    "type": "AsyncFunctionDef"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "litestar.middleware.rate_limit.CacheObject": {
+    "hash": "9460eaff99e0d672",
+    "text": "缓存对象元数据的表示。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitConfig": {
+    "hash": "0818a9ddb8e216b3",
+    "text": "``RateLimitMiddleware`` 的配置",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitConfig.get_store_from_app": {
+    "hash": "8df02762fade3aa9",
+    "text": "从 :class:`Litestar <.app.Litestar>` 实例中获取在 :attr:`store` 中定义的存储。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitConfig.middleware": {
+    "hash": "447cbd5706a208b1",
+    "text": "使用此属性将配置插入到应用层之一的中间件列表中。\n\n示例：\n.. code-block::  python\n\n    from litestar import Litestar, Request, get\n    from litestar.middleware.rate_limit import RateLimitConfig\n\n    # 限制为每分钟 10 次请求，排除 schema 路径\n    throttle_config = RateLimitConfig(rate_limit=(\"minute\", 10), exclude=[\"/schema\"])\n\n\n    @get(\"/\")\n    def my_handler(request: Request) -> None: ...\n\n\n    app = Litestar(route_handlers=[my_handler], middleware=[throttle_config.middleware])\n\nReturns:\n    一个 :class:`DefineMiddleware <.middleware.base.DefineMiddleware>` 实例，其中 ``self`` 作为配置关键字参数值包含在内。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware": {
+    "hash": "fe69f21110abd8ca",
+    "text": "速率限制中间件。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.__init__": {
+    "hash": "9dc7cc1501bb31b5",
+    "text": "初始化 ``RateLimitMiddleware``。\n\nArgs:\n    app: 要调用的下一个 ``next`` ASGI 应用。\n    config: ``RateLimitConfig`` 的实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.create_response_headers": {
+    "hash": "0af8f123e15cc438",
+    "text": "创建速率限制响应头。\n\nNotes:\n    * 参见 `IETF RateLimit draft <https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/>`_\n\nArgs:\n    cache_object: 一个 :class:`CacheObject`。\n\nReturns:\n    一个包含 HTTP 头的字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper": {
+    "hash": "62fabe7118d131cc",
+    "text": "创建一个 ``send`` 函数，用于包装原始的 ``send`` 以注入响应头。\n\nArgs:\n    send: ASGI ``send`` 函数。\n    cache_object: 一个 ``StorageObject`` 实例。\n\nReturns:\n    ``send`` 包装后的可调用对象。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.create_send_wrapper.send_wrapper": {
+    "hash": "0c920b7ded1f6c7e",
+    "text": "包装 ASGI ``Send`` 可调用对象。\n\nArgs:\n    message: 一个 ASGI ``Message``\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.retrieve_cached_history": {
+    "hash": "163b8b1fcec3c0ef",
+    "text": "获取给定持续时间单位的时戳列表。\n\nArgs:\n    key: 缓存键。\n    store: 一个 :class:`Store <.stores.base.Store>` 实例。\n\nReturns:\n    一个 :class:`CacheObject` 实例。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.set_cached_history": {
+    "hash": "fd4912379dd16d46",
+    "text": "在缓存中存储带有当前时间戳的历史记录。\n\nArgs:\n    key: 缓存键。\n    cache_object: 一个 :class:`CacheObject`。\n    store: 一个 :class:`Store <.stores.base.Store>`\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.rate_limit.RateLimitMiddleware.should_check_request": {
+    "hash": "e29b5938687dfdff",
+    "text": "返回一个布尔值，指示是否应对请求进行速率限制检查。\n\nArgs:\n    request: 一个 :class:`Request <.connection.Request>` 实例。\n\nReturns:\n    布尔值，规定是否应对请求进行速率限制检查。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.rate_limit.get_remote_address": {
+    "hash": "1c892d40a932503d",
+    "text": "从 ``Request`` 获取客户端的远程地址\n\nArgs:\n    request: 一个 :class:`Request <.connection.Request>` 实例。\n\nReturns:\n    一个地址，唯一标识此客户端",
+    "type": "FunctionDef"
+  }
+}

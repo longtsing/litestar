@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.tag.Tag": {
+    "hash": "eb7c98fffd126b6d",
+    "text": "为 `Operation Object <https://spec.openapis.org/oas/v3.1.0#operationObject>`_ 中使用的单个标签添加元数据。\n\n在 `Operation Object` 实例中，并非强制要求为每个定义的标签都创建一个 `Tag Object`（标签对象）。"
+  }
+}

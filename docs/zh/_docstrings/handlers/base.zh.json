@@ -1,0 +1,102 @@
+{
+  "litestar.handlers.base.BaseRouteHandler": {
+    "hash": "dc524e13fb81a941",
+    "text": "基础路由处理器。\n\n作为所有路由处理器的子类。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.__init__": {
+    "hash": "d8eb08068e5a4a9f",
+    "text": "初始化 ``HTTPRouteHandler``。\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段序列。如果未提供，默认为 ``/``\n    fn: 处理函数\n\n        .. versionadded:: 3.0\n    dependencies: 以字符串为键的依赖 :class:`Provider <.di.Provide>` 实例映射。\n    dto: 用于请求数据（反）序列化和验证的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    exception_handlers: 状态码和/或异常类型到处理函数的映射。\n    guards: :class:`Guard <.types.Guard>` 可调用对象序列。\n    middleware: :class:`Middleware <.types.Middleware>` 序列。\n    name: 标识路由处理函数的字符串。\n    opt: 以字符串为键的任意值映射，可在 :class:`Guards <.types.Guard>` 中访问，或在拥有 :class:`Request <.connection.Request>` 或\n        :class:`ASGI Scope <.types.Scope>` 访问权限的任何地方访问。\n    return_dto: 用于序列化出站响应数据的 :class:`AbstractDTO <.dto.base_dto.AbstractDTO>`。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    signature_types: 类型序列，用于签名建模期间的正向引用解析。\n        这些类型将通过其 ``__name__`` 属性添加到签名命名空间中。\n    type_decoders: 元组序列，每个元组由测试类型身份的谓词和用于反序列化的 msgspec 钩子组成。\n    type_encoders: 类型到可调用对象的映射，用于将它们转换为支持序列化的类型。\n    parameters: :func:`Parameter <.params.Parameter>` 定义的映射\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.__str__": {
+    "hash": "b59434f3495c591e",
+    "text": "返回路由处理器的唯一标识符。\n\nReturns:\n    一个字符串"
+  },
+  "litestar.handlers.base.BaseRouteHandler._create_kwargs_model": {
+    "hash": "56af5f9e8f988e85",
+    "text": "为给定的路由处理器创建 `KwargsModel`。"
+  },
+  "litestar.handlers.base.BaseRouteHandler._get_merge_opts": {
+    "hash": "73510a9d481eb89f",
+    "text": "获取用于 `.merge` 的 kwargs。\n\n这实际上等同于执行：\n\n```python\nfor other in others:\n    handler = handler.merge(other)\n```\n\n该方法的缺点是：它会创建大量中间实例，并且要求每个添加属性的子类重新实现所有合并逻辑。\n采用此方法，子类可以覆盖此方法，调用 `super()._get_merge_opts()`，并扩展其返回的字典。\n\n此方法的缺点是：我们无法获得类型安全（只要不支持使用 `TypedDict` 注解 `**kwargs`）。\n\n计划是在版本 4 中移除该方法，届时我们将转向完全静态的 handler 配置，将逻辑与配置完全分离。"
+  },
+  "litestar.handlers.base.BaseRouteHandler._resolve_data_dto": {
+    "hash": "75d91f8ee2db6bda",
+    "text": "从路由处理器开始向上查找以解析 data_dto。\n如果找到处理器则返回该处理器，否则设置为 None。\n此方法已进行记忆化（memoized），因此计算仅执行一次。\n\nReturns:\n    一个可选的 :class:`DTO 类型 <.dto.base_dto.AbstractDTO>`"
+  },
+  "litestar.handlers.base.BaseRouteHandler._resolve_return_dto": {
+    "hash": "468c5c22f23dd538",
+    "text": "从路由处理器开始向上查找，解析 return_dto。\n如果找到处理器则返回该处理器，否则设置为 None。\n此方法已进行缓存，因此计算仅执行一次。\n\nReturns:\n    一个可选的 :class:`DTO 类型 <.dto.base_dto.AbstractDTO>`"
+  },
+  "litestar.handlers.base.BaseRouteHandler._validate_handler_function": {
+    "hash": "928466328db14615",
+    "text": "验证路由处理函数，通过检查其返回注解。"
+  },
+  "litestar.handlers.base.BaseRouteHandler._with_changes": {
+    "hash": "967f0802a1038cde",
+    "text": "返回处理程序的新实例，替换 **kwargs 中指定的属性"
+  },
+  "litestar.handlers.base.BaseRouteHandler.authorize_connection": {
+    "hash": "89a67bf0375a2878",
+    "text": "确保通过运行当前范围内的所有路由守卫来授权连接。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.default_deserializer": {
+    "hash": "12ec02d142926376",
+    "text": "获取路由处理程序的默认反序列化器。\n\nReturns:\n    路由处理程序的默认反序列化器。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.default_serializer": {
+    "hash": "e59c2c4e0cb4fd57",
+    "text": "获取路由处理程序的默认序列化器。\n\nReturns:\n    路由处理程序的默认序列化器。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.handler_id": {
+    "hash": "05962ccc09e6f72c",
+    "text": "用于生成 DTO 的唯一标识符。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.handler_name": {
+    "hash": "86855e7ace09775e",
+    "text": "获取处理函数名称。\n\nRaises:\n    ImproperlyConfiguredException: 如果未设置处理函数。\n\nReturns:\n    处理函数的名称"
+  },
+  "litestar.handlers.base.BaseRouteHandler.on_registration": {
+    "hash": "0b8f22216f22612e",
+    "text": "当应用对象实例化时，每个处理器调用一次。\n\nArgs:\n    route: 注册此处理器的路由\n    app: 应用实例\n\nReturns:\n    None"
+  },
+  "litestar.handlers.base.BaseRouteHandler.parameter_field_definitions": {
+    "hash": "5b41224ed40110e7",
+    "text": "返回在处理器上方声明的所有参数。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.parsed_fn_signature": {
+    "hash": "f7b02a3fa2727af5",
+    "text": "返回处理函数解析后的签名。\n\n此方法已缓存，因此计算仅执行一次。\n\nReturns:\n    一个 ParsedSignature 实例"
+  },
+  "litestar.handlers.base.BaseRouteHandler.resolve_dependencies": {
+    "hash": "293dc241ebac0134",
+    "text": "返回与处理函数关键字参数相关且存在于处理函数作用域内的所有依赖项。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.resolve_exception_handlers": {
+    "hash": "9ce9da406f1e2ac4",
+    "text": "从路由处理器开始向上移动，解析 ``exception_handlers``。\n\n此方法已进行记忆化，因此计算仅执行一次。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.resolve_guards": {
+    "hash": "b58db80e284de497",
+    "text": "返回处理程序作用域中的所有守卫，从最高层到当前层。"
+  },
+  "litestar.handlers.base.BaseRouteHandler.resolve_middleware": {
+    "hash": "54966094a3765bc9",
+    "text": "返回已注册的中间件"
+  },
+  "litestar.handlers.base.BaseRouteHandler.resolve_signature_namespace": {
+    "hash": "81dd42e2a7aa8ea0",
+    "text": "通过从上到下的顺序构建路由处理程序签名命名空间字典"
+  },
+  "litestar.handlers.base.BaseRouteHandler.resolve_type_decoders": {
+    "hash": "208702fff8fc59b4",
+    "text": "返回一个合并后的 type_encoders 映射。\n\nReturns:\n    一个 type encoders（类型编码器）字典"
+  },
+  "litestar.handlers.base.BaseRouteHandler.resolve_type_encoders": {
+    "hash": "208702fff8fc59b4",
+    "text": "返回一个合并后的 type_encoders 映射。\n\nReturns:\n    一个 type encoders（类型编码器）字典"
+  },
+  "litestar.handlers.base.BaseRouteHandler.signature_model": {
+    "hash": "2b23aa6fbab2a08f",
+    "text": "获取路由处理器的签名模型。\n\nReturns:\n    路由处理器的签名模型。"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "litestar.repository._filters": {
+    "hash": "69f20ef4682c5f43",
+    "text": "集合过滤器数据结构。",
+    "type": "Module"
+  },
+  "litestar.repository._filters.BeforeAfter": {
+    "hash": "9d1afde407fce631",
+    "text": "用于在 ``datetime`` 列上过滤查询所需的数据。"
+  },
+  "litestar.repository._filters.CollectionFilter": {
+    "hash": "de38dfbb17b690d1",
+    "text": "构造 ``WHERE ... IN (...)`` 子句所需的数据。"
+  },
+  "litestar.repository._filters.LimitOffset": {
+    "hash": "b03c4d5165d1d78d",
+    "text": "用于向查询添加限制/偏移过滤所需的数据。"
+  },
+  "litestar.repository._filters.NotInCollectionFilter": {
+    "hash": "edf1c5668dd67f87",
+    "text": "构建 ``WHERE ... NOT IN (...)`` 子句所需的数据。"
+  },
+  "litestar.repository._filters.NotInSearchFilter": {
+    "hash": "24068deed65cac14",
+    "text": "构建 ``WHERE field_name NOT LIKE '%' || :value || '%'`` 子句所需的数据。"
+  },
+  "litestar.repository._filters.OnBeforeAfter": {
+    "hash": "9d1afde407fce631",
+    "text": "用于在 ``datetime`` 列上过滤查询所需的数据。"
+  },
+  "litestar.repository._filters.OrderBy": {
+    "hash": "8265db6bf6c633c6",
+    "text": "构造 ``ORDER BY ...`` 子句所需的数据。"
+  },
+  "litestar.repository._filters.SearchFilter": {
+    "hash": "d086703fd42c8c4f",
+    "text": "构造 ``WHERE field_name LIKE '%' || :value || '%'`` 子句所需的数据。"
+  }
+}

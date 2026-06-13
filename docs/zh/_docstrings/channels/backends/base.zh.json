@@ -1,0 +1,30 @@
+{
+  "litestar.channels.backends.base.ChannelsBackend.get_history": {
+    "hash": "951e623b29c0f9b7",
+    "text": "返回 ``channel`` 的事件历史，最多包含 ``limit`` 条记录"
+  },
+  "litestar.channels.backends.base.ChannelsBackend.on_shutdown": {
+    "hash": "b51100fde0c1f696",
+    "text": "由插件在应用程序关闭时调用"
+  },
+  "litestar.channels.backends.base.ChannelsBackend.on_startup": {
+    "hash": "6108bc2b7fe5217c",
+    "text": "由插件在应用程序启动时调用"
+  },
+  "litestar.channels.backends.base.ChannelsBackend.publish": {
+    "hash": "57d1924b8f8eca68",
+    "text": "将消息 ``data`` 发布到所有 ``channels``"
+  },
+  "litestar.channels.backends.base.ChannelsBackend.stream_events": {
+    "hash": "be36ed184e358171",
+    "text": "返回一个生成器，迭代订阅通道的可用事件。"
+  },
+  "litestar.channels.backends.base.ChannelsBackend.subscribe": {
+    "hash": "7e20ec93b850be90",
+    "text": "开始在 ``channels`` 上监听事件"
+  },
+  "litestar.channels.backends.base.ChannelsBackend.unsubscribe": {
+    "hash": "35df7bd74653a95a",
+    "text": "停止在 ``channels`` 上监听事件"
+  }
+}

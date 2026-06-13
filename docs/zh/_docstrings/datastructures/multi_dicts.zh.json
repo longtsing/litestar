@@ -1,0 +1,58 @@
+{
+  "litestar.datastructures.multi_dicts.FormMultiDict": {
+    "hash": "cf2d7ab99b7c50c2",
+    "text": "用于表单数据的 MultiDict。"
+  },
+  "litestar.datastructures.multi_dicts.FormMultiDict.close": {
+    "hash": "89864f84ee7da2a7",
+    "text": "关闭多字典中的所有文件。\n\nReturns:\n    None"
+  },
+  "litestar.datastructures.multi_dicts.FormMultiDict.from_form_data": {
+    "hash": "16854c6ff1268f6f",
+    "text": "从表单数据创建 FormMultiDict。\n\nArgs:\n    form_data: 用于创建 FormMultiDict 的表单数据。\n\nReturns:\n    一个 FormMultiDict 实例"
+  },
+  "litestar.datastructures.multi_dicts.ImmutableMultiDict": {
+    "hash": "7afb616ce91c35d0",
+    "text": "不可变的 MultiDict，使用类:`MultiDictProxy <multidict.MultiDictProxy>`。"
+  },
+  "litestar.datastructures.multi_dicts.ImmutableMultiDict.__init__": {
+    "hash": "be69b11a4da922e1",
+    "text": "从 `MultiMapping`、:class:`Mapping <typing.Mapping>` 或元组可迭代对象初始化 ``ImmutableMultiDict``。\n\nArgs:\n    args: 用于创建 ``ImmutableMultiDict`` 的类映射（Mapping-like）结构。"
+  },
+  "litestar.datastructures.multi_dicts.ImmutableMultiDict.copy": {
+    "hash": "8f2e4bba0d254723",
+    "text": "返回一个浅拷贝"
+  },
+  "litestar.datastructures.multi_dicts.ImmutableMultiDict.mutable_copy": {
+    "hash": "a4e49eba7bea9dd9",
+    "text": "创建一个可变的 :class:`MultiDict` 副本\n\nReturns:\n    一个可变的多值字典"
+  },
+  "litestar.datastructures.multi_dicts.MultiDict": {
+    "hash": "02c9c96ae2118fd0",
+    "text": "使用 :class:`MultiDict <multidict.MultiDictProxy>`。"
+  },
+  "litestar.datastructures.multi_dicts.MultiDict.__init__": {
+    "hash": "8f14306aa5bde497",
+    "text": "从 ``MultiMapping``、:class:`Mapping <typing.Mapping>` 或元组可迭代对象初始化 ``MultiDict``。\n\nArgs:\n    args: 用于创建 ``MultiDict`` 的类映射（Mapping-like）结构"
+  },
+  "litestar.datastructures.multi_dicts.MultiDict.copy": {
+    "hash": "8f2e4bba0d254723",
+    "text": "返回一个浅拷贝"
+  },
+  "litestar.datastructures.multi_dicts.MultiDict.immutable": {
+    "hash": "b227e1311d1860e5",
+    "text": "创建一个 :class:`ImmutableMultiDict` 视图。\n\nReturns:\n    一个不可变的多值字典"
+  },
+  "litestar.datastructures.multi_dicts.MultiMixin": {
+    "hash": "a57a14c05e8419fb",
+    "text": "为多字典提供通用方法的 Mixin，被 :class:`ImmutableMultiDict` 和 :class:`MultiDict` 使用"
+  },
+  "litestar.datastructures.multi_dicts.MultiMixin.dict": {
+    "hash": "95e77cb9b9c678f1",
+    "text": "将多字典转换为列表字典。\n\nReturns:\n    一个列表字典"
+  },
+  "litestar.datastructures.multi_dicts.MultiMixin.multi_items": {
+    "hash": "f9b4fcecac09aab4",
+    "text": "获取所有键和值，包括重复项。\n\nReturns:\n    包含键值对的元组列表"
+  }
+}

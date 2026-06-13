@@ -1,0 +1,12 @@
+{
+  "litestar.utils.deprecation.deprecated": {
+    "hash": "4e9b063560f177b3",
+    "text": "创建一个装饰器，用于包装函数、方法或属性，并在调用时发出关于（即将发生的）弃用的警告。\n\nArgs:\n    version: 发生弃用的 Litestar 版本\n    removal_in: 被弃用的函数将被移除的 Litestar 版本\n    alternative: 应替代使用的函数名称\n    info: 附加信息\n    pending: 使用 ``PendingDeprecationWarning`` 代替 ``DeprecationWarning``\n    kind: 被弃用可调用对象的类型。如果为 ``None``，将使用 ``inspect`` 来判断它是函数还是方法\n\nReturns:\n    一个包装函数调用并添加警告的装饰器",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.deprecation.warn_deprecation": {
+    "hash": "036bf1e65c5d6220",
+    "text": "警告对（即将）弃用的函数的调用。\n\nArgs:\n    version: 将发生弃用的 Litestar 版本\n    deprecated_name: 被弃用函数的名称\n    removal_in: 被弃用函数将被移除的 Litestar 版本\n    alternative: 应替代使用的函数名称\n    info: 附加信息\n    pending: 使用 ``PendingDeprecationWarning`` 代替 ``DeprecationWarning``\n    kind: 被弃用对象的类型",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "litestar.config.csrf.CSRFConfig": {
+    "hash": "21531dede13d1bab",
+    "text": "CSRF（跨站请求伪造）保护的配置。\n\n要启用 CSRF 保护，请使用 `csrf_config` 键将本类的实例传递给 :class:`Litestar <litestar.app.Litestar>` 构造函数。",
+    "type": "ClassDef"
+  }
+}

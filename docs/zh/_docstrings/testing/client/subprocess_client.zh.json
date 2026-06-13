@@ -1,0 +1,14 @@
+{
+  "litestar.testing.client.subprocess_client.run_app": {
+    "hash": "e0bca45856c6d21a",
+    "text": "在子进程中启动一个使用随机可用端口的 Litestar 应用。\n\nArgs:\n    workdir: 运行命令将执行的 working directory（工作目录）路径\n    app: Litestar 应用的路径，例如：\"my_app:application\"\n    capture_output: 是否在主进程的 stdout/stderr 中捕获子进程的输出\n    retry_count: 等待应用启动的重试次数\n    retry_timeout: 重试之间等待的超时时间（秒）\n\nRaises:\n    StartupError: 如果应用在给定的重试次数和超时时间内启动失败"
+  },
+  "litestar.testing.client.subprocess_client.subprocess_async_client": {
+    "hash": "2abe9ee88fe1600b",
+    "text": "为在子进程中启动的 Litestar 应用提供异步 httpx 客户端。\n\nArgs:\n    workdir: 应用模块所在目录的路径。\n    app: 可在提供的 working directory 中解析的 Uvicorn 应用字符串，例如：\"app:app\"\n    capture_output: 是否在主进程的 stdout/stderr 中捕获子进程的输出。"
+  },
+  "litestar.testing.client.subprocess_client.subprocess_sync_client": {
+    "hash": "8b12f561e6e1d03d",
+    "text": "为在子进程中启动的 Litestar 应用提供同步 httpx 客户端。\n\nArgs:\n    workdir: 应用模块所在目录的路径。\n    app: 可在提供的 working directory 中解析的 Uvicorn 应用字符串，例如：\"app:app\"\n    capture_output: 是否在主进程的 stdout/stderr 中捕获子进程的输出。"
+  }
+}

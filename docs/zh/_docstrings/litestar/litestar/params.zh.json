@@ -1,0 +1,67 @@
+{
+  "litestar.params.Body": {
+    "hash": "4f02214b44962c2a",
+    "text": "创建扩展的请求体关键字参数定义。\n\nArgs:\n    const: 一个布尔标志，指示该参数是否为常量。如果为 True，则传递给该参数的值必须等于其默认值。这也会导致 OpenAPI 的 const 字段被填充为默认值。\n    content_encoding: 值的编码方式。仅适用于字符串值。详见 OpenAPI 3.1。\n    description: 用于给定参数在 OpenAPI 架构描述部分中的字符串值。\n    examples: 示例模型列表。\n    external_docs: 指向给定参数外部文档的 URL。\n    ge: 将值限制为大于或等于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 minimum。\n    gt: 将值限制为大于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 exclusiveMinimum。\n    le: 将值限制为小于或等于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 maximum。\n    lt: 将值限制为小于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 exclusiveMaximum。\n    max_items: 将集合或列表限制为具有最大项目数。\n        等同于 OpenAPI 规范中的 maxItems。\n    max_length: 将字符串或字节值限制为具有最大长度。\n        等同于 OpenAPI 规范中的 maxLength。\n    media_type: 默认为 RequestEncodingType.JSON。\n    min_items: 将集合或列表限制为具有最小项目数。\n        等同于 OpenAPI 规范中的 minItems。\n    min_length: 将字符串或字节值限制为具有最小长度。\n        等同于 OpenAPI 规范中的 minLength。\n    multipart_form_part_limit: multipart/formdata 请求中允许的最大部分数。\n        此限制旨在防止 DoS 攻击。\n    multiple_of: 将值限制为给定浮点数或整数的倍数。\n        等同于 OpenAPI 规范中的 multipleOf。\n    pattern: 表示正则表达式的字符串，用于匹配给定的字符串。\n        等同于 OpenAPI 规范中的 pattern。\n    title: 用于给定参数在 OpenAPI 架构标题部分中的字符串值。\n    schema_extra: 对生成的架构的扩展。如果设置，将覆盖生成架构中匹配的字段。\n\n        .. versionadded:: 2.8.0\n    schema_component_key: 在为此类型创建组件时，将其用作引用的键。\n        .. versionadded:: 2.12.0",
+    "type": "FunctionDef"
+  },
+  "litestar.params.BodyKwarg": {
+    "hash": "32beacedf7696929",
+    "text": "表示请求体的数据容器。",
+    "type": "ClassDef"
+  },
+  "litestar.params.BodyKwarg.__hash__": {
+    "hash": "05420405763ce5b6",
+    "text": "以安全的方式对数据类进行哈希处理。\n\nReturns:\n    一个哈希值",
+    "type": "FunctionDef"
+  },
+  "litestar.params.CookieParameter": {
+    "hash": "db50e7545498a4b4",
+    "text": "描述一个 cookie 参数。\n\n在 OpenAPI 中，这映射到参数 ``in: cookie``。",
+    "type": "ClassDef"
+  },
+  "litestar.params.HeaderParameter": {
+    "hash": "e4ddf9d22a6b4609",
+    "text": "描述一个头部参数。\n\n在 OpenAPI 中，这映射为 ``in: header`` 参数。",
+    "type": "ClassDef"
+  },
+  "litestar.params.KwargDefinition": {
+    "hash": "0b0c8f262d90010e",
+    "text": "表示受限关键字参数的数据容器。",
+    "type": "ClassDef"
+  },
+  "litestar.params.KwargDefinition.is_constrained": {
+    "hash": "aa2bca86c5de4653",
+    "text": "如果设置了任何约束，则返回 True。",
+    "type": "FunctionDef"
+  },
+  "litestar.params.Parameter": {
+    "hash": "7b74f01ec19eac35",
+    "text": "创建扩展的参数关键字参数定义。\n\nArgs:\n    annotation: 默认为 `Empty`。\n    const: 一个布尔标志，指示该参数是否为常量。如果为 True，则传递给该参数的值必须等于其默认值。这也会导致 OpenAPI 的 const 字段被填充为默认值。\n    content_encoding: 值的编码方式。\n        仅适用于字符串值。详见 OpenAPI 3.1。\n    cookie: Cookie 参数的键 - 对于 cookie 参数是必需的。\n    description: 用于给定参数的 OpenAPI 架构描述部分的字符串值。\n    examples: Example 模型列表。\n    external_docs: 指向给定参数外部文档的 URL。\n    ge: 将值限制为大于或等于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 minimum。\n    gt: 将值限制为大于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 exclusiveMinimum。\n    header: 请求头参数的键 - 对于请求头参数是必需的。\n    le: 将值限制为小于或等于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 maximum。\n    lt: 将值限制为小于给定的浮点数或整数。\n        等同于 OpenAPI 规范中的 exclusiveMaximum。\n    max_items: 将集合或列表限制为具有最大项目数。\n        等同于 OpenAPI 规范中的 maxItems。\n    max_length: 将字符串或字节值限制为具有最大长度。\n        等同于 OpenAPI 规范中的 maxLength。\n    min_items: 将集合或列表限制为具有最小项目数。\n        等同于 OpenAPI 规范中的 minItems。\n    min_length: 将字符串或字节值限制为具有最小长度。\n        等同于 OpenAPI 规范中的 minLength。\n    multiple_of: 将值限制为给定浮点数或整数的倍数。\n        等同于 OpenAPI 规范中的 multipleOf。\n    pattern: 表示正则表达式的字符串，用于匹配给定的字符串。\n        等同于 OpenAPI 规范中的 pattern。\n    query: 此参数的查询参数键。\n    required: 一个布尔标志，指示该参数是否为必需。\n        如果设置为 False，则允许 None 值。默认为 True。\n    title: 用于给定参数的 OpenAPI 架构标题部分的字符串值。\n    schema_extra: 对生成的架构的扩展。如果设置，将覆盖生成架构中匹配的字段。\n\n        .. versionadded:: 2.8.0\n    schema_component_key: 在为此类型创建组件时，将其用作引用的键。\n        .. versionadded:: 2.12.0\n    include_in_schema: 一个布尔标志，指示该参数是否应包含在架构中。",
+    "type": "FunctionDef"
+  },
+  "litestar.params.ParameterKwarg": {
+    "hash": "79bf4958199c12b1",
+    "text": "表示参数的数据容器。",
+    "type": "ClassDef"
+  },
+  "litestar.params.ParameterKwarg.__hash__": {
+    "hash": "05420405763ce5b6",
+    "text": "以安全的方式对数据类进行哈希处理。\n\nReturns:\n    一个哈希值",
+    "type": "FunctionDef"
+  },
+  "litestar.params.PathParameter": {
+    "hash": "d66c3535d5c7f79c",
+    "text": "描述路径参数。\n\n在 OpenAPI 中，这映射为 ``in: path`` 参数。",
+    "type": "ClassDef"
+  },
+  "litestar.params.QueryParameter": {
+    "hash": "3db2271a63e1f268",
+    "text": "描述查询参数。\n\n在 OpenAPI 中，这映射到 ``in: query`` 参数。",
+    "type": "ClassDef"
+  },
+  "litestar.params.SkipValidationMarker": {
+    "hash": "0a935a56e33aede5",
+    "text": "指示将此作为元数据标注的类型应被视为 `Any`。",
+    "type": "ClassDef"
+  }
+}

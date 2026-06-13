@@ -1,0 +1,27 @@
+{
+  "litestar.security.session_auth.auth.SessionAuth": {
+    "hash": "710b524429e11751",
+    "text": "基于会话的安全后端。",
+    "type": "ClassDef"
+  },
+  "litestar.security.session_auth.auth.SessionAuth.middleware": {
+    "hash": "876d497f815d1a06",
+    "text": "使用此属性将配置插入到应用层之一的中间件列表中。\n\n示例：\n```python\nfrom typing import Any\nfrom os import urandom\n\nfrom litestar import Litestar, Request, get\nfrom litestar_session import SessionAuth\n\n\nasync def retrieve_user_from_session(session: dict[str, Any]) -> Any:\n    # 在此处实现逻辑，根据会话字典检索 ``user`` 数据\n    ...\n\n\nsession_auth_config = SessionAuth(\n    secret=urandom(16), retrieve_user_handler=retrieve_user_from_session\n)\n\n\n@get(\"/\")\ndef my_handler(request: Request) -> None: ...\n\n\napp = Litestar(route_handlers=[my_handler], middleware=[session_auth_config.middleware])\n```\n\nReturns:\n    一个 `DefineMiddleware` 实例，其中包含将 ``self`` 作为配置关键字参数值的实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.session_auth.auth.SessionAuth.openapi_components": {
+    "hash": "6004890359e87417",
+    "text": "为所使用的会话认证模式创建 OpenAPI 文档。\n\nReturns:\n    一个 :class:`Components <litestar.openapi.spec.components.Components>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.session_auth.auth.SessionAuth.security_requirement": {
+    "hash": "f12f637a12dd40bd",
+    "text": "返回 OpenAPI 3.1。\n\n认证后端所需的 :data:`SecurityRequirement <.openapi.spec.SecurityRequirement>`。\n\nReturns:\n    一个 OpenAPI 3.1 :data:`SecurityRequirement <.openapi.spec.SecurityRequirement>` 字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.security.session_auth.auth.SessionAuth.session_backend": {
+    "hash": "8d2b443190069c5f",
+    "text": "创建会话后端。\n\nReturns:\n    :class:`BaseSessionBackend <litestar.middleware.session.base.BaseSessionBackend>` 的子类",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "litestar.cli.commands.sessions.clear_sessions_command": {
+    "hash": "87832ec4ba563d32",
+    "text": "删除所有会话。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.sessions.delete_session_command": {
+    "hash": "fda3c17cbeed6a66",
+    "text": "删除特定会话。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.sessions.get_session_backend": {
+    "hash": "75ff724e2f14bc79",
+    "text": "获取 ``Litestar`` 应用使用的会话后端。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.sessions.sessions_group": {
+    "hash": "3a8886bd0977ed52",
+    "text": "管理服务器端会话。",
+    "type": "FunctionDef"
+  }
+}

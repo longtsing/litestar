@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.discriminator.Discriminator": {
+    "hash": "d22234e004cfe07b",
+    "text": "当请求体或响应负载可能是多种不同模式之一时，可以使用 ``discriminator`` 对象来辅助序列化、反序列化和验证。\n\n``discriminator`` 是模式中的一个特定对象，用于根据与其关联的值，告知规范的使用者应使用哪种替代模式。\n\n使用 ``discriminator`` 时，将不考虑_内联_模式。",
+    "type": "ClassDef"
+  }
+}

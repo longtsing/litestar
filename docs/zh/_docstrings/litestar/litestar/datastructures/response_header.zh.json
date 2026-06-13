@@ -1,0 +1,12 @@
+{
+  "litestar.datastructures.response_header.ResponseHeader": {
+    "hash": "c1dbd0ad46da5594",
+    "text": "响应头的容器类型。",
+    "type": "ClassDef"
+  },
+  "litestar.datastructures.response_header.ResponseHeader.__post_init__": {
+    "hash": "3173ab6152379363",
+    "text": "确保已设置 `value`，或者该实例仅用于 `documentation_only`。",
+    "type": "FunctionDef"
+  }
+}

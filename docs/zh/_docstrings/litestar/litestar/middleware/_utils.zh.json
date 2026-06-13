@@ -1,0 +1,12 @@
+{
+  "litestar.middleware._utils.build_exclude_path_pattern": {
+    "hash": "0adc142c6ab0d3c6",
+    "text": "从模式列表中构建单个路径模式，以选择退出中间件处理。\n\nArgs:\n    exclude: 一个模式或模式列表。\n    middleware_cls: 调用此函数的中间件类 - 用于生成更具信息量的警告\n\nReturns:\n    一个可选模式，用于与 scope[\"path\"] 进行匹配，以选择退出中间件处理。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware._utils.should_bypass_middleware": {
+    "hash": "651af1cf42cce985",
+    "text": "确定是否应绕过中间件。\n\nArgs:\n    exclude_http_methods: 不需要身份验证的 HTTP 方法序列。\n    exclude_opt_key: ``opt`` 中的键，路由处理程序可通过该键选择“退出”中间件。\n    exclude_path_pattern: 如果此模式匹配 scope[\"path\"]，则应绕过中间件。\n    scope: ASGI 作用域。\n    scopes: 中间件支持的 ASGI 作用域类型集合。\n\nReturns:\n    一个布尔值，指示是否应绕过中间件",
+    "type": "FunctionDef"
+  }
+}

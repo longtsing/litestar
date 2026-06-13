@@ -1,0 +1,12 @@
+{
+  "litestar.exceptions.dto_exceptions.DTOFactoryException": {
+    "hash": "b29cd0eb3afed4e4",
+    "text": "基础 DTO 异常类型。",
+    "type": "ClassDef"
+  },
+  "litestar.exceptions.dto_exceptions.InvalidAnnotationException": {
+    "hash": "a58013b53c90df24",
+    "text": "意外的 DTO 类型参数。",
+    "type": "ClassDef"
+  }
+}

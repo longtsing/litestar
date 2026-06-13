@@ -1,0 +1,37 @@
+{
+  "litestar._openapi.typescript_converter.converter.convert_openapi_to_typescript": {
+    "hash": "059edd743009d594",
+    "text": "将 OpenAPI Schema 实例转换为 TypeScript 命名空间。此函数是 TypeScript 转换器的主要入口点。\n\nArgs:\n    openapi_schema: 一个 OpenAPI Schema 实例。\n    namespace: 要使用的命名空间。\n\nReturns:\n    表示生成的类型的字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.converter.deref_container": {
+    "hash": "6d04d3d6235ef709",
+    "text": "解引用可能包含 Reference 实例的对象。\n\nArgs:\n    open_api_container: OpenAPI 内容、字典或列表。\n    components: OpenAPI 架构的 Components 部分。\n\nReturns:\n    解引用后的对象。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.converter.get_openapi_type": {
+    "hash": "051df189b80b59f9",
+    "text": "提取或解引用 OpenAPI 容器类型。\n\nArgs:\n    value: 引用或容器类型。\n    components: OpenAPI 模式的 Components 部分。\n\nReturns:\n    提取的容器。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.converter.parse_params": {
+    "hash": "6918dc387ed309ae",
+    "text": "解析请求参数。\n\nArgs:\n    params: 一个 OpenAPI 操作参数。\n    components: OpenAPI 架构的 Components 部分。\n\nReturns:\n    已解析接口的元组。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.converter.parse_request_body": {
+    "hash": "87863d494e7f5c69",
+    "text": "解析架构请求体。\n\nArgs:\n    body: 一个 OpenAPI RequestBody 实例。\n    components: OpenAPI 架构的 Components 部分。\n\nReturns:\n    一个 TypeScript 类型。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.converter.parse_responses": {
+    "hash": "2e29d40f628c1688",
+    "text": "解析给定的 Operation 的 Responses 对象。\n\nArgs:\n    responses: 一个 OpenAPI Responses 对象。\n    components: OpenAPI schema 的 Components 部分。\n\nReturns:\n    一个元组，包含命名空间，将响应代码映射到数据。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.converter.resolve_ref": {
+    "hash": "62145b7899ddc7c7",
+    "text": "将引用对象解析为其指向的实际值。\n\nArgs:\n    ref: 一个 Reference 实例。\n    components: OpenAPI schema 的 Components 部分。\n\nReturns:\n    一个 OpenAPI schema 实例。",
+    "type": "FunctionDef"
+  }
+}

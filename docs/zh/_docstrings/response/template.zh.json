@@ -1,0 +1,16 @@
+{
+  "litestar.response.template.Template": {
+    "hash": "6e14c9b1ca14185f",
+    "text": "基于模板的响应，将给定模板渲染为字节字符串。"
+  },
+  "litestar.response.template.Template.__init__": {
+    "hash": "4be0a3bd2d8f0cce",
+    "text": "将给定模板渲染为字节字符串。\n\nArgs:\n    template_name: 待渲染模板的路径类名称，例如 ``index.html``。\n    template_str: 表示模板的字符串，例如 ``template_str = \"Hello <strong>World</strong>\"``。\n    background: 一个 :class:`BackgroundTask <.background_tasks.BackgroundTask>` 实例或\n        :class:`BackgroundTasks <.background_tasks.BackgroundTasks>`，用于在响应完成后执行。\n        默认为 ``None``。\n    context: 一个键值对字典，将传递给模板引擎的渲染方法。\n    cookies: 一个 :class:`Cookie <.datastructures.Cookie>` 实例列表，用于在响应\n        ``Set-Cookie`` 头下设置。\n    encoding: 内容编码\n    headers: 一个以字符串为键的响应头字典。头键不区分大小写。\n    media_type: 一个字符串或 :class:`MediaType <.enums.MediaType>` 枚举的成员。如果未设置，则尝试根据\n        模板名称推断媒体类型。如果失败，则回退到 ``text/plain``。\n    status_code: 响应 HTTP 状态码的值。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.template.Template.create_template_context": {
+    "hash": "0f895dafea409d6f",
+    "text": "为模板创建上下文对象。\n\nArgs:\n    request: 一个 :class:`Request <.connection.Request>` 实例。\n\nReturns:\n    一个包含模板上下文的字典",
+    "type": "FunctionDef"
+  }
+}

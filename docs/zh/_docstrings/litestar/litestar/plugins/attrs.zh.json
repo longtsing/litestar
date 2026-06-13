@@ -1,0 +1,12 @@
+{
+  "litestar.plugins.attrs.AttrsSchemaPlugin.to_openapi_schema": {
+    "hash": "4d01a8b3b77368f7",
+    "text": "给定类型注解，将其转换为 OpenAPI 模式类。\n\nArgs:\n    field_definition: FieldDefinition 实例。\n    schema_creator: 模式创建器类的实例。\n\nReturns:\n    一个 :class:`OpenAPI <litestar.openapi.spec.schema.Schema>` 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.attrs.is_attrs_class": {
+    "hash": "32cee9cc5b1108f0",
+    "text": "给定一个类型注解，判断该注解是否为包含 attrs 属性的类。\n\nArgs:\n    annotation: 一个类型。\n\nReturns:\n    一个 typeguard，用于判断该类型是否为 attrs 类。",
+    "type": "FunctionDef"
+  }
+}

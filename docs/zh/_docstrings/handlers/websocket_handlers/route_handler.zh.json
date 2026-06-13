@@ -1,0 +1,22 @@
+{
+  "litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.__init__": {
+    "hash": "df6c92fa3150aa42",
+    "text": "WebSocket 路由的处理程序。\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段序列。如果未提供，默认为 ``/``\n    fn: 处理函数\n\n        .. versionadded:: 3.0\n    dependencies: 以字符串为键的依赖项 :class:`Provider <.di.Provide>` 实例映射。\n    exception_handlers: 状态码和/或异常类型到处理函数的映射。\n    guards: :class:`Guard <.types.Guard>` 可调用对象序列。\n    middleware: :class:`Middleware <.types.Middleware>` 序列。\n    name: 标识路由处理程序的字符串。\n    opt: 以字符串为键的任意值映射，可在 :class:`Guards <.types.Guard>` 中访问，或在任何可访问 :class:`Request <.connection.Request>` 或 :class:`ASGI Scope <.types.Scope>` 的地方访问。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    type_encoders: 类型到可调用对象的映射，用于将类型转换为支持序列化的类型。\n    websocket_class: :class:`WebSocket <.connection.WebSocket>` 的自定义子类，将用作路由处理程序的默认 WebSocket 类。\n    parameters: :func:`Parameter <.params.Parameter>` 定义的映射\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。"
+  },
+  "litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler._validate_handler_function": {
+    "hash": "f90555565e005996",
+    "text": "验证路由处理函数，通过检查其返回注解，在其设置完成后进行。"
+  },
+  "litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.handle": {
+    "hash": "6bd2307c419c1ced",
+    "text": "从传入的参数创建 WebSocket 并等待处理函数执行的 ASGI 应用。\n\nArgs:\n    connection: WebSocket 连接\n\nReturns:\n    None"
+  },
+  "litestar.handlers.websocket_handlers.route_handler.WebsocketRouteHandler.resolve_websocket_class": {
+    "hash": "38fba977c5cc05df",
+    "text": "返回所有者图中最近的自定义 WebSocket 类，或默认的 WebSocket 类。\n\n此方法已进行缓存（memoized），因此计算仅执行一次。\n\nReturns:\n    路由处理程序的默认 :class:`WebSocket <.connection.WebSocket>` 类。"
+  },
+  "litestar.handlers.websocket_handlers.route_handler.websocket": {
+    "hash": "02179074fe2cbd99",
+    "text": "创建 :class:`WebsocketRouteHandler`。\n\nArgs:\n    path: 路由处理函数的路径片段，或路径片段序列。如果未提供，默认为 ``/``。\n    dependencies: 以字符串为键的依赖 :class:`Provider <.di.Provide>` 实例映射。\n    exception_handlers: 状态码和/或异常类型到处理函数映射。\n    guards: :class:`Guard <.types.Guard>` 可调用对象序列。\n    middleware: :class:`Middleware <.types.Middleware>` 序列。\n    name: 用于标识路由处理函数的字符串。\n    opt: 以字符串为键的任意值映射，可在 :class:`Guards <.types.Guard>` 中访问，或在任何可访问 :class:`Request <.connection.Request>` 或 :class:`ASGI Scope <.types.Scope>` 的地方访问。\n    signature_namespace: 名称到类型的映射，用于签名建模期间的正向引用解析。\n    websocket_class: 用作路由处理程序默认 WebSocket 类的 :class:`WebSocket <.connection.WebSocket>` 自定义子类。\n    handler_class: 由装饰器实例化的路由处理程序类。\n    **kwargs: 任何额外的关键字参数 - 将设置在 opt 字典中。"
+  }
+}

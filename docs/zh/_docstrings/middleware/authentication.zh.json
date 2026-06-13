@@ -1,0 +1,22 @@
+{
+  "litestar.middleware.authentication.AbstractAuthenticationMiddleware": {
+    "hash": "33f06905917675f1",
+    "text": "抽象的 AuthenticationMiddleware，允许用户通过继承它并重写 :meth:`AbstractAuthenticationMiddleware.authenticate_request` 来创建自定义的 AuthenticationMiddleware（身份验证中间件）。"
+  },
+  "litestar.middleware.authentication.AbstractAuthenticationMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.middleware.authentication.AbstractAuthenticationMiddleware.__init__": {
+    "hash": "693b62d791d90221",
+    "text": "初始化 ``AbstractAuthenticationMiddleware``。\n\nArgs:\n    app: 一个 ASGIApp，该值是中间件栈中要调用的下一个 ASGI 处理器。\n    exclude: 一个模式或模式列表，用于在认证中间件中跳过匹配的路由。\n    exclude_from_auth_key: 用于在路由上禁用特定路由认证的标识符。\n    exclude_http_methods: 不需要认证的 HTTP 方法序列。\n    scopes: 由认证中间件处理的 ASGI 作用域（scopes）。"
+  },
+  "litestar.middleware.authentication.AbstractAuthenticationMiddleware.authenticate_request": {
+    "hash": "5ab7d8eeefc8061d",
+    "text": "接收 HTTP 连接并返回一个 :class:`AuthenticationResult`。\n\nNotes:\n    - 此方法必须由子类重写。\n\nArgs:\n    connection: 一个 :class:`ASGIConnection <litestar.connection.ASGIConnection>` 实例。\n\nRaises:\n    NotAuthorizedException | PermissionDeniedException: 如果认证失败。\n\nReturns:\n    一个 :class:`AuthenticationResult <litestar.middleware.authentication.AuthenticationResult>` 实例。"
+  },
+  "litestar.middleware.authentication.AuthenticationResult": {
+    "hash": "6ffc7526ec6cca61",
+    "text": "用于认证结果的数据类。"
+  }
+}

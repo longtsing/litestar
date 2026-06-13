@@ -1,0 +1,12 @@
+{
+  "litestar.openapi.config.OpenAPIConfig": {
+    "hash": "3ff694438a8d40ec",
+    "text": "OpenAPI 的配置。\n\n要启用 OpenAPI 模式生成和提供，请将此类的实例作为 ``openapi_config`` 关键字参数传递给 :class:`Litestar <.app.Litestar>` 构造函数。",
+    "type": "ClassDef"
+  },
+  "litestar.openapi.config.OpenAPIConfig.to_openapi_schema": {
+    "hash": "43126d6fac4aa991",
+    "text": "从 `self` 中存储的值返回一个 ``OpenAPI`` 实例。\n\nReturns:\n    一个 :class:`OpenAPI <litestar.openapi.spec.open_api.OpenAPI>` 实例。",
+    "type": "FunctionDef"
+  }
+}

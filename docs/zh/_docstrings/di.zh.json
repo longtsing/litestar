@@ -1,0 +1,14 @@
+{
+  "litestar.di.Provide": {
+    "hash": "3f740f811500b7cb",
+    "text": "依赖注入的包装类"
+  },
+  "litestar.di.Provide.__call__": {
+    "hash": "9fc5a632023b4ad7",
+    "text": "调用提供者的依赖。"
+  },
+  "litestar.di.Provide.__init__": {
+    "hash": "ddce56485dd2da77",
+    "text": "初始化 ``Provide``\n\nArgs:\n    dependency: 要调用的可调用对象或要实例化的类。其结果随后作为依赖项被注入。\n    use_cache: 缓存依赖项的返回值。默认为 False。\n    sync_to_thread: 在异步线程中运行同步代码。默认为 False。"
+  }
+}

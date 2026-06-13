@@ -1,0 +1,6 @@
+{
+  "litestar.openapi.spec.external_documentation.ExternalDocumentation": {
+    "hash": "e2bca23802af04a7",
+    "text": "允许引用外部资源以获取扩展文档。"
+  }
+}

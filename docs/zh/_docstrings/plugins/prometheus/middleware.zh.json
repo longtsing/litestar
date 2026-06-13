@@ -1,0 +1,22 @@
+{
+  "litestar.plugins.prometheus.middleware.PrometheusMiddleware": {
+    "hash": "9132219edb362f3c",
+    "text": "Prometheus 中间件。"
+  },
+  "litestar.plugins.prometheus.middleware.PrometheusMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  },
+  "litestar.plugins.prometheus.middleware.PrometheusMiddleware.__init__": {
+    "hash": "e20cce2307f4713e",
+    "text": "为应用程序添加 Prometheus 指标监控的中间件。\n\nArgs:\n    app: 要调用的下一个 ``next`` ASGI 应用。\n    config: :class:`PrometheusConfig <.plugins.prometheus.PrometheusConfig>` 的实例。"
+  },
+  "litestar.plugins.prometheus.middleware.PrometheusMiddleware._get_default_labels": {
+    "hash": "ee43ead852c1f1fc",
+    "text": "从请求中获取默认标签值。\n\nArgs:\n    request: 请求对象。\n\nReturns:\n    默认标签的字典。"
+  },
+  "litestar.plugins.prometheus.middleware.PrometheusMiddleware._get_extra_labels": {
+    "hash": "8a104a66624fd73d",
+    "text": "获取配置提供的额外标签，如果它们是可调用的，则进行解析。\n\nArgs:\nrequest: 请求对象。\n\nReturns:\n额外标签的字典。"
+  }
+}

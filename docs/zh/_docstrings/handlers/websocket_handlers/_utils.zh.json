@@ -1,0 +1,10 @@
+{
+  "litestar.handlers.websocket_handlers._utils.create_handler_signature": {
+    "hash": "e077ceb002d545d8",
+    "text": "为处理函数创建用于签名建模的 :class:`Signature`。\n\n这是出于两个原因所必需的：\n\n    1. :class:`.handlers.WebsocketHandler` 的签名模型不能包含 ``data`` 参数，而 :class:`.handlers.websocket_listener` 处理程序需要该参数。\n    2. :class:`.handlers.WebsocketHandler` 的签名模型必须包含 ``socket`` 参数，而 :class:`.handlers.websocket_listener` 处理程序中该参数是可选的。\n\nArgs:\n    callback_signature: 监听器回调的 :class:`Signature`。\n\nReturns:\n    用于签名建模所需的监听器回调的 :class:`Signature`。"
+  },
+  "litestar.handlers.websocket_handlers._utils.create_stub_dependency": {
+    "hash": "bef0b353b128889f",
+    "text": "创建一个存根依赖项，接受 ``src`` 中定义的任何关键字参数（kwargs），并将其包装在 ``Provide`` 中。"
+  }
+}

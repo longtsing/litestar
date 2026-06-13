@@ -1,0 +1,32 @@
+{
+  "litestar.cli.commands.core.CommaSplittedPath": {
+    "hash": "ccea411bf30bdecc",
+    "text": "一个按逗号分割输入字符串的 Click 路径。\n\n.. versionadded:: 2.8.0",
+    "type": "ClassDef"
+  },
+  "litestar.cli.commands.core._server_lifespan": {
+    "hash": "9debcddd1ef359c0",
+    "text": "```\n处理 ASGI 服务器生命周期的上下文管理器。\n\n它将在通过 CLI 启动 ASGI 服务器之前进入。\n```",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.core.info_command": {
+    "hash": "b6ca73adf2eb1ad2",
+    "text": "显示有关检测到的 Litestar 应用的信息。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.core.routes_command": {
+    "hash": "8def6fb74c3f11b3",
+    "text": "显示有关应用程序路由的信息。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.core.run_command": {
+    "hash": "f5991d4bcf6d2d89",
+    "text": "运行 Litestar 应用。（需要安装 `uvicorn`）。\n\n应用程序将自动发现，或者可以设置为 `litestar` 主命令的选项。运行 `litestar --help` 以获取有关应用程序自动发现的更多信息。",
+    "type": "FunctionDef"
+  },
+  "litestar.cli.commands.core.version_command": {
+    "hash": "d9b1692d6ac7ec0f",
+    "text": "显示当前安装的 Litestar 版本。",
+    "type": "FunctionDef"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "litestar.plugins.base.CLIPlugin": {
+    "hash": "b998916f755c9210",
+    "text": "用于扩展 CLI 服务器生命周期的插件协议。"
+  },
+  "litestar.plugins.base.CLIPlugin.on_cli_init": {
+    "hash": "bf5b49a7de9fb4f5",
+    "text": "在 CLI 初始化时调用。\n\n此方法可用于扩展或覆盖现有命令。\n\nArgs:\n    cli: Litestar CLI 的根 :class:`click.Group`\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar\n        from litestar.plugins import CLIPlugin\n        from click import Group\n\n\n        class CLIPlugin(CLIPlugin):\n            def on_cli_init(self, cli: Group) -> None:\n                @cli.command()\n                def is_debug_mode(app: Litestar):\n                    print(app.debug)\n\n\n        app = Litestar(plugins=[CLIPlugin()])"
+  },
+  "litestar.plugins.base.DIPlugin": {
+    "hash": "7f9ad80471e646b8",
+    "text": "扩展依赖注入"
+  },
+  "litestar.plugins.base.DIPlugin.get_typed_init": {
+    "hash": "089cd8d6ba7119e9",
+    "text": "返回关于 ``type_`` 的 :func:`__init__` 方法的签名和类型信息。"
+  },
+  "litestar.plugins.base.DIPlugin.has_typed_init": {
+    "hash": "fdee053843057822",
+    "text": "如果 ``type_`` 的 :func:`__init__` 方法具有无法从当前方法的类型注解中提取的类型信息（例如 Pydantic BaseModel 的子类），并且 :meth:`DIPlugin.get_typed_init` 支持提取这些注解，则返回 ``True``。"
+  },
+  "litestar.plugins.base.InitPlugin": {
+    "hash": "b0d36d712cb5884e",
+    "text": "用于定义影响应用程序初始化过程的插件的协议。"
+  },
+  "litestar.plugins.base.InitPlugin.on_app_init": {
+    "hash": "e70dae848ac40144",
+    "text": "在 `on_app_init` 钩子被调用后接收 :class:`AppConfig<.config.app.AppConfig>` 实例。\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar, get\n        from litestar.di import Provide\n        from litestar.plugins import InitPluginProtocol\n\n\n        def get_name() -> str:\n            return \"world\"\n\n\n        @get(\"/my-path\")\n        def my_route_handler(name: str) -> dict[str, str]:\n            return {\"hello\": name}\n\n\n        class MyPlugin(InitPluginProtocol):\n            def on_app_init(self, app_config: AppConfig) -> AppConfig:\n                app_config.dependencies[\"name\"] = Provide(get_name)\n                app_config.route_handlers.append(my_route_handler)\n                return app_config\n\n\n        app = Litestar(plugins=[MyPlugin()])\n\nArgs:\n    app_config: :class:`AppConfig <litestar.config.app.AppConfig>` 实例。\n\nReturns:\n    应用配置对象。"
+  },
+  "litestar.plugins.base.InitPluginProtocol": {
+    "hash": "4abe10aa862b60d3",
+    "text": "定义影响应用程序初始化过程的插件的协议。\n\n.. deprecated:: 2.15\n    请使用 'InitPlugin' 代替"
+  },
+  "litestar.plugins.base.InitPluginProtocol.on_app_init": {
+    "hash": "e70dae848ac40144",
+    "text": "在 `on_app_init` 钩子被调用后接收 :class:`AppConfig<.config.app.AppConfig>` 实例。\n\nExamples:\n    .. code-block:: python\n\n        from litestar import Litestar, get\n        from litestar.di import Provide\n        from litestar.plugins import InitPluginProtocol\n\n\n        def get_name() -> str:\n            return \"world\"\n\n\n        @get(\"/my-path\")\n        def my_route_handler(name: str) -> dict[str, str]:\n            return {\"hello\": name}\n\n\n        class MyPlugin(InitPluginProtocol):\n            def on_app_init(self, app_config: AppConfig) -> AppConfig:\n                app_config.dependencies[\"name\"] = Provide(get_name)\n                app_config.route_handlers.append(my_route_handler)\n                return app_config\n\n\n        app = Litestar(plugins=[MyPlugin()])\n\nArgs:\n    app_config: :class:`AppConfig <litestar.config.app.AppConfig>` 实例。\n\nReturns:\n    应用配置对象。"
+  },
+  "litestar.plugins.base.OpenAPISchemaPlugin": {
+    "hash": "43fe348de6e43198",
+    "text": "用于扩展 OpenAPI 模式生成对非库类型支持的插件。"
+  },
+  "litestar.plugins.base.OpenAPISchemaPlugin.is_constrained_field": {
+    "hash": "2621ad05775785e7",
+    "text": "如果该字段应被视为受约束，则返回 ``True``。如果返回 ``True``，则应在字段的 extras 中定义约束。"
+  },
+  "litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_field": {
+    "hash": "cb7bdf1420a6672c",
+    "text": "给定一个表示不确定类型的 :class:`FieldDefinition <litestar.typing.FieldDefinition>`，确定该值是否被插件支持。\n\nArgs:\n    field_definition: 已解析的类型。\n\nReturns:\n    该类型是否被插件支持。"
+  },
+  "litestar.plugins.base.OpenAPISchemaPlugin.is_plugin_supported_type": {
+    "hash": "81be01d9c63f2301",
+    "text": "给定一个类型不确定的值，判断该值是否被插件支持。\n\n此方法由 :meth:`is_plugin_supported_field` 的默认实现调用，以保持向后兼容性。用户应优先选择覆盖该方法。\n\nArgs:\n    value: 任意值。\n\nReturns:\n    一个布尔值，指示该值是否被插件支持。"
+  },
+  "litestar.plugins.base.OpenAPISchemaPlugin.is_undefined_sentinel": {
+    "hash": "9dcdd7b90ee027cc",
+    "text": "如果 ``value`` 应被视为未定义字段，则返回 ``True``。"
+  },
+  "litestar.plugins.base.OpenAPISchemaPlugin.to_openapi_schema": {
+    "hash": "89cd48badc5108d6",
+    "text": "给定类型注解，将其转换为 OpenAPI 模式类。\n\nArgs:\n    field_definition: 一个 :class:`OpenAPI <litestar.openapi.spec.schema.Schema>` 实例。\n    schema_creator: openapi SchemaCreator 的实例。\n\nReturns:\n    一个 :class:`OpenAPI <litestar.openapi.spec.schema.Schema>` 实例。"
+  },
+  "litestar.plugins.base.PluginRegistry.get": {
+    "hash": "3fe6cbcaf66a19ee",
+    "text": "返回已注册的 ``type_`` 插件。\n\n这应与插件协议的子类一起使用。"
+  },
+  "litestar.plugins.base.ReceiveRoutePlugin": {
+    "hash": "a50b2260468f3fcd",
+    "text": "接收添加到应用程序的路由。"
+  },
+  "litestar.plugins.base.ReceiveRoutePlugin.receive_route": {
+    "hash": "f493988f50a70f9d",
+    "text": "在应用程序注册路由时接收它们。"
+  },
+  "litestar.plugins.base.SerializationPlugin": {
+    "hash": "52a969ddbb7dd48e",
+    "text": "扩展 DTO 功能的插件抽象基类"
+  },
+  "litestar.plugins.base.SerializationPlugin.create_dto_for_type": {
+    "hash": "71bfd6156c9602db",
+    "text": "给定一个已解析的类型，创建一个 DTO 类。\n\nArgs:\n    field_definition: 一个已解析的类型。\n\nReturns:\n    一个 DTO 类。"
+  },
+  "litestar.plugins.base.SerializationPlugin.supports_type": {
+    "hash": "7204363423d3717b",
+    "text": "给定一个类型不确定的值，判断该值是否被插件支持。\n\nArgs:\n    field_definition: 已解析的类型。\n\nReturns:\n    该类型是否被插件支持。"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "litestar._openapi.schema_generation.examples._normalize_example_value": {
+    "hash": "86e201aa0bf41dab",
+    "text": "将示例值进行归一化，使其看起来更美观。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.schema_generation.examples.create_examples_for_field": {
+    "hash": "5ab9eff7e1b96df4",
+    "text": "创建一个 OpenAPI 示例实例。\n\nArgs:\n    field: 一个签名字段。\n\nReturns:\n    包含单个示例的列表。",
+    "type": "FunctionDef"
+  }
+}

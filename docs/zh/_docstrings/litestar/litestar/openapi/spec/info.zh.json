@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.info.Info": {
+    "hash": "a048c58334868104",
+    "text": "该对象提供有关 API 的元数据。\n\n客户端在需要时可以使用这些元数据，并且为了方便起见，这些元数据可以在编辑或文档生成工具中展示。",
+    "type": "ClassDef"
+  }
+}

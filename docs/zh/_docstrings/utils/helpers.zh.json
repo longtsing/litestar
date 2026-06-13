@@ -1,0 +1,37 @@
+{
+  "litestar.utils.helpers.envflag": {
+    "hash": "2a8cd1a6c02ae885",
+    "text": "将环境变量解析为布尔标志。\n\nArgs:\n    varname: 要检查的环境变量名称。\n    default: 如果环境变量未设置时返回的值。\n\nReturns:\n    对于真值（1, true, t, yes, y, on）返回 True，\n    对于假值（0, false, f, no, n, off）返回 False，\n    如果变量未设置，则返回提供的默认值。\n\nRaises:\n    LitestarException: 如果值不是已识别的布尔值。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.helpers.get_enum_string_value": {
+    "hash": "966767705dc21d18",
+    "text": "返回字符串枚举的字符串值。\n\n参见：https://github.com/litestar-org/litestar/pull/633#issuecomment-1286519267\n\nArgs:\n    value: 一个枚举或字符串。\n\nReturns:\n    一个字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.helpers.get_exception_group": {
+    "hash": "61d72b0b9ec69810",
+    "text": "获取具有版本兼容性的异常组类。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.helpers.get_name": {
+    "hash": "06575526f9ffcf1a",
+    "text": "获取对象的 ``__name__``。\n\nArgs:\n    value: 任意对象。\n\nReturns:\n    名称字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.helpers.unique_name_for_scope": {
+    "hash": "ec70e5d2abe8fea5",
+    "text": "在 ``scope`` 内创建一个源自 ``base_name`` 的唯一名称",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.helpers.unwrap_partial": {
+    "hash": "18df01239c946190",
+    "text": "解包 partial 对象，返回底层的可调用对象。\n\nArgs:\n    value: 一个 partial 函数。\n\nReturns:\n    Callable",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.helpers.url_quote": {
+    "hash": "bda3210b3bb11b2b",
+    "text": "对 URL 进行引用。\n\nArgs:\n    value: 一个 URL。\n\nReturns:\n    一个被引用的 URL。",
+    "type": "FunctionDef"
+  }
+}

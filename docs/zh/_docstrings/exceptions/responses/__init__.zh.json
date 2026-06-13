@@ -1,0 +1,18 @@
+{
+  "litestar.exceptions.responses.ExceptionResponseContent": {
+    "hash": "487143b3925468b2",
+    "text": "表示异常响应的内容。"
+  },
+  "litestar.exceptions.responses.ExceptionResponseContent.to_response": {
+    "hash": "166d487b77d2e14a",
+    "text": "从模型属性创建响应。\n\nReturns:\n    一个响应实例。"
+  },
+  "litestar.exceptions.responses.create_debug_response": {
+    "hash": "6b60792ce23a6f07",
+    "text": "从异常创建调试响应。\n\nArgs:\n    request: 触发异常的请求。\n    exc: 一个异常。\n\nReturns:\n    Response: 根据异常详情构建的调试响应。"
+  },
+  "litestar.exceptions.responses.create_exception_response": {
+    "hash": "27416e3d2094b016",
+    "text": "从异常构建响应。\n\nNotes:\n    - 对于 :class:`HTTPException <litestar.exceptions.HTTPException>` 的实例或其他具有 ``status_code`` 属性（例如 Starlette 异常）的异常类，状态码从异常中获取，否则响应状态为 ``HTTP_500_INTERNAL_SERVER_ERROR``。\n\nArgs:\n    request: 触发异常的请求。\n    exc: 一个异常。\n\nReturns:\n    Response: 根据异常详情构建的 HTTP 响应。"
+  }
+}

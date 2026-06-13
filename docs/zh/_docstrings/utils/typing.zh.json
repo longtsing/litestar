@@ -1,0 +1,57 @@
+{
+  "litestar.utils.typing.expand_type_var_in_type_hint": {
+    "hash": "80d26bef4dbb3d36",
+    "text": "展开 type_hint 中任意参数的 TypeVar\n\nArgs:\n    type_hint: 通过调用 `get_type_hints` 或 `get_fn_type_hints` 获得的参数到类型的映射\n    namespace: TypeVar 到具体类型的映射\n\nReturns:\n    已展开任意 TypeVar 参数的 type_hint",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.get_instantiable_origin": {
+    "hash": "0b47b627c5afe2c7",
+    "text": "获取一个对于给定起源类型而言可安全实例化的类型。\n\n如果内置集合类型在注解时未指定泛型参数，例如 ``a: dict``，则起源类型将为 ``None``。在这种情况下，如果存在可实例化的类型，我们可以利用该注解来确定正确的可实例化类型。\n\nArgs:\n    origin_type: 一个类型 - 即 :func:`get_origin()` 的返回值。\n    annotation: 与起源类型关联的类型注解。应将其从任何包装类型（如 ``Annotated``）中解包。\n\nReturns:\n    一个对于给定起源类型而言可安全实例化的内置类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.get_origin_or_inner_type": {
+    "hash": "ab5d2cfa13f511a0",
+    "text": "获取原始类型或解包它。对于非泛型类型返回 None。\n\nArgs:\n    annotation: 类型注解。\n\nReturns:\n    任意类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.get_safe_generic_origin": {
+    "hash": "7bb09f680bb36792",
+    "text": "获取一种在所有支持的 Python 版本中均可安全用作泛型类型的类型。\n\n如果内置集合类型在注解时未指定泛型参数，例如 ``a: dict``，则其起源类型（origin type）将为 ``None``。在这种情况下，如果存在对应的泛型类型，我们可以利用该注解来确定正确的泛型类型。\n\nArgs:\n    origin_type: 一个类型 - 即 :func:`get_origin()` 的返回值。\n    annotation: 与起源类型关联的类型注解。应已从任何包装类型（如 ``Annotated``）中解包。\n\nReturns:\n    如果存在，则返回给定类型在 ``typing`` 模块中的等价类型；否则返回原始类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.get_type_hints_with_generics_resolved": {
+    "hash": "61dd56011e8ce8b2",
+    "text": "在尽可能解析泛型类型后，获取给定对象的类型提示。\n\nArgs:\n    annotation: 类型注解。\n    globalns: 全局命名空间。\n    localns: 局部命名空间。\n    include_extras: 一个标志，指示是否包含 ``Annotated[T, ...]``。\n    type_hints: 已解析的类型提示",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.make_non_optional_union": {
+    "hash": "e2e3f47fee2c6ab1",
+    "text": "创建一个排除 ``NoneType`` 的 :data:`Union <typing.Union>` 类型。\n\nArgs:\n    annotation: 类型注解。\n\nReturns:\n    包含所有原始成员（除 ``NoneType`` 外）的联合类型。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.normalize_type_annotation": {
+    "hash": "c52a886173654489",
+    "text": "将类型注解标准化为规范形式。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.safe_generic_origin_map": {
+    "hash": "e4e9cf1eec12c991",
+    "text": "一个将类型映射到等效类型的字典，这些等效类型在所有 Python 版本中均可安全地用作泛型。\n\n这是必要的，因为我们偶尔需要重建具有不同参数和类型的泛型外部类型。",
+    "type": "Variable"
+  },
+  "litestar.utils.typing.unwrap_annotation": {
+    "hash": "02f026c17c778e5c",
+    "text": "移除“包装器”注解类型。\n\n例如 ``Annotated``、``ReadOnly``、``Required`` 和 ``NotRequired``。\n\nNote:\n    ``annotation`` 应通过 :func:`get_type_hints()` 并设置 ``include_extras=True`` 获取。这确保根据 PEP 593 规范，任何嵌套的 ``Annotated`` 类型都被扁平化。\n\nArgs:\n    annotation: 一个类型注解。\n\nReturns:\n    一个元组，包含解包后的注解及任何 ``Annotated`` 元数据，以及遇到的所有包装器类型的集合。",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.unwrap_new_type": {
+    "hash": "9a93add65e9627a2",
+    "text": "解包（嵌套的）``typing.NewType``",
+    "type": "FunctionDef"
+  },
+  "litestar.utils.typing.wrapper_type_set": {
+    "hash": "d5ab88cf31e385a7",
+    "text": "始终在其第一个参数中包含包装类型注解的类型。",
+    "type": "Variable"
+  }
+}

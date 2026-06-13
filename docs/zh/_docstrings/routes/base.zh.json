@@ -1,0 +1,22 @@
+{
+  "litestar.routes.base.BaseRoute": {
+    "hash": "e5385e6178301657",
+    "text": "Litestar 使用的基路由类。\n\n它是一个旨在被扩展的抽象类。"
+  },
+  "litestar.routes.base.BaseRoute.__init__": {
+    "hash": "cd061cbbf1249599",
+    "text": "初始化路由。\n\nArgs:\n    path: 路由的基础路径"
+  },
+  "litestar.routes.base.BaseRoute._parse_path": {
+    "hash": "c81fdcb73fd33ade",
+    "text": "标准化并解析路径。\n\n将路径拆分为组件列表，并解析任何路径参数。同时构建与 OpenAPI 兼容的路径，该路径不包含路径参数的类型。\n\nReturns:\n    一个包含标准化路径、OpenAPI 格式路径和解析后的组件列表的 3 元组。"
+  },
+  "litestar.routes.base.BaseRoute._validate_path_parameter": {
+    "hash": "4b6eacd314a0852b",
+    "text": "验证路径参数是否符合所需的格式和数据类型。\n\nRaises:\n    ImproperlyConfiguredException: 如果参数格式无效。"
+  },
+  "litestar.routes.base.BaseRoute.handle": {
+    "hash": "b7b2fb2d9f41e2b0",
+    "text": "路由的 ASGI 应用。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None"
+  }
+}

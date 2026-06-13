@@ -1,0 +1,17 @@
+{
+  "litestar._openapi.plugin.OpenAPIPlugin.create_openapi_router": {
+    "hash": "609e2bc0f4083131",
+    "text": "创建用于提供 OpenAPI 文档和模式文件的路由器。\n\n对于每个 OpenAPI 渲染插件，都会创建一个路由以提供该插件的文档站点。\n\n会添加一个处理器，用于为任何未由插件配置的模式路径提供 404 页面。\n\n如果未配置，会添加一个处理器以提供 JSON OpenAPI 模式文件。\n\n对于每个插件，都会使用路由器实例调用该插件的 `receive_router` 方法。\n\nReturns:\n    路由器。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.plugin.OpenAPIPlugin.create_openapi_router.create_handler": {
+    "hash": "d3d27a3c8b9a4725",
+    "text": "创建用于提供插件文档站点的处理器。\n\n如果插件是默认插件，除了为插件配置的路径创建处理器外，还会为根路径创建处理器。\n\n如果插件配置了用于提供 OpenAPI 模式文件的路径，则将 `openapi_json_found` 标志设置为 `True`，以避免为提供 JSON 模式文件创建处理器。\n\nArgs:\n    plugin_: 要为其创建处理器的插件。\n\nReturns:\n    处理器。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.plugin.handle_schema_path_not_found": {
+    "hash": "234baf3d81f39a2c",
+    "text": "处理从未找到的架构路径返回 HTML 格式错误的处理器。\n\n这保留了对基于 Controller 的 OpenAPI 实现的后向兼容性。",
+    "type": "FunctionDef"
+  }
+}

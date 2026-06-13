@@ -1,0 +1,102 @@
+{
+  "litestar.datastructures.state.ImmutableState": {
+    "hash": "41a4a4a42d5ee16e",
+    "text": "一个用于存储任意状态的对象。\n\n它可以使用点符号访问，同时暴露类似字典的功能。",
+    "type": "ClassDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__bool__": {
+    "hash": "9ec9c44fd9e16522",
+    "text": "返回一个布尔值，指示被包装的字典实例是否包含值。",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__copy__": {
+    "hash": "1836276ca6a75029",
+    "text": "返回给定状态对象的浅拷贝。\n\n自定义内置 `copy` 函数的工作方式。",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__get_validators__": {
+    "hash": "c3dea168f5b4c908",
+    "text": "SignatureModel 中允许自定义解析状态实例的 Pydantic 兼容方法。",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__getattr__": {
+    "hash": "82734cdff1bd2cb8",
+    "text": "从包装的状态对象中，使用属性表示法获取对应键的值。\n\nArgs:\n    key: 要检索的键\n\nRaises:\n    AttributeError: 如果给定的属性未设置。\n\nReturns:\n    检索到的值",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__getitem__": {
+    "hash": "065c4575682d2ec9",
+    "text": "使用订阅符号从包装的状态对象中获取对应键的值。\n\nArgs:\n    key: 要访问的键。\n\nRaises:\n    KeyError\n\nReturns:\n    来自包装状态实例的值。",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__init__": {
+    "hash": "d7845742cf8d1aac",
+    "text": "初始化一个 ``ImmutableState`` 实例。\n\nArgs:\n     state: 用于初始化状态的对象。可以是字典、:class:`ImmutableState` 的实例，或键值对的元组。\n     deep_copy: 是否对传入的状态进行“深拷贝”。\n\nExamples:\n    .. code-block:: python\n\n        from litestar.datastructures import ImmutableState\n\n        state_dict = {\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n        state = ImmutableState(state_dict)\n\n        # state 实现了 Mapping 类型：\n        assert len(state) == 3\n        assert \"first\" in state\n        assert not \"fourth\" in state\n        assert state[\"first\"] == 1\n        assert [(k, v) for k, v in state.items()] == [(\"first\", 1), (\"second\", 2), (\"third\", 3)]\n\n        # state 实现了 __bool__\n        assert state  # 当 state 有值时为真。\n        assert not State()  # 当 state 为空时为假。\n\n        # 它有一个 'dict' 方法用于获取底层字典的浅拷贝\n        inner_dict = state.dict()\n        assert inner_dict == state_dict\n\n        # 你也可以通过调用 'mutable_copy' 获取一个可变 State\n        mutable_state = state.mutable_copy()\n        del state[\"first\"]\n        assert \"first\" not in state",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__iter__": {
+    "hash": "2bc5b0761ce3d420",
+    "text": "返回一个迭代包装后的状态字典的迭代器。\n\nReturns:\n    字符串的迭代器",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.__len__": {
+    "hash": "a282bb7c0d22ebfe",
+    "text": "返回包装后的状态字典的长度。\n\nReturns:\n    一个整数",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.dict": {
+    "hash": "5e0d00711dda9b89",
+    "text": "返回包装字典的浅拷贝。\n\nReturns:\n    一个 dict",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.mutable_copy": {
+    "hash": "6cabe16be5f8c83b",
+    "text": "返回状态对象的可变副本。\n\nReturns:\n    一个 ``State``",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.ImmutableState.validate": {
+    "hash": "29dcc7ea0adca7d5",
+    "text": "在 SignatureModel 中解析一个值并实例化状态。这允许我们使用状态的自定义子类，并允许用户决定状态是可变的还是不可变的。\n\nArgs:\n    value: 用于初始化状态实例的值。\n\nReturns:\n    一个 ImmutableState 实例",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.State": {
+    "hash": "41a4a4a42d5ee16e",
+    "text": "一个用于存储任意状态的对象。\n\n它可以使用点号表示法访问，同时提供类似字典的功能。",
+    "type": "ClassDef"
+  },
+  "litestar.datastructures.state.State.__delattr__": {
+    "hash": "ab67b5fe75e35639",
+    "text": "使用属性表示法从包装的状态对象中删除指定键的值。\n\nArgs:\n    key: 要删除的键\n\nRaises:\n    AttributeError: 如果给定的属性未设置。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.State.__delitem__": {
+    "hash": "ff8e911d40e52049",
+    "text": "使用订阅符号从包装的状态对象中删除指定键的值。\n\nArgs:\n    key: 要删除的键\n\nRaises:\n    KeyError: 如果给定的属性未设置。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.State.__init__": {
+    "hash": "65893f3f21964acc",
+    "text": "使用可选值初始化 ``State`` 实例。\n\nArgs:\n     state: 用于初始化状态的对象。可以是 dict、'ImmutableState' 的实例，或键值对的元组。\n     deep_copy: 是否对传入的状态进行 'deepcopy'。\n\n.. code-block:: python\n    :caption: 示例\n\n    from litestar.datastructures import State\n\n    state_dict = {\"first\": 1, \"second\": 2, \"third\": 3, \"fourth\": 4}\n    state = State(state_dict)\n\n    # 可以使用 '.' 符号访问 state\n    assert state.fourth == 4\n    del state.fourth\n\n    # state 实现了 Mapping 类型：\n    assert len(state) == 3\n    assert \"first\" in state\n    assert not \"fourth\" in state\n    assert state[\"first\"] == 1\n    assert [(k, v) for k, v in state.items()] == [(\"first\", 1), (\"second\", 2), (\"third\", 3)]\n\n    state[\"fourth\"] = 4\n    assert \"fourth\" in state\n    del state[\"fourth\"]\n\n    # state 实现了 __bool__\n    assert state  # 当 state 有值时为真。\n    assert not State()  # 当 state 没有值时为假。\n\n    # 它支持浅拷贝\n    copied_state = state.copy()\n    del copied_state.first\n    assert state.first\n\n    # 它有一个 'dict' 方法，用于获取底层字典的浅拷贝\n    inner_dict = state.dict()\n    assert inner_dict == state_dict\n\n    # 可以通过调用 'immutable_copy' 获取状态的不可变副本\n    immutable_copy = state.immutable_copy()\n    del immutable_copy.first  # 抛出 AttributeError",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.State.__setattr__": {
+    "hash": "1ac3579949adcb3a",
+    "text": "使用属性表示法在状态中设置一个项。\n\nArgs:\n    key: 要设置的键。\n    value: 要设置的值。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.State.__setitem__": {
+    "hash": "dfdc374af0b9412b",
+    "text": "使用订阅符号在状态中设置一个项。\n\nArgs:\n    key: 要设置的键。\n    value: 要设置的值。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.State.copy": {
+    "hash": "ad2fff0028ed2b8f",
+    "text": "返回状态对象的浅拷贝。\n\nReturns:\n    一个 ``State``",
+    "type": "FunctionDef"
+  },
+  "litestar.datastructures.state.State.immutable_copy": {
+    "hash": "350e76dc6bbcfba1",
+    "text": "返回状态对象的浅拷贝，并将其设置为冻结状态。\n\nReturns:\n    一个 ``State``",
+    "type": "FunctionDef"
+  }
+}

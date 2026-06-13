@@ -1,0 +1,37 @@
+{
+  "litestar.response.file.ASGIFileResponse": {
+    "hash": "3d24c19b17aa42af",
+    "text": "一个低层级的 ASGI 响应，用于将文件作为响应体进行流式传输。"
+  },
+  "litestar.response.file.ASGIFileResponse.__init__": {
+    "hash": "7f232dd21a6a2bca",
+    "text": "一个底层的 ASGI 响应，将文件作为响应体进行流式传输。\n\nArgs:\n    background: 在响应发送后执行的后台任务或后台任务列表。\n    chunk_size: 使用的块大小。\n    content_disposition_type: ``Content-Disposition`` 的类型。可以是 ``inline`` 或 ``attachment``。\n    content_length: 响应内容长度。\n    cookies: 响应 Cookie。\n    encoding: 响应编码。\n    etag: 一个 ETag。\n    file_info: 文件信息。\n    file_path: 文件路径。\n    file_system: 文件系统适配器。\n    filename: 文件名。\n    headers: 标头字典。\n    headers: 响应标头。\n    is_head_response: 一个布尔值，指示响应是否为 HEAD 响应。\n    media_type: 文件的媒体类型。\n    status_code: 响应状态码。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.file.ASGIFileResponse.send_body": {
+    "hash": "18dc8018a1a913e0",
+    "text": "发出与响应体相关的事件流。\n\nArgs:\n    send: ASGI send 函数。\n    receive: ASGI receive 函数。\n\nReturns:\n    None"
+  },
+  "litestar.response.file.ASGIFileResponse.start_response": {
+    "hash": "6a817031ca467597",
+    "text": "发出响应的开始事件。此事件包含标头和状态码。\n\nArgs:\n    send: ASGI send 函数。\n\nReturns:\n    None"
+  },
+  "litestar.response.file.File": {
+    "hash": "ce03c6757eec9a19",
+    "text": "一个将文件作为响应体进行流式传输的响应。"
+  },
+  "litestar.response.file.File.__init__": {
+    "hash": "002d15d6050d7e6e",
+    "text": "从文件系统中发送文件。\n\nArgs:\n    path: 支持格式之一的文件路径。\n    background: 一个 :class:`BackgroundTask <.background_tasks.BackgroundTask>` 实例或\n        :class:`BackgroundTasks <.background_tasks.BackgroundTasks>`，用于在响应完成后执行。\n        默认为 None。\n    chunk_size: 流式传输文件时使用的块大小。默认为 1MB。\n    content_disposition_type: ``Content-Disposition`` 的类型。可以是 ``inline`` 或 ``attachment``。\n    cookies: 要在响应 ``Set-Cookie`` 标头下设置的一组 :class:`Cookie <.datastructures.Cookie>` 实例。\n    encoding: 用于响应标头的编码。\n    etag: 可选的 :class:`ETag <.datastructures.ETag>` 实例。如果未提供，将生成一个 etag。\n    file_info: 调用 :meth:`file_system.info <litestar.file_system.BaseFileSystem.info>` 的输出结果。\n    file_system: 从中加载文件的文件系统。\n        :class:`~litestar.file_system.BaseFileSystem`、:class:`fsspec.spec.AbstractFileSystem`、\n        :class:`fsspec.asyn.AsyncFileSystem` 的实例将直接使用。如果传入的是字符串，则使用它从\n        :class:`~litestar.file_system.FileSystemRegistry` 中查找对应的文件系统。如果未提供，\n        文件将从 :attr:`~litestar.file_system.FileSystemRegistry.default` 加载。\n    filename: 要在标头中设置的可选文件名。\n    headers: 以字符串为键的响应标头字典。标头键不区分大小写。\n    media_type: 响应 ``Content-Type`` 标头的值。如果未提供，如果提供了文件名且标准库支持，\n        则值将从文件名派生，否则将默认为 ``application/octet-stream``。\n    status_code: HTTP 状态码。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.file.File.to_asgi_response": {
+    "hash": "e200b522bdaf6d29",
+    "text": "创建 :class:`ASGIFileResponse <litestar.response.file.ASGIFileResponse>` 实例。\n\nArgs:\n    background: 响应发送后执行的后台任务。\n    cookies: 要在响应中设置的 Cookie 列表。\n    headers: 要与响应头合并的额外头信息。响应头具有优先权。\n    is_head_response: 响应是否为 HEAD 响应。\n    media_type: 响应的媒体类型。如果响应上已设置 ``media_type``，则忽略此参数。\n    request: :class:`Request <.connection.Request>` 实例。\n    status_code: 响应的状态码。如果响应上已设置 ``status_code``，则忽略此参数。\n    type_encoders: 用于对响应内容进行编码的类型编码器字典。\n\nReturns:\n    一个低级别的 ASGI 文件响应。",
+    "type": "FunctionDef"
+  },
+  "litestar.response.file.create_etag_for_file": {
+    "hash": "2adb5983b4715354",
+    "text": "创建 etag。\n\nNotes:\n    - 该函数源自 flask。\n\nReturns:\n    一个 etag。"
+  }
+}

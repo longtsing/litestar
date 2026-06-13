@@ -1,0 +1,12 @@
+{
+  "litestar._layers.utils.narrow_response_cookies": {
+    "hash": "d5602d547c360ee8",
+    "text": "给定作为 :class:`typing.Mapping` 的 :class:`.types.ResponseCookies`，从中创建 :class:`.datastructures.cookie.Cookie` 列表，否则原样返回 ``cookies``。",
+    "type": "FunctionDef"
+  },
+  "litestar._layers.utils.narrow_response_headers": {
+    "hash": "777eac0d3d46233e",
+    "text": "给定作为 :class:`typing.Mapping` 的 :class:`.types.ResponseHeaders`，从中创建 :class:`.datastructures.response_header.ResponseHeader` 的元组，否则原样返回 ``headers``。",
+    "type": "FunctionDef"
+  }
+}

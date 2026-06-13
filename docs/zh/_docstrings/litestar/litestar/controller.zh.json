@@ -1,0 +1,22 @@
+{
+  "litestar.controller.Controller": {
+    "hash": "2ae75bb934689cc8",
+    "text": "Litestar 控制器类。\n\n子类化此类以创建类似“视图”的组件并利用面向对象编程（OOP）。",
+    "type": "ClassDef"
+  },
+  "litestar.controller.Controller.__init__": {
+    "hash": "cb9a5ca7641292da",
+    "text": "初始化控制器。\n\n应仅由路由器在控制器注册过程中调用。",
+    "type": "FunctionDef"
+  },
+  "litestar.controller.Controller.get_route_handlers": {
+    "hash": "3bf0a18c18047f9c",
+    "text": "获取控制器的路由处理器\n\nReturns:\n    一个列表，包含控制器上定义的路由处理器的副本",
+    "type": "FunctionDef"
+  },
+  "litestar.controller.Controller.validate_route_handlers": {
+    "hash": "b0fa92bb7ee3cd3e",
+    "text": "验证控制器上的路径与装饰器方法或类型的组合是否唯一。\n\nArgs:\n    route_handlers: 控制器的路由处理器。\n\nRaises:\n    ImproperlyConfiguredException\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  }
+}

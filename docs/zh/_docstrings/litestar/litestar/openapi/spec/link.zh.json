@@ -1,0 +1,7 @@
+{
+  "litestar.openapi.spec.link.Link": {
+    "hash": "1b6717fd5213da9f",
+    "text": "``Link object`` 表示响应在运行时可能存在的链接。链接的存在并不保证调用者能够成功调用它，而是提供了响应与其他操作之间已知的关系和遍历机制。\n\n与 _动态_ 链接（即 **在** 响应负载中提供的链接）不同，OAS 链接机制不需要在运行时响应中包含链接信息。\n\n为了计算链接并提供执行指令，使用 `runtime expression <https://spec.openapis.org/oas/v3.1.0#runtimeExpression>`_ 来访问操作中的值，并在调用链接操作时将其用作参数。",
+    "type": "ClassDef"
+  }
+}

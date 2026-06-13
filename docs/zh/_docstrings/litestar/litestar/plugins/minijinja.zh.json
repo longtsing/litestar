@@ -1,0 +1,52 @@
+{
+  "litestar.plugins.minijinja": {
+    "hash": "2952395abbf3e4d3",
+    "text": "Litestar 的 MiniJinja 模板引擎集成。",
+    "type": "Module"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplate": {
+    "hash": "bfc8019151831472",
+    "text": "初始化一个模板。\n\nArgs:\n    template: 底层 minijinja 引擎使用的基础 ``MiniJinjaTemplate``",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplate.render": {
+    "hash": "9c7e1dbeffde27b2",
+    "text": "渲染模板。\n\nArgs:\n    args: 传递给引擎 ``render`` 函数的位置参数\n    kwargs: 传递给引擎 ``render`` 函数的关键字参数\n\nReturns:\n    渲染后的模板字符串",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplateEngine": {
+    "hash": "ab7949ed3d1ef2b7",
+    "text": "引擎实例。",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplateEngine.__init__": {
+    "hash": "53f12f1237d68229",
+    "text": "基于 Minijinja 的 TemplateEngine。\n\nArgs:\n    directory: 提供模板的直接路径或目录路径列表。\n    engine_instance: 一个 Minijinja Environment 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplateEngine.from_environment": {
+    "hash": "4c91563858d4ce32",
+    "text": "从现有的 minijinja Environment 实例创建 MiniJinjaTemplateEngine。\n\nArgs:\n    minijinja_environment (Environment): 一个 minijinja Environment 实例。\n\nReturns:\n    MiniJinjaTemplateEngine 实例",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplateEngine.get_template": {
+    "hash": "6ff43297426f7894",
+    "text": "通过将其名称（点分路径）与一个或多个指定目录中的文件进行匹配，来检索模板。\n\nArgs:\n    template_name: 点分路径\n\nReturns:\n    MiniJinjaTemplate 实例\n\nRaises:\n    TemplateNotFoundException: 如果未找到模板。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplateEngine.register_template_callable": {
+    "hash": "7c37f486cbe0f3ac",
+    "text": "在模板引擎上注册一个可调用对象。\n\nArgs:\n    key: 可调用对象的键，即在模板内部用于调用该可调用对象的值。\n    template_callable: 要注册的可调用对象。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.minijinja.MiniJinjaTemplateEngine.render_string": {
+    "hash": "5928ead97889b7df",
+    "text": "从给定上下文中渲染字符串模板。\n\nArgs:\n    template_string: 要渲染的模板字符串。\n    context: 要传递给模板的变量字典。\n\nReturns:\n    渲染后的模板字符串。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.minijinja._transform_state": {
+    "hash": "944ae3fa45fe9605",
+    "text": "将模板可调用对象转换为以 ``StateProtocol`` 实例作为第一个参数。\n\n这用于包装像 ``url_for()`` 这样以映射（mapping）作为第一个参数的可调用对象，以便它们能够与 minijinja 配合使用，因为 minijinja 会将 ``StateProtocol`` 实例作为第一个参数传递。",
+    "type": "FunctionDef"
+  }
+}

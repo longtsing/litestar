@@ -1,0 +1,27 @@
+{
+  "litestar.middleware.compression.middleware.CompressionMiddleware": {
+    "hash": "7a03456413e7dcd1",
+    "text": "压缩中间件包装器。\n\n这是一个允许进行通用压缩配置/处理中间件的包装器。",
+    "type": "ClassDef"
+  },
+  "litestar.middleware.compression.middleware.CompressionMiddleware.__call__": {
+    "hash": "93c0cc92c5a259ae",
+    "text": "ASGI 可调用对象。\n\nArgs:\n    scope: ASGI 连接作用域。\n    receive: ASGI 接收函数。\n    send: ASGI 发送函数。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.middleware.compression.middleware.CompressionMiddleware.__init__": {
+    "hash": "f45c5d0be5665bf4",
+    "text": "初始化 ``CompressionMiddleware``\n\nArgs:\n    app: 要调用的下一个 ``next`` ASGI 应用。\n    config: ``CompressionConfig`` 的实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper": {
+    "hash": "42cafad8eeb1767f",
+    "text": "包装 ``send`` 以处理 brotli 压缩。\n\nArgs:\n    send: ASGI send 函数。\n    compression_encoding: 使用的压缩编码。\n    scope: ASGI 连接作用域。\n\nReturns:\n    一个 ASGI send 函数。",
+    "type": "FunctionDef"
+  },
+  "litestar.middleware.compression.middleware.CompressionMiddleware.create_compression_send_wrapper.send_wrapper": {
+    "hash": "109f2c342e00ab33",
+    "text": "使用 brotli 处理并压缩 HTTP 消息。\n\nArgs:\n    message (Message): 一个 ASGI 消息。",
+    "type": "AsyncFunctionDef"
+  }
+}

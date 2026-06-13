@@ -1,0 +1,47 @@
+{
+  "litestar.stores.memory.MemoryStore": {
+    "hash": "79243eca50b051c6",
+    "text": "内存中的原子、异步键值存储。",
+    "type": "ClassDef"
+  },
+  "litestar.stores.memory.MemoryStore.__init__": {
+    "hash": "18f9e5e70a254569",
+    "text": "初始化 :class:`MemoryStore`",
+    "type": "FunctionDef"
+  },
+  "litestar.stores.memory.MemoryStore.delete": {
+    "hash": "1d5985dd9f903481",
+    "text": "删除一个值。\n\n如果该键不存在，则不执行任何操作。\n\nArgs:\n    key: 要删除的值的键",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.memory.MemoryStore.delete_all": {
+    "hash": "1d5c45a3e8f22700",
+    "text": "删除所有存储的值。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.memory.MemoryStore.delete_expired": {
+    "hash": "357766f74da9f4df",
+    "text": "删除过期项。\n\n由于过期项通常仅在访问时（即调用 :meth:`.get` 时）才会被清除，因此应定期调用此方法以释放内存。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.memory.MemoryStore.exists": {
+    "hash": "a4186f53ed052ca3",
+    "text": "检查给定的 ``key`` 是否存在。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.memory.MemoryStore.expires_in": {
+    "hash": "c75cac70e7cc8cd5",
+    "text": "获取 ``key`` 的过期时间（秒）。如果不存在该 ``key`` 或未设置过期时间，则返回 ``None``。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.memory.MemoryStore.get": {
+    "hash": "0304954c2a8af614",
+    "text": "获取一个值。\n\nArgs:\n    key: 与值关联的键\n    renew_for: 如果提供且该值已设置初始过期时间，则将过期时间延长 ``renew_for`` 秒。如果该值未设置过期时间，则此操作无效\n\nReturns:\n    如果 ``key`` 对应的值存在且未过期，则返回该值；否则返回 ``None``",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar.stores.memory.MemoryStore.set": {
+    "hash": "7025011b98b86296",
+    "text": "设置一个值。\n\nArgs:\n    key: 用于关联值的键\n    value: 要存储的值\n    expires_in: 键被视为过期前的秒数\n\nReturns:\n    ``None``",
+    "type": "AsyncFunctionDef"
+  }
+}

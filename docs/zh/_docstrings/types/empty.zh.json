@@ -1,0 +1,7 @@
+{
+  "litestar.types.empty._EmptyEnum": {
+    "hash": "02a5381ed9841c08",
+    "text": "用作占位符的哨兵枚举。",
+    "type": "ClassDef"
+  }
+}

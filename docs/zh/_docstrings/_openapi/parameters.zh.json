@@ -1,0 +1,57 @@
+{
+  "litestar._openapi.parameters.ParameterCollection": {
+    "hash": "9bfe6ebba4e51932",
+    "text": "促进参数的条件去重。\n\n如果为某个处理器生成了多个同名的参数，且两个 ``Parameter`` 实例相同，则忽略条件（保留第一个实例，忽略任何重复项）。如果 ``Parameter`` 实例不相同，则抛出异常。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.parameters.ParameterCollection.__init__": {
+    "hash": "a959984b71f47827",
+    "text": "初始化 ``ParameterCollection``。\n\nArgs:\n    route_handler: 关联的路由处理器",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.ParameterCollection.add": {
+    "hash": "9882bc302ccdbe08",
+    "text": "向集合中添加一个 ``Parameter``。\n\n如果已存在具有相同名称和类型的参数，则忽略该参数。\n\n如果已存在具有相同名称但类型不同的参数，则抛出 ``ImproperlyConfiguredException``。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.ParameterCollection.list": {
+    "hash": "a129d8152c0d1418",
+    "text": "返回集合中所有 ``Parameter`` 的列表。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.ParameterFactory": {
+    "hash": "f16644476add94a2",
+    "text": "为给定路由处理器创建 OpenAPI 参数的工厂。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.parameters.ParameterFactory.__init__": {
+    "hash": "b231b2231797459d",
+    "text": "初始化 ParameterFactory。\n\nArgs:\n    context: OpenAPI 上下文。\n    route_handler: 路由处理器。\n    path_parameters: 路由的路径参数。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.ParameterFactory.create_parameter": {
+    "hash": "d97d8ff91e4f8145",
+    "text": "为字段定义创建 OpenAPI 参数实例。\n\nArgs:\n    field_definition: 字段定义。\n    parameter_name: 参数名称。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.ParameterFactory.create_parameters_for_field_definitions": {
+    "hash": "cc5b12f416111b9c",
+    "text": "将参数模型添加到给定字段定义的处理程序集合中。\n\nArgs:\n    fields: 字段定义。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.ParameterFactory.create_parameters_for_handler": {
+    "hash": "09d91362f50891ca",
+    "text": "为给定的 PathHandler 创建路径/查询/头部参数模型列表。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.ParameterFactory.get_layered_parameter": {
+    "hash": "715d2e49028d1a95",
+    "text": "为在层上定义了 `KwargDefinition` 的字段定义创建参数。\n\nArgs:\n    field_name: 字段名称。\n    field_definition: 字段定义。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.parameters.create_parameters_for_handler": {
+    "hash": "09d91362f50891ca",
+    "text": "为给定的 PathHandler 创建路径/查询/头部参数模型列表。",
+    "type": "FunctionDef"
+  }
+}

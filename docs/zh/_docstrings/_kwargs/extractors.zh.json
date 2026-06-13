@@ -1,0 +1,92 @@
+{
+  "litestar._kwargs.extractors.body_extractor": {
+    "hash": "9fcfc35dbb1f63e8",
+    "text": "从请求实例中提取主体。\n\nNotes:\n    - 此提取器将协程（Coroutine）设置为 kwargs 中的值。这些协程将在后续阶段解析。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序中的 kwargs。\n\nReturns:\n    主体（Body）值。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.cookies_extractor": {
+    "hash": "e52e152caea2836b",
+    "text": "从连接中提取 Cookie 并将其插入到注入到处理程序的 kwargs 中。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序中的 kwargs。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.create_connection_value_extractor": {
+    "hash": "d2227ec9d32178bd",
+    "text": "创建 kwargs 提取函数。\n\nArgs:\n    kwargs_model: KwargsModel 实例。\n    connection_key: 要使用的属性键。\n    expected_params: 预期参数集合。\n    parser: 可选的解析函数。\n\nReturns:\n    一个提取函数。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.create_data_extractor": {
+    "hash": "4afddbd82ef97c84",
+    "text": "为请求体创建一个提取器。\n\nArgs:\n    kwargs_model: KwargsModel 实例。\n\nReturns:\n    用于请求体的提取器。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.create_dto_extractor": {
+    "hash": "b378aee736188dd2",
+    "text": "创建 DTO 数据提取器。\n\nReturns:\n    一个提取器函数。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.create_multipart_extractor": {
+    "hash": "cf4f839faf03d077",
+    "text": "创建一个多部分表单数据提取器。\n\nArgs:\n    field_definition: 一个 FieldDefinition 实例。\n    is_data_optional: 布尔值，指定该字段是否为可选。\n    data_dto: 数据 DTO 类型（如果为处理器配置了该类型）。\n\nReturns:\n    一个提取器函数。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.create_query_default_dict": {
+    "hash": "ef98328f351123d3",
+    "text": "将元组列表转换为默认字典。确保非列表值不会被包装在列表中。\n\nArgs:\n    parsed_query: 已解析的查询元组列表。\n    sequence_query_parameter_names: 应被包装在列表中的查询参数集合。\n\nReturns:\n    一个默认字典",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.create_url_encoded_data_extractor": {
+    "hash": "7f4974e592788fd3",
+    "text": "为 URL 编码的表单数据创建提取器。\n\nArgs:\n    is_data_optional: 布尔值，指定该字段是否为可选。\n    data_dto: 如果为处理器配置了数据 DTO 类型，则为此类型。\n\nReturns:\n    一个提取器函数。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.headers_extractor": {
+    "hash": "055d9a4c725689a3",
+    "text": "从连接中提取标头，并将其插入到注入到处理程序的 kwargs 中。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序中的 kwargs。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.json_extractor": {
+    "hash": "f756078b8ad882c2",
+    "text": "从请求中提取数据并将其插入到注入到处理程序中的 kwargs 中。\n\nNotes:\n    - 此提取器在 kwargs 中设置一个协程作为值。这些协程将在稍后阶段解析。\n\nArgs:\n    connection: ASGI 连接实例。\n\nReturns:\n    JSON 值。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.msgpack_extractor": {
+    "hash": "98f93231ddbd5889",
+    "text": "从请求中提取数据并将其插入到注入到处理程序中的 kwargs 中。\n\nNotes:\n    - 此提取器在 kwargs 中设置一个协程作为值。这些协程将在后续阶段解析。\n\nArgs:\n    connection: ASGI 连接实例。\n\nReturns:\n    MessagePack 值。",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.parse_connection_headers": {
+    "hash": "6443fc7fbcaa670d",
+    "text": "解析头部参数并将结果缓存到作用域中。\n\nArgs:\n    connection: ASGI 连接实例。\n    _: KwargsModel 实例。\n\nReturns:\n    一个 Headers 实例",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.parse_connection_query_params": {
+    "hash": "311354b76c091f4d",
+    "text": "解析查询参数并将结果缓存到作用域中。\n\nArgs:\n    connection: ASGI 连接实例。\n    kwargs_model: KwargsModel 实例。\n\nReturns:\n    解析后的值字典。",
+    "type": "FunctionDef"
+  },
+  "litestar._kwargs.extractors.query_extractor": {
+    "hash": "3d996f80f8b7f253",
+    "text": "从连接中提取查询参数，并将其插入到注入到处理程序的 kwargs 中。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序中的 kwargs。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.request_extractor": {
+    "hash": "b430698ae0488a36",
+    "text": "将连接实例设置为注入到处理程序中的 `kwargs` 的 `'request'` 值。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序中的 `kwargs`。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.scope_extractor": {
+    "hash": "f20dc18770e52839",
+    "text": "从连接中提取作用域，并将其插入到注入到处理程序的 kwargs 中。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序的 kwargs。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.socket_extractor": {
+    "hash": "9939ace77e4073fe",
+    "text": "将连接实例作为 'socket' 值设置到注入处理程序的 kwargs 中。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序中的 kwargs。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  },
+  "litestar._kwargs.extractors.state_extractor": {
+    "hash": "93f08468e21ad28a",
+    "text": "从连接中提取应用状态，并将其插入到注入到处理程序的 kwargs 中。\n\nArgs:\n    connection: ASGI 连接实例。\n    values: 从连接中提取并将注入到处理程序中的 kwargs。\n\nReturns:\n    None",
+    "type": "AsyncFunctionDef"
+  }
+}

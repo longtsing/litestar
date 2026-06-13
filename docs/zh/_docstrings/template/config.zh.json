@@ -1,0 +1,18 @@
+{
+  "litestar.template.config.TemplateConfig": {
+    "hash": "0e7278c72da65ebe",
+    "text": "模板配置。\n\n要启用模板功能，请使用 'template_config' 键将本类的实例传递给 :class:`Litestar <litestar.app.Litestar>` 构造函数。"
+  },
+  "litestar.template.config.TemplateConfig.__post_init__": {
+    "hash": "5824ba2149b783de",
+    "text": "如果 engine 是一个类，则确保已设置 directory。"
+  },
+  "litestar.template.config.TemplateConfig.engine_instance": {
+    "hash": "2a65039a283eb5fb",
+    "text": "返回模板引擎实例。"
+  },
+  "litestar.template.config.TemplateConfig.to_engine": {
+    "hash": "63f7dd96ffd92ec8",
+    "text": "实例化模板引擎。"
+  }
+}

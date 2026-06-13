@@ -1,0 +1,43 @@
+{
+  "litestar.plugins.mako": {
+    "hash": "628cefef707934d8",
+    "text": "Litestar 的 Mako 模板引擎集成。",
+    "type": "Module"
+  },
+  "litestar.plugins.mako.MakoTemplate": {
+    "hash": "cedbb3003a1ae21b",
+    "text": "Mako 模板，实现 ``TemplateProtocol``"
+  },
+  "litestar.plugins.mako.MakoTemplate.__init__": {
+    "hash": "8cf20d27425a2309",
+    "text": "初始化一个模板。\n\nArgs:\n    template: 底层 mako 引擎使用的基础 ``MakoTemplate``\n    template_callables: 传递给模板的可调用对象列表"
+  },
+  "litestar.plugins.mako.MakoTemplate.render": {
+    "hash": "9c7e1dbeffde27b2",
+    "text": "渲染模板。\n\nArgs:\n    args: 传递给引擎 ``render`` 函数的位置参数\n    kwargs: 传递给引擎 ``render`` 函数的关键字参数\n\nReturns:\n    渲染后的模板字符串"
+  },
+  "litestar.plugins.mako.MakoTemplateEngine": {
+    "hash": "49952e0cea790fe1",
+    "text": "基于 Mako 的 TemplateEngine（模板引擎）。"
+  },
+  "litestar.plugins.mako.MakoTemplateEngine.__init__": {
+    "hash": "576ad5d71f692b49",
+    "text": "初始化模板引擎。\n\nArgs:\n    directory: 提供模板服务的直接路径或路径列表。\n    engine_instance: 一个 mako TemplateLookup 实例。"
+  },
+  "litestar.plugins.mako.MakoTemplateEngine.from_template_lookup": {
+    "hash": "853126d9c28264fb",
+    "text": "从现有的 mako TemplateLookup 实例创建模板引擎。\n\nArgs:\n    template_lookup: 一个 mako TemplateLookup 实例。\n\nReturns:\n    MakoTemplateEngine 实例"
+  },
+  "litestar.plugins.mako.MakoTemplateEngine.get_template": {
+    "hash": "21ac257611cfed79",
+    "text": "根据提供的名称（点号路径）在给定目录或目录中匹配并检索模板。\n\nArgs:\n    template_name: 点号路径\n\nReturns:\n    MakoTemplate 实例\n\nRaises:\n    TemplateNotFoundException: 如果未找到模板。"
+  },
+  "litestar.plugins.mako.MakoTemplateEngine.register_template_callable": {
+    "hash": "7c37f486cbe0f3ac",
+    "text": "在模板引擎上注册一个可调用对象。\n\nArgs:\n    key: 可调用对象的键，即在模板中用于调用该可调用对象的值。\n    template_callable: 要注册的可调用对象。\n\nReturns:\n    None"
+  },
+  "litestar.plugins.mako.MakoTemplateEngine.render_string": {
+    "hash": "5928ead97889b7df",
+    "text": "从给定上下文中渲染字符串模板。\n\nArgs:\n    template_string: 要渲染的模板字符串。\n    context: 要传递给模板的变量字典。\n\nReturns:\n    渲染后的模板字符串。"
+  }
+}

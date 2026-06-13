@@ -1,0 +1,37 @@
+{
+  "litestar.plugins.jinja": {
+    "hash": "8c99d6cfa79806fc",
+    "text": "Litestar 的 Jinja2 模板引擎集成。",
+    "type": "Module"
+  },
+  "litestar.plugins.jinja.JinjaTemplateEngine": {
+    "hash": "ab7949ed3d1ef2b7",
+    "text": "引擎实例。",
+    "type": "ClassDef"
+  },
+  "litestar.plugins.jinja.JinjaTemplateEngine.__init__": {
+    "hash": "e251f4bc792aac3e",
+    "text": "基于 Jinja 的 TemplateEngine。\n\nArgs:\n    directory: 提供模板的目录的直接路径或目录路径列表。\n    engine_instance: 一个 jinja Environment 实例。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.jinja.JinjaTemplateEngine.from_environment": {
+    "hash": "b51d59b5d62a7805",
+    "text": "从现有的 jinja Environment 实例创建 JinjaTemplateEngine。\n\nArgs:\n    jinja_environment (jinja2.environment.Environment): 一个 jinja Environment 实例。\n\nReturns:\n    JinjaTemplateEngine 实例",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.jinja.JinjaTemplateEngine.get_template": {
+    "hash": "372af1ac0d4e5870",
+    "text": "根据提供的目录或目录列表，通过匹配名称（点分路径）来检索模板。\n\nArgs:\n    template_name: 点分路径\n\nReturns:\n    JinjaTemplate 实例\n\nRaises:\n    TemplateNotFoundException: 如果未找到模板。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.jinja.JinjaTemplateEngine.register_template_callable": {
+    "hash": "7c37f486cbe0f3ac",
+    "text": "在模板引擎上注册一个可调用对象。\n\nArgs:\n    key: 可调用对象的键，即在模板中用于调用该可调用对象的值。\n    template_callable: 要注册的可调用对象。\n\nReturns:\n    None",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.jinja.JinjaTemplateEngine.render_string": {
+    "hash": "5928ead97889b7df",
+    "text": "从给定上下文中渲染字符串模板。\n\nArgs:\n    template_string: 要渲染的模板字符串。\n    context: 要传递给模板的变量字典。\n\nReturns:\n    渲染后的模板字符串。",
+    "type": "FunctionDef"
+  }
+}

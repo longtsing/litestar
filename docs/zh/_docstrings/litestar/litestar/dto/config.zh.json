@@ -1,0 +1,7 @@
+{
+  "litestar.dto.config.DTOConfig": {
+    "hash": "2ffdd9a2181b38e0",
+    "text": "控制生成的 DTO。",
+    "type": "ClassDef"
+  }
+}

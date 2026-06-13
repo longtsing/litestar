@@ -1,0 +1,27 @@
+{
+  "litestar._openapi.typescript_converter.schema_parsing.create_interface": {
+    "hash": "0f44b0fd208a90af",
+    "text": "从给定的 schema.properties 值创建 TypeScript 接口。\n\nArgs:\n    properties: schema.properties 映射。\n    required: 可选的必需属性列表。\n    name: 表示接口名称的可选字符串。\n\nReturns:\n    TypeScript 接口或匿名接口。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.schema_parsing.is_schema_value": {
+    "hash": "02e4f44ecb03b1e3",
+    "text": "对模式值进行类型检查。\n\nArgs:\n    value: 任意值\n\nReturns:\n    一个类型检查布尔值，指示传入的值是否为 Schema。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.schema_parsing.normalize_typescript_namespace": {
+    "hash": "1f48e69c73d40aaa",
+    "text": "将命名空间（例如变量名或对象键）规范化为 TypeScript 支持的值。\n\nArgs:\n    value: 要规范化的字符串。\n    allow_quoted: 是否允许对值进行引用。\n\nReturns:\n    规范化后的值",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.schema_parsing.parse_schema": {
+    "hash": "1a20192465a1834b",
+    "text": "递归解析 OpenAPI 模式对象以创建 TypeScript 类型。\n\nArgs:\n    schema: 一个 OpenAPI Schema 对象。\n\nReturns:\n    一个 TypeScript 类型。",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.schema_parsing.parse_type_schema": {
+    "hash": "880c6049e5758af1",
+    "text": "解析表示一个或多个原始类型的 OpenAPI 模式。\n\nArgs:\n    schema: 一个 OpenAPI 模式。\n\nReturns:\n    一个 TypeScript 类型。",
+    "type": "FunctionDef"
+  }
+}

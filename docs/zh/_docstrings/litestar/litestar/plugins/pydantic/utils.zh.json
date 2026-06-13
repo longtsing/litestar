@@ -1,0 +1,22 @@
+{
+  "litestar.plugins.pydantic.utils.create_field_definitions_for_computed_fields": {
+    "hash": "eac28755d46cbef5",
+    "text": "为计算字段创建字段定义。\n\nArgs:\n    model: 一个 pydantic 模型。\n    prefer_alias: 是否优先使用字段的别名而非名称。\n\nReturns:\n    一个包含计算字段定义的字典。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.pydantic.utils.is_pydantic_model_class": {
+    "hash": "842bb2bf78f02af9",
+    "text": "给定类型注解，判断该注解是否为 pydantic 的 BaseModel 的子类。\n\nArgs:\n    annotation: 一个类型。\n\nReturns:\n    一个类型守卫，用于判断该类型是否为 :data:`BaseModel pydantic.BaseModel>`。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.pydantic.utils.is_pydantic_model_instance": {
+    "hash": "133070d700360d67",
+    "text": "给定一个类型注解，判断该注解是否为 pydantic 的 `BaseModel` 实例。\n\nArgs:\n    annotation: 一个类型。\n\nReturns:\n    一个类型守卫，用于判断该类型是否为 :data:`BaseModel pydantic.BaseModel>`。",
+    "type": "FunctionDef"
+  },
+  "litestar.plugins.pydantic.utils.is_pydantic_root_model": {
+    "hash": "9df291fa2b442150",
+    "text": "```\n检查给定的注解是否为 Pydantic RootModel。\n\nArgs:\n    annotation: 类型注解\n\nReturns:\n    如果注解是 RootModel 则返回 True，否则返回 False。\n```",
+    "type": "FunctionDef"
+  }
+}

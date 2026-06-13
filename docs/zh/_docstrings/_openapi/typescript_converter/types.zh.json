@@ -1,0 +1,142 @@
+{
+  "litestar._openapi.typescript_converter.types.TypeScriptAnonymousInterface": {
+    "hash": "76cef2cdf6fabc7e",
+    "text": "表示 TypeScript 匿名接口的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptAnonymousInterface.write": {
+    "hash": "0428baeee9e7e0f7",
+    "text": "编写一个无名的 TypeScript 接口对象。\n\n示例：\n    {\n        key: string;\n        optional?: number;\n    }\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptArray": {
+    "hash": "41274f5fa8343ef4",
+    "text": "表示 TypeScript 数组类型的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptArray.write": {
+    "hash": "c41e3a3498095b16",
+    "text": "编写一个 TypeScript 数组类型。\n\n示例：\n    number[]\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptConst": {
+    "hash": "561d8b3975874eb1",
+    "text": "表示 TypeScript 常量的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptConst.write": {
+    "hash": "3243cd9c2d9c78c1",
+    "text": "编写一个 TypeScript 常量。\n\n示例：\n    export const MyConst: number;\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptContainer": {
+    "hash": "2de20db87915c211",
+    "text": "表示 TypeScript 类型容器的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptContainer.write": {
+    "hash": "b1f10ac37526304c",
+    "text": "编写与给定 TypeScript 容器对应的 TypeScript 值。\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptElement": {
+    "hash": "58664bf7b00691fc",
+    "text": "表示 TypeScript 类型元素的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptElement.write": {
+    "hash": "a40ed7abe2ecc932",
+    "text": "```\n编写与给定 TypeScript 元素对应的 TypeScript 值。\n\nReturns:\n    一个 TypeScript 字符串\n```",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptEnum": {
+    "hash": "dc2520f1b79dc653",
+    "text": "表示 TypeScript 枚举的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptEnum.write": {
+    "hash": "f2e71672838b886e",
+    "text": "编写一个 TypeScript 枚举。\n\n示例：\n    export enum MyEnum {\n        DOG = \"canine\",\n        CAT = \"feline\",\n    };\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptInterface": {
+    "hash": "35cdb44477419088",
+    "text": "表示 TypeScript 接口的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptInterface.write": {
+    "hash": "3aec2f81f06e7aa7",
+    "text": "编写一个 TypeScript 接口。\n\n示例：\n    export interface MyInterface {\n        key: string;\n        optional?: number;\n    };\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptIntersection": {
+    "hash": "f0d20e1ad5a13933",
+    "text": "表示 TypeScript 交集类型的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptIntersection.write": {
+    "hash": "b9bb61a19d2a5ede",
+    "text": "编写一个 TypeScript 交集类型值。\n\n示例：\n    { prop: string } & { another: number }\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptLiteral": {
+    "hash": "ee63469c48a7494d",
+    "text": "表示 TypeScript 字面量类型的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptLiteral.write": {
+    "hash": "6272c7cb2d9abb03",
+    "text": "编写一个 TypeScript 字面量类型。\n\n示例：\n    \"someValue\"\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptNamespace": {
+    "hash": "a92904585093d921",
+    "text": "表示 TypeScript 命名空间的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptNamespace.write": {
+    "hash": "0a729f847f45b13a",
+    "text": "编写一个 TypeScript 命名空间。\n\n示例：\n    export MyNamespace {\n        export const MyConst: number;\n    }\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptPrimitive": {
+    "hash": "46cc682caca88cb8",
+    "text": "表示 TypeScript 原始类型的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptPrimitive.write": {
+    "hash": "8b6c82edc863313e",
+    "text": "编写一个 TypeScript 原始类型。\n\n示例：\n    null\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptProperty": {
+    "hash": "72bbcd701a9db3f1",
+    "text": "表示 TypeScript 接口属性的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptProperty.write": {
+    "hash": "ac4a54efb36cebdb",
+    "text": "编写一个 TypeScript 属性。此类仅用于接口内部。\n\n示例：\n    key: string;\n    optional?: number;\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptType": {
+    "hash": "9525f395d89ddaf1",
+    "text": "表示 TypeScript 类型的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptType.write": {
+    "hash": "56bf9c0179193105",
+    "text": "编写一个 TypeScript 类型。\n\n示例：\n    export type MyType = number | \"42\";\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptUnion": {
+    "hash": "6b104f4460c8b988",
+    "text": "表示 TypeScript 联合类型的类。",
+    "type": "ClassDef"
+  },
+  "litestar._openapi.typescript_converter.types.TypeScriptUnion.write": {
+    "hash": "b4123eae853e05dc",
+    "text": "编写一个 TypeScript 联合类型值。\n\n示例：\n    string | number\n\nReturns:\n    一个 TypeScript 字符串",
+    "type": "FunctionDef"
+  }
+}

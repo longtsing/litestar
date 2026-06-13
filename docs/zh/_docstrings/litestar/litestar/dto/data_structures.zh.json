@@ -1,0 +1,32 @@
+{
+  "litestar.dto.data_structures.DTOData": {
+    "hash": "be7aa1e17b79980c",
+    "text": "DTO 验证后的数据及工具方法。",
+    "type": "ClassDef"
+  },
+  "litestar.dto.data_structures.DTOData.as_builtins": {
+    "hash": "3b196d425e28e7ef",
+    "text": "将 DTO 验证后的数据作为内置类型返回。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.data_structures.DTOData.create_instance": {
+    "hash": "5c5cd78239641573",
+    "text": "创建经过验证的 DTO 数据的实例。\n\nArgs:\n    **kwargs: 用于创建实例的附加数据。其优先级高于 DTO 验证数据。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.data_structures.DTOData.update_instance": {
+    "hash": "160bb4cdf330e450",
+    "text": "使用经过 DTO 验证的数据更新实例。\n\nArgs:\n    instance: 要更新的实例。\n    **kwargs: 用于更新实例的附加数据。其优先级高于 DTO 验证的数据。",
+    "type": "FunctionDef"
+  },
+  "litestar.dto.data_structures.DTOFieldDefinition": {
+    "hash": "840bbb04bfbcf43f",
+    "text": "用于生成 DTO 后端模型类型的模型字段表示。",
+    "type": "ClassDef"
+  },
+  "litestar.dto.data_structures.DTOFieldDefinition.from_field_definition": {
+    "hash": "2cc6d7cc23056cbb",
+    "text": "从 :class:`FieldDefinition` 创建 :class:`FieldDefinition`。\n\nArgs:\n    field_definition: 用于创建 :class:`FieldDefinition` 的 :class:`FieldDefinition`。\n    model_name: 模型的名称。\n    default_factory: 默认工厂函数（如果有的话）。\n    dto_field: DTOField 实例。\n    passthrough_constraints: 将源注解的约束传递给 DTO 后端进行验证。\n\nReturns:\n    一个 :class:`FieldDefinition` 实例。",
+    "type": "FunctionDef"
+  }
+}
